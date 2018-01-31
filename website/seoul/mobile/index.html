@@ -1,0 +1,1357 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+	<title> 코딩맵: 서울대학교 앱 개선 </title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+	<meta name="Author" content="">
+	<meta name="Keywords" content="서울대학교">
+	<meta name="Description" content="서울대학교">
+	<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css">
+		
+	<style type="text/css">
+		/** 공통 **/
+		body{background-color:#ccc}
+		*{margin:0; padding:0; font-family:'Nanum Gothic', Dotum, '돋움', sans-serif}
+		#wrap{position:relative;padding:20px 15px 20px 15px;line-height:17px;font-size:12px;font-family:"돋움", "san-serif"}
+		h1{margin: 0 0 40px 0}
+		h2{margin: 0 0 10px 0}
+		/* 테이블 */
+		table	{border-collapse:collapse; width:85%; margin:0 0 40px 0}
+		table	th	{border:1px solid #ccc; padding:5px 0 2px}
+		table thead th {padding:6px 5px 3px 5px; color:#fff; background-color:#111}
+		table tbody td {padding:6px 5px 3px 5px; border:1px solid #ccc; text-align:center; background-color:#FFFFFF}
+		table td.depth1{font-weight:bold; background-color:#1056ad}
+		table tr:nth-child(even) td{background-color:#efefef}
+		table a{margin: 0 0 0 10px; text-decoration:none; font-weight:bold; color:#F9BED7}
+				a:hover{color:#000; text-decoration:underline; font-weight:bold}
+		/** 파일 정보박스 **/
+		#info{left:85%; width:200px; padding:10px; border:1px solid #ccc; text-align:left; background-color:#FFFFFF}
+		#info ul.info_class{padding:0 0 0 15px}
+		#info ul.info_class li{margin: 0 0 5px 0; vertical-align:middle}
+		#info ul.info_class span{display:inline-block; width:70px}
+		#info a{text-decoration:none; font-weight:bold; color:#9F9C9C}
+		#info a:hover{color:#000; text-decoration:underline; font-weight:bold}
+		#info ul.number{padding:10px 0 0}
+		#info ul.number li{margin:4px 0; overflow:hidden; *zoom:1}
+		#info ul.number li span{display:block; float:left; width:80px}
+		#info legend{color:#222; font-size:22px; letter-spacing:-.09em}
+		hr{margin:20px 0; color:#eee}
+		#info ul.quick_links{padding:0 0 10px 15px}
+		#info ul.quick_links li{margin:4px 0}
+		.list_txt{display:none; margin: 0 0 30px 0}
+		.list_txt strong{font-size:14px}
+		.incompletion{font-size:12px; color:#999;font-weight:bold}
+		.verify_complete{font-size:12px; color:green;font-weight:bold}
+		.pub_complete{font-size:12px; color:blue;font-weight:bold}
+		.no_cont{font-size:12px;color:#333; font-weight:bold}
+		.guide{font-size:12px;color:#9c8874; font-weight:bold}
+		.UI_complete{font-size:12px; color:black;font-weight:bold}
+		.deb2{font-size:12px; color:#5c076b; font-weight:bold}
+		.commu{font-size:12px; color:#FF6600; font-weight:bold}
+		.none{font-size:12px; color:#000;font-weight:bold}
+		.red{color:red}
+		#tot_com{color:blue}
+		#ok_file{color:green}
+		#tot_icom{color:#999}
+		fieldset#info legend{}
+		a.modify_link{color:#fff; background-color:#777; border-radius:3px; padding:5px 10px; font-size:12px; text-decoration:none}
+		a.modify_link:hover{text-decoration:none; background-color:#444}
+
+		/* @Media Query
+		------------------- ---------------------- */
+		@media only screen and (max-width:800px) {
+			#info{display:none}
+			table{width:100%}
+		}
+	</style>
+</head>
+
+<body onload="start()">
+	<div id="wrap">
+		<fieldset id="info" >
+			<legend>[ 파일정보 ]</legend>
+			<ul class="number">
+			<li><span>- TOTAL</span><strong id="tot_file" class="allfile"></strong></li>
+			<li><span>- 대기중</span><strong id="tot_icom" ></strong></li>
+			<li><span>- 작업완료</span><strong id="tot_com" ></strong></li>
+			<li><span>- 검수완료</span><strong id="ok_file" ></strong></li>
+			</ul>
+
+			<hr />
+
+			<ul class="info_class">
+				<li class="incompletion"><span>작업대기</span>incompletion</li>
+				<li class="pub_complete"><span>작업완료</span>pub_complete</li>
+				<li class="verify_complete"><span>검수완료</span>verify_complete</li>
+				<!-- <li class="UI_complete"><span>UI확정완료</span>UI_complete</li> -->
+				<li class="guide"><span>가이드</span>guide</li>
+			</ul>
+			<hr />
+
+			<ul class="quick_links">
+				<li><a href="#s1">가이드</a></li>
+				<li><a href="#main">메인</a></li>
+				<li><a href="#etc">ETC</a></li>
+				<li><a href="#none">Native[퍼블없음]</a></li>
+				<li><a href="#menu">Menu</a></li>
+			</ul>
+		</fieldset>
+		<h1>서울대학교 앱 개선 : html5/utf8 [퍼블리싱 코딩맵]</h1>
+		
+		<h2 id="s1">가이드</h2>
+		<table>
+			<thead>
+				<tr class="title">
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>화면명</th>
+					<th>Directory</th>
+					<th>파일명</th>
+					<th>완료일</th>
+					<th>수정일 및 내용</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="deb2">레이아웃</td>
+					<td>서브레이아웃</td>
+					<td></td>
+					<td></td>
+					<td>/template/layout</td>
+					<td><a href="template/layout/sub_layout.html" class="guide">sub_layout.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2"></td>
+					<td>레이어 스타일 페이지</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="template/layout/like_layer.html" class="guide">like_layer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2"></td>
+					<td>레이어팝업</td>
+					<td>타입 1<br><strong class="red">(레이어 스타일 페이지와 스타일 동일, 구조 다름)</strong></td>
+					<td></td>
+					<td></td>
+					<td><a href="template/layout/layer01.html" class="guide">layer01.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2"></td>
+					<td></td>
+					<td>타입 2</td>
+					<td></td>
+					<td></td>
+					<td><a href="template/layout/layer02.html" class="guide">layer02.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<!-- <tr>
+					<td class="deb2"></td>
+					<td></td>
+					<td>레이어팝업 띄우는 것</td>
+					<td></td>
+					<td></td>
+					<td><a href="template/layout/show_layer.html" class="guide">show_layer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr> -->
+				<tr>
+					<td class="deb2">스타일 가이드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/template/styleguide</td>
+					<td><a href="template/styleguide/style_guide.html" class="guide">style_guide.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2">메뉴아이콘</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="template/styleguide/menu_icon.html" class="guide">menu_icon.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb2"></td>
+					<td>경로확인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td><a href="template/styleguide/menu_icon_link.html" class="guide">menu_icon_link.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<div id="list">
+			<h2 id="main">메인</h2>
+			<table>
+				<thead>
+					<tr class="title">
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>화면명</th>
+						<th>Directory</th>
+						<th>파일명</th>
+						<th>완료일</th>
+						<th>수정일 및 내용</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[로고 별 확인]</strong></td>
+						<td></td>
+						<td><a href="main/H01000001_2.html" class="verify_complete" target="_blank" title="새창">H01000001_2.html</a></td>
+						<td>2017-03-03</td>
+						<td></td>
+						<td>로고는 메인, 로그인 페이지만 존재합니다.</td>
+					</tr>
+					<tr>
+						<td class="deb2">메인</td>
+						<td></td>
+						<td></td>
+						<td>메인_로그인 전[일반인]</td>
+						<td>/main</td>
+						<td><a href="main/H01000001.html" class="verify_complete" target="_blank" title="새창">H01000001.html</a></td>
+						<td>2016-12-30</td>
+						<td>2017-01-17<br>- 비주얼이미지 텍스트와 이미지 분리작업, 이미지교체.<br> - 하단 메뉴구조에서 1depth 메뉴 설명부분 구조 바뀜.<br>(이하 메인, 메뉴 페이지에서 메뉴구조 동일하게 바뀜)<br><br>2017-01-20<br>quick menu에서 ul태그에 클래스명 추가.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>메인_로그인 후[학생]</td>
+						<td></td>
+						<td><a href="main/H01000002.html" class="verify_complete" target="_blank" title="새창">H01000002.html</a></td>
+						<td>2017-01-05</td>
+						<td>2017-01-20<br>quick menu 부분 추천메뉴 별도로 빼고. ul태그에 클래스명 각각 추가.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>메인_로그인 후[교직원]</td>
+						<td></td>
+						<td><a href="main/H01000003.html" class="verify_complete" target="_blank" title="새창">H01000003.html</a></td>
+						<td>2016-12-30</td>
+						<td>2017-01-20<br>quick menu 부분 추천메뉴 별도로 빼고. ul태그에 클래스명 각각 추가.</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">메뉴</td>
+						<td></td>
+						<td></td>
+						<td>메뉴_로그인 전</td>
+						<td>/menu</td>
+						<td><a href="menu/H02000001.html" class="verify_complete" target="_blank" title="새창">H02000001.html</a></td>
+						<td>2017-01-05</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>메뉴_로그인 후</td>
+						<td></td>
+						<td><a href="menu/H02000002.html" class="verify_complete" target="_blank" title="새창">H02000002.html</a></td>
+						<td>2017-01-05</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>메뉴_검색</td>
+						<td></td>
+						<td><a href="menu/H02000003.html" class="verify_complete" target="_blank" title="새창">H02000003.html</a></td>
+						<td>2017-01-05</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="etc">ETC</h2>
+			<table>
+				<thead>
+					<tr class="title">
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>화면명</th>
+						<th>Directory</th>
+						<th>파일명</th>
+						<th>완료일</th>
+						<th>수정일 및 내용</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="deb2">로그인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td>/login</td>
+						<td><a href="login/E01000000.html" class="verify_complete" target="_blank" title="새창">E01000000.html</a></td>
+						<td>2016-12-15</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">통합검색</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong></td>
+						<td>/mssv</td>
+						<td><a href="mssv/E02000000.html" class="verify_complete" target="_blank" title="새창">E02000000.html</a></td>
+						<td>2017-01-06</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">북마크 등록</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong></td>
+						<td>/etc</td>
+						<td><a href="etc/E04000000.html" class="verify_complete" target="_blank" title="새창">E04000000.html</a></td>
+						<td>2017-01-06</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">앱 이용안내</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[layer popup]</strong></td>
+						<td></td>
+						<td><a href="etc/E06000000.html" class="verify_complete" target="_blank" title="새창">E06000000.html</a></td>
+						<td>2017-01-06</td>
+						<td>2017-01-17<br>버튼 위 문구 수정, 버튼 아래 문구 삭제</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">알림 기본단말 안내</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[layer popup]</strong></td>
+						<td></td>
+						<td><a href="etc/E07000000.html" class="verify_complete" target="_blank" title="새창">E07000000.html</a></td>
+						<td>2017-01-17</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">모바일기기 인증</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong></td>
+						<td></td>
+						<td><a href="etc/E08000000.html" class="verify_complete" target="_blank" title="새창">E08000000.html</a></td>
+						<td>2017-01-06</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">우편번호검색</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[layer popup]</strong> 우편번호검색_도로명/지번</td>
+						<td></td>
+						<td><a href="etc/E09000001.html" class="verify_complete" target="_blank" title="새창">E09000001.html</a></td>
+						<td>2017-01-17</td>
+						<td>2017-02-10 페이지 스타일을 레이어로 수정</td>
+						<td>도로명 탭은 &quot;검색하기 전 화면&quot;을 주석처리,<br>지번 탭은 &quot;검색한 후 화면&quot;을 주석처리. (소스상에는 다 있음)</td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[layer popup]</strong> 우편번호검색_나머지주소</td>
+						<td></td>
+						<td><a href="etc/E09000002.html" class="verify_complete" target="_blank" title="새창">E09000002.html</a></td>
+						<td>2017-01-17</td>
+						<td>2017-02-10 페이지 스타일을 레이어로 수정</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">공유하기</td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong></td>
+						<td>/msha</td>
+						<td><a href="msha/E03000000.html" class="verify_complete" target="_blank" title="새창">E03000000.html</a></td>
+						<td>2017-01-03</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+
+			<h2 id="menu">Menu</h2>
+			<table>
+				<thead>
+					<tr class="title">
+						<th>1Depth</th>
+						<th>2Depth</th>
+						<th>3Depth</th>
+						<th>화면명</th>
+						<th>Directory</th>
+						<th>파일명</th>
+						<th>완료일</th>
+						<th>수정일 및 내용</th>
+						<th>비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="deb2">대학정보</td>
+						<td>대학(원)</td>
+						<td></td>
+						<td>대학(원)_대학</td>
+						<td>/mcin/mcollege</td>
+						<td><a href="mcin/mcollege/M01010001.html" class="verify_complete" target="_blank" title="새창">M01010001.html</a></td>
+						<td>2016-12-15</td>
+						<td>2017-01-09<br>사이트링크를 제목에 달고, 새창링크를 전화걸기 링크로 교체</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>대학(원)_전문대학원</td>
+						<td></td>
+						<td><a href="mcin/mcollege/M01010002.html" class="verify_complete" target="_blank" title="새창">M01010002.html</a></td>
+						<td>2016-12-15</td>
+						<td>2017-01-09<br>사이트링크를 제목에 달고, 새창링크를 전화걸기 링크로 교체</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>학사일정</td>
+						<td></td>
+						<td>학사일정</td>
+						<td>/mcin/mcou</td>
+						<td><a href="mcin/mcou/M01020001.html" class="verify_complete" target="_blank" title="새창">M01020001.html</a></td>
+						<td>2016-12-16</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>2017년 학사일정 (html형)</td>
+						<td></td>
+						<td><a href="mcin/mcou/M01020001_2017.html" class="verify_complete" target="_blank" title="새창">M01020001_2017.html</a></td>
+						<td>2017-02-27</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>긴급상황</td>
+						<td></td>
+						<td>긴급상황</td>
+						<td>/mcin/memz</td>
+						<td><a href="mcin/memz/M01030001.html" class="verify_complete" target="_blank" title="새창">M01030001.html</a></td>
+						<td>2016-12-19</td>
+						<td>2017-01-04<br>하단 스누콜과 시설물고장 사이에 성폭력상담 추가.<br><br>2017-01-13<br>&quot;자동제세동기 &rarr; 자동심장충격기&quot; 문구 변경</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> 심폐소생방법</td>
+						<td></td>
+						<td><a href="mcin/memz/M01030002.html" class="verify_complete" target="_blank" title="새창">M01030002.html</a></td>
+						<td>2016-12-20</td>
+						<td>2017-01-13<br>- 3번째 항목 &quot;(분당 100~120회의...)&quot; 문구 추가. <br>- &quot;자동제세동기 &rarr; 자동심장충격기&quot; 문구 변경</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>전화번호</td>
+						<td></td>
+						<td>전화번호</td>
+						<td>/mcin/mphone</td>
+						<td><a href="mcin/mphone/M01040001.html" class="verify_complete" target="_blank" title="새창">M01040001.html</a></td>
+						<td>2016-12-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> 전화번호_전화번호검색</td>
+						<td></td>
+						<td><a href="mcin/mphone/M01040002.html" class="verify_complete" target="_blank" title="새창">M01040002.html</a></td>
+						<td>2016-12-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>스누식단</td>
+						<td></td>
+						<td>스누식단_오늘의 식단</td>
+						<td>/mcin/mfood</td>
+						<td><a href="mcin/mfood/M01070001.html" class="verify_complete" target="_blank" title="새창">M01070001.html</a></td>
+						<td>2016-12-22</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>스누식단_전체 식당</td>
+						<td></td>
+						<td><a href="mcin/mfood/M01070002.html" class="verify_complete" target="_blank" title="새창">M01070002.html</a></td>
+						<td>2016-12-19</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>학내주요기관</td>
+						<td></td>
+						<td>학내주요기관</td>
+						<td>/mcin/mbreu</td>
+						<td><a href="mcin/mbreu/M01080000.html" class="verify_complete" target="_blank" title="새창">M01080000.html</a></td>
+						<td>2016-12-19</td>
+						<td>2017-01-10<br>사이트링크를 제목에 달고, 새창링크를 전화걸기 링크로 교체</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>무선랜이용안내</td>
+						<td></td>
+						<td>무선랜이용안내</td>
+						<td>/mcin/mlangu</td>
+						<td><a href="mcin/mlangu/M01090000.html" class="verify_complete" target="_blank" title="새창">M01090000.html</a></td>
+						<td>2017-01-16</td>
+						<td>2017-01-17<br>문구수정</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">스누인지원</td>
+						<td>IT서비스</td>
+						<td>아이피신청</td>
+						<td></td>
+						<td>/msnu/mitserv</td>
+						<td><a href="msnu/mitserv/M02040100.html" class="verify_complete" target="_blank" title="새창">M02040100.html</a></td>
+						<td>2017-01-18</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td>[신청하기]</td>
+						<td>신청하기_1</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040101.html" class="verify_complete" target="_blank" title="새창">M02040101.html</a></td>
+						<td>2017-01-18</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>신청하기_1_결과</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040102.html" class="verify_complete" target="_blank" title="새창">M02040102.html</a></td>
+						<td>2017-01-18</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>신청하기_2</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040103.html" class="verify_complete" target="_blank" title="새창">M02040103.html</a></td>
+						<td>2017-01-18</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>신청하기_3</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040104.html" class="verify_complete" target="_blank" title="새창">M02040104.html</a></td>
+						<td>2017-01-18</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>신청하기_4</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040105.html" class="verify_complete" target="_blank" title="새창">M02040105.html</a></td>
+						<td>2017-01-19</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> Popup_아이피신청_동검색</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040106.html" class="verify_complete" target="_blank" title="새창">M02040106.html</a></td>
+						<td>2017-01-19</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td>[조회하기]</td>
+						<td>조회하기_목록</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040107.html" class="verify_complete" target="_blank" title="새창">M02040107.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>조회하기_상세</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040108.html" class="verify_complete" target="_blank" title="새창">M02040108.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td>노트북/CD대여</td>
+						<td></td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040200.html" class="verify_complete" target="_blank" title="새창">M02040200.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td>[신청하기]</td>
+						<td>신청하기_1</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040201.html" class="verify_complete" target="_blank" title="새창">M02040201.html</a></td>
+						<td>2017-01-23</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>신청하기_2</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040202.html" class="verify_complete" target="_blank" title="새창">M02040202.html</a></td>
+						<td>2017-01-23</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>신청하기_3</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040203.html" class="verify_complete" target="_blank" title="새창">M02040203.html</a></td>
+						<td>2017-01-23</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td>[조회하기]</td>
+						<td>예약목록확인</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040204.html" class="verify_complete" target="_blank" title="새창">M02040204.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>대여확인/연장신청_목록</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040205.html" class="verify_complete" target="_blank" title="새창">M02040205.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>대여확인/연장신청_상세</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040206.html" class="verify_complete" target="_blank" title="새창">M02040206.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>연장취소/승인현황</td>
+						<td></td>
+						<td><a href="msnu/mitserv/M02040207.html" class="verify_complete" target="_blank" title="새창">M02040207.html</a></td>
+						<td>2017-01-20</td>
+						<td></td>
+						<td></td>
+					</tr>
+
+					<tr>
+						<td class="deb2"></td>
+						<td>교직원검색</td>
+						<td></td>
+						<td>교직원검색_조직도</td>
+						<td>/msnu/mstaff</td>
+						<td><a href="msnu/mstaff/M02050003.html" class="verify_complete" target="_blank" title="새창">M02050003.html</a></td>
+						<td>2016-12-29</td>
+						<td>2017-01-17<br>교직원리스트 수정</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>교직원검색_자주찾는번호</td>
+						<td></td>
+						<td><a href="msnu/mstaff/M02050001.html" class="verify_complete" target="_blank" title="새창">M02050001.html</a></td>
+						<td>2016-12-29</td>
+						<td>2017-01-17<br>교직원리스트 수정</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> 교직원 상세</td>
+						<td></td>
+						<td><a href="msnu/mstaff/M02050005.html" class="verify_complete" target="_blank" title="새창">M02050005.html</a></td>
+						<td>2017-01-03</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> 교직원검색_교직원검색</td>
+						<td></td>
+						<td><a href="msnu/mstaff/M02050002.html" class="verify_complete" target="_blank" title="새창">M02050002.html</a></td>
+						<td>2016-12-29</td>
+						<td>2017-01-17<br>교직원리스트 수정</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> 교직원검색_교직원검색2</td>
+						<td></td>
+						<td><a href="msnu/mstaff/M02050004.html" class="verify_complete" target="_blank" title="새창">M02050004.html</a></td>
+						<td>2016-12-29</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">정보광장</td>
+						<td>With SNU</td>
+						<td>서울대뉴스(게시판타입)</td>
+						<td>목록_Atype</td>
+						<td>/msqu/mnews</td>
+						<td><a href="msqu/mnews/M03050101.html" class="verify_complete" target="_blank" title="새창">M03050101.html</a></td>
+						<td>2016-12-21</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>목록_Btype</td>
+						<td></td>
+						<td><a href="msqu/mnews/M03050102.html" class="verify_complete" target="_blank" title="새창">M03050102.html</a></td>
+						<td>2016-12-21</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>상세</td>
+						<td></td>
+						<td><a href="msqu/mnews/M03050103.html" class="verify_complete" target="_blank" title="새창">M03050103.html</a></td>
+						<td>2016-12-22</td>
+						<td>2016-12-30<br>첨부파일 영역 수정(파일크기 추가)</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">학사행정</td>
+						<td>학사정보</td>
+						<td>수강편람</td>
+						<td>수강편람_목록</td>
+						<td>/mcol/mlect</td>
+						<td><a href="mcol/mlect/M04030101.html" class="verify_complete" target="_blank" title="새창">M04030101.html</a></td>
+						<td>2017-01-24</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_강좌상세</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030102.html" class="verify_complete" target="_blank" title="새창">M04030102.html</a></td>
+						<td>2017-01-25</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_교과목개요</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030103.html" class="verify_complete" target="_blank" title="새창">M04030103.html</a></td>
+						<td>2017-01-25</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_강의계획서(국문)</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030104.html" class="verify_complete" target="_blank" title="새창">M04030104.html</a></td>
+						<td>2017-01-26</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_강의계획서(영문)</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030105.html" class="verify_complete" target="_blank" title="새창">M04030105.html</a></td>
+						<td>2017-01-26</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_수강반</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030106.html" class="verify_complete" target="_blank" title="새창">M04030106.html</a></td>
+						<td>2017-01-26</td>
+						<td>2017-02-20</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_2군교과목</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030107.html" class="verify_complete" target="_blank" title="새창">M04030107.html</a></td>
+						<td>2017-01-26</td>
+						<td>2017-02-20</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>수강편람_동일대체교과목</td>
+						<td></td>
+						<td><a href="mcol/mlect/M04030108.html" class="verify_complete" target="_blank" title="새창">M04030108.html</a></td>
+						<td>2017-02-01</td>
+						<td>2017-02-20</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>학사일정</td>
+						<td></td>
+						<td></td>
+						<td>/mcol/mcou</td>
+						<td><a href="mcol/mcou/M05010000.html" class="verify_complete" target="_blank" title="새창">M05010000.html</a></td>
+						<td>2017-02-10</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td>상세내역</td>
+						<td></td>
+						<td></td>
+						<td><a href="mcol/mcou/M05010001.html" class="verify_complete" target="_blank" title="새창">M05010001.html</a></td>
+						<td>2017-02-27</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2">마이페이지</td>
+						<td>Index</td>
+						<td></td>
+						<td>마이페이지_Index</td>
+						<td>/mmyp</td>
+						<td><a href="mmyp/M05000000.html" class="verify_complete" target="_blank" title="새창">M05000000.html</a></td>
+						<td>2017-01-16</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>알림내역</td>
+						<td></td>
+						<td>알림내역</td>
+						<td>/mmyp/mnoti</td>
+						<td><a href="mmyp/mnoti/M05020100.html" class="verify_complete" target="_blank" title="새창">M05020100.html</a></td>
+						<td>2017-01-16</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>북마크</td>
+						<td></td>
+						<td>북마크</td>
+						<td>/mmyp/mbmk</td>
+						<td><a href="mmyp/mbmk/M05030000.html" class="verify_complete" target="_blank" title="새창">M05030000.html</a></td>
+						<td>2016-12-27</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>비밀번호변경</td>
+						<td></td>
+						<td>비밀번호변경</td>
+						<td>/mmyp/mchapw</td>
+						<td><a href="mmyp/mchapw/M05050000.html" class="verify_complete" target="_blank" title="새창">M05050000.html</a></td>
+						<td>2017-01-24</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>개인정보변경</td>
+						<td></td>
+						<td>개인정보변경_학생</td>
+						<td>/mmyp/mchaper</td>
+						<td><a href="mmyp/mchaper/M05060001.html" class="verify_complete" target="_blank" title="새창">M05060001.html</a></td>
+						<td>2017-01-24</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>개인정보변경_교직원</td>
+						<td></td>
+						<td><a href="mmyp/mchaper/M05060002.html" class="verify_complete" target="_blank" title="새창">M05060002.html</a></td>
+						<td>2017-01-24</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[layer popup]</strong> 개인정보동의</td>
+						<td></td>
+						<td><a href="mmyp/mchaper/M05060003.html" class="verify_complete" target="_blank" title="새창">M05060003.html</a></td>
+						<td>2017-02-23</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>신분변경</td>
+						<td></td>
+						<td>신분변경</td>
+						<td>/mmyp/mstatus</td>
+						<td><a href="mmyp/mstatus/M05070000.html" class="verify_complete" target="_blank" title="새창">M05070000.html</a></td>
+						<td>2016-12-27</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>마이메뉴 설정</td>
+						<td></td>
+						<td>마이메뉴 설정</td>
+						<td>/mmyp/mymenu</td>
+						<td><a href="mmyp/mymenu/M06010001.html" class="verify_complete" target="_blank" title="새창">M06010001.html</a></td>
+						<td>2017-01-04</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td><strong class="red">[page popup]</strong> 메뉴가져오기</td>
+						<td></td>
+						<td><a href="mmyp/mymenu/M06010002.html" class="verify_complete" target="_blank" title="새창">M06010002.html</a></td>
+						<td>2017-01-04</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>알림설정</td>
+						<td></td>
+						<td>알림설정</td>
+						<td>/mmyp/mynoti</td>
+						<td><a href="mmyp/mynoti/M06020000.html" class="verify_complete" target="_blank" title="새창">M06020000.html</a></td>
+						<td>2017-01-05</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>언어설정</td>
+						<td></td>
+						<td>언어설정</td>
+						<td>/mmyp/mylanset</td>
+						<td><a href="mmyp/mylanset/M06030000.html" class="verify_complete" target="_blank" title="새창">M06030000.html</a></td>
+						<td>2017-01-05</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>의견접수</td>
+						<td></td>
+						<td>의견접수</td>
+						<td>/mmyp/myrecopi</td>
+						<td><a href="mmyp/myrecopi/M06050000.html" class="verify_complete" target="_blank" title="새창">M06050000.html</a></td>
+						<td>2017-01-05</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td>도움말</td>
+						<td></td>
+						<td>도움말_index</td>
+						<td>/mmyp/mhelp</td>
+						<td><a href="mmyp/mhelp/M06040000.html" class="verify_complete" target="_blank" title="새창">M06040000.html</a></td>
+						<td>2017-02-01</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_메인</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040001.html" class="verify_complete" target="_blank" title="새창">M06040001.html</a></td>
+						<td>2017-02-01</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_로그인</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040002.html" class="verify_complete" target="_blank" title="새창">M06040002.html</a></td>
+						<td>2017-02-02</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_메뉴</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040003.html" class="verify_complete" target="_blank" title="새창">M06040003.html</a></td>
+						<td>2017-02-02</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_알림내역</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040004.html" class="verify_complete" target="_blank" title="새창">M06040004.html</a></td>
+						<td>2017-02-02</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_북마크</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040005.html" class="verify_complete" target="_blank" title="새창">M06040005.html</a></td>
+						<td>2017-02-02</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_신분변경</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040006.html" class="verify_complete" target="_blank" title="새창">M06040006.html</a></td>
+						<td>2017-02-02</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_마이메뉴설정</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040007.html" class="verify_complete" target="_blank" title="새창">M06040007.html</a></td>
+						<td>2017-02-03</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_알림설정</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040008.html" class="verify_complete" target="_blank" title="새창">M06040008.html</a></td>
+						<td>2017-02-03</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_언어설정</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040009.html" class="verify_complete" target="_blank" title="새창">M06040009.html</a></td>
+						<td>2017-02-03</td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="deb2"></td>
+						<td></td>
+						<td></td>
+						<td>도움말_의견접수</td>
+						<td></td>
+						<td><a href="mmyp/mhelp/M06040010.html" class="verify_complete" target="_blank" title="새창">M06040010.html</a></td>
+						<td>2017-02-03</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+<script type="text/javascript" src="js/lib/jquery.min.js"></script>
+<script type="text/javascript">
+var tot_file=0;
+var ok_file=0;
+var tot_com=0;
+var tot_icom=0;
+function start(){
+	 totEle();
+	 //tableSize();
+}
+function totEle(){
+	var obj = document.getElementById("list");
+	var ele = obj.getElementsByTagName("a");
+	var eleTr = obj.getElementsByTagName("tr");
+
+	for(var i=0; i<ele.length;i++){
+
+		if(ele[i].className !="no_blank"){
+			ele[i].setAttribute("target","_blank");
+		}
+
+	}
+
+	for(var i=0; i<eleTr.length;i++){
+	 if(eleTr[i].className !="title"){ // tr태그에 class 네임이 title 인것은 배제하고 총파일을 알아낸다.
+		tot_file+=1;
+	 }
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "pub_complete"){
+			tot_com+=1;
+		}
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "verify_complete"){
+			ok_file+=1;
+		}
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "incompletion"){
+			tot_icom+=1;
+		}
+	}
+
+
+		document.getElementById("tot_file").innerHTML =  tot_file;
+		document.getElementById("tot_com").innerHTML =  tot_com;
+		document.getElementById("tot_icom").innerHTML =  tot_icom;
+		document.getElementById("ok_file").innerHTML =  ok_file;
+	//완료된 파일은 링크를 건다. id="list"영역안에..있는건만
+	//document.getElementById("ok_tot").innerHTML =  obj.getElementsByTagName("a").className("final_complete").length ;
+ }
+
+// Quick menu
+function initMoving(target, position, topLimit, btmLimit) {
+	if (!target) return false;
+
+	try { document.execCommand("BackgroundImageCache", false, true)}
+	catch(err){}
+
+	var obj = target;
+	obj.initTop = position;
+	obj.topLimit = topLimit;
+	obj.bottomLimit = document.documentElement.scrollHeight - btmLimit;
+
+	obj.style.position = "absolute";
+	obj.top = obj.initTop;
+	obj.left = obj.initLeft;
+
+	if (typeof(window.pageYOffset) == "number") {
+		obj.getTop = function() {
+			return window.pageYOffset;
+		}
+	} else if (typeof(document.documentElement.scrollTop) == "number") {
+		obj.getTop = function() {
+			return document.documentElement.scrollTop;
+		}
+	} else {
+		obj.getTop = function() {
+			return 0;
+		}
+	}
+
+	if (self.innerHeight) {
+		obj.getHeight = function() {
+			return self.innerHeight;
+		}
+	} else if(document.documentElement.clientHeight) {
+		obj.getHeight = function() {
+			return document.documentElement.clientHeight;
+		}
+	} else {
+		obj.getHeight = function() {
+			return 500;
+		}
+	}
+
+	obj.move = setInterval(function() {
+		if (obj.initTop > 0) {
+			pos = obj.getTop() + obj.initTop;
+		} else {
+			pos = obj.getTop() + obj.getHeight() + obj.initTop;
+			//pos = obj.getTop() + obj.getHeight() / 2 - 15;
+		}
+
+		if (pos > obj.bottomLimit)
+			pos = obj.bottomLimit;
+		if (pos < obj.topLimit)
+			pos = obj.topLimit;
+
+		interval = obj.top - pos;
+		obj.top = obj.top - interval / 3;
+		obj.style.top = obj.top - 10 + "px";
+	}, 30)
+}
+
+</script>
+<script>
+	initMoving(document.getElementById("info"), 50,-15, 800);
+
+	$('a.incompletion').on('click', function(){
+		alert('작업 대기중 입니다.');
+		return false;
+	})
+</script>
+
+</body>
+</html>

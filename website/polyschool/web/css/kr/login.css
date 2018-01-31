@@ -1,0 +1,48 @@
+@charset "utf-8";
+#headerWrap {background:#0c110d url(../../images/w/kr/login/bg_header.png) no-repeat 50% 0;}
+
+.grayBox {padding:33px 0 50px 0;}
+.grayBox .fs17 {margin-bottom:40px;}
+.grayBox .tit {margin-bottom:32px;}
+.grayBox .btnB {margin-top:30px;}
+.grayBox .btnG {margin-top:30px;}
+.btnWrap {margin-top:30px; text-align:center;}
+.btnWrap .fwB {padding-left:20px; background:url(../../images/w/kr/common/ico_right_arr.png) no-repeat 0 4px;}
+.btnWrap .btnG {margin-left:10px;}
+
+/*아이디 찾기 입력페이지*/
+.loginIdPri {text-align:center;}
+.loginIdPri .left, .loginIdPri .find .right {float:left; position:relative; height:257px; width:380px;}
+.loginIdPri .find .pAbs {bottom:0; left:0; text-align:center; width:100%;}
+.loginIdPri .find h3 {margin-bottom:33px;}
+.loginIdPri label {width:84px;}
+.loginIdPri .left {padding:0 49px 0 44px; border-right:1px solid #c9ccce;}
+.loginIdPri .left > div {margin-top:6px; text-align:left;}
+.loginIdPri .left .phone {float:left; width:292px;}
+.loginIdPri .left .select {float:left; margin-right:5px;}
+	.ie7 .loginIdPri .left .select {width:66px; padding: 3px 11px 0;}
+	.ie8 .loginIdPri .left .select {width:70px;}
+.loginIdPri .right {margin-left:-1px; padding:0 47px; border-left:1px solid #c9ccce;}
+
+/*아이디 찾기 완료페이지*/
+/* .loginIdCpl .btnB, .grayBox .btnG {width:147px; padding:9px 0;} */
+.loginIdCpl .btnWrap {margin-top: 20px;}
+.loginIdCpl .btnWrap .ml2 {margin-left:3px;}
+
+/*패스워드 찾기 페이지*/
+.loginPwFind .left, .loginPwFind .right {position:relative; float:left; height:270px; width:385px;}
+.loginPwFind .find .btnWrap {position:absolute; left:0; bottom:0; text-align:center; width:100%;}
+.loginPwFind .find h3 {margin-bottom:26px;}
+.loginPwFind input {width:266px;}
+.loginPwFind label {width:90px;}
+.loginPwFind .left {padding:0 43px; border-right:1px solid #c9ccce;}
+.loginPwFind .left div, .loginPwFind .right div {padding-top:6px; text-align:left;}
+.loginPwFind .right {margin-left:-1px; padding:0 43px; border-left:1px solid #c9ccce;}
+.loginPwFind .right p {padding-top:15px}
+
+/*패스워드 찾기 완료페이지*/
+.loginPwCpl .enter {width:435px; margin:0 auto; text-align:left;}
+.loginPwCpl label {width: 125px; font-size:16px;}
+.loginPwCpl .btnB {margin-top:30px;}
+.loginPwCpl .grayBox .tit {margin:41px 0 26px 0;}
+.loginPwCpl .btnB {margin-top:30px;} /*  width:107px; */

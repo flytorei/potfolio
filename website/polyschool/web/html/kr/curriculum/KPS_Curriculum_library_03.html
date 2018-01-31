@@ -1,0 +1,328 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7]><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class="ie7"><![endif]-->
+<!--[if IE 8]><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class="ie8"><![endif]-->
+<!--[if IE 9]><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KPS</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link type="text/css" rel="stylesheet" href="../../../css/kr/common.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/kr/curriculum.css" />
+<script type="text/javascript" src="../../../script/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../../script/common.js"></script>
+<script type="text/javascript" src="../../../script/cont.modal.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+// 모달 레이어 팝업
+jQuery(function($) {
+	$('#mOpen1').on('click', function(e){
+		e.preventDefault();
+		$('#pop_RC_01').modal({autoOpen:true, pos:'center', mask:true, btnOpID : 'mOpen1'});
+
+
+
+		$('.dimmed').css({"display":"block"});
+	});
+	$('#mOpen2').on('click', function(e){
+		e.preventDefault();
+		toggle('.toggleWrap');
+		$('#pop_RC_02').modal({autoOpen:true, pos:'center', mask:true, btnOpID : 'mOpen2'});
+		$('.dimmed').css({"display":"block"});
+	});
+
+
+});
+//]]>
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- headerWrap -->
+	<div id="headerWrap">
+		<!-- skip navigation -->
+		<dl id="skipNavi">
+			<dt>바로가기 메뉴</dt>
+			<dd><a href="#contents">본문내용 바로가기</a></dd>
+			<dd><a href="#lnbWrap">하위 메뉴 바로가기</a></dd>
+			<dd><a href="#footerWrap">하단내용 바로가기</a></dd>
+		</dl>
+		<!-- //skip navigation -->
+
+		<!-- top menu -->
+		<div class="header">
+			<!-- logo -->
+			<h1 class="logo">폴리 로고</h1>
+			<!-- //logo -->
+
+			<h2 class="hidden">주 메뉴</h2>
+			<div class="topMenu">
+
+
+			</div>
+		</div>
+		<!-- //top menu -->
+	</div>
+	<!-- //headerWrap -->
+	<hr />
+
+	<!-- container -->
+	<div id="containerWrap">
+		<div class="container">
+			<!-- left contents -->
+			<div class="leftCont">
+				<h2 class="hidden">하위 메뉴</h2>
+				<!-- sub menu -->
+				<div id="lnbWrap">
+				<h3 class="cateTitle"><img src="../../../images/w/kr/curriculum/cate_title.png" alt="curriculum" /></h3>
+					<ul class="depth1Wrap">
+						<li class="on"><a href="javascript:toggleFn()">Welcome to POLY</a></li>
+						<li><a href="#">Brand Value</a></li>
+						<li><a href="#">History</a></li>
+						<li><a href="#">PR room</a></li>
+						<li><a href="#">Contact Us</a></li>
+						<li><a href="#">Campus List</a></li>
+					</ul>
+				</div>
+				<!-- //sub menu -->
+
+			</div>
+			<!-- //left contents -->
+			<hr />
+
+			<!-- right contents -->
+			<div class="rightCont">
+				<div id="pageLocation">
+					<a href="#">HOME</a> &gt;
+					<a href="#">CURRICULUM</a> &gt;
+					<a href="#">Library</a> &gt;
+					Reading Certification Program
+				</div>
+
+				<!-- contents -->
+				<div id="contents">
+					<h2 id="pageTitle"><img src="../../../images/w/kr/curriculum/page_title_05_03.png" alt="Reading Certification Program" /></h2>
+					<!-- 본문내용 -->
+					<div class="certi">
+						<h3 class="tit"><img src="../../../images/w/kr/curriculum/txt_certification.png" alt="READING CERTIFICATION PROGRAM" /></h3>
+						<div class="cts">
+							<p class="fs30">독서교육의 새로운 기준, 독서인증제</p>
+							<p>독서인증제는, 학년별 필독도서를 기준으로 독서와 독후활동을<br /> 진행하고, 이에 대한 선생님의 인증과 소정의 보상을 통해 지속적인 독서습관을 형상하는 프로그램입니다. </p>
+							<p>학생들의 연령에 맞는 양질의 필독도서를 선정하여 독서의 질을<br /> 향상함은 물론, 독서가 주는 즐거움을 얻을 수 있도록 다양한 이벤트 요소를 가미해 지속적 독서가 이루어질 수 있도록 이끕니다. </p>
+							<p>독서인증제는 7세<span class="ffEn">(ECP7)</span>부터 초등 4학년을 대상으로 학기 별로<br /> 운영됩니다. </p>
+						</div>
+						<div class="btnWrap">
+							<!-- button -->
+							<a href="#" class="btnWideG mr2" id="mOpen1">참여방법 자세히 보기</a>
+							<!-- button -->
+							<a href="#" class="btnWideG ml5" id="mOpen2">성취조건 자세히 보기</a>
+						</div>
+
+					</div>
+					<!-- //본문내용 -->
+				</div>
+				<!-- //contents -->
+			</div>
+			<!-- //right contents -->
+		</div>
+		<hr />
+
+		<!-- quick menu -->
+		<div id="quickWrap">
+			<div class="quickMenu">
+				<img src="../../../images/temp/@quick.jpg" alt="퀵메뉴 임시" />
+			</div>
+		</div>
+		<!-- //quick menu -->
+	</div>
+	<!-- //container -->
+	<hr />
+
+	<!-- footer -->
+	<div id="footerWrap">
+		<h2 class="hidden">하단내용</h2>
+		<div class="footer">
+			<img src="../../../images/temp/@footer.jpg" alt="풋터 임시" />
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+
+<!-- 참여 방법 및 규칙 팝업 -->
+<div class="layer blue" id="pop_RC_01">
+	<div class="layerInner">
+		<p><img src="../../../images/w/kr/curriculum/txt_part.png" alt="참여 방법 및 규격" /></p>
+		<ul class="numList">
+			<li class="list01">POLY 독서인증제는 ‘드넓은 책 세계를 여행한다’는 개념으로 운영됩니다.</li>
+			<li class="list02">그에 맞춰, 참여하는 모든 학생에게 독서 여권을 배포합니다. 마치 세계를 여행할 때 국가별 공항에서 여권에 스탬프를 받는 것 처럼, 책 세계를 여행하면 독서 여권에 붙일 수 있는 인증 스티커를 받을 수 있습니다.  </li>
+			<li class="list03">POLY Library에서 대여한 도서를 읽고 AR 퀴즈를 풀이한 후 포인트를 누적하고, 정해진 기간 내 성취조건(포인트, 필독독서)을 완수하면 인증 스티커를 받을 수 있습니다.</li>
+			<li class="list04">인증단계(Stage1-5)를 모두 패스한 학생에게는 학기말에 인증서를 발급합니다. </li>
+			<li class="list05">기간 내 AR 퀴즈를 패스하지 못하더라도, 개별 퀴즈 삭제는 안 됩니다.(단, 4학년은 필독도서에 한해 AR 퀴즈 패스 시까지 다시 풀이 허용)</li>
+			<li class="list06">독서 포인트는 매달 1일부터 마지막 날까지 계산됩니다.</li>
+			<li class="list07">독서 여권 분실 또는 훼손 시, 담당 선생님께 재발급 받으실 수 있습니다.(단, 재발급 시 해당 월의 총 획득포인트에서 -10점 벌점이 부여됩니다).</li>
+		</ul>
+		<a class="close layerClose" href="#" title="닫기버튼"><img src="../../../images/w/kr/common/ico_x.png" alt="닫기 버튼" /></a>
+		<div class="btnWrap">
+			<!-- button -->
+			<a class="btnWideG ac layerClose" href="#">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //참여 방법 및 규칙 팝업 -->
+
+<!-- 성취조건 팝업 -->
+<div class="layer blue" id="pop_RC_02">
+	<div class="layerInner">
+
+		<div class="toggleWrap">
+			<dl>
+				<dt>
+					<a href="#">
+						<span class="tit">성취조건</span>
+					</a>
+				</dt>
+				<dd>
+					<p>저학년(7세~초등 3학년)은 획득 포인트 및 필독독서 읽기, 고학년(초등 4학년)은 필독독서 독서량으로 차이를 두어 운영합니다.</p>
+					<div class="termsTable">
+						<table summary="독서인증제 학년별 성취조건- 단계,기간,성취조건,독서형태 표시">
+							<caption>독서인증제 학년별 성취조건</caption>
+							<colgroup>
+								<col style="width:17%" />
+								<col style="width:13%" />
+								<col style="width:12%" />
+								<col style="width:28%" />
+								<col style="width:30%" />
+							</colgroup>
+							<thead>
+								<tr>
+									<th scope="col">학년</th>
+									<th scope="col">단계</th>
+									<th scope="col">기간</th>
+									<th scope="col">성취조건</th>
+									<th scope="col">독서형태</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td rowspan="3">7세 ~ 초등 3학년</td>
+									<td>Stage 1-2</td>
+									<td>9월 ~ 10월</td>
+									<td rowspan="2">월별 지정 포인트</td>
+									<td>자율독서</td>
+								</tr>
+								<tr>
+
+									<td>Stage 3-5</td>
+									<td>11월 ~ 1월</td>
+
+									<td>자율독서 + 필독독서(2권)</td>
+								</tr>
+								<tr>
+									<td colspan="4">Stage 3-5는 포인트를 성취했더라도 필독 도서 목록 중 읽기를 하지 않았다면 실패로 간주</td>
+
+								</tr>
+								<tr>
+									<td>초등 4학년</td>
+									<td>Stage 1-5</td>
+									<td>9월 ~ 1월</td>
+									<td>월별 지정 권수</td>
+									<td>필독독서 100%</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="toggleWrap">
+			<dl>
+				<dt>
+					<a href="#">
+						<span class="tit">인증스티커</span>
+					</a>
+				</dt>
+				<dd>
+					<p>저학년(7세~초등 3학년)은 매월 합산 포인트, 고학년(초등 4학년)은 필독도서 독서량으로 단계별 인증(★ ~ ★★★★★)되며,<br /> 성취에 따라 인증스티커는 차등 지급 됩니다.</p>
+					<div class="sticker clfix">
+						<ul>
+							<li>
+								<img src="../../../images/w/kr/curriculum/img_sticker01.png" alt="1단계 인증 스티커" />
+								<ul class="list01">
+									<li><span class="fl">7세~초등 2학년</span><span class="fr">4포인트</span></li>
+									<li><span class="fl">초등 3학년</span><span class="fr">4포인트</span></li>
+									<li><span class="fl">초등 4학년</span><span class="fr">필독 1</span></li>
+								</ul>
+							</li>
+							<li>
+								<img src="../../../images/w/kr/curriculum/img_sticker02.png" alt="2단계 인증 스티커" />
+								<ul class="list01">
+									<li><span class="fl">7세~초등 2학년</span><span class="fr">8포인트</span></li>
+									<li><span class="fl">초등 3학년</span><span class="fr">8포인트</span></li>
+									<li><span class="fl">초등 4학년</span><span class="fr">필독 1+자유 1</span></li>
+								</ul>
+							</li>
+							<li>
+								<img src="../../../images/w/kr/curriculum/img_sticker03.png" alt="3단계 인증 스티커" />
+								<ul class="list01">
+									<li><span class="fl">7세~초등 2학년</span><span class="fr">13포인트</span></li>
+									<li><span class="fl">초등 3학년</span><span class="fr">13포인트</span></li>
+									<li><span class="fl">초등 4학년</span><span class="fr">필독 2+자유 1</span></li>
+								</ul>
+							</li>
+							<li>
+								<img src="../../../images/w/kr/curriculum/img_sticker04.png" alt="4단계 인증 스티커" />
+								<ul class="list01">
+									<li><span class="fl">7세~초등 2학년</span><span class="fr">20포인트</span></li>
+									<li><span class="fl">초등 3학년</span><span class="fr">20포인트</span></li>
+									<li><span class="fl">초등 4학년</span><span class="fr">필독 2+자유 2</span></li>
+								</ul>
+							</li>
+							<li>
+								<img src="../../../images/w/kr/curriculum/img_sticker05.png" alt="5단계 인증 스티커" />
+								<ul class="list01">
+									<li><span class="fl">7세~초등 2학년</span><span class="fr">30포인트</span></li>
+									<li><span class="fl">초등 3학년</span><span class="fr">25포인트</span></li>
+									<li><span class="fl">초등 4학년</span><span class="fr">필독 3+자유 3</span></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</dd>
+			</dl>
+		</div>
+
+		<div class="toggleWrap">
+			<dl>
+				<dt>
+					<a href="#">
+						<span class="tit">학년 별 필독도서 확인하기</span>
+					</a>
+				</dt>
+				<dd>
+					<p>
+					<label for="scClass">학년을 선택한 후 '보기' 버튼을 클릭해주세요.</label>
+					<span class="select ml16">
+						<select title="select 타이틀 입력" id="scClass" style="width:140px;">
+							<option>초등 4학년</option>
+							<option>초등 3학년</option>
+						</select>
+					</span>
+					<!-- button -->
+					<a class="btnB ml2" href="#">보기</a>
+					</p>
+				</dd>
+			</dl>
+		</div>
+
+
+		<a class="close layerClose" href="#" title="닫기버튼"><img src="../../../images/w/kr/common/ico_x.png" alt="닫기 버튼" /></a>
+		<div class="btnWrap">
+			<!-- button -->
+			<a class="btnWideG ac layerClose" href="#">확인</a>
+		</div>
+	</div>
+</div>
+<!-- //성취조건 팝업 -->
+</body>
+</html>

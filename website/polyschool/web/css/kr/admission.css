@@ -1,0 +1,24 @@
+@charset "utf-8";
+#headerWrap {background:#0c110d url(../../images/w/kr/admission/bg_header.png) no-repeat 50% 0;}
+
+/*입학정보*/
+.schoolInfo .tit {text-align:center;}
+.schoolInfo .admiss {padding:43px 441px 110px 44px; background:url(../../images/w/kr/admission/bg_admission.png) no-repeat 520px 30px;}
+.schoolInfo .admiss .cts {margin-top: 19px;}
+.schoolInfo .subSmallTit {font-size:19px; font-weight:bold;}
+.schoolInfo .subBigTit {font-size:30px; color:#298f9a; line-height:50px;}
+.schoolInfo .plat {padding:35px 0 99px 345px; background:url(../../images/w/kr/admission/bg_plat.png) no-repeat 57px 23px;}
+.schoolInfo .plat .cts {margin-top: 11px;}
+.schoolInfo .step {padding-top:42px;}
+.schoolInfo .step li {float:left; width:187px; height:132px; margin-left:40px; background:url(../../images/w/kr/admission/step_arr.gif) no-repeat right 50%;}
+.schoolInfo .step li p {width:133px; height:171px; padding-top:147px; text-align:center; font-weight: bold; background:url(../../images/w/kr/admission/bg_step.gif) no-repeat 0 0;}
+.schoolInfo .step .step01 {margin:0; padding-left:65px;}
+.schoolInfo .step .step01 p {background-position:0 0;}
+.schoolInfo .step .step02 p {background-position:-200px 0;}
+.schoolInfo .step .step03 p {background-position:-400px 0;}
+.schoolInfo .step .step04 p {background-position:-600px 0;}
+.schoolInfo .step .step04 {background:none;}
+.schoolInfo .campuseInfo {width:638px; margin:102px 0 0 154px; padding:21px 0 20px;}
+.schoolInfo .campuseInfo div { text-align:center; font-size:17px; font-weight: bold;}
+.schoolInfo .campuseInfo a {margin-left:22px;}
+

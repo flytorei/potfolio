@@ -1,0 +1,417 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" type="text/css" href="../css/guide.css"/> 
+<link type="text/css" rel="stylesheet" href="../SyntaxHighlighter/Styles/shCoreDefault.css"/>
+<script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript" src="../SyntaxHighlighter/Scripts/shCore.js"></script>
+<script type="text/javascript" src="../SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+</head>
+<body>
+<!-- 스킵 내비게이션 -->
+<div class="u_skip">
+	<a href="#content"><span>컨텐츠 바로가기</span></a>
+</div>
+<!-- //스킵 내비게이션 -->
+<!-- UI Object -->
+<div class="wrap">
+	<div class="header">
+        <h1>:: <strong>포트폴리오</strong></h1>
+        <ul class="nav">
+            <li><a href="index.html">프로필</a></li>           
+            <li><a href="potfolio.html">포트폴리오</a></li> 
+            <li><a href="guide.html" class="on">작업가이드</a></li>           
+        </ul>
+    </div>
+    <div class="section">           
+            <div class="content">
+                <ul>               
+                    <li>
+                        <p class="gtit">: 레이아웃 약속어</p>
+                        <table class="tmp" summary="레이아웃 약속어 대한 표 입니다.">
+                            <caption>레이아웃 약속어</caption>
+                            <colgroup>
+                                <col style="width:*">
+                                <col style="width:70%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>약속어</th>
+                                    <th>범위</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#wrap</td>
+                                    <td>페이지 전체 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#header</td>
+                                    <td>GNB 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#visual</td>
+                                    <td>비쥬얼 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#container</td>
+                                    <td>본문 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#content</td>
+                                    <td>콘텐츠 영역</td>
+                                </tr>
+                                 <tr>
+                                    <td>#footer</td>
+                                    <td>푸터 영역</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="gtit">: 윈도우 팝업 레이아웃 약속어</p>
+                        <table class="tmp" summary="윈도우 팝업 레이아웃 약속어 대한 표 입니다.">
+                            <caption>윈도우 팝업 레이아웃 약속어</caption>
+                            <colgroup>
+                                <col style="width:*">
+                                <col style="width:70%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>약속어</th>
+                                    <th>범위</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#pop_wrap</td>
+                                    <td>팝업 페이지 전체 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#pop_container</td>
+                                    <td>팝업 본문 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#pop_content</td>
+                                    <td>팝업 콘텐츠 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#pop_footer</td>
+                                    <td>팝업 푸터 영역</td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="gtit">: 레이어 팝업 레이아웃 약속어</p>
+                        <table class="tmp" summary="레이어 팝업 레이아웃 약속어 대한 표 입니다.">
+                            <caption>레이어 팝업 레이아웃 약속어</caption>
+                            <colgroup>
+                                <col style="width:*">
+                                <col style="width:70%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>약속어</th>
+                                    <th>범위</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#layer_wrap</td>
+                                    <td>팝업 페이지 전체 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#layer_container</td>
+                                    <td>팝업 본문 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#layer_content</td>
+                                    <td>팝업 콘텐츠 영역</td>
+                                </tr>
+                                <tr>
+                                    <td>#layer_footer</td>
+                                    <td>팝업 푸터 영역</td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="gtit">: CSS 약속어</p>
+                        <table class="tmp" summary="CSS 약속어 대한 표 입니다.">
+                            <caption>CSS 약속어</caption>
+                            <colgroup>
+                                <col style="width:*">
+                                <col style="width:20%">
+                                <col style="width:50%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>분류</th>
+                                    <th>약속어</th>
+                                    <th>부가설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td rowspan="4">네비게이션</td>
+                                    <td>gnb</td>
+                                    <td>전체 메뉴</td>
+                                </tr> 
+                                <tr>                                   
+                                    <td>lnb</td>
+                                    <td>2Depth 메뉴</td>
+                                </tr> 
+                                <tr>                                
+                                    <td>snb</td>
+                                    <td>3Depth 메뉴</td>
+                                </tr>
+                                 <tr>                                  
+                                    <td>top_menu</td>
+                                    <td>탑 유틸메뉴</td>
+                                </tr> 
+                                 <tr>
+                                    <td rowspan="2">영역</td>
+                                    <td>section, area</td>
+                                    <td>영역구분</td>
+                                </tr> 
+                                <tr>
+                                    <td>inner</td>
+                                    <td>부모 영역이 존재하며 자식 영역이 필요한 경우</td>
+                                </tr> 
+                                <tr>
+                                    <td rowspan="3">타이틀</td>
+                                    <td>pgtit</td>
+                                    <td>페이지 타이틀</td>
+                                </tr>
+                                <tr>                                  
+                                    <td>tit</td>
+                                    <td>일반 타이틀</td>
+                                </tr>
+                                <tr>                                  
+                                    <td>sub_tit</td>
+                                    <td>서브 타이틀</td>
+                                </tr>
+                                <tr>                                  
+                                    <td>탭</td>
+                                    <td>tab</td>
+                                    <td></td>
+                                </tr>
+                                <tr>                                  
+                                    <td>테이블</td>
+                                    <td>tbl</td>
+                                    <td></td>
+                                </tr>
+                                <tr>                                  
+                                    <td>리스트</td>
+                                    <td>list</td>
+                                    <td>일반 목록(ul, ol, 리스트 형식의 dl)</td>
+                                </tr>
+                                <tr>                                  
+                                    <td>버튼</td>
+                                    <td>btn</td>
+                                    <td></td>
+                                </tr>
+                                <tr>                                  
+                                    <td>아이콘</td>
+                                    <td>ico</td>
+                                    <td></td>
+                                </tr>
+                                <tr>                                  
+                                    <td>배경</td>
+                                    <td>bg</td>           
+                                </tr>
+                                <tr>                                  
+                                    <td rowspan="5">폼</td>
+                                    <td>input</td>           
+                                    <td>input box</td>           
+                                </tr>
+                                <tr>                                  
+                                    <td>select</td>           
+                                    <td>select box</td>           
+                                </tr>
+                                <tr>                                  
+                                    <td>radio</td>           
+                                    <td>radio button</td>           
+                                </tr>
+                                <tr>                                  
+                                    <td>check</td>           
+                                    <td>check button</td>           
+                                </tr>
+                                <tr>                                  
+                                    <td>date</td>           
+                                    <td><input type="date"></td>           
+                                </tr>
+                                <tr>                                  
+                                    <td>박스</td>           
+                                    <td>box</td>           
+                                    <td></td>           
+                                </tr>
+                                <tr>                                  
+                                    <td>선</td>           
+                                    <td>line</td>  
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>썸네일 이미지</td>           
+                                    <td>thum</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>배너</td>           
+                                    <td>banner</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>상세내용/부가설명</td>           
+                                    <td>decs</td>  
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>페이징</td>           
+                                    <td>paging</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>번호</td>           
+                                    <td>num</td>  
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>댓글</td>           
+                                    <td>comment</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>화살표</td>           
+                                    <td>arrow</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>카테고리</td>           
+                                    <td>cate</td>   
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>상태</td>           
+                                    <td>on / off</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>위치</td>           
+                                    <td>top / btm <br>
+                                        left / right
+                                    </td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>이전 / 다음</td>           
+                                    <td>prev / next</td> 
+                                    <td></td> 
+                                </tr>
+                                <tr>                                  
+                                    <td>임시사용</td>           
+                                    <td>@</td> 
+                                    <td>임시 사용시 앞에 @을 부친다.</td> 
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li>
+                        <p class="tit">: 초기 파일</p>
+                        <pre class="brush:js">
+@charset "utf-8";
+/* fuz UI.DEV. JJS 090707, JJJ 090815 */
+
+/* Common */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textare a,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'돋움',Dotum, Helvetica,sansserif;font-size:12px}
+img,fieldset{border:0}
+ul,ol{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+.blind{visibility:hidden;overflow:hidden;position:absolute;top:0;left:0;width:1px;height: 1px;font-size:0;line-height:0}                        
+                        </pre>
+                    </li>
+                    <li>
+                        <p class="tit">: 신규 HTML 문서</p>
+                        <pre class="brush:js">
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>메뉴 : 서비스명</title>
+<link rel="stylesheet" type="text/css" href="css/...">
+</head>
+<body>
+<div id="wrap">
+   <!-- skip 네비게이션-->
+   <div id="skipnavi">본문바로가기</div>
+   <!--// skip -->
+   <!-- header -->
+   <div id="header">
+   </div>
+   <!--// header -->
+   <!-- container -->
+   <div id="container">
+       <!-- content -->
+       <div id="content">
+       </div>
+       <!--// content -->
+   </div>
+   <!-- //container -->
+   <!-- footer -->
+   <div id="footer">
+   </div>
+   <!-- //footer -->
+</div>
+</body>
+</html> 
+                        </pre>
+                    </li>
+                    <li>
+                        <p class="tit">: 모바일 신규 HTML 문서</p>
+                        <pre class="brush:js">
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="..">
+<title>상단: 헤더명</title>
+<link rel="stylesheet" type="text/css" href="css/..">
+</head>
+<body>
+<!-- header -->
+<div id=”header”>
+</div>
+<!--// header -->
+<!-- content --> 
+<div id="content" role="main">
+</div>
+<!--// content -->
+<!-- footer -->
+<div id="footer">
+</div>
+<!--// footer -->
+</body>
+</html>
+                        </pre>
+                    </li>
+                </ul>
+            </div>
+        </div>                        
+    </div>
+	
+</div>
+<!-- //UI Object -->
+<script type="text/javascript">
+	SyntaxHighlighter.all();
+</script>
+</body>
+<html>

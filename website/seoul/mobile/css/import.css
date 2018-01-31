@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* ------------------------------------------
+* Filename: import.css
+* Description: css 불러오기
+* Author: Fu:z
+------------------------------------------ */
+
+@import url('common.css');		           /*  브라우저 초기화, 공통요소  */
+@import url('layout.css');	               /*  레이아웃              */
+@import url('main.css');	               /*  메인, 메뉴            */
+@import url('mcin.css');	               /*  대학정보              */
+@import url('msnu.css');	               /*  스누인지원             */
+@import url('msqu.css');	               /*  정보광장              */
+@import url('mcol.css');	               /*  학사행정              */
+@import url('mmyp.css');	               /*  마이페이지             */
+@import url('etc.css');	                   /*  로그인, 통합검색, 공유하기 */

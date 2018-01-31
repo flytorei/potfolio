@@ -1,0 +1,44 @@
+@charset"utf-8"; 
+.main #head .head_inner{min-width:980px; max-width:1280px; width:100%}
+.main .item.main02 h2{font-size:50px}
+.main .item.main02 p{font-size:22px}
+.main_cara_vessel{position:absolute; left:50%; margin-left:-430px;}
+.main_cara_vessel:after{content:''; display:block; clear:both;}
+.main_cara_vessel li{position:relative; float:left; width:180px; padding-top:200px; text-align:center; margin-left:132px ;color:#fff;  background-repeat:no-repeat; background-position:center top;}
+.main_cara_vessel.n1 li{width:200px;}
+.main_cara_vessel li:nth-child(1){background-image:url(../img/sub/ico_cara_vessel01_01.png);}
+.main_cara_vessel li:nth-child(2){background-image:url(../img/sub/ico_cara_vessel01_02.png);}
+.main_cara_vessel li:nth-child(3){background-image:url(../img/sub/ico_cara_vessel01_03.png);}
+.main_cara_vessel li:first-child{margin-left:0}
+.main_cara_vessel li:before{content:''; position:absolute;left:-137px; top:90px; display:inline-block; width:155px; height:14px; background:url(../img/sub/left-vessel.png) no-repeat;}
+.main_cara_vessel li:first-child:before{background:none}
+.main_cara_vessel li strong{display:block; margin-bottom:10px; font-size:22px; font-family:'SansRegular'; font-weight:normal; opacity:1}
+.main_cara_vessel li i{font-size:16px; font-family:'SansRegular'; font-style:normal;opacity:0.7;}
+.main .main02.b_font h2{color:#000;}
+.main .main02.b_font p{color:#000;}
+.main .main02 .sub_cara_slide{position:absolute; left:50%; width:1280px; margin-left:-640px}
+.main .main02 .sub_cara_view{ width:925px; height:495px; overflow:hidden; margin:0 auto}
+.main .main02 .sub_slide_item{width:3000px;}
+.main .main02 .sub_slide_item>div{float:left; width:925px; height:495px;}
+.main .main02 address{position:absolute; bottom:0; display:block; width:100%; text-align:center; padding-bottom:20px; color:#fff; font-style:normal; font-size:14px}
+.main div.sub_cara_bnt a{display:block; width:72px; height:140px; top:50%; margin-top:-70px;}
+.main div.sub_cara_bnt a.cara_prev{left:50px; background:url(../img/sub/cara_vessel_left.png) no-repeat;}
+.main div.sub_cara_bnt a.cara_next{left:auto; right:50px; background:url(../img/sub/cara_vessel_right.png) no-repeat;}
+
+.main02.n2{background:url(../img/sub/main2_02_n2.jpg) center no-repeat;}
+.main02.n4{background:url(../img/sub/main2_02_n4.jpg) center no-repeat;}
+.main02.n2 .main_cara_vessel li:nth-child(1){background-image:url(../img/sub/ico_cara_vessel02_01.png);}
+.main02.n2 .main_cara_vessel li:nth-child(2){background-image:url(../img/sub/ico_cara_vessel02_02.png);}
+.main02.n2 .main_cara_vessel li:nth-child(3){background-image:url(../img/sub/ico_cara_vessel02_03.png);}
+.main02.n3 .main_cara_vessel li:nth-child(1){background-image:url(../img/sub/ico_cara_vessel03_01.png);}
+.main02.n3 .main_cara_vessel li:nth-child(2){background-image:url(../img/sub/ico_cara_vessel03_02.png);}
+.main02.n3 .main_cara_vessel li:nth-child(3){background-image:url(../img/sub/ico_cara_vessel03_03.png);}
+.main02.n4 .main_cara_vessel li:nth-child(1){background-image:url(../img/sub/ico_cara_vessel04_01.png);}
+.main02.n4 .main_cara_vessel li:nth-child(2){background-image:url(../img/sub/ico_cara_vessel04_02.png);}
+.main02.n4 .main_cara_vessel li:nth-child(3){background-image:url(../img/sub/ico_cara_vessel04_03.png);}
+.main02.n5 .main_cara_vessel li:nth-child(1){background-image:url(../img/sub/ico_cara_vessel05_01.png);}
+.main02.n5 .main_cara_vessel li:nth-child(2){background-image:url(../img/sub/ico_cara_vessel05_02.png);}
+.main02.n5 .main_cara_vessel li:nth-child(3){background-image:url(../img/sub/ico_cara_vessel05_03.png);}
+
+.sub_slide_txt{position:relative;width:980px; margin:0 auto}
+.sub_slide_txt h2,.sub_slide_txt p{left:0 !important; width:100%; text-align:center;}

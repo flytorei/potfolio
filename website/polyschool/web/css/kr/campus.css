@@ -1,0 +1,17 @@
+@charset "utf-8";
+#headerWrap {background:#0c110d url(../../images/w/kr/mypoly/bg_header.png) no-repeat 50% 0;}
+
+.dirMsg {position:relative; padding-left:15px;}
+.dirMsg p, .dirMsg h3, .dirMsg div {font-family: Arial, 'Apple Gothic', Dotum, sans-serif;}
+.dirMsg .topMsg {margin-bottom:50px; width:635px; font-size:25px; line-height:35px; text-indent:-15px;}
+.dirMsg h3 {font-size:33px; font-weight:bold; color:#336ea2;}
+.dirMsg .photo {position:absolute; top:100px; right:0;}
+.dirMsg .cts {width:500px;}
+.dirMsg .cts p {margin-top:30px; font-size:14px; line-height:24px; color:#919191;}
+.dirMsg .ceo {margin-top:30px; font-size:20px; line-height:24px; font-weight:bold; color:#373c41;}
+
+.contactMap {height:397px; border:1px solid #c9ccce;}
+.contactLocation {margin-top:30px; padding-left:89px; background:url('../../images/w/kr/about/bg_location.gif') no-repeat left top;}
+.contactLocation .tit {padding:14px 0;}
+.contactLocation ul li {float:left; width:410px; padding-left:10px; background:url('../../images/w/kr/common/bl_dot_blue.gif') no-repeat 0 50%;}
+.contactLocation ul li span {display:inline-block; width:54px; color:#346da2; font-weight:bold;}

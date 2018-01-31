@@ -1,0 +1,156 @@
+@charset "utf-8";
+@import 'compass';
+
+/* 타이틀 */
+.museum-portlet .title-type1{margin-bottom:10px !important;padding-left:23px;background:url(../../images/Relic/bul_title-type1.png) no-repeat left top;line-height:18px !important;font-size:18px;color:#4485d5}
+
+/* 상단검색 확장 */
+.museum-portlet .top_search_section{position:relative;margin:0 0 30px;z-index: 0}
+.museum-portlet .top_search{padding:15px;background:#f6f6f6}
+.museum-portlet .top_search label{visibility:hidden;position:absolute;z-index:-1}
+.museum-portlet .top_search .board_search_section{position:relative}
+.museum-portlet .top_search .search_select_area{position:absolute;top:0;left:0;z-index:10;width:100px}
+.museum-portlet .top_search .search_select_area select{width:100px;height:31px;margin:0;border:1px solid #d3d3d3}
+.museum-portlet .top_search .search_text_area{margin:0 30px 0 106px;border:1px solid #d3d3d3}
+.museum-portlet .top_search .search_text_area input.search_text{width:100%;height:29px;margin:0;padding:0;border:0;text-indent:5px}
+.museum-portlet .top_search .search_submit_area{position:absolute;top:0;right:0;z-index:10}
+.museum-portlet .top_search .search_submit_area input.search_submit{overflow:hidden;width:30px;height:31px;margin:0;padding:0;border:0;border-top-right-radius:3px;border-bottom-right-radius:3px;background:#9a9a9a url(../../images/Relic/ico_btm_search.png) no-repeat 50% 50%;text-indent:-999px}
+.museum-portlet .top_search .detail_search{border:1px solid #d5d5d5;height:31px;line-height: 31px;padding:0;margin:0;display:block;width:100%;text-align:left;padding:0 10px 0;background:#fff url(../../images/Relic/arw_detail_search_open.png) no-repeat 100% 50%;border-radius:2px;font-weight:600}
+.museum-portlet .top_search .detail_search span{font-size:14px;color:#666}
+.museum-portlet .top_search .detail_search b{float:left;font-weight:600}
+.museum-portlet .top_search .detail_search .n_01{display:none}
+.museum-portlet .top_search .detail_search .n_01.on{display:block}
+.museum-portlet .top_search .detail_search .n_02{display:none}
+.museum-portlet .top_search .detail_search .n_02.on{display:block}
+
+.museum-portlet .top_search .detail_search.search_close{background:#fff url(../../images/Relic/arw_detail_search_close.png) no-repeat 100% 50%}
+
+.museum-portlet .top_search_open{padding:15px;background:#f6f6f6;border-top:1px dotted #acacac}
+.museum-portlet .top_search_open .row-fluid > div{position:relative}
+.museum-portlet .top_search_open .label_tit{position:absolute;z-index: 10;top:0;left:0;width:60px;height:31px;line-height:31px;margin:0}
+.museum-portlet .top_search_open .search_select{margin:0 0 0 60px;width:70px}
+.museum-portlet .top_search_open .detail_search_go{border:1px solid #90949a;height:31px;padding:0 10px 0 25px;background:url(../../images/Relic/ico_detail_search.png) no-repeat 9px 50% #999fa6;color:#fff;border-radius:2px}
+@media (min-width: 768px) and (max-width: 1200px) { 
+    .museum-portlet .top_search_open .label_tit{position:relative;display:block;width:auto;text-align: center}
+    .museum-portlet .top_search_open .search_select{margin:0;width:100%}
+    .museum-portlet .top_search_open .detail_search_go{margin:20px 0 0 0}
+}
+@media (min-width: 0) and (max-width: 767px) { 
+    .museum-portlet .top_search .board_search_section{margin:0 0 15px}
+    .museum-portlet .top_search_open .search_select{width:130px}
+    .museum-portlet .top_search_open .row-fluid > div{margin:0 0 10px}
+    .museum-portlet .top_search_open .detail_search_go{width:100%}
+}
+
+/* 소장품 검색결과 및 정렬 */
+.museum-portlet .search_item_top{padding:3px 0 10px;*zoom:1}
+.museum-portlet .search_item_top:after{content:'';clear:both;display:block}
+.museum-portlet .search_item_top .search_item_result{float:left}
+.museum-portlet .search_item_top .search_item_result ul{float:left;margin:0}
+.museum-portlet .search_item_top .search_item_result ul li{float:left}
+.museum-portlet .search_item_top .sort_area{float:right}
+.museum-portlet .search_item_top .sort_area ul{float:left;margin:0}
+.museum-portlet .search_item_top .sort_area ul li{float:left;color:#d9d9d9}
+.museum-portlet .search_item_top .sort_area ul li a{color:#666}
+.museum-portlet .search_item_top .sort_area ul li a.on{color:#666;font-weight:600}
+.museum-portlet .search_item_top .sort_area ul li a.rss{display:block;width:18px;height:17px;margin:3px 0 0 2px;background:url(../../images/Relic/icon_rss.gif) no-repeat 50% 50%;overflow:hidden}
+.museum-portlet .search_item_top .sort_area ul li a.rss span{visibility:hidden;position:absolute;z-index:-1}
+
+.museum-portlet .museum_item_list{border-top:2px solid #b2b6bf;padding:20px 0 0 0;border-bottom:1px solid #d0d0d0;margin:0 0 30px}
+.museum-portlet .museum_item_list ul{margin:0;padding:0 10px;*zoom:1}
+.museum-portlet .museum_item_list ul:after{content: '';clear:both;display:block}
+.museum-portlet .museum_item_list ul li{float:left;width:calc(100% / 4);width:217.5px\9;padding:0 10px;box-sizing:border-box;margin:0 0 30px}
+.museum-portlet .museum_item_list ul li .img_area{border:1px solid #e7e7e7;/*width:205px;height:143px*/}
+.museum-portlet .museum_item_list ul li .img_area img{width:100% !important;height:143px !important}
+.museum-portlet .museum_item_list ul li a{display:block;padding:5px 0 5px}
+.museum-portlet .museum_item_list ul li a span{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.museum-portlet .museum_item_list ul li a:hover span{font-weight:600;color:#4485d5}
+.museum-portlet .museum_item_list ul li .txt_kor{display:block;text-align:center;height:20px;line-height:20px;color:#666;font-weight:600}
+.museum-portlet .museum_item_list ul li .txt_eng{display:block;text-align:center;height:20px;line-height:20px;color:#666}
+@media (min-width: 768px) and (max-width: 1200px) {
+    .museum-portlet .museum_item_list ul{padding:0}
+    .museum-portlet .museum_item_list ul li{float:left;width:calc(100% / 3);padding:0 5px;box-sizing:border-box;margin:0 0 30px}
+}
+
+@media (max-width: 767px) { 
+    .museum-portlet .museum_item_list ul{padding:0}
+    .museum-portlet .museum_item_list ul li{float:left;width:calc(100% / 2);padding:0 5px;box-sizing:border-box;margin:0 0 30px}
+}
+@media (max-width: 480px) { 
+    .museum-portlet .museum_item_list ul{padding:0}
+    .museum-portlet .museum_item_list ul li{float:left;width:calc(100% / 1);padding:0 5px;box-sizing:border-box;margin:0 0 30px}
+}
+
+
+/* 소장품검색 페이징 */
+.museum-portlet .paging{position:relative;min-height:30px;margin-bottom:30px;text-align:center}
+.museum-portlet .paging *{vertical-align:top}
+
+.museum-portlet .paging a,.museum-portlet .paging strong{display:inline-block;*display:inline;width:28px;height:28px;padding:0;line-height:28px;vertical-align:top;*zoom:1}
+.museum-portlet .paging a{overflow:hidden;background:url(../../images/Relic/bg_numbering.gif) no-repeat 0 9px;font-size:14px;font-weight:600;color:#666}
+.museum-portlet .paging a:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;background:#fff;line-height:26px;color:#4485d5;vertical-align:top}
+.museum-portlet .paging strong{padding:0;border:0;background:#6f9bc4;line-height:28px;color:#fff}
+.museum-portlet .paging a.btn{width:28px;height:28px;padding:0;border:0}
+.museum-portlet .paging a.btn:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;color:#4485d5}
+.museum-portlet .paging a.prev{background:#fff url(../../images/Relic/btn_paging_prev.gif) no-repeat 50% 50%;text-indent:999px}
+.museum-portlet .paging a.prev_first{margin-right:6px;background:#fff url(../../images/Relic/btn_paging_prev_first.gif) no-repeat 50% 50%;text-indent:-999px}
+.museum-portlet .paging a.next{background:#fff url(../../images/Relic/btn_paging_next.gif) no-repeat 50% 50%;text-indent:-999px}
+.museum-portlet .paging a.next_last{margin-left:6px;background:#fff url(../../images/Relic/btn_paging_next_last.gif) no-repeat 50% 50%;text-indent:-999px}
+
+/* 소장품검색 뷰페이지 */
+
+.museum-portlet .museum_collections_search_info .view_top{border:1px solid #dfdfdf;padding:30px;margin:0 0 40px;*zoom:1;}
+.museum-portlet .museum_collections_search_info .view_top:after{content:'';clear:both;display:block;} 
+.museum-portlet .museum_collections_search_info .view_top .img_area .img_view{margin-bottom:10px;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .img_view img{margin:0 auto;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area{position:relative;}
+
+.museum-portlet .spon_view_top .img_area .list_area .btn_prev{position: absolute;z-index: 10;top:0;left:0;height:100%}
+.museum-portlet .spon_view_top .img_area .list_area .btn_prev a{display:block;width:30px;height:100%;background:url(../../images/Relic/btn_detail_arw_l.png) no-repeat 0 50%;overflow:hidden}
+.museum-portlet .spon_view_top .img_area .list_area .btn_prev a span{visibility:hidden;position:absolute;z-index:-1}
+.museum-portlet .spon_view_top .img_area .list_area .btn_next{position: absolute;z-index: 10;top:0;right:0;height:100%}
+.museum-portlet .spon_view_top .img_area .list_area .btn_next a{display:block;width:30px;height:100%;background:url(../../images/Relic/btn_detail_arw_r.png) no-repeat 100% 50%;overflow:hidden}
+.museum-portlet .spon_view_top .img_area .list_area .btn_next a span{visibility:hidden;position:absolute;z-index:-1}
+
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul{margin:0;padding:0;*zoom:1;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul:after{content:'';clear:both;display:block}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul li{float:left;width:calc(100% / 3 - 4px);width:110.859px\9;text-align:center;padding:0}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul li:nth-child(1){text-align:left;padding:0 4px 0 0}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul li:nth-child(2){padding:0 2px 0}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul li:nth-child(3){text-align:right;padding:0 0 0 4px;right:0;}
+
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area ul li img{width:100%;cursor:pointer;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area .btn_prev{position:absolute;z-index:10;top:0;left:0;height:100%;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area .btn_prev a{display:block;width:30px;height:100%;background:url(../../images/Relic/btn_detail_arw_l.png) no-repeat 0 50%;overflow:hidden;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area .btn_prev a span{visibility:hidden;position:absolute;z-index:-1;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area .btn_next{position:absolute;z-index:10;top:0;right:0;height:100%;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area .btn_next a{display:block;width:30px;height:100%;background:url(../../images/Relic/btn_detail_arw_r.png) no-repeat 100% 50%;overflow:hidden;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area .btn_next a span{visibility:hidden;position:absolute;z-index:-1;}
+.museum-portlet .museum_collections_search_info .content_view .tit_area{background:url(../../images/Relic/slash_bg_image.png) repeat 50% 50%;padding:0 40px;margin:0 0 5px;}
+.museum-portlet .museum_collections_search_info .content_view .tit_area h4{text-align: left;}
+.museum-portlet .museum_collections_search_info .content_view .tit_area h4 span{display:block;height:60px;line-height:60px;font-size:22px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail ul{margin:0}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail ul *{vertical-align: top}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail ul li{border-bottom:1px dotted #c2c2c2;padding:16px 0 14px;}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail ul li:last-child{border-bottom:0; }
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl{position:relative;margin:0}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl dt{position:absolute;z-index:10;top:0;left:0;margin:0;padding: 0 0 0 44px;white-space: pre-wrap;}
+
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl dd{padding:0 0 0 14px;margin:0 0 0 125px; background: url(../../images/Relic/bar_collections_detail_view.gif) no-repeat 0 6px;  word-break:break-all}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl.n_01 dt{background:url(../../images/Relic/icon_s_have.png) no-repeat 15px 50%}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl.n_02 dt{background:url(../../images/Relic/icon_s_division.png) no-repeat 15px 50%}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl.n_03 dt{background:url(../../images/Relic/icon_s_age.png) no-repeat 15px 50%}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl.n_04 dt{background:url(../../images/Relic/icon_s_size.png) no-repeat 15px 50%}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl.n_05 dt{background:url(../../images/Relic/icon_s_origin.png) no-repeat 15px 50%}
+.museum-portlet .museum_collections_search_info .content_view .collections_detail dl.n_06 dt{background:url(../../images/Relic/icon_s_donor.png) no-repeat 15px 50%}
+ 
+@media (min-width: 768px) and (max-width: 1200px) {     
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area {max-width:100%;height:auto;width:auto} 
+}
+
+
+@media (min-width: 0) and (max-width: 767px){
+.museum-portlet .museum_collections_search_info .view_top .img_area .img_view {text-align:center;}
+.museum-portlet .museum_collections_search_info .view_top .img_area .list_area{display:inline-block;}
+.museum-portlet .museum_collections_search_info .view_top .img_area{text-align:center;}  
+}

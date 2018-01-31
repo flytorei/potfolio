@@ -1,0 +1,319 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 메뉴가져오기 | 마이페이지 |서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../../css/import.css">
+		
+		<!-- call js -->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="l_page"><!-- 레이어스타일 페이지는 클래스명 'l_page' 추가필요 -->
+
+		<div id="wrap">
+			<!-- 헤더 -->
+			<header id="l_header">
+				<h1 class="l_tit">메뉴가져오기</h1>
+				<a class="btn_page_close" href="#none" title="부모 페이지로 이동">닫기</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="l_container">
+				<div id="l_conts">
+					<div class="g_guide_top">
+						<p class="g_text_03">노출하려는 메뉴를 선택하신 후 확인 버튼을 누르세요. <br>[최대 12개까지 설정]</p>
+					</div>
+
+					<div class="js_tab_conts get_menu">
+						<ul class="g_tab_01 js_tabs">
+							<li class="on"><a href="#menu01">대학정보</a></li>
+							<li><a href="#menu02">스누인지원</a></li>
+							<li><a href="#menu03">정보광장</a></li>
+							<li><a href="#menu04">학사행정</a></li>
+						</ul>
+
+						<div id="menu01" class="js_tcont g_setting_box">
+							<p class="info"><span><strong>4</strong>개</span>의 메뉴가 선택되었습니다</p>
+							<ul class="depth01">
+								<li class="rdo">
+									<label for="menu0101">대학(원)</label><!-- for값과 id값은 똑같아야 함으로, id값 수정시 for값도 똑같이 수정바랍니다. -->
+									<input type="checkbox" id="menu0101">
+								</li>
+								<li class="rdo">
+									<label for="menu0102">학사일정</label>
+									<input type="checkbox" id="menu0102" checked>
+								</li>
+								<li class="rdo">
+									<label for="menu0103">긴급상황</label>
+									<input type="checkbox" id="menu0103" checked>
+								</li>
+								<li class="rdo">
+									<label for="menu0104">전화번호</label>
+									<input type="checkbox" id="menu0104">
+								</li>
+								<li class="rdo">
+									<label for="menu0105">캠퍼스맵</label>
+									<input type="checkbox" id="menu0105">
+								</li>
+								<li class="rdo">
+									<label for="menu0106">셔틀버스</label>
+									<input type="checkbox" id="menu0106" checked>
+								</li>
+								<li class="rdo">
+									<label for="menu0107">스누식단</label>
+									<input type="checkbox" id="menu0107" checked>
+								</li>
+								<li class="rdo">
+									<label for="menu0108">학내주요기관</label>
+									<input type="checkbox" id="menu0108">
+								</li>
+							</ul>
+						</div>
+
+						<div id="menu02" class="js_tcont g_setting_box">
+							<p class="info"><span><strong>6</strong>개</span>의 메뉴가 선택되었습니다</p>
+							<ul class="depth01">
+								<li class="rdo">
+									<label for="menu0201">eTL</label>
+									<input type="checkbox" id="menu0201">
+								</li>
+								<li class="rdo">
+									<strong class="tit">온라인강좌</strong>
+									<ul class="depth02">
+										<li>
+											<label class="tit" for="menu020201">SNUON</label>
+											<input type="checkbox" id="menu020201">
+										</li>
+										<li>
+											<label class="tit" for="menu020202">평생교육원</label>
+											<input type="checkbox" id="menu020202" checked>
+										</li>
+									</ul>
+								</li>
+								<li class="rdo">
+									<strong class="tit">시설예약/신고</strong>
+									<ul class="depth02">
+										<li>
+											<label class="tit" for="menu020301">강의실 예약</label>
+											<input type="checkbox" id="menu020301">
+										</li>
+										<li>
+											<label class="tit" for="menu020302">관정관 예약</label>
+											<input type="checkbox" id="menu020302" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu020303">도서관 예약</label>
+											<input type="checkbox" id="menu020303" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu020304">PC실습실예약</label>
+											<input type="checkbox" id="menu020304" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu020305">시설고장신고</label>
+											<input type="checkbox" id="menu020305">
+										</li>
+									</ul>
+								</li>
+								<li class="rdo">
+									<strong class="tit">IT서비스</strong>
+									<ul class="depth02">
+										<li>
+											<span class="tit">아이피신청</span>
+											<ul class="depth03">
+												<li>
+													<label class="tit" for="menu02040101">신청하기</label>
+													<input type="checkbox" id="menu02040101">
+												</li>
+												<li>
+													<label class="tit" for="menu02040102">조회하기</label>
+													<input type="checkbox" id="menu02040102" checked>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<span class="tit">노트북/CD대여</span>
+											<ul class="depth03">
+												<li>
+													<label class="tit" for="menu02040201">신청하기</label>
+													<input type="checkbox" id="menu02040201">
+												</li>
+												<li>
+													<label class="tit" for="menu02040202">조회하기</label>
+													<input type="checkbox" id="menu02040202" checked>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="rdo">
+									<label for="menu0205">교직원검색</label>
+									<input type="checkbox" id="menu0205">
+								</li>
+								<li class="rdo">
+									<label for="menu0205">도서검색</label>
+									<input type="checkbox" id="menu0205">
+								</li>
+								<li class="rdo">
+									<label for="menu0205">S-Card</label>
+									<input type="checkbox" id="menu0205">
+								</li>
+								<li class="rdo">
+									<label for="menu0205">실험실안전관리</label>
+									<input type="checkbox" id="menu0205">
+								</li>
+							</ul>
+						</div>
+
+						<div id="menu03" class="js_tcont g_setting_box">
+							<p class="info"><span><strong>5</strong>개</span>의 메뉴가 선택되었습니다</p>
+							<ul class="depth01">
+								<li class="rdo">
+									<label for="menu0301">스누메일</label>
+									<input type="checkbox" id="menu0301">
+								</li>
+								<li class="rdo">
+									<label for="menu0302">스누이벤트</label>
+									<input type="checkbox" id="menu0302">
+								</li>
+								<li class="rdo">
+									<strong class="tit">학교공지</strong>
+									<ul class="depth02">
+										<li>
+											<label class="tit" for="menu030301">공지사항</label>
+											<input type="checkbox" id="menu030301">
+										</li>
+										<li>
+											<label class="tit" for="menu030302">애경사</label>
+											<input type="checkbox" id="menu030302" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu030303">작업공지</label>
+											<input type="checkbox" id="menu030303">
+										</li>
+										<li>
+											<label class="tit" for="menu030304">노조게시판</label>
+											<input type="checkbox" id="menu030304" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu030305">자유게시판</label>
+											<input type="checkbox" id="menu030305">
+										</li>
+										<li>
+											<label class="tit" for="menu030306">평의원회에 바란다</label>
+											<input type="checkbox" id="menu030306" checked>
+										</li>
+									</ul>
+								</li>
+								<li class="rdo">
+									<strong class="tit">취업정보</strong>
+									<ul class="depth02">
+										<li>
+											<label class="tit" for="menu030401">학내채용공고</label>
+											<input type="checkbox" id="menu030401">
+										</li>
+										<li>
+											<label class="tit" for="menu030402">기업채용</label>
+											<input type="checkbox" id="menu030402" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu030403">인턴십&amp;알바</label>
+											<input type="checkbox" id="menu030403">
+										</li>
+									</ul>
+								</li>
+								<li class="rdo">
+									<strong class="tit">With SNU</strong>
+									<ul class="depth02">
+										<li>
+											<label class="tit" for="menu030501">서울대뉴스</label>
+											<input type="checkbox" id="menu030501">
+										</li>
+										<li>
+											<label class="tit" for="menu030502">보도자료</label>
+											<input type="checkbox" id="menu030502" checked>
+										</li>
+										<li>
+											<label class="tit" for="menu030603">행사안내</label>
+											<input type="checkbox" id="menu030603">
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<div id="menu04" class="js_tcont g_setting_box">
+							<p class="info"><span><strong>1</strong>개</span>의 메뉴가 선택되었습니다</p>
+							<ul class="depth01">
+								<li class="rdo">
+									<label for="menu0401">전자결재</label>
+									<input type="checkbox" id="menu0401">
+								</li>
+								<li class="rdo">
+									<strong class="tit">나의 수업</strong>
+									<ul class="depth02">
+										<li>
+											<span class="tit">수강신청내역/시간표</span>
+											<ul class="depth03">
+												<li>
+													<label class="tit" for="menu04020101">수강신청내역</label>
+													<input type="checkbox" id="menu04020101">
+												</li>
+												<li>
+													<label class="tit" for="menu04020102">강의시간표</label>
+													<input type="checkbox" id="menu04020102" checked>
+												</li>
+											</ul>
+										</li>
+										<li>
+											<label class="tit" for="menu040202">계절학기 수강취소/환불신청내역</label>
+											<input type="checkbox" id="menu040202">
+										</li>
+									</ul>
+								</li>
+								<li class="rdo">
+									<label for="menu0403">연구관리(SRnD)</label>
+									<input type="checkbox" id="menu0403">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="l_foot">
+					<div class="btn_wrap_half">
+						<a class="g_btn_04" href="#none">취소</a>
+						<a class="g_btn_01" href="#none">확인</a>
+					</div>
+				</div>
+
+				<div id="gotop"><a href="#none">최상단으로 이동</a></div>
+			</section><!--// 컨테너 -->
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+		</script>
+	</body>
+</html>

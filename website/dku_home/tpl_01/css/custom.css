@@ -1,0 +1,98 @@
+﻿@charset "utf-8";
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+
+
+
+@import url(dku_common.css);
+
+@import url(dku_main.css);
+
+@import url(dku_sub.css);
+
+@import url(dku_bbs.css);
+
+@font-face{ font-family:NanumGothic; src:url('../font/NanumGothic.eot'); src: local('?'), url('../font/NanumGothic.woff') format('woff'), url('/font/NanumGothic.ttf') format('truetype');}
+
+@font-face{ font-family:NanumGothicBold; src:url('../font/NanumGothicBold.eot'); src: local('?'), url('../font/NanumGothicBold.woff') format('woff'), url('/font/NanumGothicBold.ttf') format('truetype');}
+
+ /* 포틀릿 */
+ .portlet-content, .portlet-minimized .portlet-content-container {padding:0 !important}
+ 
+ /* 레이아웃 */
+.columns-basic{}
+.columns-basic #column-1{display:inline;float:left;position:relative;width:220px;margin-right:-220px}
+.columns-basic #column-2{overflow:hidden;margin:0 0 0 280px}
+@media (min-width: 0px) and (max-width: 979px) {
+.columns-basic #column-1{display: none !important}
+.columns-basic #column-2{margin:0 10px;padding:17px 0 0}	
+}
+
+.content_section h1,
+.content_section h2,
+.content_section h3,
+.content_section h4,
+.content_section h5,
+.content_section h6{ font-weight:normal !important}
+
+
+ /* 포틀릿 */
+ .portlet-content, .portlet-minimized .portlet-content-container {padding:0 !important}
+
+ /* 레이아웃 */
+.columns-basic{}
+.columns-basic #column-1{display:inline;float:left;position:relative;width:220px;margin-right:-220px}
+.columns-basic #column-2{overflow:hidden;margin:0 0 0 280px}
+@media (min-width: 0px) and (max-width: 979px) {
+.columns-basic #column-1{display: none !important}
+.columns-basic #column-2{margin:0 10px;padding:17px 0 0}
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  *border-right-width: 2px;
+  *border-bottom-width: 2px;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+}
+
+
+
+/*LNB*/
+.portlet-navigation{font-family:'나눔고딕',NanumGothic;}
+.portlet-navigation .nav-menu{overflow:hidden;border-radius:10px;background:#fff;background-size:100%;}
+.portlet-navigation .nav-menu ul{padding-left:0}
+.portlet-navigation .nav-menu > ul.layouts{border:1px solid #dbd7df;border-top:none; margin:0;border-bottom:1px solid #dbd7df;border-radius:10px}
+.portlet-navigation .nav-menu > ul.layouts li{margin:0}
+.portlet-navigation .nav-menu > ul.layouts > li{border-top:0;border-bottom:0}
+.portlet-navigation .nav-menu > ul.layouts > li > a{display:block;padding:15px 30px 15px 20px;border-top:1px solid #e7e7e7;background:#fff;background:url(../img/sub/bg_lnb_rarr.gif) no-repeat 90% 50%;font-size:16px;color:#333}
+.portlet-navigation .nav-menu > ul.layouts > li > a.selected{background:url(../img/sub/bg_lnb_darr.gif) no-repeat 90% 50%;font-weight:600;color:#055196}
+.portlet-navigation .nav-menu > ul.layouts > li > ul{margin:0;padding:13px 0;background:#f2f2f2}
+.portlet-navigation .nav-menu > ul.layouts li{margin:0;padding:0;list-style:none}
+.portlet-navigation .nav-menu > ul.layouts li > ul > li > a{display:block;padding:5px 0 5px 20px;font-size:14px;color:#4c4c4c}
+.portlet-navigation .nav-menu > ul.layouts li > ul > li > a.on{font-weight:600;color:#2191d0}
+.portlet-navigation .nav-menu > ul.layouts li > ul > li > a:before{content:'•'}
+.portlet-navigation .nav-menu > ul.layouts li ul ul{margin:0;padding:10px 0;background:#f2f2f2}
+.portlet-navigation .nav-menu > ul.layouts li ul ul li{padding:0 10px}
+.portlet-navigation .nav-menu > ul.layouts li ul ul a{display:block;padding:5px 0 5px 20px;background:#fff;color:#4c4c4c}
+.portlet-navigation .nav-menu > ul.layouts li ul ul a.on{font-weight:600;color:#2191d0}
+.portlet-navigation .nav-menu > ul.layouts li ul ul a:before{content:'- '}
+

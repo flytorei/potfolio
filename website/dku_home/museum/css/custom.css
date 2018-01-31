@@ -1,0 +1,42 @@
+@charset "utf-8";
+@import "compass";
+
+/* 테마 기본 */
+@import url(custom/theme.css);
+@import url(custom/navigation.css);
+@import url(custom/lnb.css);
+@import url(custom/location.css);
+@import url(custom/sitemap.css);
+@import url(custom/satisfy.css);
+@import url(custom/dept.css);
+
+/* portlet bar */
+.portlet-borderless-bar {margin-top:-25px;}
+.portlet-options a {background-image: url(../images/portlet/options_borderless.png)}
+
+/* portal message */
+.taglib-portal-message {display:none}
+
+/* 레이아웃 */
+.columns-basic {}
+.columns-basic #column-1 {display:inline;float:left;position:relative;width:220px;margin-right: -220px;margin:40px 0 0 0}
+.columns-basic #column-2 {overflow: hidden;margin: 20px 0 0 280px;padding-bottom:30px}
+
+.portlet-boundary.portlet-boundary_145_{margin:0 !important}
+
+@media (min-width: 0px) and (max-width: 979px) {
+	.columns-basic #column-1 {display:none !important}
+	.columns-basic #column-2 {margin: 0 10px;padding-top:17px}
+	.btn-navbar{display:none !important}
+    .portlet-dockbar {display: none}
+}
+#hrefFm{margin:0 !important}
+
+
+
+
+
+
+
+
+

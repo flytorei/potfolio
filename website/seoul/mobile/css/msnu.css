@@ -1,0 +1,212 @@
+@charset "utf-8";
+/* ------------------------------------------
+* Filename:msnu.css
+* Description:스누인지원
+* Author:Fu:z
+------------------------------------------ */
+
+/* 교직원 검색
+------------------------------------------ */
+.g_search_01 + .g_tab_01{position:relative; margin-top:-1px}
+/* 통합검색부분과 같이 사용 */
+.menu_loca{margin-top:5px; padding:12px 15px; border:1px solid #b9bfc8; border-width:1px 0; background-color:#fff}
+.menu_loca li{display:inline-block}
+.menu_loca li:before{display:inline-block; margin:0 5px; vertical-align:middle; width:6px; height:11px; content:''; background:url('../images/common/icon_arrow.png') 0 0 no-repeat; background-size:6px auto}
+.menu_loca li:first-child:before{display:none}
+.menu_loca li a, .menu_loca li > span{font-size:12px; line-height:18px; color:#999; text-decoration:underline}
+.menu_loca li > span{text-decoration:none}
+.menu_loca li.home a, .menu_loca li.home > span{display:inline-block; vertical-align:middle; width:13px; height:12px; color:rgba(255,255,255,0); background:url('../images/msnu/icon_home.png') 50% 50% no-repeat; background-size:13px auto}
+.menu_loca li.curr a, .menu_loca li.curr > span{color:#376dc8; font-weight:bold}
+
+.g_normal_box.organ .g_list_02 li:last-child{margin-bottom:-15px}
+.organ .g_list_02{margin-top:10px}
+.organ .g_tit_01 a{position:relative; display:block; color:#333}
+.organ .g_tit_01 a .arrow{position:absolute; top:50%; right:0; margin-top:-4px; display:block; width:13px; height:8px; font-size:8px; color:rgba(255,255,255,0); background:url('../images/msnu/bg_toggle_arrow.png') 0 0 no-repeat; background-size:13px auto}
+.organ .on .g_tit_01 a .arrow{background-position:0 100%}
+.lorgan .g_list_02{margin-bottom:-15px; border-top:0}
+
+.g_normal_list.edu_person{padding-top:15px}
+.g_normal_list.edu_person .g_text_01{padding:23px 0; text-align:center}
+.g_normal_list.edu_person .g_tit_01{padding-bottom:10px; border-bottom:1px solid #5d6268}
+.g_normal_list.edu_person .tit{color:#333; font-size:13px; /* font-weight:bold */}
+.g_normal_list.edu_person .desc{color:#555; font-size:13px}
+.g_normal_list.edu_person .desc .sta:before{display:inline-block; margin:-2px 5px 0; content:''; vertical-align:middle; width:1px; height:11px; background-color:#bdc0c5}
+/* 교직원검색 page popup */
+.l_page .g_normal_list.edu_person, .g_normal_box.lorgan{position:relative; padding-top:0}
+.l_page .g_normal_list.edu_person:before, .g_normal_box.lorgan:before{position:absolute; top:-7px; left:0; width:100%; display:block; content:''; height:6px; background-color:#e2e8ec}
+
+/* 교직원 상세정보 */
+.l_info_guide{position:fixed; z-index:99; width:100%; height:100%; box-sizing:border-box; padding-bottom:45px; background-color:rgba(0,0,0,.85)}
+.l_info_guide .l_cont{position:absolute; top:50%; left:0; width:100%; margin-top:-146px; color:#fff; padding-top:150px; background:url('../images/msnu/bg_desc_intro.png') 53% 0 no-repeat; background-size:130px auto}
+.l_info_guide .l_cont p{font-size:19px; line-height:27px; text-align:center}
+.l_info_guide .l_bott{position:absolute; bottom:0; left:0; width:100%; height:45px; box-sizing:border-box; padding:13px 15px; background-color:#fff}
+.l_info_guide .l_bott a{position:absolute; top:8px; right:15px; z-index:100}
+
+.edu_per_basic{position:relative; border-bottom:1px solid #b9bfc8; padding:15px; background-color:#fff}
+.edu_per_basic.photo_type{padding:15px 15px 15px 100px;}
+.edu_per_basic .ep_photo{position:absolute; top:15px; left:15px; display:block; width:64px; height:85px}
+.edu_per_basic .ep_photo img{width:100%; height:auto}
+.edu_per_basic .ep_name{font-size:15px; color:#333}
+.edu_per_basic .ep_desc{margin-top:7px}
+.edu_per_basic .ep_desc li{margin-top:5px; font-size:13px}
+.edu_per_basic .ep_desc li span{color:#999}
+.edu_per_basic .ep_desc li span:after{display:inline-block; margin:-1px 2px 0 5px; content:''; vertical-align:middle; width:1px; height:11px; background-color:#bdc0c5}
+.edu_per_basic .links{position:absolute; top:13px; right:15px}
+
+.edu_per_detail{position:relative; margin-top:6px; border:1px solid #b9bfc8; border-width:1px 0; padding:15px; background-color:#fff}
+.edu_per_detail:before{position:absolute; top:-7px; left:0; width:100%; display:block; content:''; height:6px; background-color:#e2e8ec}
+.edu_per_detail .g_list_02 li{padding:10px 0; font-size:12px; color:#555}
+.edu_per_detail .g_list_02 li:after{display:block; content:''; clear:both}
+/* 연락처 */
+.edu_per_detail .ep_tel, .edu_per_detail .ep_mail{display:block; position:relative}
+.edu_per_detail .ep_tel.w_50{width: 40%;float: left}
+.edu_per_detail .ep_tel.w_50:first-child{margin-right: 20%}
+.edu_per_detail .contact a{color:#555}
+.edu_per_detail a.btn_tel{float:none; position:absolute; top:-7px; right:-7px; color:rgba(0,0,0,0)}
+
+.edu_per_detail a.btn_msg, .edu_per_detail a.btn_mail{position:absolute; top:-7px; right:30px; float:none; color:rgba(0,0,0,0); background:url('../images/msnu/icon_msnu.png') 11px 9px no-repeat; background-size:auto 15px}
+.edu_per_detail a.btn_mail{right:-8px; background-position:-50px 9px}
+
+/* 내역 */
+.edu_per_detail .history{padding-top:15px}
+.edu_per_detail .history:first-child{padding-top:0}
+.edu_per_detail .history .list_wrap{/* max-height:186px; */ overflow:hidden}
+.edu_per_detail .history li{position:relative; padding-left:97px}
+.edu_per_detail .date{position:absolute; top:11px; left:0; display:block; width:70px; color:#999}
+.edu_per_detail .btn_show_all{position:relative}
+.edu_per_detail .history.on .btn_show_all a:after{background-position:0 100%}
+
+/* IT서비스 
+------------------------------------------ */
+.mitserv .g_normal_box{padding:18px 15px}
+.mitserv .g_normal_box .g_list_03{margin-left:16px}
+.mitserv .g_normal_box .g_list_04{margin-left:6px}
+.mitserv .btn_wrap_half{padding:15px 15px 15px 20px}
+
+.serv_list:after{display:block; content:''; clear:both}
+.serv_list{margin:14px 0 0; padding:0 0 0 7px}
+.serv_list li{display:block; float:left; box-sizing:border-box; width:50%; border:1px solid #b9bfc8; border-radius:3px; text-align:center}
+.serv_list li:first-child{position:relative; left:-7px}
+.serv_list li a{display:block; position:relative; padding-top:70px}
+.serv_list li a:after{display:block; content:''; position:absolute; /* border:1px solid red; */ top:14px; left:50%; margin-left:-40px; width:80px; height:40px; background:url('../images/msnu/bg_serv_list.png') 7px 0 no-repeat; background-size:auto 40px}
+.serv_list span{display:block; border-top:1px dotted #999; border-radius:0 0 3px 3px; padding:8px 0; line-height:17px; font-size:12px; color:#555; font-weight:bold; background-color:#fcfcfc}
+.serv_list li.icon02 a:after{background-position:-139px 0}
+
+.serv_list.n3{padding:0 7px}
+.serv_list.n3 li{width:33.333333333%}
+.serv_list.n3 li:last-child{position:relative; right:-7px}
+.serv_list.n3 li a:after{height:43px; background:url('../images/msnu/bg_serv_list2.png') 21px 0 no-repeat; background-size:auto 43px}
+.serv_list li.icon04 a:after{background-position:-79px 0}
+.serv_list li.icon05 a:after{background-position:-177px 0}
+
+/* 아이피신청: 신청하기 */
+.find_persc{margin-top:6px; padding:20px 71px 15px 15px; border-top:1px solid #b8bfc9}
+.find_persc .g_text_03{margin:5px 0 11px}
+.find_persc .g_btn_07{top:auto; bottom:15px}
+
+.g_normal_box.persc_list{padding:0 15px}
+.g_normal_box.persc_list ul{border-top:0}
+.persc_list .tit{color:#333; font-size:13px; /* font-weight:bold */}
+.persc_list .sta{color:#555; font-weight:normal}
+.persc_list .sta:before{display:inline-block; margin:0 5px; content:''; vertical-align:middle; width:1px; height:11px; background-color:#bdc0c5}
+.persc_list .desc{display:block; margin-top:4px; color:#999; font-size:13px}
+
+.g_normal_box.persc_view{padding:0 15px}
+.persc_view .g_tbl_01{border:0}
+
+.g_normal_box.regi_input{padding-bottom:0}
+.g_normal_box.regi_input table{margin-top:13px; border-bottom:0}
+.regi_input .g_text_02{padding:0 0 6px 16px; background-position:0 2px; background-color:transparent}
+.regi_input .g_text_03{margin:5px 0 15px}
+
+.ipt_btn_wrap{position:relative; padding-right:100px}
+.ipt_btn_wrap a{position:absolute; top:50%; right:0; margin-top:-15px}
+.ipt_btn_wrap.type02{padding-right:81px}
+
+.g_normal_box.regi_it_list{margin-top:0; padding-bottom:0}
+.regi_it_list ul{margin-top:12px}
+.regi_it_list li{position:relative; padding:12px 0 13px}
+.regi_it_list .no{font-size:12px; color:#999}
+.regi_it_list .loca{margin-top:3px; font-size:13px; font-weight:bold}
+.regi_it_list a.btn_del{position:absolute; top:50%; right:-7px; margin-top:-15px; padding:0; width:30px; height:30px; color:rgba(0,0,0,0); font-size:6px; background:url('../images/msnu/btn_btn_del.png') 50% no-repeat; background-size:11px}
+.regi_it_list a.btn_del:after{display:none}
+.regi_it_list .ip{position:absolute; top:50%; right:60px; margin-top:-8px; font-size:12px}
+.regi_it_list + .btn_wrap_full{border-bottom:1px solid #b8bfc9; padding:15px; background-color:#fff}
+
+/* 건물검색 */
+.find_building{position:relative; padding:15px 72px 15px 140px; border-bottom:1px solid #b9bfc8}
+.find_building h2{margin-bottom:12px; font-weight:normal; position:relative; left:-125px}
+.find_building .rdo_wrap{display:block; position:absolute; bottom:22px; left:15px}
+.find_building a.g_btn_07{position:absolute; bottom:15px; right:15px}
+/* 노트북/CD대여 신청하기step2랑 같이 사용*/
+.sch_build_list{position:relative; margin-top:6px; border:1px solid #b8bfc9; border-width:1px 0}
+.sch_build_list:before{position:absolute; top:-7px; left:0; width:100%; display:block; content:''; height:6px; background-color:#e2e8ec}
+.sch_build_list li a{position:relative; display:block; padding:13px 15px; color:#555; font-size:13px}
+.sch_build_list li a:after{position:absolute; top:50%; right:15px; margin-top:-7px; display:block; content:''; width:7px; height:13px; background:url('../images/mmyp/bg_link_arrow.png') 0 0 no-repeat; background-size:100%}
+.sch_build_list > ul > li{border-top:1px solid #e2e8ec}
+.sch_build_list > ul > li:first-child{border-top:0}
+.sch_build_list li a strong{color:#333}
+.sch_build_list li a p{margin-top:3px}
+
+/* 아이피신청: 조회하기 */
+.mitserv .g_set_top{margin-top:6px}
+.mitserv .g_set_top select{float:right; margin-top:-3px; min-width:90px}
+.mitserv .g_set_top .num{color:#222}
+.mitserv .g_set_top .num strong{color:#f24c36}
+.g_normal_box.ip_view_list{margin-top:-1px; padding:0}
+.ip_view_list li{position:relative; border-top:1px solid #e2e8ec}
+.ip_view_list li:first-child{border-top:0}
+.ip_view_list li > a{display:block; position:relative; padding:13px 30px 13px 15px}
+.ip_view_list li > a:after{position:absolute; top:50%; right:15px; margin-top:-7px; display:block; content:''; width:7px; height:13px; background:url('../images/mmyp/bg_link_arrow.png') 0 0 no-repeat; background-size:100%}
+.ip_view_list a{color:#555}
+.ip_view_list .no{font-size:12px; color:#999}
+.ip_view_list .loca{margin-top:3px; font-size:13px; font-weight:bold}
+.ip_view_list .staus{position:absolute; top:50%; right:45px; margin-top:-11px}
+.ip_view_list .txt{display:inline-block; border:1px solid #5189d6; border-radius:10px; width:50px; height:20px; line-height:20px; text-align:center; font-size:11px; color:#5189d6; font-weight:bold}
+.ip_view_list .g_text_01{line-height:64px; text-align:center}
+
+.ip_view_detail .g_tit_01{margin:30px 0 12px}
+.ip_view_detail .g_tit_01:first-child{margin-top:0}
+
+/* 노트북/CD대여 */
+.g_normal_box.nocd_regi_guide{position:relative; padding-bottom:50px}
+.nocd_regi_guide .g_list_04 li{font-size:13px}
+.nocd_regi_guide .g_list_04 .tit{position:relative; display:inline-block; width:72px; color:#333}
+.nocd_regi_guide .g_list_04 .tit:after{display:block; content:''; position:absolute; top:50%; right:10px; margin-top:-4px; width:1px; height:7px; background-color:#cecece}
+.nocd_regi_guide .g_text_02{position:absolute; bottom:0; width:100%; left:0; box-sizing:border-box}
+
+.sel_campus{margin-top:13px; padding-left:12px}
+.sel_campus:after{display:block; content:''; clear:both}
+.sel_campus li{position:relative; float:left; width:50%; box-sizing:border-box}
+.sel_campus li:first-child{left:-12px}
+.sel_campus li a{display:block; text-align:center}
+.sel_campus li a img{width:100%}
+.sel_campus li a strong{position:absolute; left:0; bottom:0; width:100%; display:block; height:35px; line-height:36px; font-size:15px; color:#fff; background-color:rgba(0,0,0,.4)}
+.sel_campus li a strong:after{display:inline-block; content:''; margin:-4px 0 0 4px; vertical-align:middle; width:7px; height:12px; background:url('../images/msnu/icon_arrow_white.png') 0 0 no-repeat; background-size:7px auto}
+
+/* 노트북/CD대여: 신청하기 */
+.term_box{margin-top:13px; border-radius:4px; border:1px solid #a5a8b2; padding:15px}
+.term_box .tit{display:block; margin-top:20px; font-size:13px; color:#333}
+.term_box .tit:first-child{margin-top:0}
+.term_box .g_text_03{margin-top:6px}
+.term_box .g_text_06{margin-top:3px}
+
+.mitserv .g_tab_01{margin-top:6px; border-top-color:#b8bfc9}
+.sch_build_list.sel_prd{margin-top:-1px; background-color:#fff}
+.sch_build_list.sel_prd:before{display:none}
+.sch_build_list.sel_prd p{color:#999}
+.sch_build_list.sel_prd p .num{margin-left:10px; color:#555}
+.sch_build_list.sel_prd p .num strong{font-weight:normal}
+
+.regi_input .same_regi{float:right; margin-top:-25px}
+
+/* 노트북/CD대여: 조회하기 */
+.g_normal_box.nocd_tbl{padding:0 15px}
+.g_normal_box.nocd_tbl table{border:0}
+.g_normal_box.nocd_tbl .g_text_01{line-height:64px; text-align:center}
+
+.g_normal_box.appr_stus{padding:0 15px 18px}
+.g_normal_box.appr_stus table{border:0}
+.g_normal_box.appr_stus .g_text_01{height:46px; line-height:64px; text-align:center}
+.g_normal_box.appr_stus a.g_btn_08:after{display:none}
+

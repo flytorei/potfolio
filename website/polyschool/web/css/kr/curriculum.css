@@ -1,0 +1,189 @@
+@charset "utf-8";
+#headerWrap {background:#0c110d url(../../images/w/kr/curriculum/bg_header.png) no-repeat 50% 0;}
+
+.toggleWrap .tit {margin-left:27px; padding-left:17px; font-weight:bold; background:url(../../images/w/kr/common/bl_dot_dgray.gif) no-repeat 0 8px;}
+.toggleWrap .on .tit {background:url(../../images/w/kr/common/bl_dot_white.png) no-repeat 0 8px;}
+.toggleWrap dd {padding:20px 0 17px 44px;}
+.toggleWrap dd div {width:850px;}
+.fs30 {padding-top:28px;}
+.btnWrap {text-align:center;}
+.numList li {padding-left:29px;}
+.numList .list01 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 3px;}
+.numList .list02 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -95px;}
+.numList .list03 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -195px;}
+.numList .list04 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -295px;}
+.numList .list05 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -395px;}
+.numList .list06 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -495px;}
+.numList .list07 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -595px;}
+
+/* 따옴표 기본색깔(blue) */
+.fs30.blue {display:inline-block; margin-top: 27px; padding:5px 30px; text-align:center; background:url(../../images/w/kr/common/bl_dbquo_s_left.png) no-repeat 0 0;}
+.fs30.blue span {padding:0 25px 5px 0; background:url(../../images/w/kr/common/bl_dbquo_s_right.png) no-repeat 100% 100%;}
+
+/* 따옴표 pink색깔 */
+.fs30.pink {display:inline-block; margin-top: 27px; padding:5px 30px; text-align:center; background:url(../../images/w/kr/common/bl_dbquo_pink_left.png) no-repeat 0 0;}
+.fs30.pink span {padding:0 25px 5px 0; background:url(../../images/w/kr/common/bl_dbquo_pink_right.png) no-repeat 100% 100%;}
+
+/* 따옴표 brown색깔 */
+.fs30.brown {display:inline-block; margin-top: 27px;  padding:5px 30px; text-align:center; background:url(../../images/w/kr/common/bl_dbquo_brown_left.png) no-repeat 0 0;}
+.fs30.brown span {padding:0 25px 5px 0; background:url(../../images/w/kr/common/bl_dbquo_brown_right.png) no-repeat 100% 100%;}
+
+.fs30 span .bgNon {padding: 0; background:none;}
+	.ie7 .fs30 span .bgNon {padding: 0; background:none;}
+/* Curriculum */
+.epoly .tit {text-align:center;}
+.curriCts01 .fs30, .curriCts02 .fs30, .curriCts03 .fs30 {margin-bottom:20px}
+.curriCts01 {padding:0 20px 85px 440px; background:url(../../images/w/kr/curriculum/bg_curri01.png) no-repeat 50px 10px;}
+.curriCts02 {padding:0 300px 100px 50px; background:url(../../images/w/kr/curriculum/bg_curri02.png) no-repeat 616px 22px;}
+.curriCts03 {padding:0 20px 85px 440px; background:url(../../images/w/kr/curriculum/bg_curri03.png) no-repeat 50px 0;}
+
+/* Early chidhood */
+.childhood {text-align:center; padding-bottom:90px; background:url(../../images/w/kr/curriculum/bg_early_childhood_program.png) no-repeat 20px 100px;}
+.childhood p {padding-top:35px; padding-left:466px; text-align:left;}
+
+/* Elementary */
+.elem {text-align:center; padding-bottom:120px; background:url(../../images/w/kr/curriculum/bg_elementary_program.png) no-repeat 20px 100px;}
+.elem p {padding-top:35px; padding-left:466px; text-align:left;}
+
+/* Junior-High */
+.junior {text-align:center;  background:url(../../images/w/kr/curriculum/bg_junior_high_program.png) no-repeat 50% 100px;}
+.junior .cts {margin-top:394px}
+.junior div {text-align:left;}
+.junior .toggleWrap dt a span span {float:none;}
+/* POLY RD */
+.polyRd {margin-bottom:90px; text-align:center; background:url(../../images/w/kr/curriculum/bg_poly_rd.png) no-repeat 50% 135px;}
+.polyRd .fs30 p {margin-top:10px;}
+.polyRd ul {margin-left:42px; padding-top:505px;}
+.polyRd ul li {float:left; width:259px; margin-left:41px; text-align:center;}
+.polyRd ul li:first-child {margin-left:0;}
+.polyKorea {padding-right: 50px; background:url(../../images/w/kr/curriculum/bg_poly_rd_korea.png) no-repeat 80px 5px;}
+.polyKorea dl {margin-top:35px; margin-left:370px; }
+.polyKorea dt,.polyKorea dd {padding-left:10px;}
+.polyKorea dt {margin-top:13px; font-weight:bold; color:#298f9a; background:url(../../images/w/kr/common/bl_dot_green.gif) no-repeat 0 11px;}
+
+/* POLY Teachier */
+.teacher {padding:5px 28px 65px 445px; background:url(../../images/w/kr/curriculum/bg_poly_teacher.png) no-repeat 30px 0;}
+.teacher .fs30 {margin:0; }
+.teacher p {margin-top:20px;}
+.teacherCnt {padding-left:70px; border-top:1px solid #c9ccce;}
+.teacherCnt p {margin-top:30px; padding:30px 0 30px 80px; font-size:20px; font-weight:bold;}
+.teacherCnt .tit01 {background:url(../../images/w/kr/curriculum/bg_poly_teacher_mark.png) no-repeat 0 10px; color:#346da2;}
+.teacherCnt .tit02 {background:url(../../images/w/kr/curriculum/bg_poly_teacher_mark.png) no-repeat 0 -90px; color:#298f9a;}
+.teacherCnt ul {margin-left:23px; margin-bottom:10px; padding-bottom: 14px;}
+.teacherCnt ul li {padding-left:30px;}
+.teacherCnt .list01 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 3px;}
+.teacherCnt .list02 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -95px;}
+.teacherCnt .list03 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -195px;}
+.teacherCnt .list04 {background:url(../../images/w/kr/common/ico_number.png) no-repeat 0 -295px;}
+
+/* e-POLY 소개 */
+.epoly {margin-bottom:67px; padding:0 0 0 20px; text-align:center;}
+.epoly p {margin-top:20px;}
+.epoly ul {height:120px; margin-top:32px;}
+.epoly ul li {float:left;  margin:26px 0 0 30px; padding-left:79px; height:60px; vertical-align:top; text-align:left; line-height:24px; font-weight:bold;}
+.epoly .list01 {width:159px; padding-top:23px; background:url(../../images/w/kr/curriculum/bg_epoly.png) no-repeat 0 0;}
+.epoly .list02 {width:159px; padding-top:11px; background:url(../../images/w/kr/curriculum/bg_epoly.png) no-repeat 0 -101px;}
+.epoly .list03 {width:247px; padding-top:11px; background:url(../../images/w/kr/curriculum/bg_epoly.png) no-repeat 0 -200px;}
+
+/* e-POLY Grand Prix */
+.grandPrix .tit {text-align:center;}
+.grandPrix .fs30 {margin-bottom:12px;}
+
+.grandPrix .prix01 {background:url(../../images/w/kr/curriculum/bg_grandrpix01.png) no-repeat 552px 70px;}
+.grandPrix .prix01 .cts {padding-right:429px; padding-left:40px;}
+.grandPrix .medal {height:178px; margin:24px 39px 92px 37px; padding:29px 0 0 0; font-size:14px; font-weight:bold; line-height:20px;}
+.grandPrix .left {float:left; height:150px; width:436px; border-right:1px solid #c9ccce;}
+.grandPrix .right {float:left; height:150px; margin-left:-1px; border-left:1px solid #c9ccce;}
+.grandPrix .prix01 li {float:left; width:100px; height:150px; margin-left:10px; background: url(../../images/w/kr/curriculum/bg_medal.png) no-repeat 0 0;}
+.grandPrix .prix01 li p {padding-top:127px; text-align:center;}
+.grandPrix .prix01 li.medal1st {margin-left:47px; background-position:12px 7px;}
+.grandPrix .prix01 li.medal2st {margin-left:25px; background-position:-88px 7px;}
+.grandPrix .prix01 li.medal3st {margin-left:25px; background-position:-188px 7px;}
+.grandPrix .prix01 li.medal4st {margin-left:47px; background-position:-288px 7px;}
+.grandPrix .prix01 li.medal5st {margin-left:25px; background-position:-388px 7px;}
+.grandPrix .prix01 li.medal6st {margin-left:25px; background-position:-488px 7px;}
+.grandPrix .prix01 .mt25{margin-top:20px;}
+.grandPrix .prix02 {padding-bottom:145px; background:url(../../images/w/kr/curriculum/bg_grandrpix02.png) no-repeat 52px 68px;}
+.grandPrix .prix02 .cts {padding-left:408px;}
+.grandPrix .prix02 .cts .fs14{padding-left:10px; background:url(../../images/w/kr/common/bl_snow.gif) no-repeat 0 9px;}
+.grandPrix .prix03 {padding-bottom:30px; background:url(../../images/w/kr/curriculum/bg_grandrpix03.png) no-repeat 592px 0; border-bottom:1px solid #c9ccce;}
+	.ie8 .grandPrix .prix03{padding-bottom:26px;}
+.grandPrix .prix03 .cts {padding-right:408px; padding-left:40px;}
+
+
+/* POLY Library */
+.library {padding: 0 40px; background:url(../../images/w/kr/curriculum/bg_poly_library.png) no-repeat 40px 0;}
+.library div {padding-left:400px; padding-right:15px;}
+.library .fs30 {margin-top:0; padding-top:10px;}
+.library .grayBox {margin-top:55px; padding:25px}
+.bigTit {font-size:40px; line-height:54px;}
+
+/* POLY Reading Program */
+.reading {padding:0 37px 0 32px;}
+.reading .tit {text-align:center;}
+.reading .titCmt {text-align:center; padding:20px 85px 34px;}
+.reading .numList{margin-top:29px; padding:26px 32px;}
+.readingCts {position:relative; height:439px; }
+.readingCts {margin-bottom:95px; background-image:url(../../images/w/kr/curriculum/bg_reading.png); background-repeat:no-repeat; background-position:50% 65px;}
+.readingCts li {position:absolute; width:230px;}
+.readingCts .num {font-size:30px; line-height:25px; font-weight:bold;}
+.readingCts .fs13 {padding-left:10px; line-height:17px; background:url(../../images/w/kr/common/bl_snow.gif) no-repeat 50px 4px; color:#8f9498;}
+.readingCts .cmt {margin-top:10px; line-height:22px; font-weight:bold;}
+.readingCts .list01, .readingCts .list02 {text-align:right;}
+.readingCts .list01 {top:45px; left: 65px;}
+.readingCts .list02 {top:195px; left: 65px;}
+.readingCts .list03 {top:333px; left: 327px;}
+.readingCts .list04 {top:195px; left: 590px;}
+.readingCts .list05 {top:45px; left: 590px;}
+.readingCts .list01 .num {color:#336ea2;}
+.readingCts .list02 .num {color:#725d9d;}
+.readingCts .list03 .num {color:#a4806f;}
+.readingCts .list04 .num {color:#df6d62;}
+.readingCts .list05 .num {color:#298f9a;}
+.readingCts .list03  {text-align:center;}
+
+/* Reading Certification Program */
+.certi {background:url(../../images/w/kr/curriculum/bg_certification.png) no-repeat 44px 82px;}
+.certi .tit {text-align:center;}
+.certi .cts {padding-left:476px; padding-right: 38px;}
+.certi .cts .fs30 {padding:20px 0 10px 0;}
+.certi .cts p {margin-top:10px;}
+.certi .btnWrap {padding-top:41px;}
+
+/* Student Reading Gallery */
+.btnG.down {margin-left:13px;}
+
+/* AR Recommended Books */
+.arRecomm .tit{margin-top:10px; text-align:left;}
+.arRecomm .fs16{margin-left:5px; font-size:16px; line-height: 24px; vertical-align: bottom; font-weight:normal;}
+.arRecomm .item .thumb {width:116px; height:116px;}
+.arRecomm .item .thumb img{width:116px; height:116px;}
+.arRecomm .item .cont {width:657px;}
+.arRecomm .vbar {margin-left:5px; padding-left:12px; background:url(../../images/w/kr/common/vbar_1x12_c9ccce.gif) no-repeat 0 2px;}
+
+/* >Spotlight on Authors */
+.notice td{background:#f2f2f2;}
+
+
+/* 레이어 팝업 */
+.layer.blue {position:absolute; width:1000px; padding:10px; background:#336ea2; z-index:9999999;}
+.layer .toggleWrap dt.on a {background: #336ea2 url(../../images/w/kr/common/ico_toggle.png) no-repeat 872px 19px;}
+.layer .toggleWrap dt a {background:url(../../images/w/kr/common/ico_toggle.png) no-repeat 872px -131px;}
+.layer .close {position:absolute; top:2px; right:2px;}
+.layerInner {position:relative; padding:50px 40px; background:#fff url(../../images/w/kr/curriculum/bg_popup.png) no-repeat 931px -1px; color:#555d63;}
+.layerInner li {margin-top:20px; line-height:30px;}
+.layerInner .toggleWrap dd {padding: 23px 14px 22px 47px; }
+#pop_RC_02 .toggleWrap dd div {width:100%; margin-top:21px;}
+.layerInner .btnWrap {margin-top:25px;}
+.termsTable table {margin-bottom:20px; text-align:center; border-top:2px solid #336ea2; border-right:1px solid #c9ccce;}
+.termsTable th, .termsTable td {padding:11px 0 8px 0; border-bottom:1px solid #c9ccce; border-left:1px solid #c9ccce;}
+
+.sticker {width:100%; margin-bottom:20px; padding-bottom:25px; padding-top:10px; border-top:2px solid #336ea2; border-right:1px solid #c9ccce;  border-left:1px solid #c9ccce;  border-bottom:1px solid #c9ccce}
+.sticker > ul > li {position:relative; float:left; width:275px; margin-left:35px; padding-left:105px;}
+.sticker > ul > li > img {position:absolute; top:0; left:0;}
+.sticker > ul > li > ul > li {margin-top: 0;  background:url(../../images/w/kr/common/dot_line.png) repeat-x 0 12px;}
+.sticker > ul > li > ul > li:after {content:""; display:block; clear:both; visibility:hidden; height:0px; font-size:0;}
+	.ie7 .sticker li {display:inline-block; zoom:1;}
+.sticker span {text-align:left; background:#ffffff}
+.sticker li .fl {padding-right:5px; font-weight:bold;}
+.sticker li .fr {width:95px; padding-left:5px;}

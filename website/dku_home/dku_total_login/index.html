@@ -1,0 +1,366 @@
+﻿<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=768, user-scalable=no,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>단국대학교 - 로그인</title>
+	<link rel="stylesheet" type="text/css" href="css/member/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/member/bootstrap-theme.css">
+	<link rel="stylesheet" type="text/css" href="css/member/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/member/contents.css">
+</head>
+<body>
+	<div id="wrap">
+		<dl class="skip_navigation">
+			<dt>건너뛰기 메뉴</dt>
+			<dd><a href="#container">본문바로가기</a></dd>
+		</dl>
+		<!-- 헤더 -->
+		<div id="header">
+			<div class="container"> 
+				<!-- 로고 -->
+				<h1><span class="logo">단국대학교</span> <span class="name">로그인</span> </h1>
+				<!-- //로고 --> 
+				<!-- 랭귀지 -->
+				<div class="select_lang">
+					<label for="lang">LANGUAGE</label>
+					<select class="select" id="lang" name="lang" title="LANGUAGE">
+						<option selected>LANGUAGE</option>
+						<option>KOREAN</option>
+						<option>ENGLISH</option>
+					</select>
+				</div>
+				<!-- //랭귀지 --> 
+			</div>
+		</div>
+		<!-- //헤더 --> 
+		<!-- 컨테이너 -->
+		<div id="container" class="container">
+			<div class="content_section"> 
+				<!-- 컨텐츠 -->
+				<div class="login_notice"> <a href="#login_notice">단국대학교 로그인 정책 안내</a> 
+					<!-- 정책안내 팝업 -->
+					<div style="display:none;">
+						<div class="layer_popup layer_wd01" id="login_notice">
+							<dl>
+								<dt class="layer_title">단국대학교 로그인 정책</dt>
+								<dd class="layer_cont">
+									<dl>
+										<dt class="bul_type_01"><strong>단국인 로그인 안내</strong></dt>
+										<dd> <br>
+											<div class="text_box"> 정책 안내 텍스트 설명 내용 수급 필요 </div>
+											<br>
+											<br>
+										</dd>
+										<dt class="bul_type_01"><strong>이메일 로그인 안내</strong></dt>
+										<dd> <br>
+											<div class="text_box"> 정책 안내 텍스트 설명 내용 수급 필요 </div>
+										</dd>
+									</dl>
+								</dd>
+							</dl>
+							<a href="#none" class="layer_close"><span>팝업창 닫기</span></a> </div>
+						</div>
+						<!-- //정책안내 팝업 --> 
+					</div>
+					<div class="dku_login_section">
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#dku_login" class="n_01" data-toggle="tab">단국인 로그인</a></li>
+							<li><a href="#mail_login" class="n_02" data-toggle="tab">이메일 로그인 only guest</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="dku_login"> 
+								<!-- 단국 로그인 -->
+								<div class="dku_login_area">
+									<ul>
+										<li>
+											<div class="input-group input-group-lg"> <span class="input-group-addon"><i class="ico_id"></i></span>
+												<label for="username">아이디</label>
+												<input type="text" id="username" name="username" class="form-control input-lg" placeholder="아이디">
+											</div>
+										</li>
+										<li>
+											<div class="input-group input-group-lg"> <span class="input-group-addon"><i class="ico_pw"></i></span>
+												<label for="password">비밀번호</label>
+												<input type="password" id="password" name="password" class="form-control input-lg" placeholder="비밀번호">
+											</div>
+											<button href="#none" class="btn_keyboard"><span>키보드입력</span></button>
+										</li>
+									</ul>
+								</div>
+								<!-- 경고 노출 -->
+								<div id="errors">
+									<div class="error_align error">
+										<ul class="error-list align_left">
+											<li>
+												<p class="warn">비밀번호가 너무 짧습니다.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에 연속된 문자를 사용하지 마십시오.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에는 하나 이상의 숫자가 포함되어야 합니다.</p>
+											</li>
+										</ul>
+									</div>
+									<div class="error_align error">
+										<ul class="error-list align_right">
+											<li>
+												<p class="warn">비밀번호가 너무 짧습니다.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에 연속된 문자를 사용하지 마십시오.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에는 하나 이상의 숫자가 포함되어야 합니다.</p>
+											</li>
+										</ul>
+									</div>
+									<div class="error_align error">
+										<p class="warn">기존 비밀번호를 입력하세요.</p>
+										<p class="warn">새로운 비밀번호를 입력하세요.</p>
+									</div>
+								</div>
+								<!-- //경고 노출 --> 
+								<!-- 버튼 영역 -->
+								<div class="btn_area">
+									<button type="submit" class="btn btn-primary btn-lg btn-block">로그인</button>
+								</div>
+								<!-- //버튼 영역 --> 
+								<!-- 바 링크영역 -->
+								<div class="text_link"> <a href="#none">아이디 찾기</a> <a href="#none">비밀번호 찾기</a> </div>
+								<!-- //바 링크영역 -->
+								<hr>
+								<!-- 버튼 영역 -->
+								<div class="btn_area">
+									<button type="submit" class="btn btn-default btn-lg btn-block">인증서 로그인 교직원 시간강사만 가능</button>
+								</div>
+								<!-- //버튼 영역 -->
+								<div class="text_link"> <a href="#none">인증관리센터</a> <a href="#none">인증서 이용안내</a> </div>
+								<!-- //단국 로그인 --> 
+							</div>
+							<div class="tab-pane" id="mail_login"> 
+								<!-- 이메일 로그인 -->
+								<div class="dku_login_area">
+									<ul>
+										<li>
+											<div class="input-group input-group-lg"> <span class="input-group-addon"><i class="ico_id"></i></span>
+												<label for="useremail">이메일</label>
+												<input type="text" id="useremail" name="useremail" class="form-control input-lg" placeholder="이메일">
+											</div>
+										</li>
+										<li>
+											<div class="input-group input-group-lg"> <span class="input-group-addon"><i class="ico_pw"></i></span>
+												<label for="userpw">비밀번호</label>
+												<input type="password" id="userpw" name="userpw" class="form-control input-lg" placeholder="비밀번호">
+											</div>
+											<button href="#none" class="btn_keyboard"><span>키보드입력</span></button>
+										</li>
+									</ul>
+								</div>
+								<!-- 경고 노출 -->
+								<div id="errors">
+									<div class="error_align error">
+										<ul class="error-list align_left">
+											<li>
+												<p class="warn">비밀번호가 너무 짧습니다.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에 연속된 문자를 사용하지 마십시오.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에는 하나 이상의 숫자가 포함되어야 합니다.</p>
+											</li>
+										</ul>
+									</div>
+									<div class="error_align error">
+										<ul class="error-list align_right">
+											<li>
+												<p class="warn">비밀번호가 너무 짧습니다.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에 연속된 문자를 사용하지 마십시오.</p>
+											</li>
+											<li>
+												<p class="warn">비밀번호에는 하나 이상의 숫자가 포함되어야 합니다.</p>
+											</li>
+										</ul>
+									</div>
+									<div class="error_align error">
+										<p class="warn">기존 비밀번호를 입력하세요.</p>
+										<p class="warn">새로운 비밀번호를 입력하세요.</p>
+									</div>
+								</div>
+								<!-- //경고 노출 -->
+								<div class="captcha_area">
+									<p class="captcha_img"><img src="images/member/img_captcha.gif" alt="캡챠 이미지입니다.">
+										<button type="button" class="btn btn-default btn-sm">새로고침</button>
+										<a class="btn_sound" href="#none"><span>소리로 듣기</span></a></p>
+										<p class="captcha_input">
+											<label for="capcha_input">캡차이미지 입력</label>
+											<input type="text" id="capcha_input" name="capcha_input" class="form-control" title="위에 보이는 문자들을 입력하여 주세요" placeholder="위에 보이는 문자를 입력하여 주세요">
+										</p>
+									</div>
+									<div class="btn_area">
+										<button type="submit" class="btn btn-primary btn-lg btn-block">로그인</button>
+									</div>
+									<div class="text_link"> <a href="#none">아이디 찾기</a> <a href="#none">비밀번호 찾기</a> </div>
+									<hr>
+									<div class="btn_area"> <a type="submit" class="btn btn-default btn-lg btn-block">인증서 로그인 교직원 시간강사만 가능</a> </div>
+									<div class="text_link"> <a href="#none">인증관리센터</a> <a href="#none">인증서 이용안내</a> </div>
+									<!-- //이메일 로그인 --> 
+								</div>
+							</div>							
+						</div>
+						<div class="dku_total_content_section">
+							<!-- 상단 얀내문구 -->
+							<div class="change_massage">
+								<div class="txt_large">
+									안전한 개인정보 보호를 위해 <em>비밀번호를 변경하여 주세요.</em>
+								</div>
+								<div class="txt_middle">회원님은 최근 3개월 동안 비밀번호를 변경하지 않으셨습니다. <br>
+									<em>새로운 비밀번호로 변경</em>하여 주세요. 
+								</div>
+							</div>
+							<!-- //상단 얀내문구 -->
+							<!-- 중앙 인풋 영역 -->
+							<div class="center_input_section">
+								<div class="dku_center_input_area">
+									<div class="input-group input-group-lg">
+										<span class="input-group-addon"><i class="ico_id"></i></span>
+										<label>아이디</label>
+										<input type="text" class="form-control input-lg" placeholder="아이디">
+										<span class="input-group-btn">
+											<button type="button" class="btn btn-primary btn-lg" disabled="disabled">아이디확인</button>	
+										</span>
+									</div>
+									<div class="error_align error">
+										<ul class="error-list align_right">
+											<li>
+												<p class="warn">비밀번호가 너무 짧습니다.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="text_link">
+								<button type="button" class="btn btn-primary btn-lg">본인인증</button>
+							</div>
+							<!-- //중앙 인풋 영역 -->
+							<!-- 비밀번호 입력 영역 -->
+							<div class="txt_disc">
+								입력하신 정보와 일치하는 <em>아이디 목록</em>입니다.
+							</div>
+							<div class="center_input_section">
+								<div class="dku_login_area">
+									<ul>
+										<li>
+											<div class="input-group input-group-lg">
+												<span class="input-group-addon"><i class="ico_pw"></i></span>
+												<label>비밀번호 입력</label>
+												<input type="text" class="form-control input-lg" placeholder="영문자, 숫자등을 조합하여 8자 이상으로 입력하세요.">
+												<button href="#none" class="btn_keyboard"><span>키보드입력</span></button>
+											</div>
+										</li>
+										<li>
+											<div class="input-group input-group-lg">
+												<span class="input-group-addon"><i class="ico_pw"></i></span>
+												<label>비밀번호 재입력</label>
+												<input type="text" class="form-control input-lg" placeholder="비밀번호를 다시 입력해주세요">
+												<button href="#none" class="btn_keyboard"><span>키보드입력</span></button>
+											</div>
+										</li>
+									</ul>
+									<div class="error_align error">
+										<ul class="error-list align_right">
+											<li>
+												<p class="warn">비밀번호가 너무 짧습니다.</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="text_link">
+								<button type="button" class="btn btn-primary btn-lg">비밀번호 변경</button>
+							</div>
+							<!-- //비밀번호 입력 영역 -->
+							<!-- 아이디 찾기 -->
+							<div class="center_input_section">
+								<div class="find_id_area">
+									<ul>
+										<li>
+											<div class="radio">
+												<label for="id_01">
+													<input type="radio" id="id_01" name="id_01">
+													<span class="find_id" title="아이디 : ifyo***n">													
+														<strong>아이디</strong> : ifyo***n</span>
+														<span class="find_sector" title="소속 : 정보기획팀"><strong>소속</strong> : 국가정보원</span>
+													</label>
+												</div>	
+											</li>
+											<li>
+												<div class="radio">
+													<label for="id_02">
+														<input type="radio" id="id_02" name="id_02">
+														<span class="find_id" title="아이디 : ifyo***n">													
+															<strong>아이디</strong> : ifyo***n</span>
+															<span class="find_sector" title="소속 : 정보기획팀"><strong>소속</strong> : 국가정보원</span>
+														</label>
+													</div>	
+												</li>
+											</ul>
+										</div>	
+									</div>
+									<div class="text_link">
+										<button type="button" class="btn btn-primary btn-lg">로그인</button>
+										<button type="button" class="btn btn-default btn-lg">비밀번호 찾기</button>
+									</div>
+									<!-- //아이디 찾기 -->
+									<!-- 주민번호 찾기 -->
+									<div class="center_input_section txt_center">
+										<form class="form-inline" role="form">
+												<div class="people_num">58**** - 154 </div>
+												<div class="form-group">
+													<label class="sr-only" for="exampleInputPassword2">주민등록번호 4자리</label>
+													<input type="password" style="width:100px" maxlength="4" class="form-control input-lg" id="exampleInputPassword2" placeholder="4자리">
+												</div>
+										</form>	
+										<div class="error_align error">
+											<ul class="error-list align_right">
+												<li>
+													<p class="warn">비밀번호가 너무 짧습니다.</p>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<div class="text_link">
+										<button type="button" class="btn btn-primary btn-lg">확인</button>
+									</div>
+									<!-- //주민번호 찾기 -->
+								</div>					
+								<!-- //컨텐츠 --> 
+							</div>
+						</div>
+						<!-- //컨테이너 --> 
+						<!-- 푸터 -->
+						<div id="footer">
+							<div class="container">
+								<div class="call_center"><span>통합 콜센터 : 1899-3700</span></div>
+								<address>
+									죽전캠퍼스 경기도 용인시 수지구 죽전로 152 (우)448-701 / 천안캠퍼스 충남 천안시 동남구 단대로 119 (우)330-714
+								</address>
+								<div class="copy_right">Copyright(c) 2010 BY DANKOOK UNIVERSITY. All rights reserved. </div>
+							</div>
+						</div>
+						<!-- //푸터 --> 
+					</div>
+					<!-- 스크립트 --> 
+					<script src="js/member/jquery-1.11.1.min.js"></script> 
+					<script src="js/member/bootstrap.js"></script> 
+					<script src="js/member/dku_total.js"></script> 
+					<script src="js/member/jquery.colorbox.js"></script> 
+					<script src="js/member/html5shiv.js"></script> 
+					<!-- //스크립트 -->
+				</body>
+				</html>

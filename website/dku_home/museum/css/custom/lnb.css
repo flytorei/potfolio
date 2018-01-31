@@ -1,0 +1,36 @@
+@charset "utf-8";
+@import 'compass';
+
+.portlet-navigation a:hover,.portlet-navigation a:focus{text-decoration:none}
+.portlet-navigation .nav-menu{}
+.portlet-navigation .nav-menu h2{height:75px;background:url(../../images/custom/sub/bg_lnb_tit.png) no-repeat 50% 0}
+.portlet-navigation .nav-menu h2 a{display:block;height:45px;line-height:normal;color:#333;text-align:center;text-decoration:none}
+.portlet-navigation .nav-menu ul{padding-left: 0}
+
+.portlet-navigation .nav-menu ul.level-1{margin:0}
+.portlet-navigation .nav-menu ul.level-1 > li{border-bottom:1px solid #dadada}
+
+.portlet-navigation .nav-menu ul.level-1 > li > a{display:block;height:45px;padding-left:20px;line-height:45px;font-size:16px;color:#333;font-weight:600}
+.portlet-navigation .nav-menu ul.level-1 > li.selected{}
+.portlet-navigation .nav-menu ul.level-1 > li.selected > a{font-weight:600;color:#00529c}
+.portlet-navigation .nav-menu ul.level-1 > li.open{}
+.portlet-navigation .nav-menu ul.level-1 > li.open > a{font-weight:600;color:#00529c}
+
+.portlet-navigation .nav-menu ul.level-2{margin:0;background:#f8f8f8;border-top:1px dashed #e3e3e3}
+.portlet-navigation .nav-menu ul.level-2 > li{}
+.portlet-navigation .nav-menu ul.level-2 > li > a{display:block;height:35px;padding-left:30px;background:url(../../images/custom/sub/bullet_lnb_lv_02.gif) no-repeat 20px 16px;line-height:35px;font-size:14px;color:#444}
+.portlet-navigation .nav-menu ul.level-2 > li.selected{}
+.portlet-navigation .nav-menu ul.level-2 > li.selected > a{font-weight:600;color:#00529c}
+.portlet-navigation .nav-menu ul.level-2 > li.open{}
+.portlet-navigation .nav-menu ul.level-2 > li.open > a{font-weight:600;color:#2167e9}
+
+.portlet-navigation .nav-menu ul.level-3{margin:0;background:#eee;border-top:1px solid #dadada}
+.portlet-navigation .nav-menu ul.level-3 > li{}
+.portlet-navigation .nav-menu ul.level-3 > li > a{display:block;height:25px;padding-left:35px;background:url(../../images/custom/sub/bullet_lnb_lv_03.gif) no-repeat 25px 12px;line-height:25px;font-size:12px;color:#666}
+.portlet-navigation .nav-menu ul.level-3 > li.selected{}
+.portlet-navigation .nav-menu ul.level-3 > li.selected > a{font-weight:600;color:#333}
+.portlet-navigation .nav-menu ul.level-3 > li.open{}
+.portlet-navigation .nav-menu ul.level-3 > li.open > a{font-weight:600;color:#333}
+
+.portlet-navigation .nav-menu ul.level-4{}
+.portlet-navigation .nav-menu ul.level-4 > li > a{padding-left:23px;font-size:12px;background:url(../../images/custom/sub/bullet_lnb_lv_03.gif) no-repeat 14px 6px;color:#666;line-height:25px;}

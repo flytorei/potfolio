@@ -1,0 +1,33 @@
+@import url(../../repositories/css/base.css);
+
+@import url(../../repositories/css/application.css);
+
+@import url(../../repositories/css/layout.css);
+
+@import url(../../repositories/css/dockbar.css);
+
+@import url(../../repositories/css/navigation.css);
+
+@import url(../../repositories/css/portlet.css);
+
+@import url(../../repositories/css/extras.css);
+
+@import url(custom.css);
+
+/* 부트스트랩 */
+@import url(../../repositories/css/bootstrap.css);
+@import url(../../repositories/css/bootstrap-responsive.css);
+/* 단국대 기본 */
+@import url(../../repositories/css/dku_common.css);
+/* 단국대 메인 */
+@import url(../../repositories/css/dku_main.css);
+/* 단국대 서브 */
+@import url(../../repositories/css/dku_sub.css);
+
+
+@font-face{ font-family:NanumGothic; src:url('../../tpl_01/font/NanumGothic.eot'); src: local('?'), url('../../tpl_01/font/NanumGothic.woff') format('woff'), url('/font/NanumGothic.ttf') format('truetype');}
+@font-face{ font-family:NanumGothicBold; src:url('../../tpl_01/font/NanumGothicBold.eot'); src: local('?'), url('../../tpl_01/font/NanumGothicBold.woff') format('woff'), url('/font/NanumGothicBold.ttf') format('truetype');}
+/* 
+로컬pc에서 나눔고딕 폰트가 존재할 경우 바로 로딩
+font-family:'나눔고딕',NanumGothic
+ */

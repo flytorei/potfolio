@@ -1,0 +1,418 @@
+@charset "utf-8";
+@import 'compass';
+
+/* 타이틀 */
+.Sponsor-portlet .title-type1{margin-bottom:10px !important;padding-left:23px;background:url(../../images/Sponsor/bul_title-type1.png) no-repeat left top;line-height:18px !important;font-size:18px;color:#4485d5}
+
+/* 후원의집 찾기 */
+.Sponsor-portlet{}
+.Sponsor-portlet .search_spon_top{margin:0 0 10px;*zoom:1}
+.Sponsor-portlet .search_spon_top:after{display:block;clear:both;content:''}
+.Sponsor-portlet .search_spon_top .member_list{flaot:left}
+.Sponsor-portlet .search_spon_top .member_list ul{float:left;margin:0;padding:10px 0 0}
+.Sponsor-portlet .search_spon_top .member_list ul li{float:left;margin:0 0 0 9px;padding:0 0 0 10px;background:url(../../images/Sponsor/bar_list_top.gif) no-repeat 0 50%;line-height:15px}
+.Sponsor-portlet .search_spon_top .member_list ul li:first-child{margin:0;padding:0;background:none}
+.Sponsor-portlet .search_spon_top .member_list ul li *{vertical-align:top}
+
+.Sponsor-portlet .search_spon_top .member_list ul li .gold{display:inline-block;width:15px;height:15px;background:url(../../images/Sponsor/ico_gold.png) no-repeat 0 -1px}
+.Sponsor-portlet .search_spon_top .member_list ul li .silver{display:inline-block;width:15px;height:15px;background:url(../../images/Sponsor/ico_silver.png) no-repeat 0 -1px}
+.Sponsor-portlet .search_spon_top .member_list ul li .bronze{display:inline-block;width:15px;height:15px;background:url(../../images/Sponsor/ico_bronze.png) no-repeat 0 -1px}
+
+.Sponsor-portlet .search_spon_top .search_location{float:right}
+.Sponsor-portlet .search_spon_top .search_location *{vertical-align:top}
+.Sponsor-portlet .search_spon_top .search_location label{visibility:hidden;position:absolute;z-index:-1}
+.Sponsor-portlet .search_spon_top .search_location select{width:115px;height:31px;margin:0;border:1px solid #d3d3d3}
+.Sponsor-portlet .search_spon_top .search_location .btn_spon_search{overflow:hidden;width:34px;height:31px;border-radius:4px;border:0;background:#9a9a9a url(../../images/Sponsor/ico_top_search.png) no-repeat 50% 50%}
+.Sponsor-portlet .search_spon_top .search_location .btn_spon_search span{visibility:hidden;position:absolute;z-index:-1}
+
+/* 탭메뉴 */
+.Sponsor-portlet .spon_tab_section{margin:0 0 20px}
+.Sponsor-portlet .spon_tab_section ul{margin:0}
+.Sponsor-portlet .spon_tab_section ul *{vertical-align:top}
+.Sponsor-portlet .spon_tab_section ul li{display:table-cell;position:relative;width:1%;border:1px solid #cdcdcd;border-left:none;background:#f8f8f8;text-align:center}
+.Sponsor-portlet .spon_tab_section ul li:first-child{border-left:1px solid #cdcdcd}
+.Sponsor-portlet .spon_tab_section ul li a{display:block;background:#f8f8f8;font-weight:600;font-size:14px;color:#666;text-decoration:none}
+
+.Sponsor-portlet .spon_tab_section ul li.on a,.tabmenu-portlet .tab_menu_01 ul li a:focus{border:1px solid #439ea9;background:url(../../images/Sponsor/tab_on_bg.gif) repeat 0 0}
+.Sponsor-portlet .spon_tab_section ul li.on a{display:block;color:#fff}
+.Sponsor-portlet .spon_tab_section ul li span{display:inline-block;overflow:hidden;height:40px;padding:0 15px;line-height:40px;white-space:nowrap;text-overflow:ellipsis}
+
+.Sponsor-portlet .spon_tab_section ul li.on a span,.tabmenu-portlet .tab_menu_01 ul li a:focus span{background:url(../../images/Sponsor/ico_tab_arw.png) no-repeat 100% 50%}
+
+@media (max-width: 767px){
+.Sponsor-portlet .spon_tab_section ul li{display:block;width:auto;margin:0 0 3px;border:1px solid #cdcdcd}
+.Sponsor-portlet .spon_tab_section ul li span{height:30px;line-height:30px}
+}
+
+.Sponsor-portlet .fund_sponsor_list{border-top:2px solid #4485d5}
+.Sponsor-portlet .fund_sponsor_list>ul{margin:0;padding:20px 0 0}
+.Sponsor-portlet .fund_sponsor_list>ul>li{position:relative;min-height:173px;margin:0 0 30px;border:1px solid #dfdfdf}
+.Sponsor-portlet .fund_sponsor_list .img_area{position:absolute;top:0;left:0;z-index:10}
+.Sponsor-portlet .fund_sponsor_list .img_area a{display:block}
+.Sponsor-portlet .fund_sponsor_list .img_area img{width:265px;height:173px}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area{padding:0 0 0 290px}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area{}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .tit_area{position:relative;z-index:0;padding:0 15px 0 0}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .tit_area .subject_area{padding:10px 0;border-bottom:1px dotted #c2c2c2}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .tit_area a{display:block;color:#333}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .tit_area *{vertical-align:top}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .gold{display:inline-block;width:15px;height:20px;background:url(../../images/Sponsor/ico_gold.png) no-repeat 0 48%}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .silver{display:inline-block;width:15px;height:20px;background:url(../../images/Sponsor/ico_silver.png) no-repeat 0 48%}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .bronze{display:inline-block;width:15px;height:20px;background:url(../../images/Sponsor/ico_bronze.png) no-repeat 0 48%}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .subject{height:20px;line-height:20px;font-size:16px;font-weight:600}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .category{display:inline-block;position:absolute;top:10px;right:15px;z-index:10;padding:0 14px 0 0;background:url(../../images/Sponsor/bg_category.gif) no-repeat 100% 0}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .category b{display:inline-block;height:23px;padding:0 0 0 14px;background:url(../../images/Sponsor/bg_category.gif) no-repeat 0 0;line-height:23px;font-weight:normal;font-size:12px;color:#fff;letter-spacing:-1px}
+
+.Sponsor-portlet .fund_sponsor_list .detail_list{}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul{margin:0;padding:10px 0 0}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul li{margin:0;padding:5px 0}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul dl{position:relative;z-index:0;margin:0;padding:0}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul dt{position:absolute;top:0;left:0;z-index:10;width:53px;padding:0 0 0 27px;font-size:12px}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul .n_01 dt{background:url(../../images/Sponsor/ico_detail_01.png) no-repeat 0 0}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul .n_02 dt{background:url(../../images/Sponsor/ico_detail_02.png) no-repeat 0 0}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul .n_03 dt{background:url(../../images/Sponsor/ico_detail_03.png) no-repeat 0 0}
+.Sponsor-portlet .fund_sponsor_list .detail_list ul dd{margin:0;padding:0 0 0 90px;font-size:12px}
+
+.Sponsor-portlet .fund_sponsor_list .more{position:absolute;right:-1px;bottom:-1px;z-index:20}
+.Sponsor-portlet .fund_sponsor_list .more a{display:block;overflow:hidden;width:35px;height:35px;border:1px solid #dfdfdf;background:url(../../images/Sponsor/ico_more_plus.png) no-repeat 50% 50%}
+.Sponsor-portlet .fund_sponsor_list .more span{visibility:hidden;position:absolute;z-index:-1}
+@media (max-width: 767px){
+.Sponsor-portlet .fund_sponsor_list .img_area{position:relative;top:auto;left:auto;padding:10px 15px 0;text-align:center}
+.Sponsor-portlet .fund_sponsor_list .spon_content_area{padding:0}
+
+.Sponsor-portlet .fund_sponsor_list .spon_content_area .tit_area{position:relative;z-index:0;padding:0 15px}
+.Sponsor-portlet .fund_sponsor_list .detail_list{padding:0 15px}
+}
+
+/* 페이징 */
+.Sponsor-portlet .paging{position:relative;min-height:30px;margin-bottom:30px;text-align:center}
+.Sponsor-portlet .paging *{vertical-align:top}
+
+.Sponsor-portlet .paging a,.Sponsor-portlet .paging strong{display:inline-block;*display:inline;width:28px;height:28px;padding:0;line-height:28px;vertical-align:top;*zoom:1}
+.Sponsor-portlet .paging a{overflow:hidden;background:url(../../images/Sponsor/bg_numbering.gif) no-repeat 0 9px;font-size:14px;font-weight:600;color:#666}
+.Sponsor-portlet .paging a:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;background:#fff;line-height:26px;color:#4485d5;vertical-align:top}
+.Sponsor-portlet .paging strong{padding:0;border:0;background:#6f9bc4;line-height:28px;color:#fff}
+.Sponsor-portlet .paging a.btn{width:28px;height:28px;padding:0;border:0}
+.Sponsor-portlet .paging a.btn:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;color:#4485d5}
+.Sponsor-portlet .paging a.prev{background:#fff url(../../images/Sponsor/btn_paging_prev.gif) no-repeat 50% 50%;text-indent:999px}
+.Sponsor-portlet .paging a.prev_first{margin-right:6px;background:#fff url(../../images/Sponsor/btn_paging_prev_first.gif) no-repeat 50% 50%;text-indent:-999px}
+.Sponsor-portlet .paging a.next{background:#fff url(../../images/Sponsor/btn_paging_next.gif) no-repeat 50% 50%;text-indent:-999px}
+.Sponsor-portlet .paging a.next_last{margin-left:6px;background:#fff url(../../images/Sponsor/btn_paging_next_last.gif) no-repeat 50% 50%;text-indent:-999px}
+
+/* 하단 검색 */
+.Sponsor-portlet .btm_search{padding:15px;background:#f6f6f6}
+.Sponsor-portlet .btm_search label{visibility:hidden;position:absolute;z-index:-1}
+.Sponsor-portlet .btm_search .search_section{position:relative}
+.Sponsor-portlet .btm_search .search_select_area{position:absolute;top:0;left:0;z-index:10;width:100px}
+.Sponsor-portlet .btm_search .search_select_area select{width:100px;height:31px;margin:0;border:1px solid #d3d3d3}
+.Sponsor-portlet .btm_search .search_text_area{margin:0 30px 0 106px;border:1px solid #d3d3d3}
+.Sponsor-portlet .btm_search .search_text_area input.search_text{width:100%;height:29px;margin:0;padding:0;border:0;text-indent:5px}
+.Sponsor-portlet .btm_search .search_submit_area{position:absolute;top:0;right:0;z-index:10}
+.Sponsor-portlet .btm_search .search_submit_area input.search_submit{overflow:hidden;width:30px;height:31px;margin:0;padding:0;border:0;border-top-right-radius:3px;border-bottom-right-radius:3px;background:#9a9a9a url(../../images/Sponsor/ico_btm_search.png) no-repeat 50% 50%;text-indent:-999px}
+
+
+/* 후원의집 상세 상단 */
+.Sponsor-portlet .spon_view_top{border:1px solid #dfdfdf;padding:30px;margin:0 0 40px;*zoom:1}
+.Sponsor-portlet .spon_view_top:after{content:'';clear:both;display:block}
+.Sponsor-portlet .spon_view_top .img_area{margin:0 0 15px}
+.Sponsor-portlet .spon_view_top .img_area .img_view{text-align: center;margin:0 0 8px}
+.Sponsor-portlet .spon_view_top .img_area .img_view img{margin:0 auto}
+.Sponsor-portlet .spon_view_top .img_area .list_area{position:relative}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul{margin:0;padding:0;*zoom:1}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul:after{content:'';clear:both;display:block}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul li{float:left;width:calc(100% / 3 - 4px);width:111px\9;text-align:center;padding:0}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul li:nth-child(1){text-align:left;padding:0 4px 0 0}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul li:nth-child(2){padding:0 2px 0}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul li:nth-child(3){text-align:right;padding:0 0 0 4px}
+.Sponsor-portlet .spon_view_top .img_area .list_area ul li img{width:100%;cursor: pointer}
+.Sponsor-portlet .spon_view_top .img_area .list_area .btn_prev{position: absolute;z-index: 10;top:0;left:0;height:100%}
+.Sponsor-portlet .spon_view_top .img_area .list_area .btn_prev a{display:block;width:30px;height:100%;background:url(../../images/Sponsor/btn_detail_arw_l.png) no-repeat 0 50%;overflow:hidden}
+.Sponsor-portlet .spon_view_top .img_area .list_area .btn_prev a span{visibility:hidden;position:absolute;z-index:-1}
+.Sponsor-portlet .spon_view_top .img_area .list_area .btn_next{position: absolute;z-index: 10;top:0;right:0;height:100%}
+.Sponsor-portlet .spon_view_top .img_area .list_area .btn_next a{display:block;width:30px;height:100%;background:url(../../images/Sponsor/btn_detail_arw_r.png) no-repeat 100% 50%;overflow:hidden}
+.Sponsor-portlet .spon_view_top .img_area .list_area .btn_next a span{visibility:hidden;position:absolute;z-index:-1}
+
+.Sponsor-portlet .spon_view_top .content_view{}
+.Sponsor-portlet .spon_view_top .content_view .tit_area{background:#f5f5f5 url(../../images/Sponsor/bg_spon_tit.gif) repeat 50% 50%;padding:0 40px;margin:0 0 5px}
+.Sponsor-portlet .spon_view_top .content_view .tit_area h4{text-align: center}
+.Sponsor-portlet .spon_view_top .content_view .tit_area h4 span{display:block;height:60px;line-height:60px;font-size:22px;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.Sponsor-portlet .content_view .spon_detail{}
+.Sponsor-portlet .content_view .spon_detail ul{margin:0}
+.Sponsor-portlet .content_view .spon_detail ul *{vertical-align: top}
+.Sponsor-portlet .content_view .spon_detail ul li{border-bottom:1px dotted #c2c2c2;padding:16px 0 14px}
+.Sponsor-portlet .content_view .spon_detail ul li:last-child{border-bottom:0}
+.Sponsor-portlet .content_view .spon_detail dl{position:relative;margin:0}
+.Sponsor-portlet .content_view .spon_detail dl dt{position:absolute;z-index:10;top:0;left:0;margin:0;padding: 0 0 0 44px;white-space: pre-wrap;}
+.Sponsor-portlet .content_view .spon_detail dl dd{padding:0 0 0 14px;margin:0 0 0 125px;background: url(../../images/Sponsor/bar_spon_detail_view.gif) no-repeat 0 6px;  word-break: break-word}
+.Sponsor-portlet .content_view .spon_detail dl.n_01 dt{background:url(../../images/Sponsor/ico_detail_view_01.png) no-repeat 15px 50%}
+.Sponsor-portlet .content_view .spon_detail dl.n_02 dt{background:url(../../images/Sponsor/ico_detail_view_02.png) no-repeat 15px 50%}
+.Sponsor-portlet .content_view .spon_detail dl.n_03 dt{background:url(../../images/Sponsor/ico_detail_view_03.png) no-repeat 15px 50%}
+.Sponsor-portlet .content_view .spon_detail dl.n_04 dt{background:url(../../images/Sponsor/ico_detail_view_04.png) no-repeat 15px 50%}
+.Sponsor-portlet .content_view .spon_detail dl.n_05 dt{background:url(../../images/Sponsor/ico_detail_view_05.png) no-repeat 15px 50%}
+
+
+
+/* 후원의집 상세 테이블 */
+.Sponsor-portlet .table_type_menu{position:relative;width:100%;margin:0 0 40px;border-top:2px solid #b2b6bf;border-bottom:1px solid #d0d0d0}
+.Sponsor-portlet .table_type_menu.non_mb{margin:0}
+.Sponsor-portlet .table_type_menu th{padding:10px 0;border-left:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;background-color:#f7f7f7}
+.Sponsor-portlet .table_type_menu th:first-child{border-left:0 none}
+.Sponsor-portlet .table_type_menu td:first-child{border-left:0 none}
+.Sponsor-portlet .table_type_menu tr:last-child td{border-bottom:0 none}
+.Sponsor-portlet .table_type_menu td{padding:10px 0;border-left:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;text-align:center}
+.Sponsor-portlet .table_type_menu td.non_center{padding:10px 20px;text-align:left}
+
+/* 이전다음 넘어가기 */
+.Sponsor-portlet .texts{margin:20px 0;border-top:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;padding:10px 0 0}
+.Sponsor-portlet .texts dl{position:relative;margin:0;padding:0}
+.Sponsor-portlet .texts dl:after{display:block;clear:both;content:''}
+.Sponsor-portlet .texts dt{position:absolute;z-index:10;left:0;top:0;width:50px;padding:0 30px 0 0;background:url(../../images/Sponsor/btn_board_next_prev.png) no-repeat;height:20px;line-height: 20px}
+.Sponsor-portlet .texts dt.next{background-position:95% 0}
+.Sponsor-portlet .texts dt.prev{background-position:95% -36px}
+.Sponsor-portlet .texts dd{padding:0 0 0 90px;margin:0 0 10px}
+.Sponsor-portlet .texts dd a{display:block}
+
+
+/* 이달의 기부자 검색 */
+.Donor-portlet .table_type{position:relative;width:100%;border-top:2px solid #4485d5;border-collapse:collapse}
+.Donor-portlet .table_type th{padding:10px 0;background:#f1f6f9;color:#333;text-align:left;text-align:center;border:1px solid #d0d0d0}
+.Donor-portlet .table_type th:first-child{border-left:0}
+.Donor-portlet .table_type th:last-child{border-right:0}
+.Donor-portlet .table_type td{padding:10px 20px;border:1px solid #e7e7e7;text-align:center}
+.Donor-portlet .table_type td:first-child{border-left:0}
+.Donor-portlet .table_type td:last-child{border-right:0}
+
+@media only screen and (max-width: 768px){
+    .Donor-portlet .table_type,.Donor-portlet .table_type thead,.Donor-portlet .table_type tbody,.Donor-portlet .table_type th,.Donor-portlet .table_type td,.Donor-portlet .table_type tr{display:block}
+    .Donor-portlet .table_type thead tr{position:absolute;top:-9999px;left:-9999px}
+    .Donor-portlet .table_type tr{min-height:80px;border-bottom:1px solid #dfdfdf}
+    .Donor-portlet .table_type tr:nth-of-type(odd){background:#f6f6f6}
+    .Donor-portlet .table_type td{position:relative;min-height:20px;padding:5px 0 5px 0;border:none;text-align:left}
+	.Donor-portlet .table_type td:nth-of-type(1):before {content:'NO';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Donor-portlet .table_type td:nth-of-type(2):before {content:'기부자명';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Donor-portlet .table_type td:nth-of-type(3):before {content:'기부용도';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Donor-portlet .table_type td:nth-of-type(4):before {content:'기부일자';padding-left:10px;float:left;width:100px;font-weight:600}
+}
+
+/* 기부자검색 */
+.Donor-portlet .donor_search_section{background:#f6f6f6;padding:10px 30px;margin:0 0 20px}
+.Donor-portlet .donor_search_section dl{position:relative;display:inline-block;margin:0;*zoom:1}
+.Donor-portlet .donor_search_section dl:after{display:block;clear:both;content:''}
+.Donor-portlet .donor_search_section dt{position:absolute;z-index: 10;top:0;left:0;width:75px;;padding:0 0 0 12px;margin:0;background:url(../../images/Donor/bullet_donor_top.gif) no-repeat 0 50%;height:31px;line-height: 31px}
+.Donor-portlet .donor_search_section dd{margin:0 0 0 85px;}
+.Donor-portlet .donor_search_section label{visibility:hidden;position:absolute;z-index:-1}
+.Donor-portlet .donor_search_section select{width:100px;height:31px;margin:0;border:1px solid #d3d3d3}
+.Donor-portlet .donor_search_section .doner_year{width:80px}
+.Donor-portlet .donor_search_section .doner_month{width:60px}
+.Donor-portlet .donor_search_section span{display:inline-block;line-height:31px;color:#666}
+.Donor-portlet .donor_search_section .search_disc{font-size:12px;padding:0 0 0 10px}
+.Donor-portlet .donor_search_section .search_donor{width:31px;height:31px;background:#9a9a9a url(../../images/Donor/ico_btm_search.png) no-repeat 50% 50%;border:0;overflow:hidden;text-indent: -999px;border-radius: 3px}
+
+@media only screen and (max-width: 768px){
+.Donor-portlet .donor_search_section{padding:10px}
+.Donor-portlet .donor_search_section dl{}
+.Donor-portlet .donor_search_section dt{position:relative;left:auto;top: auto;width:auto}
+.Donor-portlet .donor_search_section dd{margin:0}
+.Donor-portlet .donor_search_section .search_disc{padding:0;line-height: normal}
+}
+
+/* 대외 탭메뉴 */
+.Partner-portlet .spon_tab_section{margin:0 0 20px}
+.Partner-portlet .spon_tab_section ul{margin:0}
+.Partner-portlet .spon_tab_section ul *{vertical-align:top}
+.Partner-portlet .spon_tab_section ul li{display:table-cell;position:relative;width:1%;border:1px solid #cdcdcd;border-left:none;background:#f8f8f8;text-align:center}
+.Partner-portlet .spon_tab_section ul li:first-child{border-left:1px solid #cdcdcd}
+.Partner-portlet .spon_tab_section ul li a{display:block;background:#f8f8f8;font-weight:600;font-size:14px;color:#666;text-decoration:none}
+
+.Partner-portlet .spon_tab_section ul li.on a,.tabmenu-portlet .tab_menu_01 ul li a:focus{border:1px solid #439ea9;background:url(../../images/Sponsor/tab_on_bg.gif) repeat 0 0}
+.Partner-portlet .spon_tab_section ul li.on a{display:block;color:#fff}
+.Partner-portlet .spon_tab_section ul li span{display:inline-block;overflow:hidden;height:40px;padding:0 15px;line-height:40px;white-space:nowrap;text-overflow:ellipsis}
+
+.Partner-portlet .spon_tab_section ul li.on a span,.tabmenu-portlet .tab_menu_01 ul li a:focus span{background:url(../../images/Sponsor/ico_tab_arw.png) no-repeat 100% 50%}
+
+@media (max-width: 767px){
+.Partner-portlet .spon_tab_section ul li{display:block;width:auto;margin:0 0 3px;border:1px solid #cdcdcd}
+.Partner-portlet .spon_tab_section ul li span{height:30px;line-height:30px}
+}
+
+/* 대외교류기관 상단박스 */
+.Partner-portlet .parthner_top_box{padding:20px 30px;background:#f6f6f6;margin:0 0 30px}
+.Partner-portlet .parthner_top_box dl{margin:0}
+.Partner-portlet .parthner_top_box dl dt{color:#323232;margin:0 0 8px}
+.Partner-portlet .parthner_top_box dl dd{color:#333;margin:0;font-size:12px}
+.Partner-portlet .parthner_top_box dl dd ul{margin:0}
+.Partner-portlet .parthner_top_box dl dd ul li{margin:0;padding:0 0 0 10px;background:url(../../images/Sponsor/bullet_parthner_top_box.gif) no-repeat 0 10px}
+.Partner-portlet .parthner_top_box dl dd ul li em{font-style:normal;background: url(../../images/Sponsor/bar_parthner_top_box.gif) no-repeat 0 6px;padding:0 0 0 10px}
+
+/* 대외교류기관 소개 테이블 */
+.Partner-portlet .table_type_porthner{position:relative;width:100%;margin:0 0 40px;border-top:2px solid #4485d5;border-bottom:1px solid #d0d0d0;border-collapse}
+.Partner-portlet .table_type_porthner th{padding:10px 0;border:1px solid #d5d5d5;background-color:#f1f6f9}
+.Partner-portlet .table_type_porthner td{padding:10px 0;border:1px solid #e7e7e7;border-top:none;text-align:center}
+.Partner-portlet .table_type_porthner th:first-child{border-left:0 none}
+.Partner-portlet .table_type_porthner th:last-child{border-right:0 none}
+.Partner-portlet .table_type_porthner td:first-child{border-left:0 none}
+.Partner-portlet .table_type_porthner td:last-child{border-right:0 none}
+.Partner-portlet .table_type_porthner tr:last-child td{border-bottom:0 none}
+
+.Partner-portlet .table_type_porthner td.non_center{padding:10px 20px;text-align:left}
+@media only screen and (max-width: 768px){
+    .Partner-portlet .table_type_porthner,.Partner-portlet .table_type_porthner thead,.Partner-portlet .table_type_porthner tbody,.Partner-portlet .table_type_porthner th,.Partner-portlet .table_type_porthner td,.Partner-portlet .table_type_porthner tr{display:block}
+    .Partner-portlet .table_type_porthner thead tr{position:absolute;top:-9999px;left:-9999px}
+    .Partner-portlet .table_type_porthner tr{min-height:80px;border-bottom:1px solid #dfdfdf}
+    .Partner-portlet .table_type_porthner tr:nth-of-type(odd){background:#f6f6f6}
+    .Partner-portlet .table_type_porthner td{position:relative;min-height:20px;padding:5px 0 5px 0;border:none;text-align:left}
+	.Partner-portlet .table_type_porthner td:nth-of-type(1):before {content:'순번';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Partner-portlet .table_type_porthner td:nth-of-type(2):before {content:'교류협약구분';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Partner-portlet .table_type_porthner td:nth-of-type(3):before {content:'협약일';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Partner-portlet .table_type_porthner td:nth-of-type(4):before {content:'단체명';padding-left:10px;float:left;width:100px;font-weight:600}
+    .Partner-portlet .table_type_porthner td:nth-of-type(5):before {content:'관리부서';padding-left:10px;float:left;width:100px;font-weight:600}
+}
+
+/* 대외 페이징 */
+.Partner-portlet .paging{position:relative;min-height:30px;margin-bottom:30px;text-align:center}
+.Partner-portlet .paging *{vertical-align:top}
+
+.Partner-portlet .paging a,.Sponsor-portlet .paging strong{display:inline-block;*display:inline;width:28px;height:28px;padding:0;line-height:28px;vertical-align:top;*zoom:1}
+.Partner-portlet .paging a{overflow:hidden;background:url(../../images/Sponsor/bg_numbering.gif) no-repeat 0 9px;font-size:14px;font-weight:600;color:#666}
+.Partner-portlet .paging a:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;background:#fff;line-height:26px;color:#4485d5;vertical-align:top}
+.Partner-portlet .paging strong{padding:0;border:0;background:#6f9bc4;line-height:28px;color:#fff}
+.Partner-portlet .paging a.btn{width:28px;height:28px;padding:0;border:0}
+.Partner-portlet .paging a.btn:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;color:#4485d5}
+.Partner-portlet .paging a.prev{background:#fff url(../../images/Sponsor/btn_paging_prev.gif) no-repeat 50% 50%;text-indent:999px}
+.Partner-portlet .paging a.prev_first{margin-right:6px;background:#fff url(../../images/Sponsor/btn_paging_prev_first.gif) no-repeat 50% 50%;text-indent:-999px}
+.Partner-portlet .paging a.next{background:#fff url(../../images/Sponsor/btn_paging_next.gif) no-repeat 50% 50%;text-indent:-999px}
+.Partner-portlet .paging a.next_last{margin-left:6px;background:#fff url(../../images/Sponsor/btn_paging_next_last.gif) no-repeat 50% 50%;text-indent:-999px}
+
+/* 대외협력 하단 검색 */
+.Partner-portlet .btm_search{padding:15px;background:#f6f6f6;margin:0 0 15px}
+.Partner-portlet .btm_search label{visibility:hidden;position:absolute;z-index:-1}
+.Partner-portlet .btm_search .search_section{position:relative}
+.Partner-portlet .btm_search .search_select_area{position:absolute;top:0;left:0;z-index:10;width:100px}
+.Partner-portlet .btm_search .search_select_area select{width:100px;height:31px;margin:0;border:1px solid #d3d3d3}
+.Partner-portlet .btm_search .search_text_area{margin:0 30px 0 106px;border:1px solid #d3d3d3}
+.Partner-portlet .btm_search .search_text_area input.search_text{width:100%;height:29px;margin:0;padding:0;border:0;text-indent:5px}
+.Partner-portlet .btm_search .search_submit_area{position:absolute;top:0;right:0;z-index:10}
+.Partner-portlet .btm_search .search_submit_area input.search_submit{overflow:hidden;width:30px;height:31px;margin:0;padding:0;border:0;border-top-right-radius:3px;border-bottom-right-radius:3px;background:#9a9a9a url(../../images/Sponsor/ico_btm_search.png) no-repeat 50% 50%;text-indent:-999px}
+
+/* 대학발전기금 탭메뉴 */
+.Candidate-portlet .spon_tab_section{margin:0 0 20px}
+.Candidate-portlet .spon_tab_section ul{margin:0}
+.Candidate-portlet .spon_tab_section ul *{vertical-align:top}
+.Candidate-portlet .spon_tab_section ul li{display:table-cell;position:relative;width:1%;border:1px solid #cdcdcd;border-left:none;background:#f8f8f8;text-align:center}
+.Candidate-portlet .spon_tab_section ul li:first-child{border-left:1px solid #cdcdcd}
+.Candidate-portlet .spon_tab_section ul li a{display:block;background:#f8f8f8;font-weight:600;font-size:14px;color:#666;text-decoration:none}
+
+.Candidate-portlet .spon_tab_section ul li.on a,.tabmenu-portlet .tab_menu_01 ul li a:focus{border:1px solid #439ea9;background:url(../../images/Sponsor/tab_on_bg.gif) repeat 0 0}
+.Candidate-portlet .spon_tab_section ul li.on a{display:block;color:#fff}
+.Candidate-portlet .spon_tab_section ul li span{display:inline-block;overflow:hidden;height:40px;padding:0 15px;line-height:40px;white-space:nowrap;text-overflow:ellipsis}
+
+.Candidate-portlet .spon_tab_section ul li.on a span,.tabmenu-portlet .tab_menu_01 ul li a:focus span{background:url(../../images/Sponsor/ico_tab_arw.png) no-repeat 100% 50%}
+
+@media (max-width: 767px){
+.Candidate-portlet .spon_tab_section ul li{display:block;width:auto;margin:0 0 3px;border:1px solid #cdcdcd}
+.Candidate-portlet .spon_tab_section ul li span{height:30px;line-height:30px}
+}
+
+
+/* 대학발전기금 약정자 상단검색박스 */
+.Candidate-portlet .candi_search_box{padding:20px 30px;background:#f6f6f6;margin:0 0 30px}
+.Candidate-portlet .candi_search_box dl{margin:0}
+.Candidate-portlet .candi_search_box dl *{vertical-align: top}
+.Candidate-portlet .candi_search_box dl dt{display:inline-block;line-height: 31px}
+.Candidate-portlet .candi_search_box dl dd{display:inline-block;margin:0;font-size: 12px;line-height:31px}
+.Candidate-portlet .candi_search_box label{display:inline-block;line-height:31px;margin:0;font-weight: 600}
+.Candidate-portlet .candi_search_box select{width:115px;height:31px;margin:0;border:1px solid #d3d3d3;margin:0}
+
+/* 대학발전기금 약정자 테이블 */
+.Candidate-portlet .table_type_candi{position:relative;width:100%;margin:0 0 40px;border-top:2px solid #4485d5;border-bottom:1px solid #d0d0d0}
+.Candidate-portlet .table_type_candi th{padding:10px 0;border:1px solid #d5d5d5;background-color:#f1f6f9}
+.Candidate-portlet .table_type_candi td{padding:10px 0;border:1px solid #e7e7e7;border-top:none;text-align:center}
+.Candidate-portlet .table_type_candi th:first-child{border-left:0 none}
+.Candidate-portlet .table_type_candi th:last-child{border-right:0 none}
+.Candidate-portlet .table_type_candi td:first-child{border-left:0 none}
+.Candidate-portlet .table_type_candi td:last-child{border-right:0 none}
+/*.Candidate-portlet .table_type_candi tr:last-child td{border-bottom:1px solid #d0d0d0}*/
+
+.Candidate-portlet .table_type_candi td.non_center{padding:10px 20px;text-align:left}
+.Candidate-portlet .table_type_candi tfoot td{background:#f9f9f9;color:#4386d5;font-weight:600;border-top:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0}
+@media only screen and (max-width: 768px){
+    .Candidate-portlet .table_type_candi,.Candidate-portlet .table_type_candi thead,.Candidate-portlet .table_type_candi tbody,.Candidate-portlet .table_type_candi th,.Candidate-portlet .table_type_candi td,.Candidate-portlet .table_type_candi tr,.Candidate-portlet .table_type_candi tfoot{display:block}
+    .Candidate-portlet .table_type_candi thead tr{position:absolute;top:-9999px;left:-9999px}
+    .Candidate-portlet .table_type_candi tbody tr{min-height:80px;border-bottom:1px solid #dfdfdf}
+    .Candidate-portlet .table_type_candi tbody tr:nth-of-type(odd){background:#f6f6f6}
+    .Candidate-portlet .table_type_candi tbody td{position:relative;min-height:20px;padding:5px 0 5px 0;border:none;text-align:left}
+	.Candidate-portlet .table_type_candi tbody td:nth-of-type(1):before {content:'NO';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Candidate-portlet .table_type_candi tbody td:nth-of-type(2):before {content:'기부자명';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Candidate-portlet .table_type_candi tbody td:nth-of-type(3):before {content:'약정금액';padding-left:10px;float:left;width:100px;font-weight:600}
+	.Candidate-portlet .table_type_candi tbody td:nth-of-type(4):before {content:'약정일자';padding-left:10px;float:left;width:100px;font-weight:600}
+}
+
+/* 대학발전기금 페이징 */
+.Candidate-portlet .paging{position:relative;min-height:30px;margin-bottom:30px;text-align:center}
+.Candidate-portlet .paging *{vertical-align:top}
+
+.Candidate-portlet .paging a,.Sponsor-portlet .paging strong{display:inline-block;*display:inline;width:28px;height:28px;padding:0;line-height:28px;vertical-align:top;*zoom:1}
+.Candidate-portlet .paging a{overflow:hidden;background:url(../../images/Sponsor/bg_numbering.gif) no-repeat 0 9px;font-size:14px;font-weight:600;color:#666}
+.Candidate-portlet .paging a:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;background:#fff;line-height:26px;color:#4485d5;vertical-align:top}
+.Candidate-portlet .paging strong{padding:0;border:0;background:#6f9bc4;line-height:28px;color:#fff}
+.Candidate-portlet .paging a.btn{width:28px;height:28px;padding:0;border:0}
+.Candidate-portlet .paging a.btn:hover{width:26px;height:26px;border:1px solid #6f9bc4;border-radius:2px;color:#4485d5}
+.Candidate-portlet .paging a.prev{background:#fff url(../../images/Sponsor/btn_paging_prev.gif) no-repeat 50% 50%;text-indent:999px}
+.Candidate-portlet .paging a.prev_first{margin-right:6px;background:#fff url(../../images/Sponsor/btn_paging_prev_first.gif) no-repeat 50% 50%;text-indent:-999px}
+.Candidate-portlet .paging a.next{background:#fff url(../../images/Sponsor/btn_paging_next.gif) no-repeat 50% 50%;text-indent:-999px}
+.Candidate-portlet .paging a.next_last{margin-left:6px;background:#fff url(../../images/Sponsor/btn_paging_next_last.gif) no-repeat 50% 50%;text-indent:-999px}
+
+/* 대학발전기금 하단 검색 */
+.Candidate-portlet .btm_search{padding:15px;background:#f6f6f6;margin:0 0 15px}
+.Candidate-portlet .btm_search label{visibility:hidden;position:absolute;z-index:-1}
+.Candidate-portlet .btm_search .search_section{position:relative}
+.Candidate-portlet .btm_search .search_select_area{position:absolute;top:0;left:0;z-index:10;width:100px}
+.Candidate-portlet .btm_search .search_select_area select{width:100px;height:31px;margin:0;border:1px solid #d3d3d3}
+.Candidate-portlet .btm_search .search_text_area{margin:0 30px 0 106px;border:1px solid #d3d3d3}
+.Candidate-portlet .btm_search .search_text_area input.search_text{width:100%;height:29px;margin:0;padding:0;border:0;text-indent:5px}
+.Candidate-portlet .btm_search .search_submit_area{position:absolute;top:0;right:0;z-index:10}
+.Candidate-portlet .btm_search .search_submit_area input.search_submit{overflow:hidden;width:30px;height:31px;margin:0;padding:0;border:0;border-top-right-radius:3px;border-bottom-right-radius:3px;background:#9a9a9a url(../../images/Sponsor/ico_btm_search.png) no-repeat 50% 50%;text-indent:-999px}
+
+/* 명예의전당 탭메뉴 */
+.FundRank-portlet .spon_tab_section{margin:0 0 20px}
+.FundRank-portlet .spon_tab_section ul{margin:0}
+.FundRank-portlet .spon_tab_section ul *{vertical-align:top}
+.FundRank-portlet .spon_tab_section ul li{display:table-cell;position:relative;width:1%;border:1px solid #cdcdcd;border-left:none;background:#f8f8f8;text-align:center}
+.FundRank-portlet .spon_tab_section ul li:first-child{border-left:1px solid #cdcdcd}
+.FundRank-portlet .spon_tab_section ul li a{display:block;background:#f8f8f8;font-weight:600;font-size:14px;color:#666;text-decoration:none}
+
+.FundRank-portlet .spon_tab_section ul li.on a,.tabmenu-portlet .tab_menu_01 ul li a:focus{border:1px solid #439ea9;background:url(../../images/Sponsor/tab_on_bg.gif) repeat 0 0}
+.FundRank-portlet .spon_tab_section ul li.on a{display:block;color:#fff}
+.FundRank-portlet .spon_tab_section ul li span{display:inline-block;overflow:hidden;height:40px;padding:0 15px;line-height:40px;white-space:nowrap;text-overflow:ellipsis}
+
+.FundRank-portlet .spon_tab_section ul li.on a span,.tabmenu-portlet .tab_menu_01 ul li a:focus span{background:url(../../images/Sponsor/ico_tab_arw.png) no-repeat 100% 50%}
+
+@media (max-width: 767px){
+.FundRank-portlet .spon_tab_section ul li{display:block;width:auto;margin:0 0 3px;border:1px solid #cdcdcd}
+.FundRank-portlet .spon_tab_section ul li span{height:30px;line-height:30px}
+}
+
+/* 명예의전당 타이틀 */
+.FundRank-portlet .title-type1{margin-bottom:10px !important;padding-left:23px;background:url(../../images/Sponsor/bul_title-type1.png) no-repeat left top;line-height:18px !important;font-size:18px;color:#4485d5}
+
+/* 명예의전당 */
+.FundRank-portlet .contributor_contents .contributor_list{margin:0 0 15px;}
+.FundRank-portlet .contributor_contents .contributor_list ul li{border:1px solid #dfdfdf;margin:0 0 15px}
+.FundRank-portlet .contributor_contents .contributor_list ul li .image{height:93px;padding:20px 0;text-align:center;}
+.FundRank-portlet .contributor_contents .contributor_list ul li .image img{width:auto;height:93px;}
+.FundRank-portlet .contributor_contents .contributor_list ul li .name{padding:7px 0;border-top:1px dotted #dfdfdf;background:url(../../images/Sponsor/bg_patten.gif) 0 0;text-align:center;}
+.FundRank-portlet .contributor_contents .contributor_list ul li .name p{margin:0;}
+.FundRank-portlet .contributor_contents .table_contributor{position:relative;width:100%;margin:0 0 40px;border-top:2px solid #b2b6bf;border-bottom:1px solid #d0d0d0;}
+.FundRank-portlet .contributor_contents .table_contributor.non_mb{margin:0;}
+.FundRank-portlet .contributor_contents .table_contributor th{padding:10px 0;background-color:#f7f7f7;border-left:1px solid #d0d0d0;border-bottom:1px solid #d0d0d0;}
+.FundRank-portlet .contributor_contents .table_contributor th:first-child{border-left:0 none;}
+.FundRank-portlet .contributor_contents .table_contributor td:first-child{border-left:0 none;}
+.FundRank-portlet .contributor_contents .table_contributor tr:last-child td{border-bottom:0 none;}
+.FundRank-portlet .contributor_contents .table_contributor td{padding:10px 0;border-left:1px solid #e7e7e7;border-bottom:1px solid #e7e7e7;text-align:center;}
+.FundRank-portlet .contributor_contents .table_contributor td.non_center{padding:10px 20px;text-align:left;}
+.FundRank-portlet .contributor_contents .list_wrap{padding:20px 30px;background-color:#f6f6f6;}
+.FundRank-portlet .contributor_contents .list_wrap p{padding:0 0 0 18px;background:url(../../images/Sponsor/icon_fund_mark.png) 0 center no-repeat;font-weight:700;}
+.FundRank-portlet .contributor_contents .naming{margin:0 0 25px;}
+.FundRank-portlet .contributor_contents .span6{text-align:center;}
+.FundRank-portlet .contributor_contents .span6 p{margin:5px 0 0;}
+.FundRank-portlet .contributor_contents .span6 .item{padding:28px 0;border:1px solid #dfdfdf;text-align:center;}

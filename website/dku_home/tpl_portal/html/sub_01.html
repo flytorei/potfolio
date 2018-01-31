@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ko" class="aui dku-portal">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>단국대학교 PORTAL</title>
+
+    <link class="lfr-css-file" href="../css/custom/aui.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-responsive.css">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/custom/dku_contents.css">
+</head>
+
+<body class="body_main">
+    <div id="wrap">
+        <dl class="skip_navigation">
+            <dt>건너뛰기 메뉴</dt>
+            <dd> <a href="#contents">본문바로가기</a> <a href="#gnb">메뉴바로가기</a> </dd>
+        </dl>
+        <!-- 헤더 -->
+        <div id="header">
+            <div class="portal_container">
+                <h1><a href="#none" class="logo"><span>단국대학교</span></a><strong>PORTAL</strong></h1>
+                <button class="gnb_section_toggle hidden-desktop" type="button">
+                    <span class="sr-only">GNB</span>
+                </button>
+                <!-- 유틸 -->
+                <div class="util_move">
+                    <div class="util_section">
+                        <div class="util_section_inner">
+                            <div class="login_info">
+                                <!-- 로그인 후 -->
+                                <div class="name"><span>김단국</span> 님</div>
+                                <div class="select_identity">
+                                    <select title="선택" class="select">
+                                        <option>anyone012/학생</option>
+                                    </select>
+                                </div>
+                                <ul class="util_btn_area">
+                                    <li><a href="#none" class="btn-20-r">비밀번호 변경</a>
+                                    </li>
+                                    <li><a href="#none" class="btn-20-r">로그아웃</a>
+                                    </li>
+                                </ul>
+                                <!--// 로그인 후 -->
+                                <div class="select_lang">
+                                    <select title="언어선택" class="select">
+                                        <option>KOR</option>
+                                        <option>ENG</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //유틸 -->
+            </div>
+            <!-- GNB -->
+            <div id="gnb" class="gnb_section gnb_section_move navbar nav-collapse collapse">
+                <div class="portal_container">
+                    <ul class="portal_nav">
+                        <li class="dropdown"><a href="#none" class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="#"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_01.png)"></span><span class="name">포털</span><b class="caret"></b></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                                <li><a href="#none"><span>스마트 알림센터</span></a>
+                                </li>
+                                <li><a href="#none"><span>공지센터</span></a>
+                                </li>
+                                <li><a href="#none"><span>커뮤니티</span></a>
+                                </li>
+                                <li><a href="#none"><span>활동내역</span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_02.png)"></span><span class="name">웹메일</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_03.png)"></span><span class="name">그룹웨어</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_04.png)"></span><span class="name">웹정보</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_05.png)"></span><span class="name">종합정보</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_06.png)"></span><span class="name">이러닝</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_07.png)"></span><span class="name">취업</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_08.png)"></span><span class="name">웹하드</span></a>
+                        </li>
+                        <li><a href="#none"><span class="nav_ico" style="background-image:url(../images/custom/common/m_portal_gnb_09.png)"></span><span class="name">VOC</span></a>
+                        </li>
+
+                    </ul>
+                    <div class="select_service">
+                        <select title="서비스 바로가기" class="select">
+                            <option selected>서비스 바로가기</option>
+                            <option>네이버</option>
+                            <option>다음</option>
+                            <option>다음</option>
+                            <option>다음</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- //GNB -->
+        </div>
+        <!-- //헤더 -->
+        <!-- 컨테이너 -->
+        <div id="container">
+            <div class="portal_container">
+                <!-- 사이드메뉴 -->
+                <div class="portal_side">
+                    <div class="find_gnb_section"></div>
+                    <!-- 탭 메뉴 -->
+                    <!--<ul class="select_type">
+                        <li><a href="#none" class="n_01 current"><span class="chk_on">체크</span><span class="name">MAIN </span></a>
+                        </li>
+                        <li><a href="#none" class="n_02"><span class="chk_on">체크</span><span class="name">MY</span></a>
+                        </li>
+                    </ul>-->
+                    <div class="tip_layer"> <span class="arr_up"></span>
+                        <div class="tip_cont">
+                            <p><strong>MAIN, MY</strong> 중 기본 페이지를
+                                <br> 설정하실수 있습니다.</p>
+                        </div>
+                        <a href="#none" class="btn_close"><span>닫기</span></a>
+                    </div>
+
+                    <!-- //탭 메뉴 -->
+                    <!-- 로그인 -->
+
+                    <div class="login_section">
+                        <div class="tit_area">
+                            <h2><span>LOGIN</span></h2>
+                        </div>
+                        <div class="login_btn_area">
+                            <a href="#none"><span>로그인 페이지로 이동</span></a>
+                        </div>
+                    </div>
+
+                    <!-- //로그인 -->
+                    <div class="find_util"></div>
+                    <!-- 투데이 -->
+                    <div class="today_section">
+                        <div class="tit_area">
+                            <h2><span>DKU TODAY</span></h2>
+                        </div>
+                        <div class="dku_today">2014년 3월 26일 (수)</div>
+                        <!-- 투데이 탭메뉴 -->
+                        <div class="tabbable">
+                            <ul class="nav-tabs">
+                                <li class="active"><a href="#tab1" data-toggle="tab" class="n_01" title="메일"><span class="name">메일</span></a>
+                                </li>
+                                <li><a href="#tab2" data-toggle="tab" class="n_02" title="알림"><span class="name">알림</span></a>
+                                </li>
+                                <li><a href="#tab3" data-toggle="tab" class="n_03" title="도서관"><span class="name">도서관</span></a>
+                                </li>
+                                <li><a href="#tab4" data-toggle="tab" class="n_04" title="정보"><span class="name">정보</span></a>
+                                </li>
+                                <li><a href="#tab5" data-toggle="tab" class="n_05" title="공유"><span class="name">공유</span></a>
+                                </li>
+                            </ul>
+                            <div class="tab-content">
+                                <div class="tab-pane active" id="tab1">
+                                    <h3><span>메일</span></h3>
+                                    <div class="tab_content_area">
+                                        <dl>
+                                            <dt><span>받은 메일</span></dt>
+                                            <dd><strong>20</strong>건/<strong>2100</strong>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>안 읽은 메일</span></dt>
+                                            <dd><strong>15</strong>건</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab2">
+                                    <h3><span>알림</span></h3>
+                                    <div class="tab_content_area">
+                                        <dl>
+                                            <dt><span>전체 수신</span></dt>
+                                            <dd><strong>20</strong>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>미열람 수신</span></dt>
+                                            <dd><strong>15</strong>건</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab3">
+                                    <h3><span>도서관</span></h3>
+                                    <div class="tab_content_area">
+                                        <dl>
+                                            <dt><span>대출</span></dt>
+                                            <dd><strong>20</strong>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>연체</span></dt>
+                                            <dd><strong>15</strong>건</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab4">
+                                    <h3><span>전자결재</span></h3>
+                                    <div class="tab_content_area">
+                                        <dl>
+                                            <dt><span>결재할 문서</span></dt>
+                                            <dd><strong>20</strong>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>부서수신함</span></dt>
+                                            <dd><strong>15</strong>건</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="tab-pane" id="tab5">
+                                    <h3><span>VOC</span></h3>
+                                    <div class="tab_content_area">
+                                        <dl>
+                                            <dt><span>문의</span></dt>
+                                            <dd><strong>20</strong>건</dd>
+                                        </dl>
+                                        <dl>
+                                            <dt><span>답변</span></dt>
+                                            <dd><strong>15</strong>건</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //투데이 탭메뉴 -->
+                    </div>
+                    <!-- //투데이 -->
+                    <!-- 알림 -->
+                    <!--<div class="alim_section">
+                        <div class="tit_area">
+                            <h3><span>알림</span></h3>
+                            <div class="num_area"><span>15건</span>
+                            </div>
+                        </div>
+                        <div class="list_area">
+                            <ul>
+                                <li><a href="#none" title="쓰레기 줄이기 캠페인을 시작합니다. 확인해주세요.">쓰레기 줄이기 캠페인을 시작합니다. 확인해주세요.</a>
+                                </li>
+                                <li><a href="#none" title="쓰레기 줄이기 캠페인을 시작합니다. 확인해주세요.">쓰레기 줄이기 캠페인을 시작합니다. 확인해주세요.</a>
+                                </li>
+                                <li><a href="#none" title="쓰레기 줄이기 캠페인을 시작합니다. 확인해주세요.">쓰레기 줄이기 캠페인을 시작합니다. 확인해주세요.</a>
+                                </li>
+                            </ul>
+                            <div class="more"><a href="#none" target="_blank"><span>알림 더보기</span></a>
+                            </div>
+                        </div>
+                    </div>-->
+                    <!-- //알림 -->
+                    <!-- 금주의 일정 -->
+                    <div class="week_schedule_section">
+                        <div class="tit_area">
+                            <h3><span>금주의 일정</span></h3>
+                        </div>
+                        <div class="list_area">
+                            <ul>
+                                <li>
+                                    <a href="#none" title="03.15 ~ 04.05 : 수강 신청 기간이지만 열심히 할수 있는 텍스트가 길어집니다">
+                                        <dl>
+                                            <dt>03.15 ~ 04.05</dt>
+                                            <dd>수강 신청 기간이지만 열심히 할수 있는 텍스트가 길어집니다</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="03.15 ~ 04.05 : 수강 신청 기간">
+                                        <dl>
+                                            <dt>03.15 ~ 04.05</dt>
+                                            <dd>수강 신청 기간</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="03.15 ~ 04.05 : 수강 신청 기간">
+                                        <dl>
+                                            <dt>03.15 ~ 04.05</dt>
+                                            <dd>수강 신청 기간</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="03.15 ~ 04.05 : 수강 신청 기간">
+                                        <dl>
+                                            <dt>03.15 ~ 04.05</dt>
+                                            <dd>수강 신청 기간</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#none" title="03.15 ~ 04.05 : 수강 신청 기간">
+                                        <dl>
+                                            <dt>03.15 ~ 04.05</dt>
+                                            <dd>수강 신청 기간</dd>
+                                        </dl>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //금주의 일정 -->
+
+                    <!-- 직원/전화번호 검색 -->
+                    <!--<div class="people_search_section">
+                        <div class="tit_area">
+                            <h3><span>직원/전화번호 검색</span></h3>
+                        </div>
+                        <div class="input_area">
+                            <form>
+                                <fieldset>
+                                    <legend>직원/전화번호 검색하기</legend>
+                                    <input type="text" class="search_txt" title="직원/전화번호 검색하기">
+                                    <input type="submit" class="btn_search" value="검색">
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>-->
+                    <!-- //직원/전화번호 검색 -->
+                    <!-- 홈페이지 검색 -->
+                    <div class="homepage_search_section">
+                        <div class="tit_area">
+                            <h3><span>홈페이지 검색</span></h3>
+                        </div>
+                        <div class="input_area">
+                            <form>
+                                <fieldset>
+                                    <legend>홈페이지 검색하기</legend>
+                                    <input type="text" class="search_txt" title="홈페이지 검색하기">
+                                    <input type="submit" class="btn_search" value="검색">
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- //홈페이지 검색 -->
+                </div>
+                <!-- //사이드메뉴 -->
+                <!-- 컨텐츠 영역 -->
+                <div class="potal_content">
+                    <div class="content_section">
+                        <div class="sub_tit_area">
+                            <h3><span>학과소개</span></h3>
+                        </div>
+                        <ul class="tab-type2 mt30">
+                            <li class="on"><a href="#">전체</a>
+                            </li>
+                            <li><a href="#">행사</a>
+                            </li>
+                        </ul>
+                        <div class="word-type num3">
+                            <p>* 최근 <span class="fc_tin_blue">6개월간 알림 내역</span>을 확인하실 수 있습니다.</p>
+                        </div>
+                        <div class="dku_alam_date">
+                            <dl>
+                                <dt>06월 14일</dt>
+                                <dd class="first">
+                                    <div class="box_round">
+                                        <a href="#none"><span class="fc_tin_blue">[학사]</span> 수강신청 기간 안내 :  2014년 7월 1일~2014년 7월 15일</a>
+                                        <div class="date_info">
+                                            <span class="date">2014. 06. 30</span>
+                                            <span class="side_bar">
+                                                 <span class="team">발송인 : 학사정보함</span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="box_round">
+                                        <a href="#none"><span class="fc_tin_blue">[홈페이지]</span> 국제학부 국제경영학전공 조교 채용 공고안내해 드립니다. 알림글 확인하시고 답글 부탁드리며
+국제학부 국제경영학전공 조교 채용 공고안내해 드립니다. 알림글 확인하시고 답글 부탁드립니다.</a>
+                                        <div class="date_info">
+                                            <span class="date">2014. 06. 30</span>
+                                            <span class="side_bar">
+                                                 <span class="team">발송인 : 학사정보함</span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="box_round">
+                                        <a href="#none"><span class="fc_tin_blue">[취업]</span>국제학부 국제경여학전공 조교 채용 </a>
+                                        <div class="date_info">
+                                            <span class="date">2014. 06. 30</span>
+                                            <span class="side_bar">
+                                                 <span class="team">발송인 : 학사정보함</span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dt>06월 14일</dt>
+                                <dd class="first">
+                                    <div class="box_round">
+                                        <a href="#none"><span class="fc_tin_blue">[학사]</span> 수강신청 기간 안내 :  2014년 7월 1일~2014년 7월 15일</a>
+                                        <div class="date_info">
+                                            <span class="date">2014. 06. 30</span>
+                                            <span class="side_bar">
+                                                 <span class="team">발송인 : 학사정보함</span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="box_round">
+                                        <a href="#none"><span class="fc_tin_blue">[홈페이지]</span> 국제학부 국제경영학전공 조교 채용 공고안내해 드립니다. 알림글 확인하시고 답글 부탁드리며
+국제학부 국제경영학전공 조교 채용 공고안내해 드립니다. 알림글 확인하시고 답글 부탁드립니다.</a>
+                                        <div class="date_info">
+                                            <span class="date">2014. 06. 30</span>
+                                            <span class="side_bar">
+                                                 <span class="team">발송인 : 학사정보함</span>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </dd>
+                                <dd>
+                                    <div class="box_round">
+                                        <a href="#none"><span class="fc_tin_blue">[취업]</span>국제학부 국제경여학전공 조교 채용 </a>
+                                        <div class="date_info">
+                                            <span class="date">2014. 06. 30</span>
+                                            <span class="side_bar">
+                                                 <span class="team">발송인 : 학사정보함</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </dd>
+                            </dl>
+                            <div class="btn_bar">
+                                <a href="#none">
+                                    <span>더보기</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //컨텐츠 영역 -->
+            </div>
+        </div>
+        <!-- //컨테이너 -->
+        <!-- 푸터 -->
+        <div id="footer">
+            <div class="foot_inner">
+                <div class="foot_priv">
+                    <ul>
+                        <li><a href="#none">개인정보처리방침</a>
+                        </li>
+                        <li><a href="#none">webmaster@dankook.ac.kr</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot_address">죽전캠퍼스 경기도 용인시 수지구 죽전로 152 (우)448-701 / 천안캠퍼스 충남 천안시 동남구 단대로 119 (우)330-714</div>
+                <div class="foot_copyright">Copyright(c) 2010 BY DANKOOK UNIVERSITY. All rights reserved.</div>
+                <div class="foot_callcenter"><span>통합콜센터 | 1899 - 3700</span>
+                </div>
+            </div>
+        </div>
+        <!-- //푸터 -->
+    </div>
+    <!-- 스크립트 -->
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <script src="../js/jquery-ui.js"></script>
+    <script src="../js/aui.js"></script>
+    <!--<script src="../js/bootstrap.js"></script> -->
+
+    <!-- 위젯컨트롤 -->
+    <script src="../js/packery-docs.js"></script>
+    <script src="../js/controller.js"></script>
+    <!-- //위젯컨트롤 -->
+    <!-- 슬라이드 링크 -->
+    <script src="../js/jquery.easing.1.3.min.js"></script>
+    <script src="../js/jquery.sliderkit.1.9.2.js"></script>
+    <!-- //슬라이드 링크 -->
+
+    <!-- 스크롤 -->
+    <script src="../js/dku_scroll.js"></script>
+    <!-- //스크롤 -->
+    <script src="../js/portal_ui.js"></script>
+    <script src="../js/html5shiv.js"></script>
+    <script>
+        //<![CDATA[
+        //]]>
+    </script>
+
+    <!-- //스크립트 -->
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+@charset "utf-8";
+@import 'compass';
+/* 전체메뉴 */
+#header .gnb_section_toggle {overflow: hidden;position: absolute;top: 0;right: 10px;z-index: 10;width: 46px;height: 43px;background: url(../../images/custom/main/btn_nav_gnb.png) no-repeat 50% 50%;background-size: 40px 40px}
+#header .gnb_section_toggle span {overflow: hidden;position: absolute;top: -11000px;left: -11000px;width: 0;height: 0}
+
+/*GNB */
+#header>.container{}
+#header #gnb{z-index:30}
+#header #gnb .navbar_inner{background:#fff url(../../images/custom/common/bg_nav_inner.png) no-repeat 0 100%;position:static;width:100%;left:0}
+#header #gnb .nav{float:right;height:auto;margin:0}
+#header #gnb .nav>li{float:left;margin:0 0 0 25px;width:115px}
+#header #gnb .nav>li>a{display:block;height:70px;font-weight: 600;font-size:18px;line-height:70px;color:#333;word-break:break-all;text-align:center}
+#header #gnb .nav>li>a:hover,#header #gnb .nav>li>a:focus,#header #gnb .nav>li.active>a{background-color:transparent;background-image: url(../../images/custom/common/bg_nav_over.gif);background-repeat: repeat-x;background-position: 0 100%}
+#header #gnb .nav>li>ul{margin:0;padding:15px 0 15px;display:none}
+#header #gnb .nav>li>ul>li>a{display:block;padding:10px 0 10px;color:#666;letter-spacing:-1px}
+#header #gnb .nav>li>ul>li>a:hover,
+#header #gnb .nav>li>ul>li.active>a{color:#3b77cb;text-decoration: underline;font-weight: 600}
+
+/* 상단검색 */
+.util_search{position: relative;padding-right: 0;margin-top:1px}
+.util_search label{display: none}
+.util_search .dku_search{top: 0; right: 9px; width:32px;height:28px; background:url(../../images/custom/common/srch_btn.png) no-repeat 0px 0px;text-indent:-99999px}
+.util_search input{width:128px;background: transparent !important;border:none !important;color: #fff;margin:0 !important;border-radius:0 !important}
+.util_search form{margin: 0}
+.util_search button{margin-left: -4px}
+.util_search .input_area{background: #677a96;height: 28px}
+
+@media (min-width: 980px) and (max-width: 1200px) {
+    #header #gnb .nav>li{margin:0 0 0 20px;width:90px}
+}
+@media (min-width: 0) and (max-width: 979px) {
+    #header{min-height:80px}
+    #header #gnb{position:absolute;z-index:30;top:0;right:60px;width:200px}
+    #header #gnb .nav{}
+    #header #gnb .navbar_inner{background-image: none}
+    #header #gnb .navbar_inner>.container{width:auto}
+    #header #gnb h2{height:40px;margin:0;padding:0;background:#6a747e;line-height:40px;font-size:17px;font-weight:600;color:#fff;text-align:center}
+    #header #gnb ul.nav{float:none}
+    #header #gnb ul.nav>li{float:none;margin:0;width:auto;border-bottom:1px solid #efefef}
+    #header #gnb ul.nav>li>a{text-align:left;height:30px;line-height: 30px;padding:0 0 0 10px;font-size:15px}
+    #header #gnb .nav>li>a:hover,#header #gnb .nav>li>a:focus,#header #gnb .nav>li.active>a{background-image: none;color:#007cab}
+    #header #gnb ul.nav>li>ul{padding:0;background-color: #f5f5f5}
+    #header #gnb ul.nav>li>ul>li>a{padding:0 0 0 20px;font-size:13px}
+    
+    .btn_close_area{display:none}
+}
+
+/* 모바일GNB */
+.btn_mobile_gnb{overflow: hidden !important;position: absolute;top:2px;right:0;z-index: 10;width: 46px;height: 43px;background: url(../../images/custom/common/btn_nav_gnb.png) no-repeat 50% 50%;background-size: 40px 40px}
+.btn_mobile_gnb span {visibility:hidden;position:absolute;z-index:-1}
+/* GNB 닫기 */
+.btn_close_area{display:none;clear:both;text-align:right;margin-bottom:-30px}
+.btn_close_area button{width:85px;height:30px;background:#fff url(../../images/custom/common/btn_nav_close.png) no-repeat 0 50%;text-indent: -3000px}
+
+/* 모바일 검색 */
+#header .form_search_m{position:relative}
+#header .form_search_m *{vertical-align:top}
+#header .form_search_m form{height:auto;margin:0}
+#header .form_search_m legend{visibility:hidden;position:absolute;z-index:-1}
+#header .form_search_m fieldset{border:1px solid #d6d6d6;background:#f5f5f5}
+#header .form_search_m label{visibility:hidden;position:absolute;z-index:-1}
+#header .form_search_m .search_wrap{display:block;padding:3px 10px}
+#header .form_search_m .placeholder{position:relative;z-index:0;width:100%;height:32px;margin:0 !important;padding:0;background:#fff;background:url(../../images/custom/common/btn_mobile_search.png) no-repeat 5px 50%;line-height:32px;font-size:13px !important;text-indent:30px;box-sizing:border-box !important}

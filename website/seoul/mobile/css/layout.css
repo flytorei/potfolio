@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* ------------------------------------------
+* Filename:layout.css
+* Description:레이아웃
+* Author:Fu:z
+------------------------------------------ */
+
+/* body.sub{background-color:#f1f5f6} */
+body:not(.l_page){background-color:#e2e8ec}
+#wrap{min-width:320px}
+/* header */
+#header{position:relative; height:45px}
+#header a[class^='btn_']{display:block; width:35px; height:45px; line-height:45px; position:absolute; top:0; color:rgba(0,0,0,0)}
+#header a.btn_sch{background:url('../images/common/icon_sch_blue.png') 50% 50% no-repeat; background-size:auto 20px}
+#header a.btn_gnb{background:url('../images/common/icon_menu_blue.png') 50% 50% no-repeat; background-size:20px auto}
+.sub #header{color:#003173; background-color:#fff}
+.sub #header .main_tit{font-size:19px; font-weight:normal; line-height:46px; padding-left:58px; background:url('../images/common/bg_main_tit.png') 15px 50% no-repeat; background-size:31px auto}
+.sub #header a.btn_sch{right:44px}
+.sub #header a.btn_gnb{right:9px}
+
+body:not(.sub) #header{border-bottom:2px solid #0f3e8e; color:#fff; background-color:#fff}
+body:not(.sub) #header .logo a{display:block; margin:0 auto; width:230px; height:45px; text-align:center; font-size:10px; color:rgba(0,0,0,0); background-position:50% 50%; background-repeat:no-repeat;/* background:url('../images/common/logo.png') 50% 50% no-repeat; */ background-size:auto 45px}
+/* body:not(.sub) #header .logo.en a{background-image:url('../images/common/logo_en.png')} */
+body:not(.sub) #header a.btn_sch{left:6px}
+body:not(.sub) #header a.btn_gnb{right:9px}
+
+#l_header{position:relative; padding:0 45px 0 15px; height:45px; line-height:46px; color:#fff; background-color:#376dc8}
+#l_header h1{font-size:15px}
+#l_header .btn_page_close{position:absolute; top:0; right:2px; display:block; width:35px; color:rgba(255,255,255,0); background:url('../images/common/bg_page_close.png') 50% 50% no-repeat; background-size:14px auto}
+
+/* container */
+#head{position:relative; height:40px; line-height:41px; /*height:35px; line-height:37px;*/ background-color:#0f3e8e}
+#head .page_tit{text-align:center; font-size:16px; color:#fff; font-weight:normal}
+#head a.btn_prev{display:block; position:absolute; top:0; left:0; width:50px; height:40px; color:rgba(255,255,255,0); background:url('../images/common/bg_btn_prev.png') 50% 50% no-repeat; background-size:21px auto}
+
+#gotop{display:none; position:fixed; bottom:60px; right:10px; z-index:55; width:35px; height:35px; background:url('../images/common/bg_btn_top.png') 0 0 no-repeat; background-size:35px}
+#gotop a{display:block; height:35px; font-size:7px; line-height:10px; color:rgba(255,255,255,0)}
+
+.has_gap{padding:0 15px}
+#l_container .g_tit_01{margin:20px 0 10px}
+#l_container .btn_wrap_full{padding:15px}
+#l_container .btn_wrap_half{padding:15px 15px 15px 20px}
+/* #l_conts{background-color:#e2e8ec} */
+
+/* footer */
+#footer{position:fixed; bottom:0; left:0; z-index:10; width:100%; height:40px; box-sizing:border-box; border-top:2px solid #003173; background-color:#fff}
+.foot_menu:after{display:block; content:''; clear:both}
+.foot_menu li{float:left; box-sizing:border-box; padding-top:1px}
+.foot_menu li a{display:block; margin:0 auto; width:35px; height:35px; color:rgba(0,0,0,0); /* border:1px solid red; */}
+
+.main .foot_menu li{width:25%}
+.main .foot_menu li a{background:url('../images/main/bg_main_foot.png') -15px 0 no-repeat; background-size:auto 35px}
+.main .foot_menu li.icon02 a{background-position:-79px 0}
+.main .foot_menu li.icon03 a{background-position:-143px 0}
+.main .foot_menu li.icon04 a{background-position:-207px 0}
+.main .foot_menu li.icon05 a{background-position:-271px 0}
+
+body:not(.main) .foot_menu li{width:20%}
+body:not(.main) .foot_menu li a{background:url('../images/common/bg_sub_foot.png') -7px 0 no-repeat; background-size:auto 35px}
+body:not(.main) .foot_menu li.icon02 a{background-position:-63px 0}
+body:not(.main) .foot_menu li.icon03 a{background-position:-116px 0}
+body:not(.main) .foot_menu li.icon04 a{background-position:-169px 0}
+/* body:not(.main) .foot_menu li.icon05 a{background-position:-222px 0} */
+body:not(.main) .foot_menu li.icon06 a{background-position:-278px 0}
+
+/* Layer layout
+------------------------------------------ */
+.layer_just_show .g_layer_box{display:block !important; background-color:rgba(0,0,0,.7)} /* 퍼블리싱 페이지에만 레이어 확인용으로 사용 */
+.g_layer_box{position:fixed; top:0; left:0; padding:0 15px; box-sizing:border-box; width:100%; height:100%; z-index:99; /*background-color:rgba(0,0,0,.7)*/}
+.g_layer_box .inner{position:relative; top:50%; z-index:100; box-sizing:border-box}
+.g_layer_box .g_layer_header{padding:0 15px; border-bottom:2px solid #376dc8; height:40px; line-height:41px; color:#003173; background-color:#fff}
+.g_layer_box .g_layer_header h1{padding-right:20px; box-sizing:border-box; width:100%; white-space:nowrap; text-overflow:ellipsis; height:40px; overflow:hidden; font-size:15px}
+.g_layer_box .g_layer_container{overflow-y:auto; background-color:#fff}
+.g_layer_box .g_layer_container .inside{padding:15px 0}
+.g_layer_box .inner > .btn_layer_close{display:block; position:absolute; top:0; right:0; z-index:200; width:40px; height:40px; line-height:40px; text-align:center; color:rgba(255,255,255,0); background:url('../images/common/btn_layer_close.png') 50% 50% no-repeat; background-size:14px}
+.g_layer_box .g_layer_footer{position:relative; border-top:1px solid #b9bfc8; height:45px; box-sizing:border-box; padding:13px 15px; background-color:#fff}
+.g_layer_box .g_layer_footer a{position:absolute; top:8px; right:15px; z-index:100}
+
+.g_layer_box.full{padding:0}
+.g_layer_box.full .inner{top:0; margin-top:0 !important; height:100% !important}
+.g_layer_box.full .inner > .btn_layer_close{top:2px; background-image:url('../images/common/bg_page_close.png')}
+.g_layer_box.full .g_layer_header{position:fixed; width:100%; top:0; left:0; z-index:199; border-bottom:0; height:45px; line-height:46px; background-color:#376dc8}
+.g_layer_box.full .g_layer_header h1{box-sizing:border-box; padding-right:55px; height:45px; color:#fff; width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; font-size:15px}
+.g_layer_box.full .g_layer_container{padding:45px 0 0; box-sizing:border-box; height:100% !important}
+.g_layer_box.full .g_layer_container .inside{padding:0}
+.g_layer_box.full .btn_wrap_full{padding:15px}
+.g_layer_box.full .btn_wrap_half{padding:15px 15px 15px 20px}
+
+/* @Media Query
+------------------- ---------------------- */
+/*@media only screen and (max-width:359px) {
+	.allmenu{padding-left:45px}
+}*/

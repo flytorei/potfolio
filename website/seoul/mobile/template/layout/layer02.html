@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 레이어팝업 타입 2 | 서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../../css/import.css">
+		
+		<!-- call js -->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="sub"><!-- 메인, 로그인페이지는 "main" 클래스명 추가, 서브페이지는 "sub" 클래스명 추가.-->
+		<!-- 웹접근성: 반복영역 건너뛰기 -->
+		<div id="skip_nav">
+			<a href="#container">본문내용 바로가기</a>
+		</div>
+
+		<div id="wrap" class="layer_just_show">
+
+			<!-- 헤더 -->
+			<header id="header">
+				<h1 class="main_tit">대학정보</h1>
+				<a class="btn_sch" href="#none" title="통합검색 페이지 이동">검색</a>
+				<a class="btn_gnb" href="#none" title="메뉴 페이지 이동">메뉴</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="container">
+				<div id="head">
+					<h2 class="page_tit">대학&middot;대학원</h2>
+					<a class="btn_prev" href="#none" title="이전 페이지 이동">이전</a>
+				</div>
+
+				<div id="conts" class="mcollege"><!-- 2depth메뉴별 유니크한 클래스명 추가. 예) 대학(원)은 'mcollege' 추가 (2depth폴더명과 동일)-->
+					
+					<br><br>
+					id=conts div에 2depth메뉴별 유니크한 클래스명 추가.<br> 예) 대학(원)은 &#0039;mcollege&#0039; 추가 (2depth폴더명과 동일)
+					<br><br>
+
+				</div>
+
+				<div id="gotop"><a href="#none">최상단으로 이동</a></div>
+			</section><!--// 컨테너 -->
+
+			<!-- 레이어팝업: XXXX -->
+			<div class="g_layer_box "><!-- 유니크한 클래스명 추가하여 다른 레이어와 구별하여 작업 함. -->
+				<div class="inner">
+					
+					<div class="g_layer_header">
+						<h1>레이어팝업 제목</h1>
+					</div>
+					
+					<div class="g_layer_container">
+						<div class="inside">
+							
+							<p style="height:250px">내용내용</p><!-- 해당행은 삭제후 작업 진행 하세요 -->
+
+						</div><!--// .inside -->
+					</div><!--// .g_layer_container -->
+					
+					<div class="g_layer_footer"><!-- 관련 푸터 내용이 없을 시 삭제 후 사용 -->
+						<input type="checkbox" id="never_show_7day">
+						<label for="never_show_7day">7일간 보지 않기</label>
+						<a class="g_btn_07" href="#none">닫기</a>
+					</div>
+
+					<a class="btn_layer_close" href="#none">닫기</a>
+				</div>
+			</div>
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+		</script>
+	</body>
+</html>

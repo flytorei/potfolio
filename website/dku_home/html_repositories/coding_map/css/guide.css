@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+/*===============================================
+단국대 템플릿2014
+- 가이드용 
+===============================================*/
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/*=============================================*/
+
+#guide_wrap {width:98%; margin:0 auto;padding:10px 0 50px;}
+.guide_h1{padding:10px 0; font-size:17px;color:#01529c;}
+.guide_h2{display:none;position:absolute !important;left:-9000px !important;}
+.guide_h3{padding:5px 10px; font-size:13px;font-weight:normal; color:#fff; background:#252525}
+
+.guide_notice{padding:5px;border:1px solid #ededed}
+
+.btn-top {position:fixed;right:0;bottom:20%;background:#666}
+.btn-top a {display:block;width:60px;padding:5px 0;text-align:center;color:#fff;text-decoration:none;}
+
+.guide_tab{margin-bottom:10px; }
+.guide_tab ul{padding:10px;border:1px solid #01529c;overflow:hidden}
+.guide_tab ul li{float:left; border-left:1px solid #01529c}
+.guide_tab ul li:first-of-type{border:0}
+.guide_tab ul li a{color:#252525; padding:5px 25px; }
+.guide_tab ul li.on a{padding:4px 25px;  color:#fff; background:#01529c}
+
+.tbl-type1 {margin:7px 0 30px;border-top: 2px solid #333;width:100%;font-size:12px;}
+.tbl-type1 th {background-color:#dddddd;font-weight:bold;}
+.tbl-type1 th, .tbl-type1 td {border: 1px solid #aaaaaa;padding:6px 10px;vertical-align: middle;}
+.tbl-type1 thead th {padding:6px 5px;}
+.tbl-type1 thead th.header span {display:block;padding-right:20px;background:url(../img/bg.gif) no-repeat 100% 50%;cursor:pointer;}
+.tbl-type1 thead th.header.headerSortDown span {background:url(../img/asc.gif) no-repeat 100% 50%;}
+.tbl-type1 thead th.header.headerSortUp span {background:url(../img/desc.gif) no-repeat 100% 50%;}
+.tbl-type1 tbody tr.even td {background:#f2f2f2;}
+.tbl-type1 tbody tr.line td {border-bottom:1px solid #333;}
+
+.guide_folder{}
+.guide_folder ul{min-height:600px;padding:2% 0 2% 32%; background:url("../img/folder.png") no-repeat top left; background-size:30% auto}
+
+.hid{display:none;position:absolute !important;left:-9000px !important;}
+
+.ing:before{ content:"진행중"; color:#FF0000;}
+.end:before{ content:"완료 "; color:#000099;}

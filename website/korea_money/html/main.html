@@ -1,0 +1,513 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="kr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>국고보조금 전화상담 시스템</title>
+    <link href="../css/cmm_new/common.css" rel="stylesheet" type="text/css" /> 
+    <link href="../css/cmm_new/style.css" rel="stylesheet" type="text/css" /> 
+    <script type="text/javascript" src="../js/cmm/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="../js/cmm/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="../js/cmm/common.js"></script>
+</head>
+<body>
+    <div class="skip_nav">
+        <strong class="blind">건너뛰기 링크</strong>
+        <ul>
+            <li><a href="#content">본문 바로가기</a></li>
+            <li><a href="#gnb_nav">주 메뉴 바로가기</a></li>
+            <li><a href="#footer">페이지하단 바로가기</a></li>
+        </ul>
+    </div>
+    <hr /><!-- // skip_nav -->
+    <div id="header">
+        <div class="top_util_wrap">
+            <div class="top_util">
+                <h1 class="h1_logo">
+                    <a href="#"><img src="../images/2016_new/h1_logo.png" alt="국고보조금 전화상담 시스템" ></a>
+                </h1>
+                <ul class="util">
+                    <li><a class="u_01 on" href="#none"><span class="blind">로그아웃</span></a></li>
+                    <li><a class="u_02 off" href="#none"><span class="blind">CTI</span></a></li>
+                    <li><a class="u_03 off" href="#none"><span class="blind">이석</span></a></li>
+                    <li><a class="u_04 on" href="#none"><span class="blind">걸기</span></a></li>
+                    <li><a class="u_05 on" href="#none"><span class="blind">끊기</span></a></li>
+                    <li><a class="u_06 on" href="#none"><span class="blind">대기</span></a></li>
+                    <li><a class="u_07 on" href="#none"><span class="blind">호전환</span></a></li>
+                    <li><a class="u_08 on" href="#none"><span class="blind">보류</span></a></li>
+                    <li><a class="u_09 on" href="#none"><span class="blind">2차</span></a></li>
+                    <li><a class="u_10 on" href="#none"><span class="blind">3차</span></a></li>       
+                </ul>
+            </div>
+        </div>
+       
+        <div class="gnb">
+            <ul class="dep_01">
+                <li><a href="#none">상담메인</a></li>
+                <li><a href="#none">상담업무관리</a>
+                    <ul class="dep_02 g02">
+                         <li><a href="#none">예약상담관리</a></li>
+                         <li><a href="#none">2선이관관리</a></li>
+                         <li><a href="#none">나의상담이력</a></li>
+                    </ul>                                   
+                </li>
+                <li ><a href="#none">상담정보관리</a>
+                    <ul class="dep_02 g03">
+                        <li><a href="#none">상담분류관리</a></li>
+                        <li><a href="#none">상담지식조회</a></li>
+                        <li><a href="#none">상담지식관리</a></li>
+                    </ul>
+                </li>
+                 <li><a href="#none">통계</a>
+                    <ul class="dep_02 g04"><li><a href="#none">상담문류별통계</a></li></ul>
+                </li>
+                 <li><a href="#none">관리자</a></li>
+            </ul>
+        
+        </div>
+        <div class="state_bar_wrap">
+            <div class="state_bar">
+                <span class="bul"><span class="tit">ARS</span><input type="text" value="전화상담" style="width:160px" readonly>    </span>
+                 <span class="bul"><span class="tit">인입대상</span><input type="text" value="전화상담" style="width:160px" readonly>    </span>
+                 <span class="bul"><span class="tit">발신번호</span><input type="text" value="010-2256-9817" style="width:160px" readonly>    </span>
+            </div>
+        </div>
+    </div>
+    <div id="container">
+        <div class="main_contants">
+            <ul class="tab_sel t_01">
+                <li><h2><a class="on" href="#none">공지사항</a></h2></li>
+                <li><h2><a  href="#none">상담지식</a></h2></li>
+            </ul>
+            <div class="bbs_box">
+                <div class="box_inner">
+                    <div class="notice_box">
+                        <div class="top_wrap tw_01">
+                            <ul class="tab_cate">
+                                <li><a class="on" href="#none"><span>전체</span></a></li>
+                                <li class="ca"><a href="#none"><span>주의</span></a></li>
+                                <li class="fa"><a href="#none"><span>즐겨찾기</span></a></li>
+                            </ul>
+                            <div class="n_util">
+                                <span>
+                                    <select class="sel_cm" style="width:102px">				
+                                        <option>대분류</option>
+                                        <option>만안구청</option>
+                                        <option>동안구청</option>
+                                        <option>여권민원</option>
+                                    </select>
+                                </span>
+                                 <span>
+                                    <select class="sel_cm" style="width:102px">				
+                                        <option>중분류</option>
+                                        <option>만안구청</option>
+                                        <option>동안구청</option>
+                                        <option>여권민원</option>
+                                    </select>
+                                </span>
+                                 <span>
+                                    <select class="sel_cm" style="width:102px">				
+                                        <option>소분류</option>
+                                        <option>만안구청</option>
+                                        <option>동안구청</option>
+                                        <option>여권민원</option>
+                                    </select>
+                                </span>
+                                <span class="search">
+                                    <input class="inp_cm" type="text"> 
+                                    <button><span class="blind">검색</span></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="cts_box">
+                            <div class="list nano">
+                                <ul class="ellipsis nano-content">
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                                <span class="n_alert"><span class="blind">긴급</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    <li>                                        
+                                        <a href="#none">
+                                            <div class="ico">
+                                                <span class="new"><span class="blind">신규</span></span>
+                                                <span class="caption"><span class="blind">주의</span></span>
+                                                <span class="favo"><span class="blind">즐겨찾기</span></span>
+                                            </div>
+                                            보조사업관리 &gt; 편성관리 &gt; 세출비 &gt; 세출비목 선택 세출비목 선택세출비목 선택세출비목 선택세출비목 선택세출비목 선택
+                                        </a>
+                                        <span class="num">3227</span>
+                                    </li>   
+                                    
+                                </ul>
+                            </div>
+                            <div class="view_box">
+                               <div class="view">
+                                    <div class="inner nano">
+                                        <div class="nano-content">
+                                            <p class="tit">[지출비목 선택의 오류]</p>
+                                            <p>&#9679;작성내용:</p>
+                                            <p>민간이전(320)-민간경상보조(01)의 지출비목으 로 사업준비비, 식비 등로<br>오피스**, 하나로** 등에게 보조금을 재교부?</p>
+                                            <br>
+                                            <p>하위보조사업자 보조금을 교부한 것인지, 작성주체 사업자가 보조금을</p>
+                                             <br>
+                                             <br>
+                                             <br>
+                                             <br>
+                                             <br>
+                                           
+                                        </div>
+                                   </div>
+                                   <div class="btn_wrap">
+                                       <a href="#none" class="btn">부서찾기</a>
+                                       <a href="#none" class="btn">상세조회</a>
+                                       <a href="#none" class="btn">SMS발송</a>
+                                   </div>                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div><!-- bbs_box -->
+             <ul class="tab_sel t_02 mt10">
+                <li><h2><a class="on" href="#none">나의예약상담</a></h2></li>
+                <li><h2><a  href="#none">고객상담이력</a></h2></li>
+            </ul>
+            <div class="bbs_box">
+                <div class="box_inner">
+                    <div class="counsel_box">                        
+                        <div class="cts_box">
+                            <div class="bbs_list_box_wrap">   
+                                <div class="top_wrap tw_02">
+                                    <ul class="tab_cate">
+                                        <li><a class="on" href="#none"><span>전화상담이력</span></a></li>
+                                        <li><a href="#none"><span>SMS이력</span></a></li>
+                                        <li><a href="#none"><span>2선이관리이력</span></a></li>
+                                        <li><a href="#none"><span>예약상담이력</span></a></li>
+                                    </ul>                            
+                                </div>
+                                <div class="box_set">
+                                    <div class="bbs_list_cm"> 
+                                        <table summary="전화상담이력 리스트입니다.">
+                                            <caption>전화상담이력</caption>
+                                            <colgroup>
+                                                <col style="width:100px;">
+                                                <col style="width:100px;">
+                                                <col style="width:*;">
+                                                <col style="width:60px;">
+                                                <col style="width:78px;">
+                                            </colgroup>
+                                            <thead>
+                                                <tr>
+                                                    <th scope="col">고객구분</th>
+                                                    <th scope="col">인입일시</th>
+                                                    <th scope="col">상담분류</th>
+                                                    <th scope="col">상담원</th>
+                                                    <th scope="col">종결유형</th>
+                                                </tr>
+                                            </thead>                                       
+                                        </table>
+                                    </div>
+                                    <div class="tel_history nano">
+                                        <div class="bbs_list_cm nano-content">
+                                            <table summary="전화상담이력 리스트입니다.">
+                                                <caption>전화상담이력</caption>
+                                                <colgroup>
+                                                    <col style="width:100px;">
+                                                    <col style="width:100px;">
+                                                    <col style="width:*;">
+                                                    <col style="width:60px;">
+                                                    <col style="width:78px;">
+                                                </colgroup>                                           
+                                                    <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                     <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                     <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                     <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                     <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                     <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                     <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                      <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                      <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                      <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                      <tr>
+                                                        <td>중앙·지자체</td>                                               
+                                                        <td>11.11 17:53</td>                                               
+                                                        <td><a class="cmt" href="#">보조사업관리>편성관리 보조사업관리>편성관리보조사업관리>편성관리보조사업관리>편성관리 보조사업관리>편성관리</a></td>                                               
+                                                        <td>김다현</td>                                               
+                                                        <td>1선완료</td>                                               
+                                                    </tr> 
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>   
+                                </div>
+                                                             
+                           </div>
+                            
+                            <div class="write_box">
+                               <div class="bbs_write_cm">
+                                  <table summary="전화상담이력 리스트입니다.">
+                                        <caption>전화상담이력</caption>
+                                        <colgroup>
+                                            <col style="width:90px;">
+                                            <col style="width:180px;">
+                                            <col style="width:90px;">
+                                            <col style="width:*;">                                              
+                                        </colgroup>                                           
+                                        <tbody>		
+                                            <tr>
+                                                <td>고객구분</td>                                               
+                                                <td colspan="3"><span><input id="c_center" type="radio" name="costmer"><label for="c_center" >중앙·지자체</label></span>
+                                                    <span><input id="c_common" type="radio" name="costmer"><label for="c_common">공공·민간기관</label></span>
+                                                </td>                                                                                               
+                                            </tr> 
+                                             <tr>
+                                                <td>업무구분</td>                                               
+                                                <td>
+                                                    <span>
+                                                        <select class="sel_cm" style="width:148px">				
+                                                            <option>전화상담</option>
+                                                            <option>만안구청</option>
+                                                            <option>동안구청</option>
+                                                            <option>여권민원</option>
+                                                        </select>
+                                                    </span>                                                      
+                                                </td>  
+                                                <td>종결유형</td>                                               
+                                                <td>
+                                                    <span>
+                                                        <select class="sel_cm" style="width:148px;">				
+                                                            <option>1선완료</option>
+                                                            <option>만안구청</option>
+                                                            <option>동안구청</option>
+                                                            <option>여권민원</option>
+                                                        </select>
+                                                    </span>                                                      
+                                                </td>  
+                                            </tr> 
+                                             <tr>
+                                                <td>상담분류</td>                                               
+                                                <td colspan="3">
+                                                    <input class="inp_cm" style="width: 406px;" type="text" value="보조사업관리 > 편성관리 > 세출비" readonly>
+                                                </td>                                                                                               
+                                            </tr> 
+                                             <tr>
+                                                <td>제목</td>                                               
+                                                <td colspan="3">
+                                                    <input class="inp_cm" style="width: 406px;" type="text" value="세출비목 선택 시 주의사항">
+                                                </td>                                                                                               
+                                            </tr> 
+                                            <tr>
+                                                <td>상담내용</td>                                               
+                                                <td colspan="3">
+                                                    <textarea class="tarea_input" style="width: 396px;">
+
+                                                    </textarea>
+                                                </td>                                                                                               
+                                            </tr> 
+                                        </tbody>
+                                    </table>                                 
+                                </div>                               
+                            </div>
+                             <div class="btn_wrap ar">                                  
+                                   <a href="#none" class="btn">상담저장</a>
+                               </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- bbs_box -->
+        </div>    
+    </div>
+    <div id="footer">
+        <div class="footer_inner">
+            <span class="f_state">
+                상담원 : <span>system</span>
+            </span>
+            <span class="f_state">
+                통화시간 : <span>10:00:00</span>
+            </span>
+             <span class="f_state">
+                통화건수 : <span>205</span>
+            </span>
+            <span class="f_state">
+                총통화시간 : <span>10:00:00</span>
+            </span>
+             <span class="f_state">
+                현재시간 : <span>2016/11/11(금) 17:48</span>
+            </span>
+            <select class="sel_cm" style="width:135px">				
+                <option>바로가기</option>
+                <option>만안구청</option>
+                <option>동안구청</option>
+                <option>여권민원</option>
+            </select>
+            <a class="btn_reple" href="#noe"><img src="../images/2016_new/btn_reple.png" alt="새로고침" title="새로고침" /></a>
+        </div>
+    </div>
+</body>
+</html>

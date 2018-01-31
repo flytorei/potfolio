@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 로그인 | 서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../css/import.css">
+		
+		<!-- call js -->
+		<script src="../js/lib/jquery.min.js"></script>
+		<script src="../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="login"><!-- 로그인페이지는 "login" 클래스명 추가 -->
+		<!-- 웹접근성: 반복영역 건너뛰기 -->
+		<div id="skip_nav">
+			<a href="#container">본문내용 바로가기</a>
+		</div>
+
+		<div id="wrap">
+			<!-- 헤더 -->
+			<header id="header">
+				<h1 class="logo"><a href="#none" style="background-image:url('../images/common/logo.png');">서울대학교 SEOUL NATIONAL UNIVERSITY</a></h1>
+				<a class="btn_sch" href="#none" title="통합검색 페이지 이동">검색</a>
+				<a class="btn_gnb" href="#none" title="메뉴 페이지 이동">메뉴</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="container">
+				<div class="login_wrap">
+					<h2 class="page_tit">LOGIN</h2>
+
+					<div class="js_faq_conts show_keyb">
+						<ul>
+							<li>
+								<strong class="js_qtitle"><a href="#none">키보드 보기<span class="arrow">펼침</span></a></strong>
+								<div class="js_acont">
+									<img alt="키보드 이미지" src="../images/login/img_kb_01.jpg">
+								</div>
+							</li>
+							<li>
+								<strong class="js_qtitle"><a  href="#none">특수문자<span class="arrow">펼침</span></a></strong>
+								<div class="js_acont">
+									<img alt="특수문자 이미지" src="../images/login/img_kb_02.jpg">
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<div class="input_wrap">
+						<input type="text" title="아이디 입력" placeholder="아이디">
+						<input type="password" title="비밀번호 입력" placeholder="비밀번호">
+					</div>
+					<div class="atuo_check_wrap">
+						<input type="checkbox" id="auto_login" title="자동로그인" checked><!-- id와 label for은 동일한 값으로 설정필요. Dev: id수정시 참고 -->
+						<label for="auto_login">자동로그인</label>
+					</div>
+					<div class="btn_wrap_full">
+						<a class="g_btn_01" href="#none">로그인</a>
+					</div>
+
+					<div class="link_wrap">
+						<a class="find_id" href="#none">아이디 찾기</a>
+						<a class="find_pw" href="#none">비밀번호 찾기</a>
+					</div>
+
+					<p class="service_tel">서비스 이용 문의 <a href="tel:02-880-8282">02-880-8282</a></p>
+				</div>
+			</section><!--// 컨테너 -->
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+
+			pub_ui.fnLoginBg();
+			$(window).resize(function() {
+				pub_ui.fnLoginBg();
+			});
+		</script>
+	</body>
+</html>

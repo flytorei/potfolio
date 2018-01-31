@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* ------------------------------------------
+* Filename:etc.css
+* Description:로그인, 통합검색, 공유하기
+* Author:Fu:z
+------------------------------------------ */
+
+/*로그인*/
+body.login{padding-bottom:40px !important}
+.login_wrap{position:relative; padding:0 25px 55px; background:#fff url('../images/login/bg_login.png') 0 100% no-repeat; background-size:100% auto}
+.login_wrap .page_tit{padding:25px 0 18px; text-align:center; font-weight:normal; font-size:25px; color:#003173; font-family:'Arial', sans-serif; letter-spacing:-1px}
+
+.show_keyb{position:relative}
+.show_keyb .js_acont{display:none; margin-top:12px}
+.show_keyb .js_acont img{width:100%; height:auto}
+.show_keyb .js_qtitle a{display:inline-block; padding-right:10px; color:#999; font-size:12px; font-weight:normal; background:url('../images/login/bg_kb_arrow.png') 100% 4px no-repeat; background-size:7px auto}
+.show_keyb .js_qtitle a .arrow{position:absolute; color:rgba(255,255,255,0)}
+.show_keyb .on .js_qtitle a{color:#555; background-position:100% -47px}
+.show_keyb li:last-child .js_qtitle{position:absolute; left:90px; top:0}
+
+.login_wrap .input_wrap{margin-top:12px}
+.login_wrap input[type='text'], .login_wrap input[type='password']{height:35px; border-radius:0}
+.login_wrap input[type='password']{margin-top:6px}
+.atuo_check_wrap{margin-top:14px}
+.atuo_check_wrap label{margin-left:4px; font-size:13px; color:#333}
+.login_wrap .btn_wrap_full{margin-top:20px}
+.login_wrap .btn_wrap_full a{font-size:15px}
+.login_wrap .link_wrap{margin-top:20px; text-align:center}
+.login_wrap .link_wrap a{display:inline-block; font-size:13px; color:#555; line-height:20px}
+.login_wrap .link_wrap a:before{display:inline-block; vertical-align:middle; content:''; margin:-3px 5px 0 0; width:12px}
+.login_wrap .link_wrap a.find_id:before{height:12px; background:url('../images/login/icon_get_id.png') 0 0 no-repeat; background-size:12px auto}
+.login_wrap .link_wrap a.find_pw:before{height:13px; background:url('../images/login/icon_get_pw.png') 0 0 no-repeat; background-size:12px auto}
+.login_wrap .link_wrap a.find_id:after{display:inline-block; margin:0 13px; vertical-align:middle; content:''; width:1px; height:11px; background-color:#aaa}
+
+.login_wrap .service_tel{position:absolute; bottom:20px; left:0; width:100%; text-align:center; font-size:13px}
+.login_wrap .service_tel a{display:inline-block; margin-left:5px; padding-left:14px; color:#555; background:url('../images/common/icon_tel.png') 0 40% no-repeat; background-size:11px auto}
+
+/* 공유하기 */
+.sns_list{padding:40px 0; text-align:center}
+.sns_list li{display:inline}
+.sns_list li a{position:relative; display:inline-block; width:135px; padding-top:65px; font-size:15px; color:#555}
+.sns_list li a:before{display:block; content:''; width:55px; height:55px; position:absolute; top:0; left:50%; margin-left:-27px; background:url('../images/msha/icon_sns.png') 0 0 no-repeat; background-size:auto 55px}
+.sns_list li.icon02 a:before{background-position:100% 0}
+
+/* 그레이컬러 띠 */
+.msearchm, .ipt_book, .phone_certi{position:relative}
+.msearch:before, .ipt_book:before, .phone_certi:before{position:absolute; top:-7px; left:0; width:100%; display:block; content:''; height:6px; background-color:#e2e8ec}
+
+/* 통합검색 */
+.msearch .result_num{margin-top:-15px; float:right; color:#999; font-size:12px}
+.msearch .result_num strong{color:#f34c38}
+.msearch .btn_show_more{margin-bottom:15px}
+
+#l_container .msearch .g_tit_01{margin:0}
+.g_normal_box.msearch{padding-bottom:0}
+.msearch .srch_list{margin-top:10px; border-top:1px solid #5d6268}
+.srch_list > li{border-top:1px solid #e2e8ec; padding:12px 0 13px}
+.srch_list > li:first-child{border-top:0}
+.srch_list > li > a{display:block; background:url('../images/msqu/bg_bbs_link.png') 100% 50% no-repeat; background-size:7px auto}
+.srch_list .tit{display:block; padding-right:16px}
+.srch_list .tit span{display:inline-block; vertical-align:middle; width:100%; box-sizing:border-box; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; height:18px; color:#333; font-size:13px; font-weight:bold}
+.srch_list .tit img{margin:-2px 0 0 3px; width:15px; vertical-align:middle}
+.srch_list .cont{display:block; max-height:35px; overflow:hidden; margin:4px 0 5px; padding-right:20px; font-size:12px; line-height:17px; color:#555}
+.srch_list .info .date:after, .srch_list .info a:first-child:after, .srch_list .pers strong:after{display:inline-block; margin:-1px 2px 0 7px; vertical-align:middle; content:''; width:1px; height:10px; background-color:#bdc0c5}
+.srch_list .date, .srch_list .author{font-size:12px; color:#999}
+.srch_list .menu_loca{padding:0; border:0; margin:0}
+.srch_list a.url{padding:10px 0 8px; font-size:12px; color:#555}
+.srch_list .info a{display:inline-block; color:#999; font-size:12px}
+.srch_list .info a:before{display:inline-block; content:''; margin:-1px 2px 0 0; vertical-align:middle; width:12px; height:13px; background:url('../images/common/icon_mini.png') 0 0 no-repeat; background-size:auto 13px}
+.srch_list .info a.tel:before{background-position:-59px 0}
+.srch_list .info a.mail:before{background-position:100% 0}
+.srch_list .pers{margin-bottom:7px; font-size:13px}
+.srch_list .pers strong{color:#333}
+
+/* 북마크 */
+/* .ipt_book{padding:15px 15px 100px} */
+.ipt_book input{border-radius:3px}
+
+/* 모바일기기 인증 */
+.phone_certi .ipt_wrap{position:relative; display:block; margin-top:10px; padding-right:112px}
+.phone_certi .ipt_wrap:first-child{margin-top:0}
+.phone_certi .ipt_wrap .rgt{position:absolute; top:0; right:0}
+.phone_certi strong.rgt{line-height:30px; font-weight:normal; font-size:13px; color:#376dc8}
+
+/* 앱 이용안내 & 알림 기본단말 안내 */
+.l_app_use .g_text_03{padding:0 15px}
+.l_app_use .g_text_02{padding-bottom:5px; background-color:#fff}
+.l_app_use .btn_wrap_center{margin-bottom:5px}
+.l_app_use .btn_wrap_half{padding:20px 15px 10px 20px}
+
+/* 우편번호 검색 */
+.find_zipcode .g_list_01{margin-top:10px}
+.find_zipcode .g_search_01{padding-right:15px}
+.addr_result{position:relative; margin-top:6px}
+.addr_result:before{position:absolute; top:-6px; left:0; width:100%; display:block; content:''; height:6px; background-color:#e2e8ec}
+.addr_result .ar_num{display:block; border:1px solid #b9bfc8; border-width:1px 0; padding:15px}
+.addr_result .ar_num strong{color:#f24c36}
+.addr_result ul{border:1px solid #b9bfc8; border-width:1px 0}
+.addr_result li{border-top:1px solid #e2e8ec}
+.addr_result li:first-child{border-top:0}
+.addr_result li a{position:relative; display:block; padding:12px 50px 12px 65px}
+.addr_result li a:hover{background-color:#f3f7fa}
+.addr_result li a:after{position:absolute; top:50%; right:15px; margin-top:-7px; display:block; content:''; width:7px; height:13px; background:url('../images/mmyp/bg_link_arrow.png') 0 0 no-repeat; background-size:100%}
+.addr_result li a .zip{color:#999; font-size:12px; display:block; position:absolute; top:50%; left:15px; margin-top:-8px}
+.addr_result li a p{color:#555; font-size:13px}
+.addr_result li a p + p{margin-top:5px}
+.addr_result li a p span{color:#376dc8}
+
+.remain_addr .tit, .all_addr .tit{font-size:13px; color:#333}
+.remain_addr{padding:15px 15px 10px; border-bottom:1px solid #b9bfc8}
+.remain_addr input{margin-top:10px}
+.all_addr{position:relative; margin-top:6px; padding:15px 15px; border:1px solid #b9bfc8; border-width:1px 0}
+.all_addr:before{position:absolute; top:-7px; left:0; width:100%; display:block; content:''; height:6px; background-color:#e2e8ec}
+.all_addr .tit span{color:#555; font-weight:normal}
+.all_addr .cont{margin-top:15px; padding:15px; border-radius:3px; background-color:#f3f7fa}
+.all_addr .cont .zip{font-size:12px}
+.all_addr .cont p{margin-top:5px; font-size:13px; line-height:18px; color:#333}
+.all_addr .cont p span{color:#376dc8}

@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* This file allows you to override default styles in one central location for easier upgrade and maintenance. */
+@import url(custom/dku_common.css);
+@import url(custom/dku_portal.css);
+
+@font-face{ font-family:NanumGothic; src:url('../images/custom/font/NanumGothic.eot'); src: local('?'), url('../images/custom/font/NanumGothic.woff') format('woff'), url('/font/NanumGothic.ttf') format('truetype');}
+@font-face{ font-family:NanumGothicBold; src:url('../images/custom/font/NanumGothicBold.eot'); src: local('?'), url('../images/custom/font/NanumGothicBold.woff') format('woff'), url('/font/NanumGothicBold.ttf') format('truetype');}
+
+/* 포틀릿 */
+.portlet-content, .portlet-minimized .portlet-content-container {padding:0 !important}
+ 
+.content_section h1,
+.content_section h2,
+.content_section h3,
+.content_section h4,
+.content_section h5,
+.content_section h6{ font-weight:600}
+
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6{ font-weight:600}
+
+
+/* 포틀릿 */
+.portlet-content, .portlet-minimized .portlet-content-container {padding:0 !important}

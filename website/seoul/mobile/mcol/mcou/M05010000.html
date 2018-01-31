@@ -1,0 +1,510 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 학사일정 | 학사행정 | 서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../../css/import.css">
+		
+		<!-- call js -->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="sub"><!-- 메인, 로그인페이지는 "main" 클래스명 추가, 서브페이지는 "sub" 클래스명 추가.-->
+		<!-- 웹접근성: 반복영역 건너뛰기 -->
+		<div id="skip_nav">
+			<a href="#container">본문내용 바로가기</a>
+		</div>
+
+		<div id="wrap">
+			<!-- 헤더 -->
+			<header id="header">
+				<h1 class="main_tit">학사행정</h1>
+				<a class="btn_sch" href="#none" title="통합검색 페이지 이동">검색</a>
+				<a class="btn_gnb" href="#none" title="메뉴 페이지 이동">메뉴</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="container">
+				<div id="head">
+					<h2 class="page_tit">학사일정</h2>
+					<a class="btn_prev" href="#none" title="이전 페이지 이동">이전</a>
+				</div>
+
+				<div id="conts" class="mcou"><!-- 2depth메뉴별 유니크한 클래스명 추가. 예) 학사일정은 'mcou' 추가 (2depth폴더명과 동일)-->
+					
+					<div class="g_normal_box js_faq_conts lect cous">
+						<div class="jfc_item">
+							<h3 class="g_tit_04 js_qtitle"><a href="#none">학사일정 검색<span class="arrow">접힘</span></a></h3>
+							<div class="js_acont">
+								<table class="g_tbl_01">
+									<caption>학사일정 검색항목 - 조회기간, 일정구분, 일정명의 순서로 정보 제공</caption>
+									<colgroup>
+										<col style="width:25%">
+										<col> 
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row">조회기간</th>
+											<td>
+												<div class="g_cal_wrap">
+													<input type="date" title="시작일 입력">
+													<span class="dash">~</span>
+													<input type="date" title="마지막일 입력">
+												<div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">일정구분</th>
+											<td>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou01">
+													<label for="cou01">수업</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou02">
+													<label for="cou02">학적</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou03">
+													<label for="cou03">등록</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou04">
+													<label for="cou04">성적</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou05">
+													<label for="cou05">장학</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou06">
+													<label for="cou06">졸업</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou07">
+													<label for="cou07">입시</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou08">
+													<label for="cou08">기타</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou09">
+													<label for="cou09">나의일정</label>
+												</span>
+												<span class="chk_wrap">
+													<input type="checkbox" id="cou10">
+													<strong><label for="cou10">전체</label></strong>
+												</span>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">일정명</th>
+											<td><input class="rnd" type="text" title="일정명 입력"></td>
+										</tr>
+									</tbody>
+								</table>
+
+								<div class="btn_wrap_full">
+									<a class="g_btn_01" href="#none">검색</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- 2017-02-27 관심일정이 없을 경우 -->
+					<div class="g_normal_list fav_cale">
+						<h3 class="g_tit_01">관심일정</h3>
+						<p class="g_text_01 fav_icon">
+							등록된 관심일정이 없습니다. <br>
+							&quot; <span class="btn_fav">즐겨찾기</span> &quot; 를 체크하시면 관심일정으로 등록됩니다.
+						</p>
+					</div><!--// 2017-02-27 관심일정이 없을 경우 -->
+
+					<div class="g_normal_list fav_cale">
+						<h3 class="g_tit_01">관심일정</h3>
+						<ul>
+							<li>
+								<strong class="tit">17.3.7</strong>
+								<p class="g_text_03">17년1학기 수강신청변경</p>
+								<div class="links">
+									<a class="btn_fav on" href="#none">즐겨찾기</a>
+									<a class="btn_gocoll" href="#none">상세보기</a>
+								</div>
+							</li>
+							<li>
+								<strong class="tit">17.3.13 ~ 17.3.17</strong>
+								<p class="g_text_03">하계계절학기 수요조사</p>
+								<div class="links">
+									<a class="btn_fav" href="#none">즐겨찾기</a>
+									<a class="btn_gocoll" href="#none">상세보기</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 2017-02-27 일정이 없을 경우 -->
+					<div class="acad_cale_box coud">
+						<h3 class="g_tit_01">2017년 학사일정</h3>
+						<p class="g_text_01">일정이 없습니다.</p>
+					</div><!--// 2017-02-27 일정이 없을 경우 -->
+
+					<div class="acad_cale_box coud">
+						<h3 class="g_tit_01">2017년 학사일정</h3>
+
+						<!-- 학사력 정보 노출 -->
+						<div class="acad_cale_detail">
+
+							<h4 class="mon_tit">January (1월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>1.8 (금)</strong>
+									<p>동계 계절학기 수강신청 취소 마감(1/2선)</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav on" href="#none">즐겨찾기</a><!-- 즐겨찾는 식당일 겨우, 클래스명 "on" 추가 -->
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>1.28 (목) ~ 2.3 (수)</strong>
+									<p>2016학년도    제1학기 수강신청</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">February (2월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>2.1 (월)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">March (3월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">April (4월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>1.8 (금)</strong>
+									<p>동계 계절학기 수강신청 취소 마감(1/2선)</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>1.28 (목) ~ 2.3 (수)</strong>
+									<p>2016학년도    제1학기 수강신청</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">May (5월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>2.1 (월)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">June (6월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">July (7월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">August (8월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">September (9월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">October (10월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">November (11월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+							<h4 class="mon_tit">December (12월)</h4>
+							<ul class="detail_list">
+								<li>
+									<strong>3.3 (목) ~ 3.9 (수)</strong>
+									<p>동계 계절학기 성적제출 마감</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.18 (금)</strong>
+									<p>수업일수 3/4선</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+								<li>
+									<strong>3.28 (월) ~ 4.14 (수)</strong>
+									<p>2017학년도 제1학기 장학생 선정 신청서 제출</p>
+									<a class="g_btn_06" href="#none">일정<br>추가</a>
+									<div class="links">
+										<a class="btn_fav" href="#none">즐겨찾기</a>
+										<a class="btn_gocoll" href="#none">상세보기</a>
+									</div>
+								</li>
+							</ul>
+
+						</div><!--// 학사력 정보 노출 -->
+					</div><!--//.acad_cale_box -->
+
+				</div>
+
+				<div id="gotop"><a href="#none">최상단으로 이동</a></div>
+			</section><!--// 컨테너 -->
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+			pub_ui.fnMcou(); // 학사일정
+		</script>
+	</body>
+</html>

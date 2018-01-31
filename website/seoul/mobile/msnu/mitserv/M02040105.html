@@ -1,0 +1,242 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 신청자 정보입력 | IT서비스 | 스누인지원 | 서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../../css/import.css">
+		
+		<!-- call js -->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="sub"><!-- 메인, 로그인페이지는 "main" 클래스명 추가, 서브페이지는 "sub" 클래스명 추가.-->
+		<!-- 웹접근성: 반복영역 건너뛰기 -->
+		<div id="skip_nav">
+			<a href="#container">본문내용 바로가기</a>
+		</div>
+
+		<div id="wrap">
+			<!-- 헤더 -->
+			<header id="header">
+				<h1 class="main_tit">스누인지원</h1>
+				<a class="btn_sch" href="#none" title="통합검색 페이지 이동">검색</a>
+				<a class="btn_gnb" href="#none" title="메뉴 페이지 이동">메뉴</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="container">
+				<div id="head">
+					<h2 class="page_tit">신청하기</h2>
+					<a class="btn_prev" href="#none" title="이전 페이지 이동">이전</a>
+				</div>
+
+				<div id="conts" class="mitserv"><!-- 2depth메뉴별 유니크한 클래스명 추가. 예) IT서비스는 'mitserv' 추가 (2depth폴더명과 동일)-->
+					
+					<!-- step -->
+					<ol class="g_step_01">
+						<li>책임자<br>선택</li>
+						<li>신청자<br>정보입력</li>
+						<li>실사용자<br>정보입력</li>
+						<li class="on">상세정보<br>입력</li>
+					</ol>
+
+					<!-- 실사용자 정보 입력 -->
+					<div class="g_normal_box regi_input">
+						<h3 class="g_tit_01">상세 정보 입력</h3>
+						<p class="g_text_03">상세 정보를 입력하신 후 신청버튼을 누르세요.</p>
+						<table class="g_tbl_01">
+							<caption>상세 정보 입력 - 캠퍼스, 동, 호, 호실구분, 호실명, 접속기종, Eth Addr, O/S, 용도, 비고(선택)의 순서로 정보 제공</caption>
+							<colgroup>
+								<col style="width:30%">
+								<col>
+							</colgroup>
+							<tbody>
+								<tr>
+									<th scope="row">캠퍼스</th>
+									<td>
+										<select title="캠퍼스 선택">
+											<option>선택하세요</option>
+											<option>관악</option>
+											<option>수원</option>
+											<option>동수원</option>
+											<option>연건</option>
+											<option>동해</option>
+											<option>기타</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">동</th>
+									<td>
+										<div class="ipt_btn_wrap type02">
+											<p class="g_text_05">123</p>
+											<a class="g_btn_07" href="#none">건물검색</a>
+										</div>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">호</th>
+									<td><input class="rnd" type="text" title="호 입력"></td>
+								</tr>
+								<tr>
+									<th scope="row">호실구분</th>
+									<td>
+										<select title="호실 선택">
+											<option>선택하세요</option>
+											<option>연구실</option>
+											<option>...</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">호실명</th>
+									<td><input class="rnd" type="text" title="호실명 입력"></td>
+								</tr>
+								<tr>
+									<th scope="row">접속기종</th>
+									<td>
+										<select title="접속기종 선택">
+											<option>선택하세요</option>
+											<option>PC</option>
+											<option>Mac</option>
+											<option>Network Printer</option>
+											<option>NetWork 장비</option>
+											<option>Notebook</option>
+											<option>WorkStation</option>
+											<option>기타</option>
+											<option>대형 Computer</option>
+											<option>무선AP</option>
+											<option>중형 Computer</option>
+											<option>플로터</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">Eth Addr</th>
+									<td><input class="rnd" type="text" title="Eth Addr 입력"></td>
+								</tr>
+								<tr>
+									<th scope="row">O/S</th>
+									<td>
+										<select title="O/S 선택">
+											<option>선택하세요</option>
+											<option>AIX</option>
+											<option>FreeBSD</option>
+											<option>IRIX</option>
+											<option>Linux</option>
+											<option>MacOS</option>
+											<option>SolarisWindows 2000</option>
+											<option>Windows 2003</option>
+											<option>Windows 95</option>
+											<option>Windows 98</option>
+											<option>Windows ME</option>
+											<option>Windows NT</option>
+											<option>Windows VistaWindows XP</option>
+											<option>Windows7</option>
+											<option>기타</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">용도</th>
+									<td>
+										<select title="용도 선택">
+											<option>선택하세요</option>
+											<option>ADSL</option>
+											<option>DHCP</option>
+											<option>DNS Server</option>
+											<option>FTP Server</option>
+											<option>File Server</option>
+											<option>Firewall</option>
+											<option>Mail Server</option>
+											<option>Network용</option>
+											<option>RAS(PPP)</option>
+											<option>Web Server</option>
+											<option>기타</option>
+											<option>냉난방시스템용</option>
+											<option>무선랜</option>
+											<option>사무용</option>
+											<option>실험용</option>
+											<option>연구용</option>
+											<option>전산실</option>
+											<option>정보검색</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<th scope="row">비고(선택)</th>
+									<td>
+										<textarea class="rnd" title="비고(선택) 입력"></textarea>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+
+					<!-- 버튼 -->
+					<div class="btn_wrap_half">
+						<a class="g_btn_04" href="#none">이전</a>
+						<a class="g_btn_01" href="#none">추가</a>
+					</div>
+
+					<!-- 신청목록 -->
+					<div class="g_normal_box regi_it_list">
+						<h3 class="g_tit_01">신청목록</h3>
+						<ul class="g_list_02">
+							<li>
+								<span class="no">20161212-35</span>
+								<p class="loca">[관악] 102동 314</p>
+								<span class="ip">123.123.123.123</span>
+								<a class="btn_del" href="#none">삭제</a>
+							</li>
+							<li>
+								<span class="no">20161212-35</span>
+								<p class="loca">[관악] 102동 314</p>
+								<span class="ip">123.123.123.123</span>
+								<a class="btn_del" href="#none">삭제</a>
+							</li>
+							<li>
+								<span class="no">20161212-35</span>
+								<p class="loca">[관악] 102동 314</p>
+								<span class="ip">123.123.123.123</span>
+								<a class="btn_del" href="#none">삭제</a>
+							</li>
+						</ul>
+					</div>
+
+					<!-- 버튼 -->
+					<div class="btn_wrap_full">
+						<a class="g_btn_01" href="#none">신청하기</a>
+					</div>
+
+				</div>
+
+				<div id="gotop"><a href="#none">최상단으로 이동</a></div>
+			</section><!--// 컨테너 -->
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+		</script>
+	</body>
+</html>

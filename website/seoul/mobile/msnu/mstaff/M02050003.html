@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 교직원검색 | 스누인지원 | 서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../../css/import.css">
+		
+		<!-- call js -->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="sub"><!-- 메인, 로그인페이지는 "main" 클래스명 추가, 서브페이지는 "sub" 클래스명 추가.-->
+		<!-- 웹접근성: 반복영역 건너뛰기 -->
+		<div id="skip_nav">
+			<a href="#container">본문내용 바로가기</a>
+		</div>
+
+		<div id="wrap">
+			<!-- 헤더 -->
+			<header id="header">
+				<h1 class="main_tit">스누인지원</h1>
+				<a class="btn_sch" href="#none" title="통합검색 페이지 이동">검색</a>
+				<a class="btn_gnb" href="#none" title="메뉴 페이지 이동">메뉴</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="container">
+				<div id="head">
+					<h2 class="page_tit">교직원검색</h2>
+					<a class="btn_prev" href="#none" title="이전 페이지 이동">이전</a>
+				</div>
+
+				<div id="conts" class="mstaff"><!-- 2depth메뉴별 유니크한 클래스명 추가. 예) 교직원검색은 'mstaff' 추가 (2depth폴더명과 동일)-->
+					
+					<!-- 검색 -->
+					<div class="g_search_01">
+						<input type="text" title="교직원 검색" placeholder="교직원 검색">
+						<a class="g_btn_07" href="#none">검색</a>
+					</div><!--// 검색 -->
+
+					<!-- 탭 -->
+					<ul class="g_tab_01 n2">
+						<li class="on"><a href="#none">조직도</a></li>
+						<li><a href="#none">자주찾는교직원</a></li>
+					</ul><!--// 탭 -->
+
+					<!-- 메뉴위치 -->
+					<ol class="menu_loca">
+						<li class="home"><a href="#none">홈</a></li>
+						<li><a href="#none">총장</a></li>
+						<li><a href="#none">교육기구</a></li>
+						<li><a href="#none">인문대학</a></li>
+						<li><a href="#none">국어국문학과</a></li>
+						<li class="curr"><a href="#none">연계전공 한국문화</a></li>
+					</ol><!--// 메뉴위치 -->
+
+					<!-- 기관 -->
+					<div class="g_normal_box js_faq_conts organ">
+						<div class="jfc_item">
+							<h3 class="g_tit_01 js_qtitle"><a href="#none">기관<span class="arrow">접힘</span></a></h3>
+							<ul class="js_acont g_list_02">
+								<li><a href="#none">하위기관1</a></li>
+								<li><a href="#none">하위기관2</a></li>
+								<li><a href="#none">하위기관3</a></li>
+								<li class="nolower"><a href="#none">하위기관4</a></li><!-- 하위기관이 없을 경우 -->
+								<li><a href="#none">하위기관5</a></li>
+								<li><a href="#none">하위기관6</a></li>
+								<li><a href="#none">하위기관7</a></li>
+								<li><a href="#none">하위기관8</a></li>
+							</ul>
+						</div>
+					</div><!--// 기관 -->
+
+					<div class="g_normal_list edu_person">
+						<h3 class="g_tit_01">교직원</h3>
+						<ul>
+							<li>
+								<strong class="tit">홍서울</strong>
+								<span class="desc">교수</span>
+								<span class="num">02-880-8112</span>
+								<div class="links">
+									<a class="btn_fav on" href="#none">즐겨찾기</a><!-- 즐겨찾기 활성화시 클래스명 'on'추가 -->
+									<a class="btn_tel" href="tel:02-880-8112">전화걸기</a>
+									<a class="btn_gocoll" href="#none">상세보기</a>
+								</div>
+							</li>
+							<li>
+								<strong class="tit">동서울</strong>
+								<span class="desc">선임행정관</span>
+								<span class="num">02-880-8119</span>
+								<div class="links">
+									<a class="btn_fav" href="#none">즐겨찾기</a>
+									<a class="btn_tel" href="tel:02-880-8119">전화걸기</a>
+									<a class="btn_gocoll" href="#none">상세보기</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+
+				<div id="gotop"><a href="#none">최상단으로 이동</a></div>
+			</section><!--// 컨테너 -->
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+		</script>
+	</body>
+</html>

@@ -1,0 +1,111 @@
+@charset "utf-8";
+/* ------------------------------------------
+* Filename:mcol.css
+* Description:학사행정
+* Author:Fu:z
+------------------------------------------ */
+
+/* 수강편람
+------------------------------------------ */
+/* 강좌검색 */
+.same_part_two{padding-left:6px}
+.same_part_two:after{display:block; content:''; clear:both}
+.same_part_two select{float:left; width:50%}
+.same_part_two select:first-child{position:relative; left:-6px}
+
+.g_normal_box.lect{padding-top:12px; padding-bottom:12px}
+.g_normal_box.lect .g_tit_04 a{position:relative; display:block; color:#333}
+.g_normal_box.lect .g_tit_04 a .arrow{position:absolute; top:50%; right:0; margin-top:-4px; display:block; width:13px; height:8px; font-size:8px; color:rgba(255,255,255,0); background:url('../images/mcol/bg_toggle_arrow.png') 0 0 no-repeat; background-size:13px auto}
+.g_normal_box.lect .on .g_tit_04 a .arrow{background-position:0 100%}
+.g_normal_box.lect table{margin-top:13px; border-bottom:0}
+.g_normal_box.lect table td > select + select{margin-top:5px}
+
+.g_normal_box.lect .btn_wrap_full:after{position:absolute; left:-15px; top:0; display:block; content:''; width:100%; height:1px; padding:0 15px; background-color:#b9bfc8}
+.g_normal_box.lect .btn_wrap_full{position:relative; padding:15px 0}
+
+/* 결과리스트 */
+.lect_result{margin-top:6px; background-color:#fff}
+.lect_result .lr_num{display:block; border:1px solid #b9bfc8; border-width:1px 0; padding:15px; color:#999}
+.lect_result .lr_num strong{color:#f24c36}
+
+.lect_result .g_text_01{border-bottom:1px solid #b9bfc8; text-align:center; line-height:64px}
+
+.lect_result ul{border-bottom:1px solid #b9bfc8}
+.lect_result li{border-top:1px solid #e2e8ec}
+.lect_result li:first-child{border-top:0}
+.lect_result li a:after{position:absolute; top:50%; right:15px; margin-top:-7px; display:block; content:''; width:7px; height:13px; background:url('../images/mmyp/bg_link_arrow.png') 0 0 no-repeat; background-size:100%}
+/* 교과항목(한단위) */
+.lect_item a{position:relative; display:block; padding:12px 45px 12px 15px; color:#555}
+.lect_item .cat{color:#333; font-size:15px}
+.lect_item .cat .sp{color:#555; font-weight:normal; font-size:12px; vertical-align:top}
+.lect_item .ifo, .lect_item .num{display:block; margin-top:3px; font-size:13px}
+.lect_item .ifo .sp, .lect_item .num .sp{font-size:10px; color:#999; vertical-align:top}
+.lect_item .sbj{display:block; margin-top:10px; font-size:15px; line-height:20px; color:#333}
+.lect_item .tim{margin-top:6px; font-size:13px}
+.lect_item .tim strong{color:#376dc8}
+
+/* 탭 */
+.fix_nav.g_tab_03{position:fixed; top:0; left:0; width:100%; z-index:10; margin-top:0}
+.g_tab_03 + .g_normal_box{margin-top:-1px}
+.g_tab_03 + .g_normal_box .g_tit_01{margin:30px 0 5px}
+.g_tab_03 + .g_normal_box .g_tit_01:first-child{margin-top:0}
+
+/* 강좌상세정보 */
+.g_normal_box.lect_detail{padding-bottom:0}
+.lect_detail table{margin-top:13px}
+.lect_detail .g_tit_01{margin-top:30px}
+.lect_detail .g_tit_01:first-child{margin-top:0}
+.lect_detail .g_tbl_01 tr th, .lect_detail .g_tbl_01 tr td{padding:10px 0}
+.lect_detail table:last-child{border-bottom:0}
+
+/* 교과목개요 */
+.g_normal_box.subj_detail{}
+
+/* 강의계획서 */
+.g_normal_box.lect_program{padding-top:20px; padding-bottom:20px}
+.lect_program .g_box_01{margin-top:12px; padding:13px 0}
+.g_box_01.edu_per_detail{border-top-color:#5d6268; border-bottom-color:#e2e8ec}
+.g_box_01.edu_per_detail:before{display:none}
+.g_box_01.edu_per_detail .tit{color:#333; font-size:13px; line-height:22px}
+.g_box_01.edu_per_detail .desc{display:block; color:#555; font-size:13px}
+
+.lect_program table{margin:10px 0}
+.lect_program .g_text_03{margin-top:5px}
+.lect_program .g_tit_02{margin:20px 0 4px}
+.lect_program .g_tit_03{margin:8px 0 4px}
+/* .lect_program .g_tit_03 + p{margin-left:14px} */
+.lect_program .g_text_03 + .g_tit_03{margin-top:13px}
+
+/* 수강반 & 2군 교과목 & 동일대체 교과목 */
+.g_normal_box.lect_class .g_text_01{text-align:center; line-height:64px}
+.g_normal_box.lect_class{padding-top:0; padding-bottom:0}
+.lect_class ul li{padding:15px 0; border-top:1px solid #e2e8ec}
+.lect_class ul li:first-child{border-top:0}
+.lect_class ul li .fipro{display:block; margin:4px 0; color:#999}
+.lect_class ul li .sta:before{display:inline-block; margin:-2px 5px 0; content:''; vertical-align:middle; width:1px; height:11px; background-color:#bdc0c5}
+.lect_class ul li .tit{color:#333}
+.lect_class ul li .stit{margin-top:4px; color:#999}
+.lect_class ul li .lecn{display:block; margin-top:4px}
+
+.lect_class ul li a{position:relative; display:block; color:#999}
+.lect_class ul li .re_box{position:relative; padding-left:30px; margin-top:15px; padding-top:10px; background:url('../images/mcol/bg_dot_line.png') 0 0 repeat-x}
+.lect_class ul li .re_box:before{position:absolute; top:12px; left:0; display:block; width:19px; height:15px; content:''; background:url('../images/mcol/bg_rep_item.png') 0 0 no-repeat; background-size:19px auto}
+
+/* 학사일정
+------------------------------------------ */
+.g_normal_box.cous .btn_wrap_full{padding-bottom:3px}
+
+.g_normal_box.cous .chk_wrap{display:inline-block; margin:4px 10px 4px 0}
+.acad_cale_box.coud .g_tit_01{margin:12px 15px}
+.acad_cale_box.coud .acad_cale_detail{padding-bottom:25px; border-top:1px solid #b9bfc8}
+.acad_cale_box.coud .acad_cale_detail li{padding-right:107px}
+.acad_cale_detail li .links{right:0}
+.acad_cale_box.coud li a.g_btn_06{right:72px}
+.acad_cale_box.coud > .g_text_01{border-top:1px solid #b9bfc8; line-height:64px; text-align:center}
+
+.g_normal_list.fav_cale .g_tit_01{margin-top:12px; padding-bottom:12px; border-bottom:1px solid #5d6268}
+.g_normal_list.fav_cale li{padding-right:70px}
+.g_normal_list.fav_cale .tit{color:#333}
+.g_normal_list.fav_cale .g_text_01{padding:23px 0; text-align:center}
+
+.mcou .btn_wrap_full{border-bottom:1px solid #b8bfc9; padding:15px; background-color:#fff}

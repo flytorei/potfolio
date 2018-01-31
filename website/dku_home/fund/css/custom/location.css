@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import 'compass';
+/* 로케이션 */
+.location{position:relative;z-index:10;border-bottom:1px solid #e2e2e2;background:#f3f4f8}
+.location dl{position:relative;z-index:0;height:40px;margin:0 auto;padding:0 0 0 40px !important}
+.location dl:after{display:block;clear:both;content:''}
+.location dl dt{display:block;position:absolute;top:0;left:0;z-index:10;width:40px;height:40px;padding:0;border-left:1px solid #e2e2e2;border-right:1px solid #e2e2e2;text-indent:-2000px}
+.location dl dt a{display:block;height:40px;padding:0;background:url(../../images/custom/sub/icon_depth_home.png) no-repeat 50% 50%;line-height:40px;text-align:center}
+.location dl dt a>img{vertical-align:middle}
+.location a{font-family:'나눔고딕',NanumGothic;color:#333;text-decoration:none}
+.location dl dd{display:block;float:left;position:relative;width:19%;height:40px;margin:0;padding:0;border-right:1px solid #e2e2e2;box-sizing:border-box}
+.location dl dd:first-child{background:none}
+.location dl dd>a{display:block;overflow:hidden;height:40px;margin:0 15px;padding-right:30px;background:url(../../images/custom/sub/icon_depth.png) no-repeat 100% 50%;background-size:19px auto;line-height:40px;font-weight:600;font-size:14px;color:#333;white-space:nowrap;text-overflow:ellipsis}
+.location dl dd>a:hover{background:url(../../images/custom/sub/icon_depth_on.png) no-repeat 100% 50%;color:#527cc8}
+.location dl dd.open>a{background:url(../../images/custom/sub/icon_depth_on.png) no-repeat 100% 50%;color:#527cc8}
+.location dl ul{display:none;overflow:hidden;position:absolute;top:40px;left:0;z-index:10;width:100%;margin:0;padding:10px;border:1px solid #dcdcdc;background:#fbfbfb;box-sizing:border-box}
+.location dl ul li{box-sizing:border-box}
+.location dl dd>ul>li>a{display:block;overflow:hidden;height:25px;line-height:25px;white-space:nowrap;text-overflow:ellipsis}
+.location dl dd>ul>li>a:hover{color:#527cc8}
+@media (min-width:768px) and (max-width:979px){
+.location dl dd{width:30%}
+}
+@media (min-width:0px) and (max-width:767px){
+
+/* .location dl dd{display:table-cell;float:none;position:initial;width:auto;height:auto} */
+.location dl dd{display:inline-block;float:left;position:initial;width:calc(100% / 3);height:auto;box-sizing:border-box}
+.location dl dd>a{font-size:12px}
+.location dl dd>ul{position:absolute;top:40px;left:0;z-index:10;width:100%;padding:0;border:0}
+.location dl dd>ul>li{padding:0;border-bottom:1px solid #efefef}
+.location dl dd>ul>li>a{padding:0 10px}
+.location dl.long_depth dd{display:block !important;float:left !important;width:calc(100% / 4) !important}
+}

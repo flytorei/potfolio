@@ -1,0 +1,492 @@
+@charset "utf-8";
+@import 'compass';
+@font-face{
+font-family:NanumGothic;src:url('/html/themes/_styled/images/custom/font/NanumGothic.eot');src:local('?'),url('/html/themes/_styled/images/custom/font/NanumGothic.woff') format('woff'),url('/html/themes/_styled/images/custom/font/NanumGothic.ttf') format('truetype')}
+
+#header *,#footer *,#container .slide_section *,#container .sub_visual_wrap *,#container .location *,#container .portlet-navigation *,#container .sub_tit_area *,#container #column-2 *,#container .portlet-navigation *,body.body_main #container *{font-family:'나눔고딕',NanumGothic}
+#header ol,#footer ol,#container .slide_section ol,#container .sub_visual_wrap ol,#container .location ol,#container .portlet-navigation ol,#container .sub_tit_area ol,#container #column-2 ol,#container .portlet-navigation ol,body.body_main #container ol,#header ul,#footer ul,#container .slide_section ul,#container .sub_visual_wrap ul,#container .location ul,#container .portlet-navigation ul,#container .sub_tit_area ul,#container #culumn-2 ul,#container .portlet-navigation ul,body.body_main #container,#header dt,#footer dt,#container .slide_section dt,#container .sub_visual_wrap dt,#container .location dt,#container .portlet-navigation dt,#container .sub_tit_area dt,#container #cdtumn-2 dt,#container .portlet-navigation dt,body.body_main #container dt,#header fieldset,#footer fieldset,#container .slide_section fieldset,#container .sub_visual_wrap fieldset,#container .location fieldset,#container .portlet-navigation fieldset,#container .sub_tit_area fieldset,#container #cfieldsetumn-2 fieldset,#container .portlet-navigation fieldset,body.body_main #container fieldset{list-style:none}
+legend{visibility:hidden;overflow:hidden;position:absolute;top:-50px;left:-50px;width:0;height:0;padding:0;font-size:0;line-height:0}
+#header button,#footer button,#container .slide_section button,#container .sub_visual_wrap button,#container .location button,#container .portlet-navigation button,#container .sub_tit_area button,#container #cbuttonumn-2 button,#container .portlet-navigation button,body.body_main #container button{overflow:visible;margin:0;padding:0;border:none;vertical-align:top;cursor:pointer}
+#header h1,#container h1,#footer h1,#header h2,#container h2,#footer h2,#header h3,#container h3,#footer h3,#header h4,#container h4,#footer h4,#header h5,#container h5,#footer h5,#header h6,#container h6,#footer h6{margin:0;font-weight:600}
+#header label,#footer label,#container .slide_section label,#container .sub_visual_wrap label,#container .location label,#container .portlet-navigation label,#container .sub_tit_area label,#container #clabelumn-2 label,#container .portlet-navigation label,#header select,#footer select,#container .slide_section select,#container .sub_visual_wrap select,#container .location select,#container .portlet-navigation select,#container .sub_tit_area select,#container #cselectumn-2 select,#container .portlet-navigation select,#header input,#footer input,#container .slide_section input,#container .sub_visual_wrap input,#container .location input,#container .portlet-navigation input,#container .sub_tit_area input,#container #cinputumn-2 input,#container .portlet-navigation input{font-size:13px;color:#666}
+#header img,#container img,#footer img{max-width:100%;width:auto;height:auto;border:0;vertical-align:top}
+
+body.body_main #container ul,body.body_main #container ol,body.body_main #container li{list-style:none}
+
+#container #column-2 ul,#container #column-2 ol,#container #column-2 li,#container #column-2 dt,#container #column-2 dd,#container #column-2 dl{list-style:none}
+
+
+/* 메인배경 */
+.random_bg{background-color:#27221d;position:fixed;width:100%;height:100%}
+.main_bg_01{background:url(../../images/custom/main/main_bg_01.jpg) no-repeat 50% 0}
+.main_bg_02{background:url(../../images/custom/main/main_bg_02.jpg) no-repeat 50% 0}
+
+/* 하위버전 */
+.container{width:1170px\9 !important}
+
+#header{position:absolute;z-index:30;width:100%;min-height:100px;*zoom:1}
+#header:after{display:block;clear:both;content:''}
+#container{position:relative;z-index:20;padding:99px 0 0;*zoom:1}
+#container:after{display:block;clear:both;content:''}
+#container .content_section *{transition:.35s ease}
+#footer{clear:both;position:relative;z-index:10;*zoom:1}
+#footer:after{display:block;clear:both;content:''}
+@media (min-width: 0) and (max-width: 979px){
+#container{position:relative;z-index:20;padding:80px 0 0;*zoom:1}
+}
+
+/* Skip to Content */
+hr,.skip,legend,caption{visibility:hidden;overflow:hidden;position:absolute;width:0;height:0;font-size:0;line-height:0}
+caption{position:static}
+.skip_navigation{margin:0 !important}
+.skip_navigation dt{position:absolute;top:-10000px;left:0}
+.skip_navigation a{display:block;position:absolute;top:-10000px;left:0;z-index:100;width:100%;font-size:1.3em;text-align:center}
+.skip_navigation a:focus{position:absolute;top:0;z-index:100;padding:15px 0;background:#368dc9;font-weight:600;color:#fff}
+
+.body_main #container{}
+.body_sub #container .sub_layout{position:relative}
+body{margin:0 !important;padding:0 !important}
+
+/* 상단로고 */
+#header .container{position:relative}
+#header h1{position:absolute;top:0;left:0;z-index:50}
+#header h1 a{display:inline-block;float:left;width:185px;height:70px;background:url(../../images/custom/common/h1_logo_pc.png) no-repeat 0 50%}
+#header h1 a span{visibility:hidden;position:absolute;z-index:-1}
+#header h1 .school_name{display:block;overflow:hidden;float:left;width:160px;height:70px;background:url(../../images/custom/common/top_logo_museum.png) no-repeat 0 50%;font-size:20px;color:#666;text-indent:-3000px}
+@media (max-width: 979px){
+#header h1 a{width:126px;height:50px;background-size:126px auto}
+#header h1 .school_name{width:90px;height:50px;background-size:90px auto;background-position:0 50%}
+}
+
+/* 상단유틸 */
+#header .section_util{height:30px;background:#35435b}
+#header .section_util .util_inner{margin:0 auto}
+#header .section_util ul{float:right;margin:0;padding:0}
+#header .section_util ul li{float:left;padding:0 10px;background:url(../../images/custom/common/bar_section_util.png) no-repeat 0 50%}
+#header .section_util ul li:first-child{background:none}
+#header .section_util ul li a{display:inline-block;height:30px;font-size:10px;line-height:30px;color:#fff}
+#header .section_util ul li.join a{color:#d8d731}
+#header .section_util ul li.login a{color:#d8d731}
+#header .section_util ul li.logout a{color:#d8d731}
+#header .section_util ul li.logout a span{color:#fff}
+#header .section_util ul li.state{height:30px;background:none;line-height:30px;font-size:11px;color:#fff}
+
+/* 상단검색 */
+.util_search{position:relative;margin-top:1px;padding:0 0 0 10px !important}
+.util_search label{display:none}
+.util_search .dku_search{top:0;right:9px;width:32px;height:28px;background:url(../../images/custom/common/srch_btn.png) no-repeat 0 0;text-indent:-99999px}
+.util_search input{width:128px;margin:0 !important;border:none !important;border-radius:0 !important;background:transparent !important;color:#fff}
+.util_search form{margin:0}
+.util_search button{margin-left:-4px}
+.util_search .input_area{height:28px;background:#677a96}
+
+/* 슬라이드킷 */
+.sliderkit{display:none;overflow:hidden;position:relative;text-align:left}
+.sliderkit a,.sliderkit a:hover{text-decoration:none}
+.sliderkit a:focus{outline:1px dotted #000}
+.sliderkit img{border:0}
+.sliderkit .sliderkit-nav{position:absolute;z-index:10;text-align:center}
+.sliderkit .sliderkit-nav-clip{overflow:hidden;position:relative;margin:0 auto}
+.sliderkit .sliderkit-nav-clip ul{position:relative;top:0;left:0;margin:0;padding:0;list-style:none}
+.sliderkit .sliderkit-nav-clip ul li{float:left}
+.sliderkit .sliderkit-nav-clip ul li a{display:block;overflow:hidden}
+.sliderkit .sliderkit-btn{z-index:10}
+.sliderkit .sliderkit-panel{overflow:hidden;position:absolute;z-index:1}
+.sliderkit .sliderkit-panel-active{z-index:5}
+.sliderkit .sliderkit-panel-old{z-index:4}
+.sliderkit .sliderkit-panel .sliderkit-panel-textbox{position:absolute;z-index:1}
+.sliderkit .sliderkit-panel .sliderkit-panel-text{position:absolute;top:0;left:0;z-index:3}
+.sliderkit .sliderkit-panel .sliderkit-panel-overlay{position:absolute;top:0;left:0;z-index:2}
+.sliderkit .sliderkit-count{position:absolute;top:5px;right:5px;z-index:10;padding:5px;background:#000;color:#fff}
+.sliderkit .sliderkit-timer{position:absolute;top:0;left:0;z-index:10;height:3px;background:#ccc}
+
+/* 메인슬라이드 */
+.main_visual_section{position:relative}
+.main_visual{width:100%}
+.main_visual .sliderkit-panels{display:block;height:415px}
+.main_visual .sliderkit-panels .sliderkit-panel{width:100%;height:415px;background-repeat:no-repeat;background-position:50% 0}
+.main_visual .sliderkit-panels .sliderkit-panel a{display:block;width:100%;height:415px}
+.main_visual .sliderkit-panels .sliderkit-panel a span{visibility:hidden;position:absolute;z-index:-1}
+
+.main_visual .main_controll{position:absolute;top:0;left:0;z-index:100;width:100%}
+.main_visual .controll_inner{float:right}
+.main_visual .sliderkit-nav{float:left;position:relative}
+.main_visual .sliderkit-nav-clip{float:left;position:relative}
+.main_visual .sliderkit-nav-clip ul{float:left;position:relative;padding:25px 0 0}
+.main_visual .sliderkit-nav-clip ul li{float:left;margin:0 0 0 5px}
+.main_visual .sliderkit-nav .sliderkit-nav-clip ul li a{overflow:hidden;width:13px;height:13px;background:url(../../images/custom/main/bullet_main_slide_off.png) no-repeat 50% 50%}
+
+.main_visual .sliderkit-nav .sliderkit-nav-clip ul li.sliderkit-selected a{width:34px;background:url(../../images/custom/main/bullet_main_slide_on.png) no-repeat 50% 50%}
+.main_visual .sliderkit-nav .sliderkit-nav-clip ul li a span{visibility:hidden;position:absolute;z-index:-1}
+
+.main_visual .sliderkit-controls{height:13px;margin:0 0 0 5px;padding:25px 0 0}
+.main_visual .sliderkit-controls *{vertical-align:top}
+.main_visual .sliderkit-btn a{display:inline-block;overflow:hidden;width:13px;height:13px}
+.main_visual .sliderkit-btn a span{visibility:hidden;position:absolute;z-index:-1}
+.main_visual .sliderkit-play-btn a{background:url(../../images/custom/main/bullet_main_slide_pause.png) no-repeat 50% 50%}
+.main_visual .sliderkit-pause-btn a{background:url(../../images/custom/main/bullet_main_slide_play.png) no-repeat 50% 50%}
+.main_visual .sliderkit-controls{float:left}
+@media (min-width:0) and (max-width:1200px){
+.main_visual .sliderkit-panels{display:block;height:300px}
+.main_visual .sliderkit-panels .sliderkit-panel{height:300px;background-size:auto 300px}
+.main_visual .sliderkit-panels .sliderkit-panel a{height:300px}
+}
+
+/* 메인 박물관 섹션영역 */
+.item{width:285px;height:256px}
+
+/* 메인 비주얼 텍스트 */
+.main_visual_section .container{position:relative}
+.main_visual_section .main_txt{position:relative}
+.main_visual_section .main_txt a{display:block;position:absolute;top:65px;left:0;z-index:10;width:410px;height:280px;background:url(../../images/custom/main/main_visual_txt.png) no-repeat 0 0}
+.main_visual_section .main_txt a span{visibility:hidden;position:absolute;z-index:-1}
+
+/* 메인 컨텐츠 영역 */
+.main_content_section{padding:83px 0 0;margin:0 auto 40px}
+
+@media (max-width: 1200px) {
+    .main_content_section{width:875px}
+}
+@media (min-width: 580px) and (max-width: 979px) {
+    .main_content_section{width:285px;padding:20px 0 0 0}
+    .main_content_section{width:580px}
+}
+@media (min-width: 0) and (max-width: 579px) {
+    .main_content_section{width:285px;padding:10px 0 0 0}
+    .option,.item{width:285px}
+    .notice_section{width:285px !important}
+}
+
+
+/* 박물관 새소식 */
+.notice_section{width:580px;background:#f8f8f8}
+.notice_section .tit_area{padding:20px 25px 0;height:40px}
+.notice_section .tit_area h3{color:#333;font-size:22px;height:30px;line-height:22px;font-weight:normal !important}
+.notice_section .list_area{padding:0 25px 0}
+.notice_section .list_area ul{margin:0}
+.notice_section .list_area ul li{position:relative}
+.notice_section .list_area ul li a{display:block;height:25px;line-height: 25px;color:#666;background:url(../../images/custom/main/bullet_main_notice.gif) no-repeat 0 50%;padding:0 0 0 10px;margin:0 65px 0 0;overflow:hidden;white-space: nowrap;text-overflow: ellipsis}
+.notice_section .list_area ul li a:hover{font-weight:600}
+.notice_section .list_area ul li .date{position:absolute;z-index: 10;top:0;right:0;width:65px;text-align:right;height:25px;line-height: 25px;color:#999;font-size:12px}
+.notice_section .more{position:absolute;z-index: 10;top:25px;right:25px}
+.notice_section .more a{display:block;width:16px;height:16px;overflow:hidden;background:url(../../images/custom/main/btn_more.png) no-repeat 50% 50%}
+.notice_section .more a span{visibility:hidden;position:absolute;z-index: -1}
+
+/* 유물기증안내 */
+.guidance_section{height:123px;margin:0 0 10px;background:#396394 url(../../images/custom/main/bg_guidence.png) no-repeat 100% 50%}
+.guidance_section .tit_area{padding:25px 25px 0;height:30px}
+.guidance_section .tit_area h3{color:#fff;font-size:22px;height:30px;line-height:30px;font-weight:normal !important}
+.guidance_section .more{padding:15px 0 0 25px}
+.guidance_section .more a{display:block;width:90px;height:15px;overflow:hidden;background:url(../../images/custom/main/btn_more_eng.png) no-repeat 0 50%}
+.guidance_section .more a span{visibility:hidden;position:absolute;z-index: -1}
+
+/* 박물관 링크 */
+.link_section{height:123px;background:#bd932e}
+.link_section ul{margin:0;padding:25px 25px 0;*zoom:1}
+.link_section ul:after{content:'';clear:both;display:block}
+.link_section ul li{float:left;width:calc(100% / 3);width:73.3281px\9}
+.link_section ul li a{display:block;height:30px;padding:60px 0 0 0;text-decoration:none}
+.link_section ul li a.n_01{background:url(../../images/custom/main/set_link.png) no-repeat 50% -100px;color:#fff}
+.link_section ul li a.n_02{background:url(../../images/custom/main/set_link.png) no-repeat 50% -200px;color:#fff}
+.link_section ul li a.n_03{background:url(../../images/custom/main/set_link.png) no-repeat 50% -300px;color:#fff}
+.link_section ul li a span{font-size: 12px;display: block;text-align: center}
+
+/* 소장품 검색 */
+.search_section{height:123px;margin:0 0 10px;background:#4489ae url(../../images/custom/main/bg_search.png) no-repeat 50% 50%}
+.search_section .tit_area{padding:30px 25px 0;height:30px}
+.search_section .tit_area h3{color:#fff;font-size:18px;height:30px;line-height:normal;font-weight:normal !important}
+.search_section legend{visibility:hidden;position:absolute;z-index: -1}
+.search_section .search_input_area{position:relative;margin:0 25px 0;height:40px;background:#fff;border-radius:2px}
+.search_section .search_input_area .text_area{margin:0 40px 0 0}
+.search_section .search_input_area .text_area input[type=text]{width:100%;box-sizing:border-box;margin:0;border:none;height:40px}
+.search_section .search_input_area .submit_area{position:absolute;z-index: 10;top:0;right:0}
+.search_section .search_input_area .submit_area input[type=submit]{width:40px;height:40px;overflow:hidden;border:0;background:url(../../images/custom/main/ico_search.png) no-repeat 50% 50%;text-indent: -999px;font-size:14px}
+
+/* 석주선기념박물관 구글아트프로젝트 */
+.artproject_section{height:123px;margin:0 0 10px;background:#419181 url(../../images/custom/main/bg_google.png) no-repeat 100% 50%}
+.artproject_section .tit_area{padding:35px 25px 0;height:30px}
+.artproject_section .tit_area h3{color:#fff;font-size:18px;height:30px;line-height:normal;font-weight:normal !important}
+.artproject_section .more{padding:0 25px 0}
+.artproject_section .more a{display:block;width:140px;height:20px;overflow:hidden;background:url(../../images/custom/main/btn_google.png) no-repeat 0 50%}
+.artproject_section .more a span{visibility:hidden;position:absolute;z-index: -1}
+
+/* 교육/문화행사 */
+.culture_section{position:relative;z-index:0;background:#fff}
+.culture_section .tit_area{height:40px;padding:20px 25px 0}
+.culture_section .tit_area h3{font-size:22px;height:40px;line-height:22px;color:#333;font-weight: normal !important}
+.culture_section .list_area{position:relative;z-index:0;min-height:196px}
+.culture_section .list_area .img_area{height:196px;background:#efefef;text-align:center}
+.culture_section .list_area .img_area img{width:100%;height:196px !important}
+.culture_section .list_area .bar{display:block;position:absolute;left:0;bottom:0;z-index:10;width:100%;height:35px;background:#000;opacity:.5}
+.culture_section .list_area .subject{display:block;position:absolute;left:0;bottom:0;z-index:20;width:100%;height:35px}
+.culture_section .list_area .subject a{display:block;overflow:hidden;height:35px;padding:0 30px;line-height:35px;color:#fff;white-space:nowrap;text-overflow:ellipsis;text-align:center}
+.culture_section .more{position:absolute;top:25px;right:25px;z-index:10}
+.culture_section .more a{display:block;overflow:hidden;width:16px;height:16px;background:url(../../images/custom/main/btn_more.png) no-repeat 50% 50%}
+.culture_section .more a span{visibility:hidden;position:absolute;z-index:-1}
+
+/* 특별전 */
+.special_section{position:relative;z-index:0;background:#fff}
+.special_section .tit_area{height:40px;padding:20px 25px 0}
+.special_section .tit_area h3{font-size:22px;height:35px;line-height:22px;color:#333;font-weight: normal !important}
+.special_section .list_area{position:relative;z-index:0;min-height:196px}
+.special_section .list_area .img_area{height:196px;background:#efefef;text-align:center}
+.special_section .list_area .img_area img{width:100%;height:196px !important}
+.special_section .list_area .bar{display:block;position:absolute;left:0;bottom:0;z-index:10;width:100%;height:35px;background:#000;opacity:.5}
+.special_section .list_area .subject{display:block;position:absolute;left:0;bottom:0;z-index:20;width:100%;height:35px}
+.special_section .list_area .subject a{display:block;overflow:hidden;height:35px;padding:0 30px;line-height:35px;color:#fff;white-space:nowrap;text-overflow:ellipsis;text-align:center}
+.special_section .more{position:absolute;top:25px;right:25px;z-index:10}
+.special_section .more a{display:block;overflow:hidden;width:16px;height:16px;background:url(../../images/custom/main/btn_more.png) no-repeat 50% 50%}
+.special_section .more a span{visibility:hidden;position:absolute;z-index:-1}
+
+/* 석주선박사 바로가기 */
+.doctor_section{background:#a67238 url(../../images/custom/main/bg_doctor.png) no-repeat 100% 100%}
+.doctor_section .tit_area{height:40px;padding:20px 25px 0}
+.doctor_section .tit_area h3{font-size:22px;height:35px;line-height:22px;color:#fff;font-weight: normal !important}
+.doctor_section .subject{padding:0 25px 0;font-size:14px;color:#fff}
+.doctor_section .more{padding:0 0 0 25px}
+.doctor_section .more a{display:block;width:90px;height:15px;overflow:hidden;background:url(../../images/custom/main/btn_more_doctor.png) no-repeat 0 50%}
+.doctor_section .more a span{visibility:hidden;position:absolute;z-index: -1}
+
+/* 관람안내 */
+.view_section{background:#61733d url(../../images/custom/main/bg_view.png) no-repeat 50% 50%}
+.view_section .tit_area{height:40px;padding:20px 25px 0}
+.view_section .tit_area h3{font-size:22px;height:35px;line-height:22px;color:#fff;font-weight: normal !important}
+.view_section .list_area ul{margin:0;padding:0 25px 10px}
+.view_section .list_area ul li{color:#fff;margin:0 0 13px;padding:0 0 0 8px;line-height: 14px;background:url(../../images/custom/main/bullet_main_view.gif) no-repeat 0 50%;letter-spacing: -1px}
+.view_section .tel{color:#fff;font-size:22px;line-height:22px;margin:0 25px 15px;padding:0 0 0 32px;background:url(../../images/custom/main/bg_phone.png) no-repeat 0 50%}
+.view_section .application_link{margin:0 25px 15px}
+.view_section .application_link a{display:block;height:40px;line-height: 40px;border-radius:2px;background:#404f23;text-align:center;font-size:16px;color:#cee0aa;font-weight:600}
+
+/* 스크롤 */
+.mCustomScrollBox{overflow:hidden;position:relative;max-width:100%;height:100%;outline:0;direction:ltr}
+.mCSB_container{overflow:hidden;width:auto;height:auto}
+.mCSB_inside>.mCSB_container{margin-right:2px}
+.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0}
+.mCS-dir-rtl>.mCSB_inside>.mCSB_container{margin-right:0;margin-left:30px}
+.mCS-dir-rtl>.mCSB_inside>.mCSB_container.mCS_no_scrollbar_y.mCS_y_hidden{margin-left:0}
+.mCSB_scrollTools{position:absolute;top:0;right:0;left:auto;bottom:0;width:16px;height:auto}
+.mCSB_outside+.mCSB_scrollTools{right:-26px}
+.mCS-dir-rtl>.mCSB_inside>.mCSB_scrollTools,.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{right:auto;left:0}
+.mCS-dir-rtl>.mCSB_outside+.mCSB_scrollTools{left:-26px}
+.mCSB_scrollTools .mCSB_draggerContainer{position:absolute;top:0;right:0;left:0;bottom:0;height:auto}
+.mCSB_scrollTools a+.mCSB_draggerContainer{margin:20px 0}
+.mCSB_scrollTools .mCSB_draggerRail{width:2px;height:100%;margin:0 auto;border-radius:16px}
+.mCSB_scrollTools .mCSB_dragger{z-index:1;width:100%;height:30px;cursor:pointer}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{position:relative;width:4px;height:100%;margin:0 auto;border-radius:16px;text-align:center}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:12px}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:8px}
+.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown{display:block;overflow:hidden;position:absolute;width:100%;height:20px;margin:0 auto;cursor:pointer}
+.mCSB_scrollTools .mCSB_buttonDown{bottom:0}
+.mCSB_horizontal.mCSB_inside>.mCSB_container{margin-right:0;margin-bottom:0}
+.mCSB_horizontal.mCSB_outside>.mCSB_container{min-height:100%}
+.mCSB_horizontal>.mCSB_container.mCS_no_scrollbar_x.mCS_x_hidden{margin-bottom:0}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal{top:auto;right:0;left:0;bottom:0;width:auto;height:16px}
+.mCustomScrollBox+.mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCustomScrollBox+.mCSB_scrollTools+.mCSB_scrollTools.mCSB_scrollTools_horizontal{bottom:-26px}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal a+.mCSB_draggerContainer{margin:0 20px}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:2px;margin:7px 0}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger{left:0;width:30px;height:100%}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto}
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{height:12px;margin:2px auto}
+.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height:8px;margin:4px 0}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft,.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{display:block;overflow:hidden;position:absolute;width:20px;height:100%;margin:0 auto;cursor:pointer}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonLeft{left:0}
+.mCSB_scrollTools.mCSB_scrollTools_horizontal .mCSB_buttonRight{right:0}
+.mCSB_container_wrapper{overflow:hidden;position:absolute;top:0;right:0;left:0;bottom:0;width:auto;height:auto;margin-right:30px;margin-bottom:30px}
+.mCSB_container_wrapper>.mCSB_container{padding-right:30px;padding-bottom:30px}
+.mCSB_vertical_horizontal>.mCSB_scrollTools.mCSB_scrollTools_vertical{bottom:20px}
+.mCSB_vertical_horizontal>.mCSB_scrollTools.mCSB_scrollTools_horizontal{right:20px}
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden+.mCSB_scrollTools.mCSB_scrollTools_vertical{bottom:0}
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden+.mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal,.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal{right:0}
+.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_scrollTools.mCSB_scrollTools_horizontal{left:20px}
+.mCS-dir-rtl>.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden+.mCSB_scrollTools ~ .mCSB_scrollTools.mCSB_scrollTools_horizontal{left:0}
+.mCS-dir-rtl>.mCSB_inside>.mCSB_container_wrapper{margin-right:0;margin-left:30px}
+.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden>.mCSB_container{padding-right:0;box-sizing:border-box}
+.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden>.mCSB_container{padding-bottom:0;box-sizing:border-box}
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_y.mCS_y_hidden{margin-right:0;margin-left:0}
+.mCustomScrollBox.mCSB_vertical_horizontal.mCSB_inside>.mCSB_container_wrapper.mCS_no_scrollbar_x.mCS_x_hidden{margin-bottom:0}
+.mCSB_scrollTools,.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight{transition:opacity .2s ease-in-out,background-color .2s ease-in-out}
+.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger_bar,.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerRail{transition:width .2s ease-out .2s,height .2s ease-out .2s,margin-left .2s ease-out .2s,margin-right .2s ease-out .2s,margin-top .2s ease-out .2s,margin-bottom .2s ease-out .2s,opacity .2s ease-in-out,background-color .2s ease-in-out}
+.mCSB_scrollTools{opacity:.25}
+.mCS-autoHide>.mCustomScrollBox>.mCSB_scrollTools,.mCS-autoHide>.mCustomScrollBox ~ .mCSB_scrollTools{opacity:0}
+.mCustomScrollbar>.mCustomScrollBox>.mCSB_scrollTools.mCSB_scrollTools_onDrag,.mCustomScrollbar>.mCustomScrollBox ~ .mCSB_scrollTools.mCSB_scrollTools_onDrag,.mCustomScrollBox:hover>.mCSB_scrollTools,.mCustomScrollBox:hover ~ .mCSB_scrollTools,.mCS-autoHide:hover>.mCustomScrollBox>.mCSB_scrollTools,.mCS-autoHide:hover>.mCustomScrollBox ~ .mCSB_scrollTools{opacity:1}
+.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,0.4)}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.75)}
+.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.85)}
+.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.9)}
+.mCSB_scrollTools .mCSB_buttonUp,.mCSB_scrollTools .mCSB_buttonDown,.mCSB_scrollTools .mCSB_buttonLeft,.mCSB_scrollTools .mCSB_buttonRight{background-repeat:no-repeat;opacity:.4}
+.mCSB_scrollTools .mCSB_buttonUp{background-position:0 0}
+.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -20px}
+.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -40px}
+.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -56px}
+.mCSB_scrollTools .mCSB_buttonUp:hover,.mCSB_scrollTools .mCSB_buttonDown:hover,.mCSB_scrollTools .mCSB_buttonLeft:hover,.mCSB_scrollTools .mCSB_buttonRight:hover{opacity:.75}
+.mCSB_scrollTools .mCSB_buttonUp:active,.mCSB_scrollTools .mCSB_buttonDown:active,.mCSB_scrollTools .mCSB_buttonLeft:active,.mCSB_scrollTools .mCSB_buttonRight:active{opacity:.9}
+.mCS-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,0.15)}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.75)}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:rgba(0,0,0,0.85)}
+.mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:rgba(0,0,0,0.9)}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px 0}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}
+.mCS-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}
+.mCS-light-2.mCSB_scrollTools .mCSB_draggerRail,.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{width:4px;border-radius:1px;background-color:#fff;background-color:rgba(255,255,255,0.1)}
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:4px;border-radius:1px;background-color:#fff;background-color:rgba(255,255,255,0.75)}
+.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-light-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-2.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:4px;margin:6px auto}
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.85)}
+.mCS-light-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-light-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.9)}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonUp{background-position:-32px 0}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonDown{background-position:-32px -20px}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonLeft{background-position:-40px -40px}
+.mCS-light-2.mCSB_scrollTools .mCSB_buttonRight{background-position:-40px -56px}
+.mCS-dark-2.mCSB_scrollTools .mCSB_draggerRail{border-radius:1px;background-color:#000;background-color:rgba(0,0,0,0.1)}
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{border-radius:1px;background-color:#000;background-color:rgba(0,0,0,0.75)}
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.85)}
+.mCS-dark-2.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark-2.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.9)}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonUp{background-position:-112px 0}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonDown{background-position:-112px -20px}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonLeft{background-position:-120px -40px}
+.mCS-dark-2.mCSB_scrollTools .mCSB_buttonRight{background-position:-120px -56px}
+.mCS-light-thick.mCSB_scrollTools .mCSB_draggerRail,.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{width:4px;border-radius:2px;background-color:#fff;background-color:rgba(255,255,255,0.1)}
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:6px;border-radius:2px;background-color:#fff;background-color:rgba(255,255,255,0.75)}
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%;height:4px;margin:6px 0}
+.mCS-light-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:6px;margin:5px auto}
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.85)}
+.mCS-light-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-light-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#fff;background-color:rgba(255,255,255,0.9)}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px 0}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -20px}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -40px}
+.mCS-light-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -56px}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_draggerRail{border-radius:2px;background-color:#000;background-color:rgba(0,0,0,0.1)}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{border-radius:2px;background-color:#000;background-color:rgba(0,0,0,0.75)}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.85)}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark-thick.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.9)}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonUp{background-position:-96px 0}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonDown{background-position:-96px -20px}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonLeft{background-position:-100px -40px}
+.mCS-dark-thick.mCSB_scrollTools .mCSB_buttonRight{background-position:-100px -56px}
+.mCS-light-thin.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,0.1)}
+.mCS-light-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:2px}
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_draggerRail{width:100%}
+.mCS-light-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-dark-thin.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{width:100%;height:2px;margin:7px auto}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,0.15)}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.75)}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.85)}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-dark-thin.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.9)}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px 0}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -20px}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -40px}
+.mCS-dark-thin.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -56px}
+.mCS-rounded.mCSB_scrollTools .mCSB_draggerRail{background-color:#fff;background-color:rgba(255,255,255,0.15)}
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger,.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger,.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger{height:14px}
+.mCS-rounded.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{width:14px;margin:0 1px}
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger{width:14px}
+.mCS-rounded.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{height:14px;margin:1px 0}
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:16px;height:16px;margin:-1px 0}
+.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded-dark.mCSB_scrollTools_vertical.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{width:4px}
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_dragger .mCSB_dragger_bar{width:16px;height:16px;margin:0 -1px}
+.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail,.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_dragger.mCSB_dragger_onDrag_expanded+.mCSB_draggerRail,.mCS-rounded-dark.mCSB_scrollTools_horizontal.mCSB_scrollTools_onDrag_expand .mCSB_draggerContainer:hover .mCSB_draggerRail{height:4px;margin:6px 0}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonUp{background-position:0 -72px}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonDown{background-position:0 -92px}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonLeft{background-position:0 -112px}
+.mCS-rounded.mCSB_scrollTools .mCSB_buttonRight{background-position:0 -128px}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.75)}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_draggerRail{background-color:#000;background-color:rgba(0,0,0,0.15)}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.85)}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-rounded-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar{background-color:#000;background-color:rgba(0,0,0,0.9)}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-80px -72px}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-80px -92px}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-80px -112px}
+.mCS-rounded-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-80px -128px}
+.mCS-rounded-dots.mCSB_scrollTools_vertical .mCSB_draggerRail,.mCS-rounded-dots-dark.mCSB_scrollTools_vertical .mCSB_draggerRail{width:4px}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail,.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{background-color:transparent;background-position:center}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_draggerRail,.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_draggerRail{opacity:.3}
+.mCS-rounded-dots.mCSB_scrollTools_horizontal .mCSB_draggerRail,.mCS-rounded-dots-dark.mCSB_scrollTools_horizontal .mCSB_draggerRail{height:4px;margin:6px 0;background-repeat:repeat-x}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonUp{background-position:-16px -72px}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonDown{background-position:-16px -92px}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonLeft{background-position:-20px -112px}
+.mCS-rounded-dots.mCSB_scrollTools .mCSB_buttonRight{background-position:-20px -128px}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonUp{background-position:-96px -72px}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonDown{background-position:-96px -92px}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonLeft{background-position:-100px -112px}
+.mCS-rounded-dots-dark.mCSB_scrollTools .mCSB_buttonRight{background-position:-100px -128px}
+.mCS-3d.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{background-repeat:repeat-y;background-image:linear-gradient(to right, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%)}
+.mCS-3d.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar,.mCS-3d-thick-dark.mCSB_scrollTools_horizontal .mCSB_dragger .mCSB_dragger_bar{background-repeat:repeat-x;background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.5) 0, rgba(255, 255, 255, 0) 100%)}
+
+/* 하단슬라이드 링크 */
+.foot_slide_frame{position:relative;height:48px;padding:0 20px;border-radius:2px;background:#373331;margin:0 0 15px;opacity:0.9}
+.foot_slide_frame .scroll{overflow:hidden;margin:0 10px}
+.foot_slide_frame .mCSB_container{margin:0 !important}
+.foot_slide_frame .foot_slide_list{position:relative;z-index:0}
+.foot_slide_frame .foot_slide_list ul{overflow:hidden;margin:0;padding:0}
+.foot_slide_frame .foot_slide_list ul:after{display:block;clear:both;content:''}
+.foot_slide_frame .foot_slide_list ul li{float:left;margin:0;padding:0;padding:0 10px;background:url(../../images/custom/main/bar_foot_slide.gif) no-repeat 0 50%;list-style:none}
+.foot_slide_frame .foot_slide_list ul li:first-child{padding-left:0;background:none}
+.foot_slide_frame .foot_slide_list ul li:last-child{padding-right:0}
+.foot_slide_frame .foot_slide_list ul li a{display:inline-block;height:46px;line-height:46px;font-size:12px;color:#fff}
+.foot_slide_frame .foot_slide_list ul li a:hover{color:#fef6b3;text-decoration:none}
+.foot_slide_frame .mCSB_container{z-index:0}
+.foot_slide_frame .mCSB_scrollTools{visibility:visible;position:absolute;left:0;bottom:0;z-index:10;width:100%}
+.foot_slide_frame .mCSB_scrollTools .mCSB_buttonLeft{display:block;overflow:hidden;position:absolute;top:0;left:-20px;z-index:10;width:20px;height:25px;text-indent:-3000px}
+.foot_slide_frame .mCSB_scrollTools .mCSB_buttonRight{display:block;overflow:hidden;position:absolute;top:0;right:-20px;z-index:10;width:20px;height:25px;text-indent:-3000px}
+@media (min-width: 0) and (max-width: 768px){
+.foot_slide_frame{margin-left:10px;margin-right:10px;margin-bottom:15px}
+}
+
+/* 푸터 */
+.body_sub #footer{background: #68757c}
+#footer .address{padding:10px 0 0 0;font-size:12px;color:#efefef}
+#footer .address em{font-style:normal}
+#footer .copyright{display:block;padding:0 0 0;color:#efefef;font-size:12px}
+#footer .footer_inner{position:relative}
+#footer .footer_menu{padding:20px 0 0 0}
+#footer .footer_menu ul{margin:0;padding:0;text-align:center}
+#footer .footer_menu ul:after{display:block;clear:both;content:''}
+#footer .footer_menu ul li{display:inline-block;float:left;margin:0 0 0 10px;padding:0 0 0 12px;list-style:none;list-style-type:none;background:url(../../images/custom/common/bullet_foot_li.gif) no-repeat 0 50%;}
+#footer .footer_menu ul li:first-child{margin:0;padding:0;background:none}
+#footer .footer_menu ul li a{display:inline-block;font-size:13px;color:#efefef}
+#footer .foot_callcenter h4{position:absolute;top:0;right:0;z-index:100;padding:30px 10px;color:#adadad}
+
+@media (max-width:979px){
+#footer .foot_selectbox{position:relative;top:0;right:0}
+#footer .foot_callcenter h4{position:relative;top:auto;right:auto;text-align:center}
+}
+
+@media (max-width:767px){
+#footer{padding-left:10px;padding-right:10px}
+#footer .footer_menu{padding-left:0}
+#footer .footer_menu ul li{padding-left:15px}
+#footer .footer_menu ul li{float:none}
+#footer .address{padding-left:0;text-align:center}
+#footer .copyright{display:block;margin-left:0;padding-left:0;background:none}
+
+}
+
+/* 서브 비주얼 */
+#container .sub_visual_wrap{height:180px;background:#efefef url(../../images/custom/sub/sub_visual_01.jpg) no-repeat 50% 0}
+#container .sub_visual_wrap .sub_visual{visibility:hidden;position:absolute;z-index:-1;min-height:84px;margin:0 auto;padding-top:46px;padding-right:10px;font-size:40px;line-height:40px;font-weight:600;color:#fff;text-align:right}
+@media (min-width:0px) and (max-width:767px){
+#container .sub_visual_wrap{height:100px;background-size:auto 100px}
+}
+
+/* 서브타이틀 */
+#container .sub_tit_area{position:relative;min-height:55px;margin:0 0 20px}
+#container .sub_tit_area h3{float:left;margin:0;padding:0;font-size:30px;font-weight:normal;color:#333}
+@media (max-width:480px){
+#container .sub_tit_area h3{font-size:20px}
+}
+
+/* 기능유틸 */
+#container menu.content_util{display:block;position:absolute;top:0;right:0;margin:0;padding:0 10px 0 0}
+#container menu.content_util ul{position:relative;margin:0 !important;background:none}
+#container menu.content_util ul li{float:left;width:auto;margin:0 0 0 2px;list-style:none}
+#container menu.content_util ul li a{display:block;overflow:hidden;width:27px;height:25px;background-image:url(../../images/custom/sub/btn_view_etc.png);text-indent:-2000px}
+#container menu.content_util ul li a.bookmark{background-position:0 0}
+#container menu.content_util ul li a.share{background-position:-31px 0}
+#container menu.content_util ul li a.sns{background-position:-62px 0}
+#container menu.content_util ul li a.print{background-position:-93px 0}
+#container menu.content_util ul li a:hover{background-image:url(../../images/custom/sub/btn_view_etc_over.png)}
+#container menu.content_util ul li.on a{background-image:url(../../images/custom/sub/btn_view_etc_over.png)}
+@media (max-width:480px){
+#container menu.content_util{clear:both;position:relative;top:auto;right:auto;padding:0 10px 10px 0}
+#container menu.content_util:after{display:block;clear:both;content:''}
+#container menu.content_util ul{float:right}
+}

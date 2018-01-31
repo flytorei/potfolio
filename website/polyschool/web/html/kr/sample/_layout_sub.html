@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!--[if IE 7]><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class="ie7"><![endif]-->
+<!--[if IE 8]><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class="ie8"><![endif]-->
+<!--[if IE 9]><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko" class="ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--><html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko"><!--<![endif]-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>KPS</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<link type="text/css" rel="stylesheet" href="../../../css/kr/common.css" />
+<link type="text/css" rel="stylesheet" href="../../../css/kr/curriculum.css" />
+<script type="text/javascript" src="../../../script/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../../script/common.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+jQuery(function($) {
+	function lnbMov(e){
+		var $depth1Wrap = $('#lnbWrap .depth1Wrap'),
+			$depth2Wrap = $('#lnbWrap .depth2Wrap'),
+			$dep1List = $depth1Wrap.children('li'),
+			$dep2List = $depth2Wrap.children('li');
+
+
+		// 초기값
+		//	li.on 에 .current 추가, 하위 리스트 보이기
+		$depth1Wrap.find('.on').addClass('current')
+			.children('.depth2Wrap').show();
+
+		if($depth2Wrap.is(':animated')) { return; }
+
+		// 1depth 리스트 마우스 오버시 슬라이드 다운, 나가면 슬라이드 업
+		$dep1List.on('mouseenter', function(){
+			$depth2Wrap.slideUp(200);
+			$(this).addClass('on')
+				.children('.depth2Wrap').not(':animated').slideDown(200);
+		}).on('mouseleave', function(){
+			$dep1List.removeClass('on');
+			$(this).children('.depth2Wrap').slideUp(200);
+		});
+
+		// LNB를 벗어나면 초기 값(.current 하위 리스트)을 펼쳐 줌. 초기 값에 .on 다시 추가
+		$depth1Wrap.on('mouseleave', function(){
+			// $depth2Wrap.slideUp(200);
+			$depth2Wrap.hide();
+			// 동작 후 초기값 찾아서 원래 메뉴 펼침
+			$('#lnbWrap').find('.current').children('.depth2Wrap').delay(1000).show();
+			$('#lnbWrap').find('.current').addClass('on');
+		});
+	}
+
+	lnbMov();
+
+
+	// $move_img 요소가 애니메이션 중이면 함수 중지
+	/*
+	function moveFn(e){
+		if( $move_img.is(':animated') ) { return; }
+	}
+	*/
+
+	// 메뉴 상단 고정 스크립트	http://www.cmsfactory.net/node/10983
+
+});
+
+//]]>
+</script>
+</head>
+<body>
+<div class="wrapper">
+	<!-- headerWrap -->
+	<div id="headerWrap">
+		<!-- skip navigation -->
+		<dl id="skipNavi">
+			<dt>바로가기 메뉴</dt>
+			<dd><a href="#contents">본문내용 바로가기</a></dd>
+			<dd><a href="#lnbWrap">하위 메뉴 바로가기</a></dd>
+			<dd><a href="#footerWrap">하단내용 바로가기</a></dd>
+		</dl>
+		<!-- //skip navigation -->
+
+		<!-- top menu -->
+		<div class="header">
+			<!-- logo -->
+			<h1 class="logo">폴리 로고</h1>
+			<!-- //logo -->
+
+			<h2 class="hidden">주 메뉴</h2>
+			<div class="topMenu">
+
+
+			</div>
+		</div>
+		<!-- //top menu -->
+	</div>
+	<!-- //headerWrap -->
+	<hr />
+
+
+
+	<!-- container -->
+	<div id="containerWrap">
+		<div class="container">
+			<!-- left contents -->
+			<div class="leftCont">
+				<h2 class="hidden">하위 메뉴</h2>
+				<!-- sub menu -->
+				<div id="lnbWrap">
+					<h3 class="cateTitle"><img src="../../../images/w/kr/curriculum/cate_title.png" alt="CURRICULUM" /></h3>
+
+					<!-- 메뉴 한글부분을 span.ffDef 로 감싸 줍니다. -->
+					<ul class="depth1Wrap">
+						<li>
+							<a href="#"><span class="ffDef">교육 로드맵</span></a>
+							<ul class="depth2Wrap">
+								<li><a href="#">1e-POLY <span class="ffDef">소개</span></a></li>
+								<li><a href="#">1e-POLY DEMO</a></li>
+								<li><a href="#">1e-Learning <span class="ffDef">활용</span> tip</a></li>
+							</ul>
+						</li>
+						<li class="on">
+							<a href="#">R&amp;D</a>
+							<ul class="depth2Wrap">
+								<li class="on"><a href="#">2e-POLY <span class="ffDef">소개</span></a></li>
+								<li><a href="#">2e-POLY DEMO</a></li>
+								<li><a href="#">2e-Learning <span class="ffDef">활용</span> tip</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">(no SubMenu)</a>
+						</li>
+						<li>
+							<a href="#">e-POLY</a>
+							<ul class="depth2Wrap">
+								<li><a href="#">4e-POLY <span class="ffDef">소개</span></a></li>
+								<li><a href="#">4e-POLY DEMO</a></li>
+								<li><a href="#">4e-Learning <span class="ffDef">활용</span> tip</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //sub menu -->
+			</div>
+			<!-- //left contents -->
+			<hr />
+
+			<!-- right contents -->
+			<div class="rightCont">
+				<!-- location의 한글부분을 span.ffDef 로 감싸 줍니다. -->
+				<div id="pageLocation">
+					<a href="#">HOME</a> &gt;
+					<a href="#">CURRICULUM <span class="ffDef">커리큘럼</span></a> &gt;
+					<a href="#">Library</a> &gt;
+					<span>Reading Certification <span class="ffDef">프로그램</span></span>
+				</div>
+
+				<!-- contents -->
+				<div id="contents">
+<!-- 본문내용 -->
+
+					<h2 id="pageTitle"><img src="../../../images/w/kr/curriculum/page_title_05_03.png" alt="Reading Certification Program" /></h2>
+
+					내용 내용.....<br />
+					내용 내용.....
+					<div style="height:500px;"></div>
+
+
+<!-- //본문내용 -->
+				</div>
+				<!-- //contents -->
+			</div>
+			<!-- //right contents -->
+		</div>
+		<hr />
+
+		<!-- quick menu -->
+		<div id="quickWrap">
+			<div class="quickMenu">
+				<img src="../../../images/temp/@quick.jpg" alt="퀵메뉴 임시" />
+			</div>
+		</div>
+		<!-- //quick menu -->
+	</div>
+	<!-- //container -->
+	<hr />
+
+	<!-- footer -->
+	<div id="footerWrap">
+		<h2 class="hidden">하단내용</h2>
+		<div class="footer">
+			<img src="../../../images/temp/@footer.jpg" alt="풋터 임시" />
+		</div>
+	</div>
+	<!-- //footer -->
+</div>
+</body>
+</html>

@@ -1,0 +1,380 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="kr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href="../css/cmm_new/popup.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/cmm/jquery-1.8.3.min.js"></script> 
+    <script type="text/javascript" src="../js/cmm/jquery-ui-1.8.2.custom.min.js"></script>   
+    <script type="text/javascript" src="../js/cmm/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="../js/cmm/common.js"></script>  
+	
+    <script type="text/javascript">
+         $.datepicker.setDefaults({
+            dateFormat: 'yy-mm-dd',
+            prevText: '이전 달',
+            nextText: '다음 달',
+            monthNames: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            monthNamesShort: ['1월', '2월', '3월', '4월', '5월', '6월', '7월', '8월', '9월', '10월', '11월', '12월'],
+            dayNames: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesShort: ['일', '월', '화', '수', '목', '금', '토'],
+            dayNamesMin: ['일', '월', '화', '수', '목', '금', '토'],
+            showMonthAfterYear: true,
+            buttonImageOnly: true,
+			buttonImage: "/images/btn/btn_calendar2.png",
+            yearSuffix: '년'
+        });
+
+        $(document).ready(function(){
+		  $( "#sDate" ).datepicker();
+		  $( "#eDate" ).datepicker();
+	    });
+    </script> 
+</head>
+<body>
+	<div class="pop_wrap">
+		<div class="pop_header">
+			2선이선현황
+		</div>
+		<div class="pop_section">
+			<div class="bbs_write_cm_wrap">
+                <div class="bbs_write_cm">
+		            <table summary="예약 상담관리 입니다.">
+		                    <caption>예약상담관리</caption>
+		                    <colgroup>
+		                        <col style="width:8%;">
+		                        <col style="width:35%;">
+		                        <col style="width:10%;">
+		                        <col style="width:15%;">
+		                        <col style="width:8%;">
+		                        <col style="width:*;">  
+		                    </colgroup>                                           
+		                    <tbody>		
+		                        <tr>
+		                            <td>등록일자</td>                              
+		                            <td colspan="">
+		                                <input type="text" id="sDate" class="inp_cm tinput_date" style="width:40%"> ~ 
+		                                <input type="text" id="eDate" class="inp_cm tinput_date" style="width:40%">
+		                            </td>      
+		                            <td>업무구분</td>
+		                            <td colspan="">
+		                              <span>
+		                                     <select class="sel_cm" style="width:146px">		
+		                                        <option>일반상담</option>
+		                                        <option>일반상담</option>
+		                                        <option>일반상담</option>
+		                                        <option>일반상담</option>
+		                                    </select>
+		                                 </span>   
+		                            </td>
+		                            <td>고객구분</td>
+		                            <td colspan="">
+		                              <div class="rig">
+		                                     <select class="sel_cm" style="width:90%">		
+		                                        <option>공공·민간기관</option>
+		                                        <option>공공·민간기관</option>
+		                                        <option>공공·민간기관</option>
+		                                        <option>공공·민간기관</option>
+		                                    </select>
+		                                </div>
+		                            </td>
+		                        </tr>
+		                         <tr>
+		                            <td>처리상태</td> 
+		                            <td>
+		                                 <span>
+		                                     <select class="sel_cm" style="width:160px">		
+		                                        <option>처리완료</option>
+		                                        <option>처리완료</option>
+		                                        <option>처리완료</option>
+		                                        <option>처리완료</option>
+		                                    </select>
+		                                </span>                           
+		                            </td>
+		                            <td>화면갱신주기</td>
+		                            <td colspan="2">
+		                            	<span class="rig">
+		                                    <select class="sel_cm" style="width:146px">		
+		                                        <option>30초</option>
+		                                        <option>30초</option>
+		                                        <option>30초</option>
+		                                        <option>30초</option>
+	                                	    </select>
+		                                </span>
+		                            </td>
+		                            <td class="" style="">
+		                                <div class="rela">
+		                                     <a class="btn type_02" href="#none">조회</a>
+		                                </div> 
+		                            </td>
+		                        </tr>                             
+		                    </tbody>
+		            </table>                                 
+	            </div>
+	        </div>
+			<div class="overflow_h mb_10">
+				<div class="pop_two_box">
+					<div class="pop_aticle02 bbs_list_cm statistics">
+                        <div class="booking_list_wrap nano">
+                            <div class="booking_list nano-content">
+                                <table summary="부서찾기: 등록일, 고객구분, 처리상태, 부서, 담당자, 담당업무  리스트입니다.">
+                                    <caption>부서찾기</caption>
+                                    <colgroup>
+                                        <col style="width:18%;">
+                                        <col style="width:23%">
+                                        <col style="width:20%;">
+                                        <col style="width:*">
+                                        <col style="width:13%;">             
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">등록일</th>
+                                            <th scope="col">고객구분</th>
+                                            <th scope="col">처리상태</th>
+                                            <th scope="col">부서</th>
+                                            <th scope="col">담당자</th>                    
+                                        </tr>
+                                    </thead>
+                                    <tbody>		
+                                        <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>     
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                         <tr onclick="location.href=''">
+                                            <td>2016/11/15</td>
+                                            <td>공공·민간기관</td>
+                                            <td>처리완료</td>
+                                            <td>운영사업자</td>
+                                            <td>SR1</td>
+                                        </tr>
+                                        
+                                        <tr onclick="location.href=''">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr onclick="location.href=''">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>	                       
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+		                <div class="paginate">
+		                    <a href="#none" class="first">First</a><a href="#none" class="prev active">Perv</a><a href="#curr" class="on pop_pa"><span>1</span></a><a href="#none" class="next active02">Next</a><a href="#none" class="last">Last</a><select class="select_up" style="width:80px;vertical-align: top;">
+		                    	<option value="">3</option>
+		                    	<option value="">2</option>
+		                    	<option value="">1</option>
+		                    	<option value="">1</option>
+		                    </select>
+		                </div>
+					</div>
+				</div>
+				<div class="pop_two_box borli">
+					<div class="">
+	                    <div class="cont_input">
+	                        <div class="bbs_write_cm">
+	                            <table summary="2선이선현황 : 업무구분, 등록일, 고객구분, 고객전화번호, 담당부서, 2선이관당담자, 처리상태, 상담분류, 제목, 요청내용, 처리내용 리스트 입니다.">
+	                                <caption>2선이선현황</caption>
+	                                <colgroup>
+	                                    <col style="width:20%;">
+	                                    <col style="width:;">
+	                                    <col style="width:;">
+	                                    <col style="width:;">                               
+	                                    <col style="width:;">                               
+	                                    <col style="width:;">                               
+	                                </colgroup>                                           
+	                                <tbody>		
+	                                    <tr>
+	                                        <td>업무구분</td>                              
+	                                        <td colspan="5">
+		                                        <span>
+				                                    <select class="sel_cm" style="width:146px">		
+				                                        <option>30초</option>
+				                                        <option>30초</option>
+				                                        <option>30초</option>
+				                                        <option>30초</option>
+			                                	    </select>
+				                                </span>
+				                            </td>    
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>등록일</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="2016/11/15"></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>고객구분</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="2016/11/15"></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>고객전화번호</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="010-1564-4844"></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>담당부서</td>                              
+	                                        <td colspan="5">
+                                                <div class="pop_rla">
+                                                     <input disabled type="text" class="inp_cm bg_w w100 etc"  value="보조사업파트1 > 상담1팀">
+                                            <a href="#">
+                                                <span class="pop_btn_search"><em class="blind">검색</em></span>
+                                            </a>
+                                                </div>
+                                               
+                                            </td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>2선이관당담자</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="SR1"></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>처리상태</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="처리완료" ></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>상담분류</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="보조사업관리 > 편성관리 > 편성방법"></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>제목</td>                              
+	                                        <td colspan="5"><input disabled type="text" class="inp_cm bg_w w100"  value="보조급 지급 관련 본인 확인 요청"></td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>요청내용</td>                              
+	                                        <td colspan="5">
+	                                        	<p class="text_disabled_scroll">
+	                                        		[보조금 지급 관련 확인 요청 이관]<br/>O 요청내용 : 보조금 지급과 관련한 본인 확인 요청
+	                                        	</p>
+	                                        </td>      
+	                                    </tr> 
+	                                    <tr>
+	                                        <td>처리내용</td>                              
+	                                        <td colspan="5">
+	                                           <p class="text_disabled_scroll">
+	                                        		[보조금 지급 관련 확인 요청 이관]<br/>O 요청내용 : 보조금 지급과 관련한 본인 확인 요청
+	                                        	</p>
+	                                        </td>    
+	                                    </tr> 
+	                                </tbody>
+	                            </table>                                 
+	                        </div>
+	                    </div>
+	                </div>
+				</div>
+			</div>
+			<div class="pop_btn_box">
+				<a href="#" class="btn">반려완료</a>
+				<a href="#" class="btn">반려완료</a>
+				<a href="#" class="btn">반려완료</a>
+			</div>
+		</div>
+		
+	</div>
+</body>
+</html>

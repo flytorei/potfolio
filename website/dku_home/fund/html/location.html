@@ -1,0 +1,766 @@
+<!DOCTYPE html> #parse ($init)
+
+<html class="$root_css_class" dir="#language (" lang.dir ")" lang="$w3c_language_id">
+
+<head>
+    <title>$the_title - $site_name</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" name="viewport" /> $theme.include($top_head_include)
+    <!-- 스크립트 -->
+    <script src="$javascript_folder/jquery-1.11.1.min.js"></script>
+    <script src="$javascript_folder/jquery.easing.1.3.js"></script>
+    <script src="$javascript_folder/jquery.sliderkit.1.9.2.js"></script>
+    <script src="$javascript_folderdku_scroll.js"></script>
+    <script src="$javascript_folder/dku_common.js"></script>
+    <script src="$javascript_folder/html5shiv.js"></script>
+    <script>
+        //<![CDATA[
+
+        //]]>
+    </script>
+    <!-- //스크립트 -->
+
+    #if ($is_signed_in && $show_add_content)
+    <!-- show dockbar -->
+    #else
+    <script type="text/javascript">
+        /* dockbar control */
+        $(document).ready(function () {
+            var width = parseInt($(this).width());
+            if (width > 980) {
+                $("#_145_dockbar").hide();
+            } else {
+                $("#_145_dockbar").show();
+            };
+        });
+        $(window).resize(function () {
+            var width = parseInt($(this).width());
+            if (width > 980) {
+                $("#_145_dockbar").hide();
+            } else {
+                $("#_145_dockbar").show();
+            };
+        });
+    </script>
+    #end
+</head>
+
+#if ($is_first_parent)
+
+<body class="body_main">
+    #else
+
+    <body class="body_sub">
+        #end
+
+        <dl class="skip_navigation">
+            <dt>#language ("skip-to-menu")</dt>
+            <dd><a href="#container">#language ("skip-to-content")</a><a href="#gnb">#language ("skip-to-menu")</a>
+            </dd>
+        </dl>
+
+        $theme.include($body_top_include) #if ($is_signed_in && $show_add_content) #dockbar() #end
+
+        <div id="header">
+            <div class="clearfix">
+                <!-- 상단유틸 -->
+                <div class="section_util">
+                    <div class="util_inner container">
+                        <ul class="nav_util visible-desktop">
+                            <li><a href="/web/fund">HOME</a>
+                            </li>
+                            <li><a href="/web/kor">DKU</a>
+                            </li>
+                            <li><a href="/web/portal">PORTAL</a>
+                            </li>
+                            <li><a href="#none">나의기부내역</a>
+                            </li>
+                            <li><a href="#none">기부영수증 출력</a>
+                            </li>
+                            <li><a href="#none">SITEMAP</a>
+                            </li>
+                            <li class="util_search hidden-phone">
+                                <div class="input_area">
+                                    <form action="http://www.dankook.ac.kr/search/result" method="get" target="_blank">
+                                        <input type="hidden" name="siteId" value="" />
+                                        <input type="hidden" name="siteName" value="" />
+                                        <input type="hidden" name="cmsName" value="" />
+                                        <input type="hidden" name="language" value="ENG" />
+                                        <fieldset>
+                                            <legend>#language ("search")</legend>
+                                            <label for="search_str">#language ("full-search")</label>
+                                            <input type="text" id="kwd" name="kwd" class="text off" />
+                                            <button type="button" class="dku_search"><span>#language ("search")</span>
+                                            </button>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </li>
+                        </ul>
+                        <ul class="state">
+                            #if (!$is_signed_in)
+                            <li class="login"><a href="$sign_in_url">$sign_in_text</a>
+                            </li>
+                            <!--
+                        <li class="join"><a href="#none">JOIN </a>
+                        </li>
+			-->
+                            #else
+                            <li class="logout"><a href="$sign_out_url"><span>$user_name</span>님 $sign_out_text </a>
+                            </li>
+                            #end
+                        </ul>
+                    </div>
+                </div>
+                <!-- //상단유틸 -->
+            </div>
+            <div class="container clearfix">
+                <h1><a href="/web$page_group.getFriendlyURL()"><span>$company_name</span></a></h1>
+                <button class="gnb_section_toggle hidden-desktop" type="button"><span>GNB</span>
+                </button>
+                <div id="gnb">
+                    #if ($has_navigation) #parse ("$full_templates_path/navigation.vm") #end
+                </div>
+            </div>
+        </div>
+        <div id="container">
+            #if ($is_first_parent)
+            <!-- 메인 비주얼 -->
+            <div class="slide_section">
+                <section class="portlet">
+                    <div class="portlet-content">
+                        <!-- 메인비주얼 -->
+                        <div class="main_visual_section">
+                            <!-- 슬라이드 영역 -->
+                            <div class="sliderkit main_visual">
+                                <div class="sliderkit-nav container">
+                                    <div class="slide_info">
+                                        <p class="tit">
+                                            How to Unite International Students as Dankookians
+                                        </p>
+                                        <p class="cmt">
+                                            DKU Holds 2013 International Student Culture Festival, Time to Become One with International Students “Special Screening of Videos with Foreign Language Subtitles” Run November ...
+                                        </p>
+                                        <div class="sliderkit-nav-clip">
+                                            <ul>
+                                                <li class="sliderkit-selected" style="background: url(/eng-theme/images/custom/main/slide_thum_01.png) no-repeat 0 0">
+                                                    <a href="#" title="[link title]"></a>
+                                                </li>
+                                                <li style="background: url(/eng-theme/images/custom/main/slide_thum_02.png) no-repeat 0 0">
+                                                    <a href="#" title="[link title]"></a>
+                                                </li>
+                                                <li style="background: url(/eng-theme/images/custom/main/slide_thum_03.png) no-repeat 0 0">
+                                                    <a href="#" title="[link title]"></a>
+                                                </li>
+                                            </ul>
+                                            <div class="btn_wrap">
+                                                <div class="sliderkit-btn sliderkit-go-btn sliderkit-go-prev">
+                                                    <a href="#" title="Previous"><span>Previous</span></a>
+                                                </div>
+                                                <div class="sliderkit-btn sliderkit-play-btn sliderkit-pause-btn">
+                                                    <a href="#" title="Play/Pause"><span>Play</span></a>
+                                                </div>
+                                                <div class="sliderkit-btn sliderkit-go-btn sliderkit-go-next">
+                                                    <a href="#" title="Next"><span>Next</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="sliderkit-panels">
+                                    <div class="sliderkit-panel sliderkit-panel-active">
+                                        <div class="img" style="background: url(/eng-theme/images/custom/main/ex_main_img_01.png) no-repeat 50% 0">
+                                        </div>
+                                    </div>
+                                    <div class="sliderkit-panel">
+                                        <div class="img" style="background: url(/eng-theme/images/custom/main/ex_main_img_02.png) no-repeat 50% 0">
+                                        </div>
+                                    </div>
+                                    <div class="sliderkit-panel sliderkit-panel-old">
+                                        <div class="img" style="background: url(/eng-theme/images/custom/main/ex_main_img_03.png) no-repeat 50% 0">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //슬라이드 영역 -->
+                        </div>
+                        <!-- //메인 비주얼 -->
+                    </div>
+                </section>
+            </div>
+            <!-- //메인 비주얼 -->
+            #else
+            <div class="location">
+                <nav class="container">
+                    #if ($has_navigation) $theme.runtime("Breadcrumbs_WAR_communityportlet") #end </nav>
+            </div>
+            #end
+            <!-- 메인 컨텐츠 -->
+            <div class="container #if ($is_first_parent) mainbody #end">
+                #if ($is_first_parent)
+                <!-- DKU NEWS -->
+                <div class="section1">
+                    <div class="sliderkit dku_news_wrap latest_wrap">
+                        <p class="big_tit">
+                            DKU <span>NEWS</span>
+                        </p>
+                        <div class="sliderkit-nav">
+                            <div class="sliderkit-nav-clip">
+                                <ul>
+                                    <li class="sliderkit-selected">
+                                        <a href="#" title="[link title]">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="[link title]">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="[link title]">3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sliderkit-panels">
+                            <div class="sliderkit-panel sliderkit-panel-active row-fluid">
+                                <div class="dku_news latest first selected span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_01.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                1Why go abroad? Having fun with foreign students at DKU ISS sdfsdfasdfsdfsfasdfasdfds
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..dsfdsfasdfsdfasdfasdfsdfasdf
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_news latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_02.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                1Why go abroad? Having fun with foreign students
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_news latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_03.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                1Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //sliderkit-panel -->
+                            <div class="sliderkit-panel row-fluid">
+                                <div class="dku_news latest first selected span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_01.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                2Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_news latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_02.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                2Why go abroad? Having fun with foreign students
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_news latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_03.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                2Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //sliderkit-panel -->
+                            <div class="sliderkit-panel row-fluid">
+                                <div class="dku_news latest first selected span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_01.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                3Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_news latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_02.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                3Why go abroad? Having fun with foreign students
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_news latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_03.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                3Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //sliderkit-panel -->
+                        </div>
+                    </div>
+                    <!-- //dku_news_wrap -->
+                </div>
+                <!-- //section1 -->
+                <div class="section2 row-fluid">
+                    <div class="program span8">
+                        <p class="big_tit">
+                            International <span>Programs</span>
+                        </p>
+                        <ul class="list">
+                            <li class="first"><a class="exchange" href="#none">Exchange Student</a>
+                            </li>
+                            <li><a class="visiting" href="#none">Visiting Student</a>
+                            </li>
+                            <li><a class="school" href="#none">International Summer School</a>
+                            </li>
+                            <li class="first"><a class="korean" href="#none">Korean Language Course</a>
+                            </li>
+                            <li><a class="english" href="#none">Courses Taught in English</a>
+                            </li>
+                            <li><a class="student" href="#none">International Student Admission</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="service span4">
+                        <p class="big_tit">
+                            DKU <span>SERVICE</span>
+                        </p>
+                        <ul class="list">
+                            <li class="first"><a class="office" href="#none"><span>International Office</span></a>
+                            </li>
+                            <li><a class="visa" href="#none"><span>Visa</span></a>
+                            </li>
+                            <li><a class="dormitory" href="#none"><span>Dormitory</span></a>
+                            </li>
+                            <li><a class="map" href="#none"><span>Campus Map</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //section2 -->
+            </div>
+            <!-- //메인 컨텐츠 -->
+            <div class="mainbody_bottom">
+                <div class="section3 container">
+                    <div class="sliderkit dku_event_wrap latest_wrap">
+                        <p class="big_tit">
+                            DKU EVENTS
+                        </p>
+                        <div class="sliderkit-nav">
+                            <div class="sliderkit-nav-clip">
+                                <ul>
+                                    <li class="sliderkit-selected">
+                                        <a href="#" title="[link title]">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="[link title]">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="[link title]">3</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="sliderkit-panels">
+                            <div class="sliderkit-panel sliderkit-panel-active row-fluid">
+                                <div class="dku_event latest first selected span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_04.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                1Professor Song Young-Seok’s teamProfessor Song Young-Seok’s teamProfessor Song Young-Seok’s teamProfessor Song Young-Seok’s teamProfessor Song Young-Seok’s team
+                                            </p>
+                                            <p class="cmt">
+                                                Software Science Students Sweep ‘Smart TV App Idea Competition’ Hosted by Ministry of...Software Science Students Sweep ‘Smart TV App Idea Competition’ Hosted by Ministry of...
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_event latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_05.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                1Professor Song Young-Seok’s team
+                                            </p>
+                                            <p class="cmt">
+                                                Software Science Students Sweep ‘Smart TV App Idea Competition’ Hosted by Ministry of...
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_event latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_06.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                1Professor Song Young-Seok’s team
+                                            </p>
+                                            <p class="cmt">
+                                                Software Science Students Sweep ‘Smart TV App Idea Competition’ Hosted by Ministry of...
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //sliderkit-panel-->
+                            <div class="sliderkit-panel row-fluid">
+                                <div class="dku_event latest first selected span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_01.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                2Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_event latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_02.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                2Why go abroad? Having fun with foreign students
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_event latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_03.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                2Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //sliderkit-panel-->
+                            <div class="sliderkit-panel row-fluid">
+                                <div class="dku_event latest first selected span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_01.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                3Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_event latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_02.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                3Why go abroad? Having fun with foreign students
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                                <div class="dku_event latest span4">
+                                    <div class="img_wrap">
+                                        <img src="/eng-theme/images/custom/main/@temp_thum_03.png" align="임시 이미지" />
+                                    </div>
+                                    <div class="info">
+                                        <a href="#none">
+                                            <p class="tit">
+                                                3Why go abroad? Having fun with foreign students at DKU ISS
+                                            </p>
+                                            <p class="cmt">
+                                                More than 230 foreign students from 15 countries such as the U.S. Germany and China visited..
+                                            </p>
+                                        </a>
+                                        <a class="more" href="#none">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //sliderkit-panel-->
+                        </div>
+                    </div>
+                </div>
+                <!-- //section3 -->
+                #end #if ($is_first_parent) #else #if ($selectable) $theme.include($content_include) #else $portletDisplay.recycle() $portletDisplay.setTitle($the_title) $theme.wrapPortlet("portlet.vm", $content_include) #end #end
+            </div>
+        </div>
+        <div id="footer">
+            <div class="footer_inner container">
+                <div class="footer_menu">
+                    <p>
+                        Jukjeon Campus : 152, Jukjeon-ro, Suji-gu, Yongin-si, Gyeonggi-do, 448-701, Korea Tel : 82-1899-3700
+                    </p>
+                    <p>
+                        Cheonan Campus : 119, Dandae-ro, Dongnam-gu, Cheonan-si, Chungnam, 330-714, Korea Tel : 82-1899-3700
+                    </p>
+                </div>
+                <address class="address">
+		<span class="copyright">Copyright(c) 2015 BY DANKOOK UNIVERSITY. All rights reserved.</span>
+		</address>
+                <!--	 하단footer_페밀리 사이트 box
+				<div class="site">
+                    <div class="foot_selectbox">
+                        <select class="select" title="==FAMILY SITE==" style="width:140px;" id="CList" onchange="javascript:go_url()">
+                            <option selected>==FAMILY SITE==</option>
+                            <option value="http://www.dankook.ac.kr">단국대학교</option>
+                            <option value="http://www.dankook.ac.kr/html/themes/kor/templates/main/webmail_link.html">웹메일</option>
+                            <option value="http://www.d-voice.co.kr/">d-voice</option>
+                            <option value="http://www.dankook.or.kr/">단대동창회</option>
+                            <option value="http://www.dankook-iacf.ac.kr/">산학협력단</option>
+                        </select>
+                    </div>
+                </div>
+    -->
+            </div>
+        </div>
+        #if ($is_first_parent)
+        <!-- home -->
+        #else
+        <div class="_ScrapView_WAR_communityportlet_layouttpl_popup" style="display:none;">
+        </div>
+        #if ($is_signed_in && $show_add_content) $theme.runtime("ScrapView_WAR_communityportlet") $theme.runtime("SatisfactionView_WAR_communityportlet") $theme.runtime("Responsible_WAR_communityportlet") #else
+        <div style="display:none;">
+            $theme.runtime("ScrapView_WAR_communityportlet") $theme.runtime("SatisfactionView_WAR_communityportlet") $theme.runtime("Responsible_WAR_communityportlet")
+        </div>
+        #end #end $theme.include($body_bottom_include) $theme.include($bottom_include)
+        
+        
+        <h3 class="title-type1">GV Schedule</h3>
+
+<div class="cont-type1">
+<ul class="bul_list-type2">
+	<li>Period : <span class="fcBlue bold">June 23 ~ July 10, 2015 (3 weeks)</span></li>
+	<li>Arrival : June 22, 2015
+	<ul class="bul_list-type1">
+		<li>This is the day you can move into the dorm at Dankook.</li>
+	</ul>
+	</li>
+	<li>Orientation : June 23 ~ June 24, 2015
+	<ul class="bul_list-type1">
+		<li>Students will be given an information package containing materials for class instruction, books to use in class, a schedule, grading standards, etc.</li>
+	</ul>
+	</li>
+	<li>Session : 2.5hours x 2sessions daily x 12days (Monday to Friday)
+	<table class="table-type1" summary="GV Schedule Session">
+		<caption>GV Schedule Session</caption>
+		<colgroup>
+			<col style="width: 50%;" />
+			<col style="width: 50%;" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th class="border_r pe_qY" scope="col">Morning Session</th>
+				<th class="pe_qY" scope="col">Afternoon Session</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="center border_r">9:30am ~ 12:00pm</td>
+				<td class="center">1:30pm ~ 4:00pm</td>
+			</tr>
+		</tbody>
+	</table>
+	</li>
+	<li class="mt5">Teaching 5hours a day - total 60hours of teaching</li>
+	<li>Calendar
+	<div class="table-responsive">
+	<table class="table-type1" summary="GV Schedule Calendar">
+		<caption>GV Schedule Calendar</caption>
+		<colgroup>
+			<col style="width: 16%;" />
+			<col style="width: 14%;" />
+			<col style="width: 14%;" />
+			<col style="width: 14%;" />
+			<col style="width: 14%;" />
+			<col style="width: 14%;" />
+			<col style="width: 14%;" />
+		</colgroup>
+		<thead>
+			<tr>
+				<th class="border_r pe_qY" scope="col">Monday</th>
+				<th class="border_r pe_qY" scope="col">Tuesday</th>
+				<th class="border_r pe_qY" scope="col">Wednesday</th>
+				<th class="border_r pe_qY" scope="col">Thursday</th>
+				<th class="border_r pe_qY" scope="col">Friday</th>
+				<th class="border_r pe_qY" scope="col">Saturday</th>
+				<th class="pe_qY" scope="col">Sunday</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td class="center border_r">6/22</td>
+				<td class="center border_r">6/23</td>
+				<td class="center border_r">6/24</td>
+				<td class="center border_r">6/25</td>
+				<td class="center border_r">6/26</td>
+				<td class="center border_r">6/27</td>
+				<td class="center">6/28</td>
+			</tr>
+			<tr>
+				<td class="center border_r">Arrival</td>
+				<td class="center border_r">Orientation</td>
+				<td class="center border_r">Orientation</td>
+				<td class="center border_r">GV Session 1</td>
+				<td class="center border_r">GV Session 2</td>
+				<td class="center border_r">&nbsp;</td>
+				<td class="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="center border_r">6/29</td>
+				<td class="center border_r">6/30</td>
+				<td class="center border_r">7/1</td>
+				<td class="center border_r">7/2</td>
+				<td class="center border_r">7/3</td>
+				<td class="center border_r">7/4</td>
+				<td class="center">7/5</td>
+			</tr>
+			<tr>
+				<td class="center border_r">GV Session 3</td>
+				<td class="center border_r">GV Session 4</td>
+				<td class="center border_r">GV Session 5</td>
+				<td class="center border_r">GV Session 6</td>
+				<td class="center border_r">GV Session 7</td>
+				<td class="center border_r">&nbsp;</td>
+				<td class="center">&nbsp;</td>
+			</tr>
+			<tr>
+				<td class="center border_r">7/6</td>
+				<td class="center border_r">7/7</td>
+				<td class="center border_r">7/8</td>
+				<td class="center border_r">7/9</td>
+				<td class="center border_r">7/10</td>
+				<td class="center border_r">7/11</td>
+				<td class="center">7/12</td>
+			</tr>
+			<tr>
+				<td class="center border_r">GV Session 8</td>
+				<td class="center border_r">GV Session 9</td>
+				<td class="center border_r">GV Session 10</td>
+				<td class="center border_r">GV Session 11</td>
+				<td class="center border_r">GV Session 12</td>
+				<td class="center" colspan="2">Continue onto the Academic Program</td>
+			</tr>
+		</tbody>
+	</table>
+	</div>
+	</li>
+</ul>
+</div>
+
+    </body>
+
+</html>

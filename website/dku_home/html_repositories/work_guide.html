@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>웹 가이드</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<link type="text/css" rel="stylesheet" href="web/css/kr/common.css" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- jquery ui theme -->
+<!--
+<link href="jquery-ui-1.10.4.min.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/select.js"></script>
+-->
+
+<style type="text/css">
+* {margin:0; padding:0;}
+html {overflow-y:scroll;}
+body {background:#ededed; color:#666; font:12px/1 ng, Tahoma, Sans-serif;}
+a {/*color:#27e;*/ text-decoration:none;}
+a:focus, a:hover, a:active {text-decoration:underline;}
+.header {padding:0.5em; font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif;}
+.header h1 {font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif; color:#444; font-size:2em; font-weight:bold;}
+.header h1 strong {font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif; font-size:70%; font-weight:bold;}
+.header .nav {list-style:none; background:#969696; padding:0.5em 0.5em 0.2em; color:#f9f9f9; font-weight:bold; font-size:1.1em;}
+.header .nav li {display:inline; margin-right:0.5em;}
+.header .nav li a {color:#f9f9f9;}
+.header .nav li a.on {color:#fff !important; border-bottom:2px solid #3e3e3e; text-shadow:#7c7c7c 2px 1px 2px; text-decoration:none; font-size:105%;}
+.header .nav-otherlink {list-style:none; text-align:right; padding:0.5em 0.5em 0.2em; color:#969696; font-size:1em;}
+.header .nav-otherlink li {display:inline;}
+.header .nav-otherlink li a {color:#969696; font-weight:bold;}
+.header .nav-otherlink li a.on {color:#3e3e3e;}
+.header .nav-otherlink li a.on:before {content:'→'; font-size:0.9em;}
+.wrapper {padding-bottom:1em;}
+.section {}
+.section + .section {margin-top:3em;}
+.section .title {margin:0 0 20px 0; padding:1em 2em; border:1px solid #ccc; background-color:#0295C9; color:#fff; font-weight:bold; font-size:125%; margin-top:-1px; position:relative; *zoom:1;}
+.section .guide_tit {background:#fff; padding:5px 10px; font-weight:bold; margin-bottom:20px; color:#333; border:2px dashed #999;}
+.section .sub_tit {margin-top:30px; background:#f3f3f3; padding:10px; font-weight:bold; margin-bottom:20px; color:#333;}
+.header .list_sort {overflow:hidden; margin:10px 0;}
+.header .list_sort li {float:left;}
+.header .list_sort li a {display:inline-block; padding:0 15px; background:url(/asset/skin/basil/img/common/bar_1x13_b5b5b5.gif) no-repeat 0 3px; font-weight:bold;}
+.header .list_sort li:first-child a {padding-left:0; background:none;}
+pre {padding: 20px; line-height: 25px;}
+</style>
+</head>
+
+<body>
+<pre>
+    [Html/CSS Common Rule]
+
+1. HTML
+	- 앞은 탭(1탭=4스페이스)으로 들여쓰고 그 이외 부분은 1스페이스로 합니다.
+	- 불필요한 공백 제거 및 줄 끝 공백 제거가 되어야 합니다.
+	- HTML 내부의 태그 및 속성은 모두 소문자 표기를 원칙으로 합니다. 속성값은 쌍 따옴표("")를 묶어 줍니다.
+	- xhtml 문법으로 작업 ex) <br />
+	- [html 파일 네이밍] : 화면ID.html
+
+2. CSS 작성 순서
+		- class는 탭(1탭=4스페이스)으로 들여쓰고 속성 사이는 1스페이스로 합니다.
+		- CSS3의 자식선택자, 인접형제선택자, A태그의 이외의 의사클래스 사용을 하지 않는다.
+		- 변경되는 범위가 큰 순서부터 작성되도록 합니다.
+			display / overflow / visibility / position(left, top) / float(clear) /
+			width / height
+			margin / padding /
+			background / border
+			text-align(vertical-align) / color / font(weight, size, line-height) / other
+			z-index
+
+3. Image
+	- 유형별로 하나의 이미지로 합치고, DOM 구조는 아이콘 부분을 <span> 사용하여 CSS에서 이미지 sprite 방법을 기본으로 한다.
+	- 테이블 위의 아이콘에 대한 설명이 있고, 테이블내에 아이콘으로만 정보를 제공할 경우는 img 태그 사용하며 alt 에는 "무슨무슨 아이콘" 으로 대체텍스트를 적용
+		ex) <img src="~~~" alt="~~~ 아이콘" />
+	- 블릿이미지나 이미지 sprite 방법을 사용 시 DOM 구조와 CSS 속성이 복잡한 케이스일 경우는 <span> 태그 및 이미지 sprite 방법을 사용하지 않고 배경이미지로 사용한다.
+
+4. Name Guide
+	- 파일명 & Class 명은 카멜 표기법으로 표기합니다. (첫 음절은 소문자 다음음절의 시작단어는 대문자)
+		예) btn + area => btnArea
+	- 이미지 명은 모두 소문자로 표기합니다. 단어 구분자는 " _ "로 통일합니다. ( "_" 외 다른 특수문자 사용 금지 )
+		예) btn + area => btn_area.gif
+	- 의미를 살릴 수 있는 단어의 조합으로 생성합니다.
+	- 동일 형태의 이미지, class 발생 시 순번 표기합니다.
+		이미지 예) cont_tit01.gif, cont_tit02.gif
+		Class 예) contTit01, contTit02
+
+5. Mail Form Guide
+	- 메일 인코딩은 euc-kr을 원칙으로 합니다.
+	- 링크는 새창으로 제작합니다.   예) <a href="#" target="_blank"></a>
+	- 이미지 경로는 절대 경로로 제작합니다.   예) http://www.ahnlab.com/...
+	- 메일폼 제작 후 아웃룩, 포털사이트(naver, nate, hanmail, gmail, hotmail 등)에서 메일테스트 진행 부탁드립니다.
+
+
+
+===========================================
+
+
+[Directory Structure]
+
+- root 에는 css, image, js, html 의 구성된다.
+
+- CSS
+	common.css		공통, gnb, 네비게이션 CSS
+	main.css		메인관련 CSS
+	product.css		제품및솔루션관련 CSS
+	security.css	보안서비스관련 CSS
+	purchase.css	제품구매관련 CSS
+	download.css	다운로드관련 CSS
+	info.css		보안정보관련 CSS
+	support.css
+	partner.css		파트너관련 CSS
+	login.css		로그인관련 CSS
+	member.css		회원가입관련 CSS
+	mypage.css		마이페이지관련 CSS
+
+image
+	common		공통 관련 image
+	main		메인 관련 image
+	product		제품및솔루션 관련 image
+	security	보안서비스 관련 image
+	purchase	제품구매 관련 image
+	download	다운로드 관련 image
+	info		보안정보 관련 image
+	support		고객지원 관련 image
+	partner		파트너 관련 image
+	login		로그인 관련 image
+	member		회원가입 관련 image
+	mypage		회원가입 관련 image
+	mail		메일폼 관련 image
+
+
+============================================
+
+
+[개발자 사항]
+
+1. html 파일 관리
+	- 작업된 html 파일은 SVN으로 관리되며 퍼블리셔 개별적으로 로컬 작업 후 SVN 서버로 commit 됩니다.
+	- html 파일만 관리되며 디자인 파일 및 기획 문서는 해당되지 않습니다.
+
+2. html 작업 상태 확인
+	- 좌측 트리메뉴에서 각 html 작업 현황이 색상으로 표시되며, 개발에서는 최종 검수가 끝나고 검정색으로 마킹된 파일만 체크하셔서 작업을 시작합니다.
+	- 검수 완료 후 개발 전달 된 파일이 재수정이 되어 업데이트 되는 경우에는 붉은색으로 해당파일이 나타나며, 수정 일자가 추가됩니다
+		ex) 140204 수정
+	- 개발전달 후 수정되어 업데이트 된 파일내에는 오류방지와 편의를 위해 수정부분에 대한 주석이 추가됩니다. 작업시 참고하시면 됩니다.
+
+
+============================================
+
+
+Validation 국문 http://validator.kldp.org/
+
+CSS 속성 우선순위
+display / overflow / visibility / position(left, top) / z-index / float(clear) / width / height / margin / padding / background / border
+text-align(vertical-align) / color / font(weight, size, line-height) / other
+
+IR
+/* 대체텍스트 */
+.hide {position:absolute; top:-11000px; left:-11000px; width:2px; height:2px; overflow:hidden;}
+
+IE Hack
+선택자	{zoom:1;}	/*for IE 5.5-7*/
+:root 선택자	{속성:값 \0/IE9;}	/*for IE 9*/
+@media all and (-ms-high-contrast:none) {
+	선택자 {속성:값}	/* IE10 */
+	*::-ms-backdrop, 선택자 {속성:값}	/* IE11 */
+}
+
+Web font
+@font-face {
+	font-family:sansKR;
+	src:url('/font/SourceHanSansKR-Light.eot');
+	src:local('☺'), url('/font/SourceHanSansKR-Light.woff') format("woff"), url('/font/SourceHanSansKR-Light.otf') format("opentype");
+}
+
+
+.clfix:after	{content: ""; display:block; height:0; clear:both; visibility:hidden; font-size:0;}
+.clfix	{*display:inline-block; zoom:1;}
+
+-----------------------
+
+box style guide
+http://ahnlab-kr.vi-nyl.com/wsg/box.html
+
+.fcDgray {color:#282828;}
+.fcGray {color:#707070;}
+.fcBlue {color:#0e77d9;}
+.fcStrong {color:#1f4787;}
+.fcRed	{color:#ff0000;}
+
+
+이메일 CSS 속성 적용가능 확인
+https://www.campaignmonitor.com/css/
+
+
+=======================================
+
+</pre>
+</body>
+</html>

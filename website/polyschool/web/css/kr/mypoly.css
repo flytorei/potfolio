@@ -1,0 +1,149 @@
+@charset "utf-8";
+#headerWrap {background:#0c110d url(../../images/w/kr/mypoly/bg_header.png) no-repeat 50% 0;}
+
+/* 가입정보 조회/수정 */
+.fTit.mtno {margin-top:-2px;}
+.tForm {margin-top:13px;}
+.tForm .fs14 {margin-left:10px; color:#8f9498;}
+.tForm .pAbs {top:9px; right:10px; color:#fff;}
+.btnG.ml2.mp {margin-left:5px;}
+
+.infoArea {position:relative; padding:0 255px 0 200px; margin-bottom:20px; min-height:90px;}
+.infoArea .thumb {position:absolute; top:0; left:0; width:160px; height:90px;}
+.infoArea .info {padding-top:15px;}
+.infoArea .info p {color:#000;}
+.infoArea .info ul {margin-top:5px; overflow:hidden;}
+.infoArea .info ul:after {content:''; display:block; clear:both; height:0;}
+.infoArea .info ul li {float:left; padding:1px 8px 0; font-size:13px; line-height:15px; background:url(../../images/w/kr/common/vbar_1x12_b5b8bb.gif) no-repeat 0 50%;}
+.infoArea .info ul li span {color:#336ea2; font-weight:bold;}
+.infoArea .info ul li.memb {padding-left:20px; background:url(../../images/w/kr/mypoly/bg_memb.gif) no-repeat 0 0;}
+.infoArea .btnArea {position:absolute; bottom:0; right:0;}
+
+.myTop {position:relative; padding:0 22px; color:#fff;}
+.myTop label {display:inline-block; padding-right:11px; font-size:15px; color:#fff;}
+.myTop ul {position:absolute; top:8px; right:48px; overflow:hidden;}
+.myTop ul:after {content:''; display:block; clear:both; height:0;}
+.myTop ul li {float:left; font-size:15px; line-height:21px;}
+.myTop ul li:first-child {background:url(../../images/w/kr/mypoly/bar_1x21_a9adaf.gif) no-repeat 100% 0;}
+.myTop ul li .camp {display:inline-block; padding:0 26px 0 35px; background:url(../../images/w/kr/mypoly/ico_camp.gif) no-repeat 0 0;}
+.myTop ul li .level {display:inline-block; padding-left:52px; background:url(../../images/w/kr/mypoly/ico_level.gif) no-repeat 26px 50%;}
+
+.dateWrap {position:relative;}
+.dateWrap .dateArea {position:relative; margin:30px auto 0; width:363px; height:120px; border-bottom:1px solid #336ea2; background:url(../../images/w/kr/mypoly/bg_date_area.gif) no-repeat 0 0;}
+.dateWrap .dateArea .date {position:absolute; top:30px; left:55px; font-size:70px; line-height:70px; font-weight:bold; color:#336ea2;}
+.dateWrap .dateArea .month {position:absolute; bottom:30px; left:157px; font-size:30px; line-height:30px;}
+.dateWrap .dateArea .year {position:absolute; top:30px; left:157px; font-size:30px; line-height:30px; color:#336ea2;}
+.dateWrap .btnArea a {position:absolute; display:block; width:32px; height:32px; margin-top:-16px; background:url(../../images/w/kr/mypoly/btn_date_move.png) no-repeat;}
+.dateWrap .btnArea a.prev {top:50%; left:230px; background-position:0 0;}
+.dateWrap .btnArea a.next {top:50%; right:230px; background-position:0 -32px;}
+.dateWrap.record .dateArea .year {top:35px; left:90px; font-size:70px; line-height:70px; height:70px; font-weight:bold;}
+
+.diaryWrap {padding-top:40px; overflow:hidden; margin-top:-21px; margin-left:-28px;}
+	.ie7 .diaryWrap {display:inline-block; zoom:1;}
+.diaryWrap:after {content:''; display:block; clear:both; height:0;}
+.diaryWrap dl {float:left; width:297px; height:280px; margin-top:21px; margin-left:28px; background:url(../../images/w/kr/mypoly/bg_diary.png) no-repeat 0 0;}
+.diaryWrap dl dt {height:60px; text-align:center; font-size:30px; line-height:60px; color:#fff;}
+.diaryWrap dl dt.month {font-size:24px;}
+.diaryWrap dl dt.month span {display:inline-block; padding-right:5px; font-size:40px;}
+.diaryWrap dl dd {padding:15px 30px;}
+.diaryWrap dl dd ul {height:179px; overflow-y:auto;}
+.diaryWrap dl dd ul li {padding-left:16px; font-size:14px; line-height:29px; color:#3675ac; background:url(../../images/w/kr/common/bl_dot_dgray.gif) no-repeat 6px 13px; border-top:1px solid #ebedee;}
+.diaryWrap dl dd ul li:first-child {border-top:none;}
+.diaryWrap dl dd ul li.bg {background-color:#f9f9f9;}
+.diaryWrap dl dd ul li .th {display:inline-block; width:109px; color:#3e4041;}
+.diaryWrap dl dd ul li .date {display:inline-block; width:67px; color:#3e4041;}
+.diaryWrap dl dd ul li .btnView {display:inline-block; width:80px; height:23px; vertical-align:middle;}
+.diaryWrap dl dd ul li .time {display:inline-block; padding-left:32px; font-weight:bold; line-height:29px; background:url(../../images/w/kr/mypoly/ico_attend.gif) no-repeat;}
+.diaryWrap dl dd ul li .time.att {background-position:0 0;}
+.diaryWrap dl dd ul li .time.abs {background-position:0 -29px;}
+.diaryWrap dl dd ul li .time.late {background-position:0 -58px;}
+.diaryWrap dl dd ul li .time span {color:#404040;}
+.diaryWrap dl dd ul li a .icoNew {padding-left:7px; vertical-align:middle;}
+.diaryWrap dl.timeTbl dd .day {margin:10px 0 5px; font-size:16px; font-weight:bold; line-height:43px; color:#fff; text-align:center; background:url(../../images/w/kr/mypoly/bg_day.png) no-repeat 0 0;}
+.diaryWrap dl.timeTbl dd ul {height:125px;}
+.diaryWrap dl.timeTbl dd ul li {line-height:34px; background-position: 6px 50%;}
+.diaryWrap dl.timeTbl dd ul li .th {width:75px;}
+.diaryWrap dl.timeTbl dd ul li .subj {display:inline-block; padding-left:35px; line-height:34px; font-size:12px; color:#323232; font-weight:bold; background:url(../../images/w/kr/mypoly/ico_time_tbl.gif) no-repeat;}
+.diaryWrap dl.timeTbl dd ul li .subj.voc {background-position:0 0;}
+.diaryWrap dl.timeTbl dd ul li .subj.read {background-position:0 -34px;}
+.diaryWrap dl.timeTbl dd ul li .subj.gram {background-position:0 -68px;}
+.diaryWrap dl.notice dd ul li .date {display:table-cell; width:67px; vertical-align:top;}
+.diaryWrap dl.notice dd ul li a {display:table-cell; width:135px; line-height:24px;}
+.diaryWrap dl.data dd ul li {padding:7px 0 7px 16px; line-height:16px;}
+
+.tPay {width:100%; border-bottom:1px solid #c9ccce;}
+.tPay th, .tPay td {text-align:center; font-size:15px; line-height:16px; border-top:1px solid #c9ccce; border-left:1px solid #c9ccce;}
+.tPay th.first, .tPay td.first {border-left:none;}
+.tPay th.double {padding:9px 0 8px;}
+.tPay th {padding:17px 0 16px; background:#e6e6e6;}
+.tPay td {padding:17px 10px 16px;}
+.tPay .date {font-size:13px; color:#000000;}
+.tPay .price {font-size:13px; color:#336ea2; font-weight:bold;}
+.tPay .receipt {margin-top:5px; display:inline-block; width:56px; height:28px; background:#646b71; border:1px solid #4d555b; font-size:13px; line-height:28px; color:#fff; text-align:center;}
+.tPay .refund {display:inline-block; width:30px; padding:13px 15px; background:#336ea2; border:1px solid #2e6392; font-size:16px; color:#fff; line-height:18px;}
+.tPay input[type="checkbox"] {margin:0;}
+.tPay table td table .first th, .tPay table td table .first td {border-top:none;}
+.tPay table td table th {color:#000000;}
+.tPay table td table td {text-align:left; font-size:14px;}
+
+.refundFin {text-align:center; font-size:25px; height:93px; line-height:93px; background:url('../../images/w/kr/mypoly/bg_refund_fin.png') no-repeat 0 0;}
+
+.tInfo {width:100%; margin-top:10px; border-bottom:1px solid #c9ccce;}
+.tInfo th, .tInfo td {padding:15px 20px; text-align:left; font-size:16px; line-height:19px; color:#545d64; border-top:1px solid #c9ccce; border-left:1px solid #c9ccce;}
+.tInfo th.first, .tInfo td.first {border-left:none;}
+.tInfo th {background:#e6e6e6;}
+
+.tRepo {width:100%; margin-top:10px;}
+.tRepo th, .tRepo td {padding:10px 15px; text-align:center; font-size:14px; line-height:29px; color:#323232; border-top:1px solid #c9ccce; border-left:1px solid #c9ccce;}
+.tRepo th.first, .tRepo td.first {border-left:none;}
+.tRepo th {background:#e6e6e6; font-weight:normal;}
+.tRepo tbody td {font-weight:bold;}
+.tRepo.comment td {font-weight:normal; line-height:20px;}
+.tRepo .tfoot th, .tRepo .tfoot td {border-top:1px solid #6caada; border-bottom:1px solid #6caada; background:#e0ecf6;}
+.tRepo .tfoot .first {border-left:1px solid #6caada;}
+.tRepo .tfoot .last {border-right:1px solid #6caada;}
+.tRepo tr.last th, .tRepo tr.last td {border-bottom:1px solid #c9ccce;}
+.tRepo.type2 th, .tRepo.type2 td {padding:10px 0;}
+.tRepo .bdrTN th, .tRepo .bdrTN td {border-top:none;}
+
+.graphBar {margin:3px auto; width:404px; height:21px; background:url('../../images/w/kr/mypoly/graph_bar.png') no-repeat 0 100%; text-align:left;}
+.graphBar .bar {position:relative; display:inline-block; height:21px; background:url('../../images/w/kr/mypoly/graph_bar_on.png') no-repeat 0 0;}
+.graphBar .bar .icon {position:absolute; bottom:7px; right:-5px; display:block; width:10px; height:14px; background:url('../../images/w/kr/mypoly/graph_bar_icon.png') no-repeat 0 0;}
+.layer .graph {margin:35px 0;}
+.layer .guideBox .boxTop {width:950px; height:25px; background:url('../../images/w/kr/mypoly/bg_box_guide.gif') no-repeat 0 0;}
+.layer .guideBox .boxCont {padding:0 20px; font-size:14px; line-height:20px; background:#f7f7f7; color:#494949;}
+.layer .guideBox .boxBtm {width:950px; height:25px; background:url('../../images/w/kr/mypoly/bg_box_guide.gif') no-repeat 0 100%;}
+.layer .btnWrap {margin:30px 0; text-align:center;}
+
+.listGrade {overflow:hidden;}
+	.ie7 .listGrade {display:inline-block; zoom:1;}
+.listGrade:after {content:''; display:block; clear:both; height:0;}
+.listGrade li {float:left; padding-left:32px; margin-right:40px; height:23px; line-height:23px; font-size:13px; font-weight:bold; color:#606060; background:url('../../images/w/kr/mypoly/bg_list_grade.png') no-repeat;}
+.listGrade li.grade05 {background-position:0 0;}
+.listGrade li.grade04 {background-position:0 -23px;}
+.listGrade li.grade03 {background-position:0 -46px;}
+.listGrade li.grade02 {background-position:0 -69px;}
+.listGrade li.grade01 {background-position:0 -92px;}
+
+.tAttend {width:100%; margin-top:40px; padding-bottom:12px; background:url('../../images/w/kr/mypoly/bg_attend_btm.png') no-repeat 0 100%;}
+.tAttend table th {height:49px; line-height:49px; font-size:15px; font-weight:bold; color:#fff; background:url('../../images/w/kr/mypoly/bg_attend_top.png') no-repeat 50% 0;}
+.tAttend table th.first {background-position:0 0;}
+.tAttend table th.last {background-position:100% 0;}
+.tAttend table td {position:relative; padding:12px; height:75px; background:#fff; border-right:1px solid #e7e7e7; border-top:1px solid #e7e7e7; vertical-align:top; font-size:13px; line-height:17px;}
+.tAttend table tr.first td {border-top:none;}
+.tAttend table td.first {border-left:1px solid #e7e7e7;}
+.tAttend table td .date.sun {color:#d94c4c;}
+.tAttend table td .date.sat {color:#326b9d;}
+.tAttend table td .time {position:absolute; top:12px; right:12px; font-size:13px; font-weight:bold; line-height:17px;}
+.tAttend table td .time .start {color:#336ea2;}
+.tAttend table td .icon {position:absolute; bottom:12px; left:12px; display:block; width:35px; height:39px; background:url('../../images/w/kr/mypoly/ico_attend_tbl.png') no-repeat;}
+.tAttend table td .icon.att {background-position:0 0;}
+.tAttend table td .icon.abs {background-position:-40px 0;}
+.tAttend table td .icon.late {background-position:-80px 0;}
+.tAttend table td .memo {display:inline-block; margin-left:10px; width:16px; height:17px; background:url('../../images/w/kr/mypoly/ico_memo.png') no-repeat 0 1px; vertical-align:middle;}
+
+.infoAtt {margin-top:20px; text-align:right;}
+.infoAtt span {display:inline-block; margin-left:15px; width:35px; padding-top:39px; font-size:12px; line-height:20px; color:#8a8a8a; background:url('../../images/w/kr/mypoly/ico_attend_tbl.png') no-repeat; text-align:center;}
+.infoAtt span.att {background-position:0 0;}
+.infoAtt span.abs {background-position:-40px 0;}
+.infoAtt span.late {background-position:-80px 0;}

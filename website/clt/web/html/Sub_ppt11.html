@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>CLT</title>
+    <link rel="stylesheet" type="text/css" href="../css/import.css" />
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui-1.9.2.custom.min.js"></script>
+    <script type="text/javascript" src="../js/pub.js"></script>
+</head>
+
+<body>
+    <div id="wrap" class="gate"> <!-- gate 페이지는 .gate추가 -->
+        <div class="skip_nav">
+            <strong class="blind">건너뛰기 링크</strong>
+            <ul>
+                <li><a href="#container">본문 바로가기</a></li>
+                <li><a href="#gnb">주 메뉴 바로가기</a></li>              
+            </ul>
+        </div>
+        <div id="head">
+             <a href="#" class="gate_logo"><img src="../img/btn_logo.png"></a>
+            <div class="location">               
+                <ul class="dep_01">                  
+                    <li class="d01">
+                        <a href="main.html"><span>Vessel Schedule</span></a>
+                        
+                    </li>
+                    <li class="d02 on">
+                        <a href="#none"><span>Operation and Performance</span></a>
+                        <ul class="dep_02">
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li class="on"><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                        </ul>
+                    </li>
+                    <li class="d03">
+                        <a href="#none"><span>Application</span></a>
+                        <ul class="dep_02">
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li class="on"><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                            <li><a href="#">Proforma Schedule Inquiry</a></li>
+                        </ul>
+                    </li>
+                    <li class="d04"><a href="#none"><span>Allocation</span></a></li>
+                    <li class="d05"><a href="#none"><span>Settlement</span></a></li>
+                </ul>
+            </div>           
+            <a href="#" class="btn_more"><span class="blind">전체메뉴</span></a>
+        </div>
+        <!-- //head -->
+        <div id="container">
+            <div id="aside_section">
+                <div class="aside_inner">
+                    <div class="toggle_box tg2">
+                        <dl>
+                            <dt><a href="#none"><strong>E-mail</strong></a>
+                                <div class="btn_email">
+                                    <a href="#none" class="btn04">Body</a>
+                                    <a href="#none" class="btn04">Attachments</a>
+                                </div>
+                            </dt>
+                            <dd>                         
+                               <div class="email_area dot_line">
+                                   <div class="to">
+                                        <p>Chi-Gyun Du</p>
+                                        <p>Liner Business Consulting Team / Liner Solution 
+                                        Business Unit / CyberLogitec Co., Ltd.
+                                        Tel: 82-2-6350-2897,  Mobile: 82-10-2634-5605
+                                        16th FL. R&amp;D Tower
+                                        1605 Nuritkum Square, Sangam-Dong, Mapo-Ku, 
+                                        Seoul 121-795, Korea</p>
+                                   </div>  
+                                   <div class="from">
+                                        <p>From : 신현기대리</p>
+                                        <p>[mailto:ianshin@ckline.co.kr] </p>
+                                        <p>Sent : Monday, February 20, 2017 1:31 PM </p>
+                                        <p>To : CKM SALE (sales.ckm@ckm.co.jp); </p>
+                                        <p>CKM-OPERATION (ope.ckm@ckm.co.jp); </p>
+                                        <p>hcm.csd@benline.com.vn; JKT-ASEP; JKT-Bornok; </p>
+                                        <p>JKT-BUSTAN; JKT-Fame; JKT-OPR </p>
+                                        <p>(operation_jkt@dagmarshipping.com); JKT-Pk Jha; </p>
+                                        <p>JKT-Rafly; JKT-Sulaeman; JKT-Togi; JKT-Zaenuri; </p>
+                                   </div>
+                               </div>
+                            </dd>                            
+                            <dt><a href="#none"><strong>Recipients</strong></a>
+                                <div class="btn_recip">
+                                    <a href="#none" class="btn04">Forward</a>
+                                    <a href="#none" class="btn04">Reply</a>
+                                </div>
+                            </dt>
+                            <dd>
+                                <div class="tbl_normal02" style="height:500px;">               
+                                   <table summary="" cellpadding="0" cellspacing="0">
+                                        <caption>결과</caption>
+                                        <colgroup>                           
+                                            <col style="width:60px">
+                                            <col style="width:60px">
+                                            <col style="width:*">                                                                    
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Check</th>
+                                                <th scope="col">Mail<br>Flag</th>
+                                                <th scope="col">Address</th>                                       
+                                            </tr>                                   
+                                        </thead> 
+                                        <tbody>                              
+                                            <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>
+                                                <td>F</td>                                       
+                                                <td class="tal">Demo_imdasdasdfsadg@cyberlogitec.com</td>  
+                                            </tr>
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>
+                                                <td>F</td>                                       
+                                                <td class="tal">Demo_imdasdasdfsadg@cyberlogitec.com</td>  
+                                            </tr>
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>
+                                                <td>F</td>                                       
+                                                <td class="tal">Demo_imdasdasdfsadg@cyberlogitec.com</td>  
+                                            </tr>
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>
+                                                <td>F</td>                                       
+                                                <td class="tal">Demo_imdasdasdfsadg@cyberlogitec.com</td>  
+                                            </tr>
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>
+                                                <td>F</td>                                       
+                                                <td class="tal">Demo_imdasdasdfsadg@cyberlogitec.com</td>  
+                                            </tr>
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>
+                                                <td>F</td>                                       
+                                                <td class="tal">Demo_imdasdasdfsadg@cyberlogitec.com</td>  
+                                            </tr>
+                                    </tbody> 
+                                </table>
+                            </div>
+                            </dd>
+                        </dl>
+                    </div>                                        
+                </div>
+                <div class="quick_bottom">
+                    <div class="gap">
+                        <ul>
+                            <li>
+                                <a class="qk01" href="#">
+                                    <span class="blind">시간</span>        
+                                </a>
+                            </li>
+                             <li>
+                                <a class="qk02" href="#">
+                                    <span class="blind">날씨</span>        
+                                </a>
+                            </li>
+                            <li>
+                                <a class="qk03" href="#">
+                                    <span class="blind">취소</span>        
+                                </a>
+                            </li>
+                            <li>
+                                <a class="qk04" href="#">
+                                    <span class="blind">접속</span>        
+                                </a>
+                            </li>
+                            <li>
+                                <a class="qk05" href="#">
+                                    <span class="blind">일정</span>        
+                                </a>
+                            </li>
+                            <li>
+                                <a class="qk06" href="#">
+                                    <span class="blind">스케줄</span>        
+                                </a>
+                            </li>
+                            <li>
+                                <a class="qk07" href="#">
+                                    <span class="blind">더보기</span>        
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tab_bottom">
+                    <ul>
+                        <li><a href="#" class="min "><span class="blind">MIN</span></a></li>
+                        <li><a href="#" class="med"><span class="blind">MED</span></a></li>
+                        <li><a href="#" class="max on"><span class="blind">MAX</span></a></li>
+                    </ul>
+                </div>
+               <a href="#none" class="btn_side_more"><span class="blind">더보기</span></a>                
+            </div> 
+            <div class="left_text">
+                 <ul class="sr_no">
+                    <li>SR NO. <span>6454</span></li>
+                    <li>Carrier <span></span></li>
+                    <li>Mail Form <span>JiaWer</span></li>
+                </ul>
+            </div>
+            <div class="util">
+                <div class="util_inner">                    
+                    <a href="#none" class="sw">
+                        <span><em class="blind">토글버튼</em></span>
+                    </a>             
+                    <ul>
+                        <li class="u1"><a href="#none"><span class="blind">Tip</span></a></li>
+                        <li class="u2"><a href="#none"><span class="blind">Step forward</span></a></li>
+                        <li class="u3"><a href="#none"><span class="blind">Step backward</span></a></li>
+                        <li class="u4"><a href="#none"><span class="blind">Result</span></a></li>
+                        <li class="u5"><a href="#none"><span class="blind">History</span></a></li>
+                        <li class="u6"><a href="#none"><span class="blind">Option</span></a></li>
+                    </ul>                    
+                </div>
+            </div>
+            <div id="contents" class="bg">                
+                <div class="top_tit">
+                    <strong>CBRI (CIMBRIA)</strong>
+                </div>                    
+                <div class="cbri_section">
+                    <div class="log_area">
+                        <div class="l_logo">
+                             <span class="tit">Sender</span>
+                            <span><img src="../img/@logo.png" alt="logo"></span>
+                        </div>
+                       
+                        <ul class="log_list">
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                            <li><img src="../img/@logo.png" alt="logo"></li>
+                        </ul>
+                    </div>    
+                    <div class="tbl_normal" style="height:115px;">               
+                        <table summary="" cellpadding="0" cellspacing="0">
+                             <caption>결과</caption>
+                            <colgroup>                           
+                                <col style="width:105px">
+                                <col style="width:160px">
+                                <col style="width:100px">
+                                <col style="width:90px">
+                                <col style="width:100px">
+                                <col style="width:120px">
+                                <col style="width:100px">
+                                <col style="width:130px">
+                                <col style="width:120px">
+                                <col style="width:200px">
+                                <col style="width:100px">
+                                <col style="width:100px">                                                   
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th scope="col">IMO Number</th>
+                                    <th scope="col">Name of Ship</th>
+                                    <th scope="col">Call Sign</th>
+                                    <th scope="col">MMSI</th>
+                                    <th scope="col">Gross Tonnage</th>
+                                    <th scope="col">Tonnage</th>
+                                    <th scope="col">Type of Ship</th>
+                                    <th scope="col">Year of Build</th>
+                                    <th scope="col">Lane</th>
+                                    <th scope="col">Vessel</th>
+                                    <th scope="col">Voyage</th>
+                                    <th scope="col">Delay(HRS)</th>
+                                </tr>                                   
+                            </thead> 
+                            <tbody>                              
+                                <tr>                                                 
+                                    <td>939513</td>   
+                                     <td>HAMBURO BRIDGE</td>
+                                     <td>3FVW2</td>   
+                                     <td></td>    
+                                     <td>98747</td> 
+                                     <td>99214</td> 
+                                     <td>Container Ship</td> 
+                                     <td></td> 
+                                     <td></td> 
+                                    <td>URKW (HAMBURG BRIDGE)</td>
+                                    <td>044W</td> 
+                                    <td></td> 
+                                </tr>                                
+                            </tbody> 
+                        </table>
+                    </div>
+                </div>
+             
+                                
+                <div class="vs_schedule_section">
+                    <div class="toggle_box wht tg3">
+                        <dl>
+                            <dt><a href="#none"><strong>Vessel Schedule</strong></a>
+                                <div class="btn_vs_schedule">
+                                    <a href="#none" class="btn04">Add Row</a>
+                                    <a href="#none" class="btn04">Update</a>
+                                    <a href="#none" class="btn04">Delete Row</a>
+                                </div>
+                            </dt>
+                            <dd>
+                                <div class="vs_schedule_top_area">
+                                    <div class="tab_box2">
+                                        <div class="scroll_box">
+                                            <ul class="hidden_box">
+                                                <li><a href="#none" class="on">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                 <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                 <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                 <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                 <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                                <li><a href="#none">CKM-OPERATION</a></li>
+                                              
+                                            </ul>
+                                        </div>                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="tbl_normal" style="height:350px;">               
+                                   <table summary="" cellpadding="0" cellspacing="0">
+                                        <caption>결과</caption>
+                                        <colgroup>                           
+                                            <col style="width:50px">
+                                            <col style="width:150px">
+                                            <col style="width:150px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:100px">
+                                            <col style="width:160px">
+                                            <col style="width:160px">
+                                            <col style="*">                                           
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="2">Sel</th> 
+                                                <th scope="col" rowspan="2">Voyage No</th> 
+                                                <th scope="col" rowspan="2">Port</th> 
+                                                <th scope="col" rowspan="2"rowspan="2">Port Code</th> 
+                                                <th scope="col" colspan="3">Long Range Schedule</th> 
+                                                <th scope="col" rowspan="2">Delay<br>ETA</th> 
+                                                <th scope="col" rowspan="2">Delay<br>ETD</th> 
+                                                <th scope="col" colspan="3">Coastal Schedule</th> 
+                                            </tr>  
+                                             <tr>
+                                                <th scope="col">ETA</th>          
+                                                <th scope="col">ETB</th>          
+                                                <th scope="col">ETD</th> 
+                                                  <th scope="col">ETA</th>          
+                                                <th scope="col">ETB</th>          
+                                                <th scope="col">ETD</th> 
+                                            </tr>  
+                                        </thead> 
+                                        <tbody>                              
+                                            <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>   
+                                                 <td>0031N</td>
+                                                 <td>SHAGHAI</td>   
+                                                 <td>CNSHA</td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td> 
+                                            </tr>    
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>   
+                                                 <td>0031N</td>
+                                                 <td>SHAGHAI</td>   
+                                                 <td>CNSHA</td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td> 
+                                            </tr>     
+                                            <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>   
+                                                 <td>0031N</td>
+                                                 <td>SHAGHAI</td>   
+                                                 <td>CNSHA</td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td> 
+                                            </tr>    
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>   
+                                                 <td>0031N</td>
+                                                 <td>SHAGHAI</td>   
+                                                 <td>CNSHA</td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td> 
+                                            </tr>   
+                                             <tr>                                                 
+                                                <td><input type="checkbox" id="chk"></td>   
+                                                 <td>0031N</td>
+                                                 <td>SHAGHAI</td>   
+                                                 <td>CNSHA</td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td></td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td>    
+                                                 <td>2017-06-06 14:53:43</td> 
+                                            </tr>   
+                                       </tbody> 
+                                    </table>
+                                </div>
+                            </dd>                             
+                        </dl>
+                    </div>
+                </div>
+                <div class="remark_section">
+                    <div class="toggle_box wht tg4">
+                        <dl>
+                            <dt><a href="#none"><strong>Port Rematk</strong></a></dt>
+                            <dd>
+                                <div class="gap">
+                                    <ul>
+                                        <li>[1] 36H D</li>
+                                        <li>[2] I/B ONLY</li>
+                                        <li>[3] I/B ONLY</li>
+                                        <li>[5] 8H D</li>
+                                        <li>[6] ON SKED.</li>
+                                    </ul>
+                                </div> 
+                            </dd>                              
+                        </dl>
+                    </div>
+
+                    <div class="toggle_box wht tg4">
+                        <dl>
+                            <dt><a href="#none"><strong>SKED Remark</strong></a></dt>
+                            <dd>
+                                <div class="gap">
+                                   <ul class="list01">
+                                        <li>
+                                            0031N SHA delayed 17 hrs due to port congestion / port closure affected by bad weather
+                                       </li>
+                                        <li>
+                                            0031N SUB delayed 24 hrs due to pilot service suspended due to bad weather &amp; low productivity
+                                       </li>
+                                    </ul>
+                                </div> 
+                            </dd>                               
+                        </dl>
+                    </div>                   
+                </div>
+                <div class="delay_section">
+                    <div class="toggle_box wht tg3">
+                        <dl>
+                            <dt><a href="#none"><strong>Delays (hrs)</strong></a></dt>
+                            <dd>
+                                <img src="../img/@delays.png" alt="">
+                            </dd>                               
+                        </dl>
+                    </div> 
+                </div>
+            </div> 
+            <div class="btn_wrap right">
+                <a href="#" class="btn01 black"><strong>Confirm</strong></a>
+                <a href="#" class="btn01 black"><strong>Drop</strong></a>
+                <a href="#" class="btn01 black"><strong>Add VSL</strong></a>
+                <a href="#" class="btn01 black"><strong>Delete VSL</strong></a>
+                <a href="#" class="btn01 black"><strong>Match LRS</strong></a>
+                <a href="#" class="btn01 blue"><strong>Save</strong></a>
+            </div>
+        </div>
+        <!-- //container -->
+        <div id="footer">
+            <img src="../img/footer_tab.png">
+        </div>       
+    </div>
+    <script type="text/javascript">
+        cltUi.gateLayout('fixed')  // 'fixed' 놀이값고정       
+    </script>
+</body>
+
+</html>

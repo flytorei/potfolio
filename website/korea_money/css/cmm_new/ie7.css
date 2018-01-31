@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+.ie7 .state_bar{padding: 2px 0 3px 0}
+.ie7 .state_bar input {border: none;height: 30px; margin-left: 10px;vertical-align: top;padding-left: 10px; color: #5886c8;font-size: 14px;line-height: 30px;}
+.ie7 .state_bar .tit{display: inline-block}
+.ie7 .state_bar .bul{background-position: 0 17px}
+.ie7 .gnb .dep_02.g02 {width: 335px;}
+.ie7 .gnb .dep_02.g03 {width: 340px;}
+.ie7 .gnb .dep_02{top:44px}
+.ie7 .notice_box .n_util .search button{top: 5px;right: 8px;}
+.ie7 .sel_cm{height: auto!important}
+.ie7 .notice_box .cts_box .list{text-align: left}
+.ie7 .notice_box .cts_box .list a{padding: 0 0 0 70px;  width: 380px;}
+.ie7 .notice_box .cts_box .list .num{right: 20px;}
+.ie7 .notice_box .cts_box .list li{position: relative}
+.ie7 .n_util .search .inp_cm{height: 18px;}
+.ie7 .notice_box .n_util .search button{background-size: 50%;top:-5px;right: 0}
+.ie7 .counsel_box .bbs_write_cm .inp_cm{width: 395px!important}
+.ie7 .counsel_box .bbs_write_cm .tarea_input{width: 385px!important}
+.ie7 .box_01 .inp_cm{height: 20px;line-height: 20px}
+.ie7 .counsel_admin .bbs_write_cm .sel_cm{width: 367px!important}
+.ie7 .counsel_admin .bbs_write_cm .inp_cm{width: 355px!important}
+.ie7 .counsel_admin .box_cts{margin-bottom: 0}
+.ie7 .counsel_admin .btn_wrap{margin-top: 10px}
+.ie7 .booking_admin .bbs_write_cm .btn.type_02{top: -35px}
+.ie7 .booking_admin .l_box .bbs_write_cm .inp_cm{width: 126px!important}
+.ie7 .booking_admin .l_box .bbs_write_cm .inp_cm.tc{width: 95px!important}
+.ie7 .booking_admin .l_box .bbs_write_cm .inp_cm.w_425{width: 390px!important}
+.ie7 .booking_admin .l_box .bbs_write_cm .inp_cm.w_145{width: 95px!important}
+.ie7 .booking_admin .search button{right: 5px;top: 2px}
+.ie7 .booking_admin .bbs_write_cm table .tarea_input.w_420{width: 380px!important}
+.ie7 .booking_admin .r_box .bbs_write_cm .tarea_input{width: 380px!important}
+.ie7 .brains_admin .brains_list_box{height: 350px;}
+.ie7 .w_730{width: 720px!important}
+.ie7 .w_160{width: 150px!important}
+.ie7 .w_720{width: 710px!important}

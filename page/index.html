@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html leng="ko">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포트폴리오</title>
+    <link type="text/css" rel="stylesheet" href="../css/style.css" />
+    <link type="text/css" rel="stylesheet" href="../SyntaxHighlighter/Styles/shCoreDefault.css"/>
+    <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+    <script type="text/javascript" src="../SyntaxHighlighter/Scripts/shCore.js"></script>
+    <script type="text/javascript" src="../SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+
+    <script type="text/javascript">
+        SyntaxHighlighter.all();
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            $('div.section').stat();
+            $('.section').eq(0).find('.content').css({
+                'display': 'block'
+            });
+            //over-coloring
+            $('div.section tbody tr').mouseover(function () {
+                $(this).addClass('overcoloring');
+            }).mouseout(function () {
+                $(this).removeClass('overcoloring');
+            });
+        });
+    </script>
+    <style type="text/css">
+        .section .content{display: block;}
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <h1>:: <strong>포트폴리오</strong></h1>
+            <ul class="nav">
+                <li><a href="index.html" class="on">프로필</a></li>           
+                <li><a href="potfolio.html">포트폴리오</a></li>   
+                <li><a href="guide.html">작업가이드</a></li>        
+            </ul>
+        </div>
+        <div class="body">
+            <div class="section">
+                <h2 class="title">프로필 소개</h2>
+                <div class="content">
+                    <ul>
+                        <li>이름 : 노선용</li>
+                        <li>나이 : 37 (1982년생)</li>
+                        <li>경력사항 : 쇼핑몰 유지보수 2년, 웹 에이전시 3년</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="title">작업가능분야</h2>
+                <div class="content">
+                    <ul>
+                        <li>HTML마크업 및 접근성 퍼블리싱</li>
+                        <li>Javascript</li>
+                        <li>jQuery</li>
+                        <li>부트스트랩</li>
+                        <li>모바일 jQuery</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="section">
+                <h2 class="title">경력사항</h2>
+                <div class="content">
+                    <p class="tit">* 회사</p>
+                    <ul>
+                        <li><span class="poi">다울지오인포</span> - 지도 데이터(네이버지도)및 '지도판매'쇼핑몰 사이트(근무연수 : 2년)</li>
+                        <li><span class="poi">블루스트림</span> - 웹 에이전시(근무연수 6개월)</li>
+                        <li><span class="poi">퓨즈</span> - 웹 에이전시(근무연수 3냔)</li>
+                    </ul>
+                    <p class="tit">* 프로젝트</p>
+                    <ul>
+                        <li><span class="poi">단국대학교 구축</span> (기간 2014.12~2015.06 - 6개월)</li>
+                        <li><span class="poi">신한 올댓닷컴 구축</span> (기간 2015.08~2015.10 - 4개월)</li>
+                        <li><span class="poi">BC카드 운영 유지보수</span> (기간 2015.10~2016.10 - 12개월)</li>
+                        <li><span class="poi">서울대학교 - 모바일</span> (기간 2017.1~2017.3 - 3개월)</li>
+                        <li><span class="poi">사이버로지택 사내시스탬</span> (기간 2017.7 ~ 2017.9,2017.12 ~ 2017.1 - 4개월)</li>
+                        <li><span class="poi">연합뉴스</span> (기간 2017.9 ~ 2017.10 - 1개월)</li>
+                        <li><span class="poi">HK 저축은행</span> (기간 2017.11 ~ 2017.12 - 1개월)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html

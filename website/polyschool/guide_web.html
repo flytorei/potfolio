@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ko" xml:lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>공통 클래스 가이드</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link type="text/css" rel="stylesheet" href="web/css/kr/common.css" />
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- jquery ui theme -->
+    <!--
+    <link href="jquery-ui-1.10.4.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/select.js"></script>
+    -->
+
+    <style type="text/css">
+        * {margin:0; padding:0;}
+        html {overflow-y:scroll;}
+        body {background:#ededed; color:#666; font:12px/1 ng, Tahoma, Sans-serif;}
+        a {/*color:#27e;*/ text-decoration:none;}
+        a:focus, a:hover, a:active {text-decoration:underline;}
+        .header {padding:0.5em; font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif;}
+        .header h1 {font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif; color:#444; font-size:2em; font-weight:bold;}
+        .header h1 strong {font:12px/1.5 Malgun Gothic, Tahoma, Sans-serif; font-size:70%; font-weight:bold;}
+        .header .nav {list-style:none; background:#969696; padding:0.5em 0.5em 0.2em; color:#f9f9f9; font-weight:bold; font-size:1.1em;}
+        .header .nav li {display:inline; margin-right:0.5em;}
+        .header .nav li a {color:#f9f9f9;}
+        .header .nav li a.on {color:#fff !important; border-bottom:2px solid #3e3e3e; text-shadow:#7c7c7c 2px 1px 2px; text-decoration:none; font-size:105%;}
+        .header .nav-otherlink {list-style:none; text-align:right; padding:0.5em 0.5em 0.2em; color:#969696; font-size:1em;}
+        .header .nav-otherlink li {display:inline;}
+        .header .nav-otherlink li a {color:#969696; font-weight:bold;}
+        .header .nav-otherlink li a.on {color:#3e3e3e;}
+        .header .nav-otherlink li a.on:before {content:'→'; font-size:0.9em;}
+        .wrapper {padding-bottom:1em;}
+        .section {}
+        .section + .section {margin-top:3em;}
+        .section .title {margin:0 0 20px 0; padding:1em 2em; border:1px solid #ccc; background-color:#0295C9; color:#fff; font-weight:bold; font-size:125%; margin-top:-1px; position:relative; *zoom:1;}
+        .section .guide_tit {background:#fff; padding:5px 10px; font-weight:bold; margin-bottom:20px; color:#333; border:2px dashed #999;}
+        .section .sub_tit {margin-top:30px; background:#f3f3f3; padding:10px; font-weight:bold; margin-bottom:20px; color:#333;}
+        .header .list_sort {overflow:hidden; margin:10px 0;}
+        .header .list_sort li {float:left;}
+        .header .list_sort li a {display:inline-block; padding:0 15px; background:url(/asset/skin/basil/img/common/bar_1x13_b5b5b5.gif) no-repeat 0 3px; font-weight:bold;}
+        .header .list_sort li:first-child a {padding-left:0; background:none;}
+        .section .btn li {float: left; margin-left: 10px;}
+        .section .content li p {text-align: center; font-size: 12px;}
+        .content:after {content:""; display:block; clear:both; visibility:hidden; height:0px; font-size:0;}
+    </style>
+</head>
+
+<body>
+<div class="header">
+    <h1>:: <strong>공통 클래스 가이드</strong></h1>
+    <ul class="nav">
+        <li><a href="#">FILE List</a></li>
+        <li><a href="#" class="on">Contents Guide</a></li>
+    </ul>
+    <ul class="list_sort">
+        <li><a href="#layout">레이아웃</a></li>
+        <li><a href="#title">제목/텍스트</a></li>
+        <li><a href="#button">버튼</a></li>
+        <li><a href="#form">폼</a></li>
+        <li><a href="#tbl">테이블</a></li>
+        <li><a href="#bbs">bbs 게시판</a></li>
+        <li><a href="#tab_style">탭</a></li>
+        <li><a href="#list">리스트</a></li>
+        <li><a href="#box">박스타입</a></li>
+        <li><a href="#content_g">콘텐트</a></li>
+    </ul>
+</div>
+
+<div class="wrapper">
+<div class="container" style="padding-top:1em;">
+<!-- layout -->
+<div class="section" id="layout">
+    <h2 class="title">Layout</h2>
+    <a href="/polyschool/web/html/kr/sample/layout_sub.html" target="_blank" title="새 창">레이아웃 링크페이지 클릭 &gt;</a>
+</div>
+<!-- //layout -->
+
+<!-- title / text -->
+<div class="section" id="title">
+    <h2 class="title">Title &amp; text</h2>
+    <p class="guide_tit">font-size:24px 콘텐츠 타이틀 (.fTit)</p>
+    <div class="content">
+        <h4 class="fTit">기본정보</h4>
+    </div>
+</div>
+<!-- //title / text -->
+
+<!-- button -->
+<div class="section" id="button">
+    <h2 class="title">Button</h2>
+    <p class="guide_tit">버튼 스타일1</p>
+    <div class="content btn" style="width:950px;">
+        <ul>
+            <li>
+                <p>.btnB</p>
+                <a href="#" class="btnB">버튼 스타일1 Blue</a>
+            </li>
+            <li>
+                <p>.btnG</p>
+                <a href="#" class="btnG">버튼 스타일1 Gray</a>
+            </li>
+            <li>
+                <p>.btnGrn</p>
+                <a href="#" class="btnGrn">버튼 스타일1 Green</a>
+            </li>
+            <li>
+                <p>.btnDg</p>
+                <a href="#" class="btnDg">버튼 스타일1 Dark Gray</a>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <p class="guide_tit">버튼 스타일2</p>
+    <div class="content btn" style="width:950px;">
+        <ul>
+            <li>
+                <p>.btnG.down</p>
+                <a href="#" class="btnG down"><span class="ffEn">Book report</span> 다운로드</a></li>
+            <li>
+            <li>
+                <p>.btnG .ico.linkArr</p>
+                <a href="#" class="btnG">캠퍼스 정보 바로가기<span class="ico linkArr">바로가기 아이콘</span></a>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <p class="guide_tit">버튼 스타일3</p>
+    <div class="content btn" style="width:950px;">
+        <li>
+            <p>.btnWideB</p>
+            <a href="#" class="btnWideB">버튼 스타일3 Blue</a>
+        </li>
+        <li>
+            <p>.btnWideG</p>
+            <a href="#" class="btnWideG">버튼 스타일3 Gray</a>
+        </li>
+    </div>
+</div>
+<!-- //button -->
+
+<!-- form -->
+<div class="section" id="form">
+    <h2 class="title">Form</h2>
+    <p class="guide_tit">input (.txtBox)</p>
+    <div class="content">
+        <input class="txtBox" type="text" title="인풋타이틀" style="width:268px;" />
+<pre>
+&lt;input class="txtBox" type="text" title="인풋타이틀" style="width:268px;" /&gt;
+</pre>
+    </div><br /><br />
+    <p class="guide_tit">select (.select)</p>
+    <div class="content">
+			<span class="select">
+				<select title="select 타이틀 입력" style="width:140px;">
+                    <option>선택하세요.</option>
+                </select>
+			</span>
+<pre>
+&lt;span class="select"&gt;
+	&lt;select title="select 타이틀 입력" style="width:140px;"&gt;
+		&lt;option&gt;선택하세요.&lt;/option&gt;
+	&lt;/select&gt;
+&lt;/span&gt;
+</pre>
+    </div><br /><br />
+    <p class="guide_tit">radio/checkbox</p>
+    <div class="content">
+        <input type="radio" name="radioName" id="radio01" /><label for="radio01">예</label>
+        <input type="radio" name="radioName" id="radio02" /><label for="radio02">아니오</label>
+<pre>
+&lt;input type="radio" name="radioName" id="radio01" /&gt;&lt;label for="radio01"&gt;예&lt;/label&gt;
+&lt;input type="radio" name="radioName" id="radio02" /&gt;&lt;label for="radio02"&gt;아니오&lt;/label&gt;
+</pre>
+    </div><br /><br />
+</div>
+<!-- //form -->
+
+<!-- tbl -->
+<div class="section" id="tbl">
+    <h2 class="title">Table</h2>
+    <p class="guide_tit">테이블(.tForm)</p>
+    <div class="content">
+        <div class="tForm">
+            <p class="requireTxt">필수입력사항</p>
+            <table summary="개인정보 입력 - 필수입력사항 상세내역">
+                <caption>기본정보 필수입력사항</caption>
+                <colgroup>
+                    <col style="width:16%;" />
+                    <col style="width:84%;" />
+                </colgroup>
+                <tbody>
+                <tr>
+                    <th scope="row">이름</th>
+                    <td>홍길동</td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="userID">아이디</label></th>
+                    <td><input class="txtBox" type="text" id="userID" style="width:268px;" />
+                        <!-- button -->
+                        <a class="btnG ml2" href="#">중복체크</a>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="userPw">비밀번호</label></th>
+                    <td><input class="txtBox" type="password" id="userPw" style="width:268px;" /></td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="reUserPw">비밀번호 확인</label></th>
+                    <td><input class="txtBox" type="password" id="reUserPw" style="width:268px;" /></td>
+                </tr>
+                <tr>
+                    <th class="vTop" scope="row"><label for="wrtPost">주소</label></th>
+                    <td>
+                        <div><input class="txtBox mr2" type="text" id="wrtPost" title="우편번호 앞자리" style="width:61px;" /> - <input class="txtBox ml2" type="text" title="우편번호 뒷자리" style="width:61px;" />
+                            <!-- button -->
+                            <a class="btnG ml2" href="#">우편번호 찾기</a>
+                        </div>
+                        <div class="mt5">
+                            <input class="txtBox" type="text" title="주소 입력" style="width:268px;" />
+                            <input class="txtBox ml2" type="text" title="상세 주소 입력" style="width:473px;" />
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="wrtHomephone">집 전화번호</label></th>
+                    <td>
+										<span class="select">
+											<select id="wrtHomephone" title="집 전화번호 앞 2~3자리" style="width:70px;" >
+                                                <option>선택</option>
+                                            </select>
+										</span>
+                        <input class="txtBox ml2" type="text" title="집 전화번호 가운데 3~4자리" style="width:70px;" />
+                        <input class="txtBox ml2" type="text" title="집 전화번호 끝 4자리" style="width:70px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="wrtCellphone">휴대폰번호</label></th>
+                    <td>
+										<span class="select">
+											<select id="wrtCellphone" title="휴대폰번호 앞 3~4자리" style="width:70px;">
+                                                <option>선택</option>
+                                            </select>
+										</span>
+                        <input class="txtBox ml2" type="text" title="휴대폰번호 가운데 3~4자리" style="width:70px;" />
+                        <input class="txtBox ml2" type="text" title="휴대폰번호 끝 4자리" style="width:70px;" />
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><label for="Email">이메일</label></th>
+                    <td>
+                        <input class="txtBox" type="text" id="Email" title="이메일 아이디 입력" style="width:149px;" /> @ <input class="txtBox ml2" type="text" title="이메일 도메인 입력" style="width:149px;" />
+										<span class="select">
+											<select title="이메일 도메인 선택" style="width:140px;">
+                                                <option>선택하세요.</option>
+                                            </select>
+										</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br /><br />
+</div>
+<!-- //tbl -->
+
+<!-- bbs -->
+<div class="section" id="bbs">
+    <h2 class="title">게시판</h2>
+    <p class="guide_tit">게시판 목록 (.bbsList / 탑라인 없는 테이블 .nonTLine 클래스 추가)</p>
+    <div class="content" style="width:950px;">
+        <div class="bbsList nonTLine">
+            <table summary="당첨자 발표 목록">
+                <caption>이벤트 당첨자 발표 목록 - 이벤트 명 및 이벤트 기간</caption>
+                <colgroup>
+                    <col style="width:8%;" />
+                    <col style="width:71%;" />
+                    <col style="width:21%;" />
+                </colgroup>
+                <thead>
+                <tr class="first">
+                    <th scope="col" class="first">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">기간</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="num">3</td>
+                    <td class="link">
+                        <a href="#">'세계 책의 날' 이벤트에 참여하세요!</a>
+                    </td>
+                    <td class="date">2014.04.21 ~ 2014.05.31</td>
+                </tr>
+                <tr>
+                    <td class="num">2</td>
+                    <td class="link">
+                        <a href="#">'세계 책의 날' 이벤트에 참여하세요!'세계 책의 날' 이벤트에 참여하세요!'세계 책의 날' 이벤트에 참여하세요!</a>
+                    </td>
+                    <td class="date">2014.04.21 ~ 2014.05.31</td>
+                </tr>
+                <tr>
+                    <td class="num">1</td>
+                    <td class="link">
+                        <a href="#">'세계 책의 날' 이벤트에 참여하세요!</a>
+                    </td>
+                    <td class="date">2014.04.21 ~ 2014.05.31</td>
+                </tr>
+                </tbody>
+            </table>
+        </div><br /><br />
+        <div class="bbsList mt30">
+            <table summary="당첨자 발표 목록">
+                <caption>이벤트 당첨자 발표 목록 - 이벤트 명 및 이벤트 기간</caption>
+                <colgroup>
+                    <col style="width:8%;" />
+                    <col style="width:71%;" />
+                    <col style="width:21%;" />
+                </colgroup>
+                <thead>
+                <tr>
+                    <th scope="col" class="first">번호</th>
+                    <th scope="col">제목</th>
+                    <th scope="col">기간</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="num">3</td>
+                    <td class="link">
+                        <a href="#">'세계 책의 날' 이벤트에 참여하세요!</a>
+                    </td>
+                    <td class="date">2014.04.21 ~ 2014.05.31</td>
+                </tr>
+                <tr>
+                    <td class="num">2</td>
+                    <td class="link">
+                        <a href="#">'세계 책의 날' 이벤트에 참여하세요!'세계 책의 날' 이벤트에 참여하세요!'세계 책의 날' 이벤트에 참여하세요!</a>
+                    </td>
+                    <td class="date">2014.04.21 ~ 2014.05.31</td>
+                </tr>
+                <tr>
+                    <td class="num">1</td>
+                    <td class="link">
+                        <a href="#">'세계 책의 날' 이벤트에 참여하세요!</a>
+                    </td>
+                    <td class="date">2014.04.21 ~ 2014.05.31</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div><br /><br />
+    <p class="guide_tit">paging (.paging)</p>
+    <div class="content" style="width:950px;">
+        <!-- paging -->
+        <div class="paging">
+            <a href="#" class="first"><span class="hidden">처음 페이지로 이동</span></a>
+            <a href="#" class="prev"><span class="hidden">이전 페이지로 이동</span></a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="on">4</a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#">7</a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#" class="next"><span class="hidden">다음 페이지로 이동</span></a>
+            <a href="#" class="last"><span class="hidden">끝 페이지로 이동</span></a>
+        </div>
+        <!-- //paging -->
+    </div><br /><br />
+    <p class="guide_tit">게시판 View (.bbsView)</p>
+    <div class="content" style="width:950px;">
+        <div class="bbsView">
+            <div class="titWrap">
+                <div class="tit">
+                    <h3>
+                        <span class="cate">[News in Media]</span>
+                        <span class="cmt">오직 POLY에만 허락된 북미 명문 영재교육 오직 POLY에만 허락된 북미 명문 영재교육오직 POLY에만 허락된 북미 명문 영재교육</span>
+                    </h3>
+                    <p class="rInfo date">2014.07.28</p>
+                </div>
+                <ul class="viewInfo">
+                    <li class="file"><span>첨부파일</span><a href="#" title="POLY_보도자료.doc 다운로드">POLY_보도자료.doc</a>,<a href="#" title="POLY_보도자료2.doc 다운로드">POLY_보도자료2.doc</a></li>
+                </ul>
+            </div>
+
+            <div class="view">
+                <!-- 게시판 내용 -->
+
+                <!-- 게시판용 이미지 max width 890px -->
+                <img src="./polyschool/web/images/temp/@img_bbs_max.jpg" alt="게시판 임시이미지"><br><br>
+
+                <strong>Seabury School Gifted Program 개강</strong><br>
+                북미 명문 영재교육학교 Seabury School의 차별화된 영재교육을 이제 폴리에서 만날 수 있다.<br>
+                북미 명문 영재교육학교 Seabury School의 차별화된 영재교육을 이제 폴리에서 만날 수 있다.<br>
+                북미 명문 영재교육학교 Seabury School의 차별화된 영재교육을 이제 폴리에서 만날 수 있다.<br>
+                북미 명문 영재교육학교 Seabury School의 차별화된 영재교육을 이제 폴리에서 만날 수 있다.
+
+
+
+                <!-- //게시판 내용 -->
+            </div>
+
+            <div class="bbsMove">
+                <p class="prev">
+                    <span class="tit">이전 글</span>
+                    <a href="#">[News in Media] The 2014 POLY Speech Contest 개최[News in Media] The 2014 POLY Speech Contest 개최[News in Media] The 2014 POLY Speech Contest 개최</a>
+                    <span class="date">2014.06.24</span>
+                </p>
+                <p class="next">
+                    <span class="tit">다음 글</span>다음 글이 없습니다.
+                </p>
+            </div>
+
+            <!-- button -->
+            <div class="btnWrap">
+                <div class="fr">
+                    <a class="btnB" href="#">목록보기</a>
+                </div>
+            </div>
+        </div>
+    </div><br /><br />
+</div>
+<!-- //bbs -->
+
+<!-- tab -->
+<div class="section" id="tab_style">
+    <h2 class="title">Tab</h2>
+    <p class="guide_tit">탭 (.tabWrap / 탭 갯수에 따라 .col3 , .col4 클래스 추가)</p>
+    <div class="content" style="width:950px;">
+        <div class="tabWrap col3">
+            <ul>
+                <li class="tab01 on"><a class="scrolltoanchor" href="#bvCont01"><span>2010년 ~ 현재</span></a></li>
+                <li class="tab02"><a class="scrolltoanchor" href="#bvCont02"><span>2001년 ~ 2009년</span></a></li>
+                <li class="tab03"><a class="scrolltoanchor" href="#bvCont03"><span>1991년 ~ 2000년</span></a></li>
+            </ul>
+        </div><br />
+        <div class="tabWrap col4">
+            <ul>
+                <li class="short"><a href="#"><span>전체</span></a></li>
+                <li><a href="#"><span>진행중인 이벤트</span></a></li>
+                <li><a href="#"><span>종료된 이벤트</span></a></li>
+                <li class="short on"><a href="#"><span>당첨자 발표</span></a></li>
+            </ul>
+        </div>
+    </div><br /><br />
+</div>
+<!-- //tab -->
+
+<!-- list -->
+<div class="section" id="list">
+    <h2 class="title">List</h2>
+    <p class="guide_tit">토글 리스트(.toggleWrap)</p>
+    <div class="content" style="width:950px;">
+        <div class="toggleWrap">
+            <dl class="qnaArea">
+                <dt class="on">
+                    <a href="#">
+                        <span class="num">7</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">입학 절차가 어떻게 되나요?</span>
+                    </a>
+                </dt>
+                <dd style="display:block;">
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>가까운 POLY에 전화하시어 입학 상담을 받으신 후 PLAT(영어 능력 진단 평가) 응시 일정을 예약합니다.</p>
+                        <p>PLAT 결과에 따라 수강 과정이 확정되면, 보다 확실한 학습 계획은 안내받으실 수 있습니다.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">6</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">몇 학년까지 입학이 가능한가요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>5세부터 중학교 3학년까지 가능합니다.</p>
+                        <p>단 지역에 따라 개설 과정이 다를 수 있으므로, 입학 전 지역 POLY에 꼭 확인해주세요.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">5</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">PLAT(영어 능력 진단 평가) 결과에 따라 반 편성이 어려울 경우, 재 응시가 가능한가요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>PLAT 응시 후 1개월이 경과한 다음 재 응시가 가능합니다.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">4</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">POLY 귀국학생(Returnee) 과정을 수강하려면 어떤 요건을 갖춰야 하나요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>영어권 국제학교에서 연속적으로 1년 이상 정규 과정을 이수한 학생 또는 POLY ECP(5~6세 유치부) 과정 수료 후 초등 특별 과정인 S과정을 이수한 학생이 대상입니다.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">3</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">셔틀버스는 이용할 수 있나요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>지역 상황에 따라 셔틀버스 운행 구간이 결정됩니다.</p>
+                        <p>가까운 POLY에 연락하시면, 자세하게 안내 받으실 수 있습니다.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">2</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">교습비는 얼마인가요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>교습비는 지역 교육청 기준에 따라 정해지며, 수강 과정, 교시 수에 따라 달라질 수 있습니다.</p>
+                        <p>따라서 가까운 POLY에 연락하시면, 자세하게 안내 받으실 수 있습니다.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">1</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">수업에 필요한 교재는 어떻게 구입하나요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>POLY 재학생을 위한 회원제 온라인교재쇼핑몰(POLYMall)에서 구입 가능합니다.</p>
+                        <p>학생의 과정에 맞는 교재를 편리하게 구매하실 수 있습니다.</p>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <br />
+    <br />
+    <p class="guide_tit">토글 리스트(.toggleWrap.Pink)</p>
+    <div class="content" style="width:950px;">
+        <div class="toggleWrap Pink">
+            <dl class="qnaArea">
+                <dt class="on">
+                    <a href="#">
+                        <span class="num">7</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">입학 절차가 어떻게 되나요?</span>
+                    </a>
+                </dt>
+                <dd style="display:block;">
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>가까운 POLY에 전화하시어 입학 상담을 받으신 후 PLAT(영어 능력 진단 평가) 응시 일정을 예약합니다.</p>
+                        <p>PLAT 결과에 따라 수강 과정이 확정되면, 보다 확실한 학습 계획은 안내받으실 수 있습니다.</p>
+                    </div>
+                </dd>
+                <dt>
+                    <a href="#">
+                        <span class="num">6</span>
+                        <span class="quest">Q.</span>
+                        <span class="cmt">몇 학년까지 입학이 가능한가요?</span>
+                    </a>
+                </dt>
+                <dd>
+                    <span class="answer">A.</span>
+                    <div>
+                        <p>5세부터 중학교 3학년까지 가능합니다.</p>
+                        <p>단 지역에 따라 개설 과정이 다를 수 있으므로, 입학 전 지역 POLY에 꼭 확인해주세요.</p>
+                    </div>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <br />
+    <br />
+</div>
+<!-- //list -->
+
+<!-- box -->
+<div class="section" id="box">
+    <h2 class="title">Box</h2>
+    <p class="guide_tit">박스타입1 (.cmLineBox)</p>
+    <div class="content" style="width:950px;">
+        <div class="cmLineBox">
+            <p class="fl mt5">전체<span class="cmSrchNum">7</span>건</p>
+            <div class="fr">
+                <input type="text" title="검색어 입력" style="width:205px;" class="txtBox mr2">
+                <!-- button -->
+                <a href="#" class="btnB">검색</a>
+            </div>
+        </div>
+    </div><br /><br />
+    <p class="guide_tit">박스타입2 (.grayBox / .grayTBox)</p>
+    <div class="content" style="width:950px;">
+        <div class="grayBox">
+            contents<br />contents<br />contents<br />contents<br />contents<br />contents
+        </div>
+        <br />
+        <div class="grayTBox">
+            contents<br />contents<br />contents<br />contents<br />contents<br />contents
+        </div>
+    </div><br /><br />
+    <p class="guide_tit">라운드박스타입1 (.rBoxGray)</p>
+    <div class="content" style="width:950px;">
+        <div class="rBoxGray">
+            <div class="boxTop"></div>
+            <div class="boxCont">
+                contents<br />contents<br />contents<br />contents<br />contents<br />contents
+            </div>
+            <div class="boxBtm"></div>
+        </div>
+    </div><br /><br />
+    <p class="guide_tit">라운드박스타입2 (.rBoxBdr)</p>
+    <div class="content" style="width:950px;">
+        <div class="rBoxBdr">
+            <div class="boxTop"></div>
+            <div class="boxCont">
+                contents<br />contents<br />contents<br />contents<br />contents<br />contents
+            </div>
+            <div class="boxBtm"></div>
+        </div>
+    </div><br /><br />
+    <p class="guide_tit">라운드박스타입3 (.rBoxBdr2)</p>
+    <div class="content" style="width:950px;">
+        <div class="rBoxBdr2">
+            <div class="boxTop"></div>
+            <div class="boxCont">
+                contents<br />contents<br />contents<br />contents<br />contents<br />contents
+            </div>
+            <div class="boxBtm"></div>
+        </div>
+    </div><br /><br />
+</div>
+<!-- //box -->
+
+<!-- content_g -->
+<div class="section" id="content_g">
+    <h2 class="title">Content</h2>
+    <p class="guide_tit">콘텐츠</p>
+    <div class="content">
+
+    </div><br /><br />
+</div>
+<!-- //content_g -->
+<!-- file -->
+<div class="section" id="file">
+    <h2 class="title">file</h2>
+    <p class="guide_tit">파일 업로드</p>
+    <div class="file_upload">
+        <input type="text" name="file_upload_info" id="file_upload_info" class="file_upload_info" readonly="readonly">
+        <div class="file">
+                <input type="button" class="file_upload_btn" value="찾아보기...">
+                <input type="file" name="name" id="id" class="file_upload_input" onchange="javascript:document.getElementById('file_upload_info').value=this.value">
+        </div>
+    </div>
+    <br /><br />
+</div>
+<!-- //file -->
+<br /><br /><br /><br /><br />
+</div>
+</div>
+</body>
+</html>

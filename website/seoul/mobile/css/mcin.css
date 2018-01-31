@@ -1,0 +1,151 @@
+@charset "utf-8";
+/* ------------------------------------------
+* Filename:mcin.css
+* Description:대학정보
+* Author:Fu:z
+------------------------------------------ */
+
+/* 학사일정 */
+.mcou_head{position:relative; padding:0 15px; height:40px; border-bottom:1px solid #b9bfc8; background-color:#fff}
+.mcou_head .tit{line-height:41px; color:#222; font-weight:normal}
+.mcou_head a.g_btn_02{position:absolute; top:50%; right:15px; margin-top:-13px}
+
+.acad_cale_box{margin-top:4px; border:1px solid #b9bfc8; border-width:1px 0; background-color:#fff}
+.acad_cale_nav{padding:0 6px; width:100%; box-sizing:border-box; border-bottom:1px solid #b9bfc8; overflow-x:auto}
+.acad_cale_nav .inner{width:560px}
+.acad_cale_nav .inner:after{display:block; content:''; clear:both}
+.acad_cale_nav a{display:block; float:left; width:40px; color:#999; font-size:10px; height:40px; line-height:41px; text-align:center}
+.acad_cale_nav a span{font-size:15px}
+.acad_cale_nav a.on{position:relative; color:#0f3e8e; font-weight:bold}
+.acad_cale_nav a.on:after{position:absolute; bottom:0; left:0; display:block; content:''; width:100%; height:2px; background-color:#0f3e8e}
+.acad_cale_nav.fix_nav{position:fixed; top:0; left:0; width:100%; z-index:10; background-color:#fff}
+
+.acad_cale_nav.fix_nav + .acad_cale_detail{margin-top:38px}
+.acad_cale_detail{position:relative; padding:0 15px 0 30px}
+.acad_cale_detail:before{position:absolute; top:0; left:20px; display:block; content:''; width:1px; height:100%; background-color:#b9bfc8}
+.acad_cale_detail .mon_tit:before, .acad_cale_detail .detail_list li:before{display:block; content:''; position:absolute; top:50%; background:url('../images/mcin/bg_bul_mcou.png') 0 0 no-repeat; background-size:25px auto}
+.acad_cale_detail .mon_tit{position:relative; padding:18px 0 3px; font-size:16px; font-weight:bold; color:#25262a}
+.acad_cale_detail .mon_tit:before{left:-14px; margin-top:3px; width:10px; height:10px; background-size:25px auto}
+.acad_cale_detail .detail_list li{position:relative; box-sizing:border-box; margin-top:6px; padding:10px 45px 10px 10px; border-radius:4px; font-size:13px; border:1px solid #f3f7fa; background-color:#f3f7fa}
+.acad_cale_detail .detail_list li:before{left:-15px; width:8px; height:8px; margin-top:-3px; background-position:0 -45px}
+.acad_cale_detail .detail_list li strong{font-weight:normal}
+.acad_cale_detail .detail_list li p{margin-top:4px; color:#333; line-height:18px}
+.acad_cale_detail .detail_list li a.g_btn_06{position:absolute; top:50%; right:10px; margin-top:-13px; padding:2px 2px 0; font-size:10px; height:auto; line-height:12px}
+
+.acad_cale_detail .active .mon_tit{color:#f34c38}
+.acad_cale_detail .active .mon_tit:before{left:-15px; background-position:100% 0}
+.acad_cale_detail .active .detail_list li{border-color:#f34c38; background-color:transparent}
+.acad_cale_detail .active .detail_list li:before{left:-14px; background-position:100% -45px}
+
+.acad_cale_detail .g_list_01{padding:20px 0}
+
+/* 오늘의 식단 */
+.mfood_head{position:relative; /* border-bottom:1px solid #b9bfc8; */ padding:5px 15px; background-color:#e2e8ec}
+.mfood_head .sel_time{position:absolute; top:50%; right:15px; margin-top:-13px}
+.mfood_head .sel_time:after{display:block; content:''; clear:both}
+.mfood_head .sel_time a{display:block; float:left; margin-left:5px; border:1px solid #5c5f6b; color:#555; font-size:12px; border-radius:13px; text-align:center; width:50px; height:25px; line-height:26px; background-color:#fff}
+.mfood_head .sel_time a.on{color:#fff; background-color:#5c5f6b}
+.mfood_head select{border:0; padding:0 20px 0 0}
+
+.restr_item{position:relative; padding-top:6px}
+.restr_item:first-child{padding-top:0}
+.restr_item dl{border:1px solid #b8bfc9; border-width:1px 0; padding:0 15px; background-color:#fff}
+.restr_item dt{position:relative; border-bottom:1px solid #5d6268; padding:18px 0 13px}
+.restr_item .tit{padding-left:23px; color:#f34c38; font-size:15px; background:url('../images/mcin/bg_icon_rest.png') 0 0 no-repeat; background-size:14px auto}
+.restr_item.disable .tit{color:#999; background-position:0 100%}
+.restr_item.disable p.g_text_01{padding:23px 0; text-align:center}
+.restr_item .nav{position:absolute; top:18px; right:-10px}
+.restr_item .nav a{width:25px; height:25px; background:url('../images/mcin/bg_food_icons.png') 0 0 no-repeat; background-size:25px auto}
+.restr_item .nav > a{display:inline-block; color:rgba(255,255,255,0); overflow:hidden}
+.restr_item .nav a.btn_down{background-position:0 5px}
+.restr_item .nav a.btn_up{background-position:0 -43px}
+.restr_item .nav a.btn_other{background-position:0 -89px}
+
+.restr_item .link{position:absolute; top:24px; right:10px; z-index:10; width:100px; display:none; /*height:0;*/ overflow:hidden; box-sizing:border-box}
+.restr_item .link .inner{margin-top:9px; border-radius:4px; padding:15px 10px 10px 10px; background-color:#707f95}
+.restr_item .link .inner:before{position:absolute; top:0; right:0; display:block; content:''; width:14px; height:15px; background:url('../images/mcin/bg_other_link.png') 0 0 no-repeat; background-size:14px auto}
+.restr_item .link a{display:block; margin-top:3px; width:100%; box-sizing:border-box; padding-left:25px; color:#fff; font-size:12px; }
+.restr_item .link a:first-child{margin-top:0}
+.restr_item .link a.btn_fav{background-position:0 -143px}
+.restr_item .link a.btn_fav.on{background-position:0 -273px}
+.restr_item .link a.btn_share{background-position:0 -184px}
+.restr_item .link a.btn_loca{background-position:0 -225px}
+
+.fmenu_list{}
+.fmenu_list li{padding:11px 0; border-bottom:1px solid #e2e8ec}
+.fmenu_list li:after{display:block; content:''; clear:both}
+.fmenu_list li:last-child{border-bottom:0}
+.fmenu_list li strong{float:left; display:block; font-weight:normal}
+.fmenu_list li span{float:right; display:block; color:#999}
+
+/* 긴급상황 */
+.emerg_tel{margin-top:6px; padding-top:18px; border:1px solid #b9bfc8; border-width:1px 0; background-color:#fff}
+.emerg_tel .g_tit_01{margin:0 15px}
+.tel_list li a:before, .other_tel a:before{display:block; content:''; position:absolute; width:55px; height:45px; background:url('../images/mcin/bg_icon_emz.png') 0 0 no-repeat; background-size:auto 45px}
+.tel_list li a:before{/* border:1px solid red; */ top:10px; left:50%; margin-left:-28px}
+.tel_list li a.icon01:before{background-position:9px 0}
+.tel_list li a.icon02:before{background-position:-89px 0}
+.tel_list li a.icon03:before{background-position:-190px 0}
+.other_tel a:before{/* border:1px solid red; */ left:10px; top:50%; margin-top:-22px}
+.other_tel a.icon04:before{background-position:-289px 0}
+.other_tel a.icon05:before{background-position:-380px 0}
+.other_tel a.icon06:before{background-position:-470px 0}
+
+.tel_list:after{display:block; content:''; clear:both}
+.tel_list{margin:14px 0; padding:0 22px}
+.tel_list li{display:block; float:left; box-sizing:border-box; width:33.333333333%; border:1px solid #ff624f; border-radius:3px; text-align:center}
+.tel_list li:first-child{position:relative; left:-7px}
+.tel_list li:last-child{position:relative; right:-7px}
+.tel_list li a{display:block; position:relative; padding-top:60px}
+.tel_list .tit{display:block; font-size:13px; color:#f34c38}
+.tel_list .num{display:block; margin:6px 0 9px; font-size:12px; color:#555}
+.tel_list .act{display:block; border-top:1px dotted #999; border-radius:0 0 3px 3px; height:36px; line-height:36px; font-size:12px; color:#555; font-weight:bold; background-color:#fcfcfc}
+.tel_list .act:before{display:inline-block; margin-right:4px; content:''; width:15px; height:16px; vertical-align:middle; background:url('../images/mcin/icon_tel.png') 0 0 no-repeat; background-size:15px auto}
+
+.memz .btn_wrap_half{padding:15px 15px 15px 23px; background-color:#e2e8ec}
+.memz .btn_wrap_half a:first-child{left:-8px}
+.other_tel{padding:0 15px 15px; background-color:#e2e8ec}
+.other_tel a{position:relative; display:block; padding:13px 0 13px 75px; border-radius:3px; background-color:#fff}
+.other_tel a + a{margin-top:5px}
+.other_tel .tit{display:block; font-size:11px; color:#999; vertical-align:bottom; font-weight:normal}
+.other_tel .tit span{margin-right:4px; font-size:13px; font-weight:bold; color:#555}
+.other_tel .num{display:block; margin-top:5px; font-size:14px; color:#555}
+.other_tel .act{display:block; width:70px; height:100%; position:absolute; top:0; right:0; border-left:1px solid #e2e8ec; text-align:center; color:rgba(255,255,255,0); background:#fcfcfc url('../images/mcin/icon_tel.png') 50% 50% no-repeat; background-size:15px auto}
+
+/* 심폐소생 방법 */
+.nat_act_guide{margin-top:15px; padding:0 15px; border:1px solid #b9bfc8; border-width:1px 0}
+.nat_act_guide li{position:relative; padding:24px 0 22px 93px; border-top:1px solid #e2e8ec}
+.nat_act_guide li:first-child{border-top:0}
+.nat_act_guide li .img_wrap{position:absolute; top:50%; left:8px; display:block; width:65px; margin-top:-30px}
+.nat_act_guide li .img_wrap img{width:100%; height:auto}
+.nat_act_guide li .tit{font-size:14px; color:#333}
+.nat_act_guide li .cont{margin-top:5px; font-size:12px; color:#999}
+.nat_act_guide li a.g_btn_06{margin-top:7px}
+
+/* 전화번호 */
+.mphone .g_normal_list{padding-top:15px}
+.mphone .g_normal_list .g_tit_01{padding-bottom:10px; border-bottom:1px solid #5d6268}
+.often_phone_num .g_text_01{padding:23px 0; text-align:center}
+.fav_icon .btn_fav{float:none; display:inline-block; margin:-12px -10px -15px; /* margin:-2px -10px 0; */ vertical-align:middle}
+
+/* 전화번호 검색 */
+.g_normal_list.result_phone_num{margin-top:0; border-top:0}
+
+/* 무선랜이용안내 */
+.langu_box h4, .langu_box h5{margin-top:18px}
+.langu_box h4:first-of-type, .langu_box h5:first-of-type{margin-top:7px}
+.langu_box h5, .langu_box ol{margin-left:10px}
+.langu_box ol{margin-top:9px}
+.langu_box .img_wrap{float:right; margin-top:-17px; width:68px}
+.langu_box .img_wrap img{width:100%}
+.langu_box .g_text_04{margin-top:15px}
+
+
+/* @Media Query
+------------------- ---------------------- */
+@media only screen and (max-width:350px) {
+	.other_tel a{padding-left:55px}
+	.other_tel a:before{left:0px}
+	.other_tel .act{width:55px}
+}
+

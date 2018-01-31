@@ -1,0 +1,98 @@
+<!DOCTYPE HTML>
+<html lang="ko"><!-- 영문일 경우 "en"으로 넣어주세요. -->
+	<head>
+		<title> 교직원검색 | 스누인지원 | 서울대학교 </title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="서울대학교">
+		<meta name="Description" content="서울대학교">
+
+		<!-- call css -->
+		<link type="text/css" rel="stylesheet" href="../../css/import.css">
+		
+		<!-- call js -->
+		<script src="../../js/lib/jquery.min.js"></script>
+		<script src="../../js/ui.common.js"></script>
+
+	</head>
+
+	<body class="l_page"><!-- 레이어스타일 페이지는 클래스명 'l_page' 추가필요 -->
+
+		<div id="wrap">
+			<!-- 헤더 -->
+			<header id="l_header">
+				<h1 class="l_tit">교직원검색</h1>
+				<a class="btn_page_close" href="#none" title="부모 페이지로 이동">닫기</a>
+			</header><!--// 헤더 -->
+
+			<!-- 컨테너 -->
+			<section id="l_container">
+				<div id="l_conts">
+					<!-- 검색 -->
+					<div class="g_search_01">
+						<input type="text" title="교직원 및 기관검색" placeholder="교직원 및 기관검색">
+						<a class="g_btn_07" href="#none">검색</a>
+					</div><!--// 검색 -->
+
+					<!-- 탭 -->
+					<ul class="g_tab_01 n2">
+						<li class="on"><a href="#none">교직원</a></li>
+						<li><a href="#none">기관</a></li>
+					</ul><!--// 탭 -->
+
+					<!-- 검색결과 -->
+					<div class="g_normal_list edu_person">
+						<ul>
+							<li>
+								<strong class="tit">홍서울</strong>
+								<span class="desc">선임행정관<span class="sta">정보화본부</span></span>
+								<span class="num">02-880-8112</span>
+								<div class="links">
+									<a class="btn_fav on" href="#none">즐겨찾기</a><!-- 즐겨찾기 활성화시 클래스명 'on'추가 -->
+									<a class="btn_tel" href="tel:02-880-8112">전화걸기</a>
+									<a class="btn_gocoll" href="#none">상세보기</a>
+								</div>
+							</li>
+							<li>
+								<strong class="tit">동서울</strong>
+								<span class="desc">교수<span class="sta">인문대학</span></span>
+								<span class="num">02-880-8119</span>
+								<div class="links">
+									<a class="btn_fav" href="#none">즐겨찾기</a>
+									<a class="btn_tel" href="tel:02-880-8119">전화걸기</a>
+									<a class="btn_gocoll" href="#none">상세보기</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+
+				</div>
+				<div id="l_foot">
+					<div class="btn_wrap_full">
+						<a class="g_btn_04" href="#none">닫기</a>
+					</div>
+				</div>
+
+				<div id="gotop"><a href="#none">최상단으로 이동</a></div>
+			</section><!--// 컨테너 -->
+
+			<!-- 푸터 -->
+			<footer id="footer">
+				<ul class="foot_menu">
+					<li class="icon01"><a href="#none">메인</a></li>
+					<li class="icon02"><a href="#none">이전</a></li>
+					<li class="icon03"><a href="#none">다음</a></li>
+					<li class="icon04"><a href="#none">새로고침</a></li>
+					<li class="icon06"><a href="#none">메뉴</a></li>
+				</ul>
+			</footer><!--// 푸터 -->
+
+		</div>
+
+		<!-- call func. -->
+		<script>
+			pub_ui.init(); // 공통
+		</script>
+	</body>
+</html>

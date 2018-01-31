@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+<meta name="author" content="">
+<meta name="copyright" content="(c)2016">
+<meta name="keywords" content="원주세브란스병원">
+<meta name="description" content="원주세브란스병원">
+<title>코딩맵: [국고보조금]</title>
+<script type="text/javascript" src="../js/cmm/jquery-1.8.3.min.js"></script>
+<style type="text/css">
+	/*  */
+	body{background-color:#eee}
+	*{margin:0; padding:0; font-family:'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif}
+	#wrap{position:relative;padding:20px 15px 20px 15px;line-height:17px;font-size:12px}
+	h1{margin: 0 0 40px 0;}
+	h2{margin: 0 0 10px 0;}
+	strong.allfile{color:#0000FF;}
+	/* 테이블 */
+	table	{border-collapse:collapse; width:85%; margin:0 0 40px 0; }
+	table	th	{border:1px solid #ccc; padding:5px 0 2px;}
+	table thead th {padding:6px 5px 3px 5px; color:#fff; background-color:#111}
+	table tbody td {padding:6px 5px 3px 5px; border:1px solid #ccc; text-align:center; background-color:#FFFFFF;}
+	table tr:nth-child(even) td{background-color:#efefef}
+	table a{margin: 0 0 0 10px; text-decoration:none; font-weight:bold; color:#F9BED7;}
+	a:hover{color:#000; text-decoration:underline; font-weight:bold;}
+
+	table tbody td:nth-child(1),
+	table tbody td:nth-child(2),
+	table tbody td:nth-child(3),
+	table tbody td:nth-child(4),
+	table tbody td:nth-child(5){text-align:left;padding-left:10px;}
+
+	/* 파일 정보박스 */
+	#info{left:85%;width:200px;padding:10px;border:1px solid #ccc;text-align:left;background-color:#FFFFFF;}
+	#info ul.info_class{padding:0 0 0 15px;}
+	#info ul.info_class li{margin: 0 0 5px 0; vertical-align:middle}
+	#info ul.info_class span{display:inline-block; width:70px}
+	#info a{text-decoration:none; font-weight:bold; color:#9F9C9C;}
+	#info a:hover{color:#000; text-decoration:underline; font-weight:bold;}
+	#info ul.number{padding:10px 0 0}
+	#info ul.number li{margin:4px 0; overflow:hidden; *zoom:1}
+	#info ul.number li span{display:block; float:left; width:80px}
+	#info legend{color:#222; font-size:22px; letter-spacing:-.09em}
+	hr{margin:20px 0; color:#eee}
+	#info ul.quick_links{padding:0 0 10px 15px;}
+	#info ul.quick_links li{margin:4px 0}
+	.list_txt{display:none; margin: 0 0 30px 0;}
+	.list_txt strong{font-size:14px;}
+	#ok_tot{color:#FF0000;}
+	#tot_icom{color:red;}
+	.incompletion{font-size:12px; color:red;font-weight:bold;
+		text-decoration: none;	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+		filter: alpha(opacity=30);
+		-moz-opacity: 0.3;
+		-khtml-opacity: 0.3;
+		opacity: 0.3;
+		cursor: default;
+	}
+
+	.incompletion:hover,
+	.incompletion:active,
+	.incompletion:focus {
+		text-decoration: none;
+	}
+
+	.coding_complete{font-size:12px; color:green;font-weight:bold;}
+	.coding_modi{font-size:12px; color:blue;font-weight:bold;}
+	.no_cont{font-size:12px;color:#333; font-weight:bold;}
+	.guide{font-size:12px;color:#9c8874; font-weight:bold;}
+	.deb1{font-size:12px; color:#5c076b; font-weight:bold;}
+	.commu{font-size:12px; color:#FF6600; font-weight:bold;}
+	#tot_com{color:#008000}
+	filedset#info legend{}
+</style>
+<script type="text/javascript">
+$(window).load(function(){
+	 $('.incompletion').attr('href','#none');
+})
+</script>
+</head>
+
+<body onload="start()">
+<div id="wrap">
+	<fieldset id="info" >
+		<legend>[ 파일정보 ]</legend>
+		<ul class="number">
+			<li><span>- 총 파일</span><strong id="tot_file" class="allfile"></strong></li>
+			<li><span>- 작업중</span><strong id="tot_icom" ></strong></li>
+			<li><span>- 완료 파일</span><strong id="tot_com" ></strong></li>
+		</ul>
+		<hr />
+		<ul class="info_class">
+			<li class="incompletion"><span>대기/작업중</span>incompletion</li>
+			<li class="coding_modi"><span>수정완료</span>coding_modi</li>
+			<li class="coding_complete"><span>코딩완료</span>coding_complete</li>
+			<!-- <li class="no_cont">기획 협의중 no_cont</li>
+			<li class="commu">디자인 수정완료 commu</li>  -->
+			<li class="guide"><span>가이드</span>guide</li>
+		</ul>
+		<hr />
+		<!-- <ul class="quick_links">
+			<li><a href="#s1">가이드</a></li>
+			<li><a href="#s2">메인</a></li>
+		</ul> -->
+	</fieldset>
+	<h1>국고보조금 (utf-8/HTML 4.01/ie10~)</h1>
+	<div id="list">
+		<h2>가이드</h2>
+		<table>
+			<thead>
+				<tr class="title">
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>4Depth</th>
+					<th>5Depth</th>
+					<th>Directory</th>
+					<th>파일명</th>
+					<th>업데이트</th>
+				</tr>
+			</thead>
+			<tbody>				
+				<tr>
+					<td class="deb1"></td>
+					<td>스타일가이드</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/guide/</td>
+					<td><a class="guide" href="guide.html">guide</a></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+		<h2>메인</h2>
+		<table>
+			<thead>
+				<tr class="title">
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>4Depth</th>
+					<th>5Depth</th>
+					<th>Directory</th>
+					<th>파일명</th>
+					<th>업데이트</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="deb1">메인</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/html/</td>
+					<td><a class="coding_complete" href="../html/main.html">main.html</a></td>
+					<td></td>
+				</tr>              
+			</tbody>
+		</table>
+
+		<h2>서브페이지</h2>
+		<table>
+			<thead>
+				<tr class="title">
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>4Depth</th>
+					<th>5Depth</th>
+					<th>Directory</th>
+					<th>파일명</th>
+					<th>업데이트</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="deb1">상담정보관리</td>
+					<td>상담분류관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/html/</td>
+					<td><a class="coding_complete" href="../html/sub_01.html">sub_01</a></td>
+					<td></td>
+				</tr>
+                <tr>
+					<td class="deb1"></td>
+					<td>상담지식관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/html/</td>
+					<td><a class="coding_complete" href="../html/sub_03.html">sub_03</a></td>
+					<td></td>
+				</tr>
+                 <tr>
+					<td class="deb1"></td>
+					<td>상담지식조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/html/</td>
+					<td><a class="coding_complete" href="../html/sub_04.html">sub_04</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">상담업무관리</td>
+					<td>예약상담관리</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/html/</td>
+					<td><a class="coding_complete" href="../html/sub_02.html">sub_02</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">상담통계</td>
+					<td>상담분류별통계</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/html/</td>
+					<td><a class="coding_complete" href="../html/sub_05.html">sub_05</a></td>
+					<td></td>
+				</tr>				
+			</tbody>
+		</table>
+
+
+		<h2>팝업</h2>
+		<table>
+			<thead>
+				<tr class="title">
+					<th>1Depth</th>
+					<th>2Depth</th>
+					<th>3Depth</th>
+					<th>4Depth</th>
+					<th>5Depth</th>
+					<th>Directory</th>
+					<th>파일명</th>
+					<th>업데이트</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="deb1">부서찾기</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					<td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_03.html', '_blank', 'width=808,height=700');">popUp_03</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">공지사항</td>
+					<td>공지사항 상세조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					<td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_01.html', '_blank', 'width=808,height=740');">popUp_01</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">대기중</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					<td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_02.html', '_blank', 'width=808,height=490');">popUp_02</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">업무분류선택</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+				    <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_10.html', '_blank', 'width=450,height=540');">popUp_10</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">전화</td>
+					<td>전화가 왔습니다</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+				    <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_04.html', '_blank', 'width=450,height=280');">popUp_04</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">이석</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					 <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_05.html', '_blank', 'width=450,height=280');">popUp_05</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">이석중</td>
+					<td>이석중입니다.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					 <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_06.html', '_blank', 'width=600,height=485');">popUp_06</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">상담지식 상세조회</td>
+					<td>상세정보</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					 <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_07.html', '_blank', 'width=808,height=740');">popUp_07</a></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td class="deb1">상담지식 상세조회</td>
+					<td>추가정보</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					 <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_08.html', '_blank', 'width=808,height=740');">popUp_08</a></td>
+					<td></td>
+				</tr>
+                <tr>
+					<td class="deb1">SMS발송</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					 <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_09.html', '_blank', 'width=580,height=540');">popUp_09</a></td>
+					<td></td>
+				</tr>
+                  <tr>
+					<td class="deb1">2선이선현황</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>/popup/</td>
+					 <td><a class="coding_complete" href="#none" onclick="window.open('../popup/popUp_11.html', '_blank', 'width=1260,height=840');">popUp_11</a></td>
+					<td></td>
+				</tr>                
+			
+	
+			</tbody>
+		</table>
+	</div>
+</div>
+<!-- 스크립트 -->
+<script type="text/javascript">
+<!--
+var tot_file=0;
+var ok_file=0;
+var tot_com=0;
+var tot_icom=0;
+function start(){
+	 totEle();
+	 tableSize();
+}
+function totEle(){
+	var obj = document.getElementById("list");
+	var ele = obj.getElementsByTagName("a");
+	var eleTr = obj.getElementsByTagName("tr");
+
+	for(var i=0; i<ele.length;i++){
+
+		if(ele[i].className !="no_blank"){
+			ele[i].setAttribute("target","_blank");
+		}
+
+	}
+
+	for(var i=0; i<eleTr.length;i++){
+	 if(eleTr[i].className !="title"){ // tr태그에 class 네임이 title 인것은 배제하고 총파일을 알아낸다.
+		tot_file+=1;
+	 }
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "coding_complete"){
+			tot_com+=1;
+		}
+	}
+
+	for(var i=0; i<ele.length;i++){
+		if(ele[i].className == "incompletion"){
+			tot_icom+=1;
+		}
+	}
+
+
+		document.getElementById("tot_file").innerHTML =  tot_file;
+		document.getElementById("tot_com").innerHTML =  tot_com;
+		document.getElementById("tot_icom").innerHTML =  tot_icom;
+	//완료된 파일은 링크를 건다. id="list"영역안에..있는건만
+	//document.getElementById("ok_tot").innerHTML =  obj.getElementsByTagName("a").className("coding_complete").length ;
+ }
+	function tableSize(){
+
+		var eleTable = document.getElementsByTagName("table");
+
+		for(var i=0;i<eleTable.length;i++)
+		{
+			eleTable[i].getElementsByTagName("td")[0].style.width="12%";
+			eleTable[i].getElementsByTagName("td")[1].style.width="13%";
+			eleTable[i].getElementsByTagName("td")[2].style.width="13%";
+			eleTable[i].getElementsByTagName("td")[3].style.width="17%";
+			eleTable[i].getElementsByTagName("td")[4].style.width="13%";
+			eleTable[i].getElementsByTagName("td")[5].style.width="8%";
+			eleTable[i].getElementsByTagName("td")[6].style.width="12%";
+			eleTable[i].getElementsByTagName("td")[7].style.width="12%";
+		}
+	}
+
+// Quick menu
+function initMoving(target, position, topLimit, btmLimit) {
+	if (!target) return false;
+
+	try { document.execCommand("BackgroundImageCache", false, true);}
+	catch(err){}
+
+	var obj = target;
+	obj.initTop = position;
+	obj.topLimit = topLimit;
+	obj.bottomLimit = document.documentElement.scrollHeight - btmLimit;
+
+	obj.style.position = "absolute";
+	obj.top = obj.initTop;
+	obj.left = obj.initLeft;
+
+	if (typeof(window.pageYOffset) == "number") {
+		obj.getTop = function() {
+			return window.pageYOffset;
+		}
+	} else if (typeof(document.documentElement.scrollTop) == "number") {
+		obj.getTop = function() {
+			return document.documentElement.scrollTop;
+		}
+	} else {
+		obj.getTop = function() {
+			return 0;
+		}
+	}
+
+	if (self.innerHeight) {
+		obj.getHeight = function() {
+			return self.innerHeight;
+		}
+	} else if(document.documentElement.clientHeight) {
+		obj.getHeight = function() {
+			return document.documentElement.clientHeight;
+		}
+	} else {
+		obj.getHeight = function() {
+			return 500;
+		}
+	}
+
+	obj.move = setInterval(function() {
+		if (obj.initTop > 0) {
+			pos = obj.getTop() + obj.initTop;
+		} else {
+			pos = obj.getTop() + obj.getHeight() + obj.initTop;
+			//pos = obj.getTop() + obj.getHeight() / 2 - 15;
+		}
+
+		if (pos > obj.bottomLimit)
+			pos = obj.bottomLimit;
+		if (pos < obj.topLimit)
+			pos = obj.topLimit;
+
+		interval = obj.top - pos;
+		obj.top = obj.top - interval / 3;
+		obj.style.top = obj.top - 10 + "px";
+	}, 30)
+}
+//-->
+</script>
+<script type="text/javascript">initMoving(document.getElementById("info"), 50,-15, 800);</script>
+</body>
+</html>
